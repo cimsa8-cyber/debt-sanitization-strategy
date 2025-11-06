@@ -1,0 +1,311 @@
+ANÁLISIS SITUACIÓN REAL QUICKBOOKS - 06 NOVIEMBRE 2025
+Basado en 6 archivos MD de conversación anterior (02-03 nov)
+
+═══════════════════════════════════════════════════════════════
+RECONCILIACIÓN TEMPORAL
+═══════════════════════════════════════════════════════════════
+
+LÍNEA DE TIEMPO CONFIRMADA:
+
+02/11/2025:
+- Saldos iniciales ingresados en QB
+- Fecha oficial de inicio (NO 01/11)
+- Activos: $14,334.73
+- Pasivos: $47,830.07
+- Patrimonio: -$33,495.34
+
+03/11/2025 8:02 AM:
+- Configuración QB completada al 100%
+- 39 cuentas operativas
+- Multimoneda funcionando
+- Sistema listo para operar
+
+03/11/2025 (durante el día):
+- ✅ Liquidado crédito VISA 6386: $200
+- ✅ Pagado CCSS: ₡358,000 (~$706)
+- ✅ Pagado Intcomex #250911: $3,137.26
+- ✅ Pagado Compueconomicos #12478: $62
+- Total pagos: $3,399.26 + ₡358,000
+
+04/11/2025:
+- Débitos ahorros semanales: $210
+- (lunes rutina)
+
+05/11/2025:
+- ¿Movimientos? (no documentados en archivos)
+
+06/11/2025:
+- Balance Sheet capturado (el que me mostraste)
+- Estado actual del sistema
+
+═══════════════════════════════════════════════════════════════
+LO QUE YA ESTÁ HECHO ✅
+═══════════════════════════════════════════════════════════════
+
+CONFIGURACIÓN:
+✅ Empresa creada en QB Desktop 2013
+✅ Multimoneda activada (USD + CRC)
+✅ Tipo de cambio configurado: ₡507 = $1
+✅ 39 cuentas importadas y operativas
+✅ Números de cuenta activados
+✅ Saldos iniciales ingresados al 02/11/2025
+
+CUENTAS ESPECIALES CREADAS:
+✅ 1520 · Due from Owner - Álvaro
+✅ 1610 · VISA 6386 Crédito a Favor (liquidada 03/11)
+✅ 3030 · Owners Draw
+✅ 6010 · Payroll Expense - Owner
+✅ 6020 · Payroll Expense - Staff
+✅ 1510 · Cuentas por Cobrar Clientes
+
+TRANSACCIONES REGISTRADAS (confirmadas):
+✅ 03/11: Liquidación crédito VISA 6386 ($200)
+✅ 03/11: Pago CCSS (₡358,000)
+✅ 03/11: Pago Intcomex #250911 ($3,137.26)
+✅ 03/11: Pago Compueconomicos #12478 ($62)
+
+═══════════════════════════════════════════════════════════════
+LO QUE FALTA POR HACER ⚠️
+═══════════════════════════════════════════════════════════════
+
+1. CORRECCIÓN CRÍTICA - ERROR BAC 9550:
+─────────────────────────────────────────────────────────────
+Estado actual en QB:
+- 2140 TC VISA BAC 9550 CRC: ₡2,799.42 ❌
+
+Debe ser:
+- 2140 TC VISA BAC 9550 CRC: ₡1,419,305.54 ✅
+
+Corrección requerida:
+DEBE  | 2140 TC VISA BAC 9550 CRC | ₡1,416,506.11
+HABER | 3900 Ajustes Apertura     | ₡1,416,506.11
+
+Problema: Cuenta 3900 NO aparece en lista de 39 cuentas
+Solución: Usar 3010 Capital Social - Empresa
+
+2. CUENTAS POR COBRAR (A/R):
+─────────────────────────────────────────────────────────────
+Saldo esperado: $10,866.42 (al 01/11 o 03/11)
+
+En Balance Sheet 06/11: NO APARECE A/R
+¿Significa que está en $0?
+
+Necesito confirmar:
+□ ¿Se registró A/R inicial?
+□ Si no, ¿cómo registrar ahora?
+
+3. CUENTAS POR PAGAR (A/P):
+─────────────────────────────────────────────────────────────
+Del MD 04/11 tenía:
+- INTCOMEX #2502060: $410.09 (27 días mora) ⚠️
+- INTCOMEX #2509011: PAGADO 03/11 ✅
+- EUROCOMP #203637: $2,007.68 (vence 16/11)
+- EUROCOMP #203831: $16.92 (vence 19/11)
+- SGL 3 facturas: $44.07
+- Comp. Económicos #12616: $284.91 (vence 23/11)
+- IBASA #004210: ₡144,516
+
+En Balance Sheet 06/11:
+A/P Aging Summary: $0.00
+
+¿Significa que NO se registraron las facturas pendientes?
+O ¿se pagaron todas?
+
+4. FACTURAS EMITIDAS (INGRESOS):
+─────────────────────────────────────────────────────────────
+Del archivo facturas_emitidas_nov_2025.csv:
+- 29/10: 2 facturas SWS ($1,386.51)
+- 03/11: 2 facturas ($743.54)
+- 04/11: 3 facturas ($1,043.86)
+- 05/11: 1 factura ($452.00)
+Total: $3,625.91
+
+¿Registradas en QB?
+¿Afectó A/R?
+
+5. COMPRAS (NOVIEMBRE):
+─────────────────────────────────────────────────────────────
+Del archivo cuentas_por_pagar_nov_2025.csv:
+- 03/11: Intcomex Cloud $2,317.09
+- 04/11: Intcomex Lenovo $679.12
+Total: $2,996.21
+
+¿Registradas en QB?
+
+6. PAGOS DE TARJETAS (02-06 NOV):
+─────────────────────────────────────────────────────────────
+Del archivo consolidado_pagos_tarjetas_nov.txt:
+- 27/10-06/11: Total ~$2,708 pagos TC
+
+Desglose:
+- BNCR 188618 CRC: ₡318,104 (~$555)
+- BNCR 10664 USD: $1,810.57
+- BNCR 011112 USD: $342.56
+
+¿Registrados en QB?
+
+7. MOVIMIENTOS BANCARIOS:
+─────────────────────────────────────────────────────────────
+- Débitos ahorros semanales: $210/semana
+- Transferencias entre cuentas
+- Otros movimientos operativos
+
+═══════════════════════════════════════════════════════════════
+COMPARACIÓN: SALDOS 02/11 vs 06/11
+═══════════════════════════════════════════════════════════════
+
+PREGUNTA CRÍTICA: ¿Qué cambió del 02/11 al 06/11?
+
+Del Balance Sheet 06/11 que me mostraste al inicio:
+- Total Assets: $XX,XXX (necesito verificar)
+- CCSS: Ya no aparece (pagado 03/11) ✅
+- VISA 6386 Crédito: Ya no aparece (liquidado 03/11) ✅
+
+Cambios esperados 02/11 → 06/11:
+- BNCR USD Operativa: -$3,399 (pagos 03/11)
+- CCSS: -₡358,000 (pagado)
+- Intcomex factura: -$3,137 (pagado)
+- VISA 6386 crédito: $0 (liquidado)
+- Ahorros: -$210 (débitos 04/11)
+- Tarjetas: ~-$2,708 (pagos varios)
+
+═══════════════════════════════════════════════════════════════
+CUENTAS FALTANTES IDENTIFICADAS
+═══════════════════════════════════════════════════════════════
+
+COMPARANDO las 39 cuentas existentes con mi propuesta:
+
+FALTAN (posiblemente):
+□ 2000 · Cuentas por Pagar (Accounts Payable)
+□ 1150 · IVA Crédito Fiscal
+□ 2015 · IVA Débito Fiscal
+□ 3900 · Ajustes de Apertura (crítica para corrección)
+□ Subcuentas de ingresos (4100, 4200, 4300, 4400)
+□ Subcuentas de gastos (6100, 6200, 6400, etc.)
+
+PRESENTES (confirmadas):
+✅ 1510 · Cuentas por Cobrar Clientes
+✅ 1520 · Due from Owner - Álvaro
+✅ 3030 · Owners Draw
+✅ 6010 · Payroll Expense - Owner
+✅ 6020 · Payroll Expense - Staff
+
+═══════════════════════════════════════════════════════════════
+PROBLEMAS DETECTADOS
+═══════════════════════════════════════════════════════════════
+
+1. A/R y A/P ambos en $0 en Balance Sheet 06/11
+   → Indica que NO se registraron facturas pendientes
+   → O se usa método cash basis (no accrual)
+
+2. Cuenta 3900 Ajustes de Apertura no existe
+   → Necesaria para corrección BAC 9550
+   → Alternativa: usar 3010 Capital Social
+
+3. Falta cuenta 2000 Accounts Payable
+   → ¿Cómo se están registrando facturas de proveedores?
+   → Posiblemente directo a gasto (cash basis)
+
+4. No hay cuentas de IVA
+   → ¿Se está registrando IVA separado?
+   → CR requiere separar IVA para declaraciones
+
+═══════════════════════════════════════════════════════════════
+ESTRATEGIA RECOMENDADA
+═══════════════════════════════════════════════════════════════
+
+DECISIÓN 1: ¿Método contable?
+─────────────────────────────────────────────────────────────
+CASH BASIS (actual aparente):
+- Registrar ingresos cuando se cobran
+- Registrar gastos cuando se pagan
+- Más simple
+- A/R y A/P no se usan
+
+ACCRUAL BASIS (profesional):
+- Registrar facturas cuando se emiten/reciben
+- Usar A/R y A/P
+- Más complejo pero más preciso
+- Requerido para empresa grande
+
+Recomendación: HÍBRIDO
+- A/R SÍ (para control cobros)
+- A/P NO necesario (pocos proveedores)
+- Registrar facturas emitidas en Customers
+- Registrar compras cuando se pagan
+
+DECISIÓN 2: ¿Crear cuentas adicionales?
+─────────────────────────────────────────────────────────────
+Mínimas necesarias:
+✅ 3900 · Ajustes de Apertura (o usar 3010)
+✅ 1150 · IVA Crédito Fiscal
+✅ 2015 · IVA Débito Fiscal
+
+Opcionales:
+□ 2000 · Accounts Payable
+□ Subcuentas detalladas ingresos/gastos
+
+═══════════════════════════════════════════════════════════════
+PLAN AJUSTADO - PRÓXIMOS PASOS
+═══════════════════════════════════════════════════════════════
+
+PASO 1: VERIFICAR ESTADO ACTUAL QB
+─────────────────────────────────────────────────────────────
+Necesito que confirmes en QB:
+1. ¿Cuál es el saldo de 1510 Cuentas por Cobrar al 06/11?
+2. ¿Hay cuenta 2000 Accounts Payable? ¿Saldo?
+3. ¿Hay cuenta 3900 Ajustes de Apertura?
+4. ¿Hay cuentas IVA (1150, 2015)?
+
+PASO 2: CORREGIR ERROR BAC 9550
+─────────────────────────────────────────────────────────────
+Si hay cuenta 3900:
+DEBE  | 2140 TC VISA BAC 9550 CRC | ₡1,416,506.11
+HABER | 3900 Ajustes Apertura     | ₡1,416,506.11
+
+Si NO hay cuenta 3900:
+Opción A: Crear cuenta 3900 primero
+Opción B: Usar 3010 Capital Social
+
+PASO 3: REGISTRAR A/R INICIAL (si falta)
+─────────────────────────────────────────────────────────────
+Si 1510 = $0:
+Registrar saldo inicial $10,866.42
+
+Método depende de decisión:
+A) Saldo global (rápido)
+B) Detalle por cliente (profesional)
+
+PASO 4: VERIFICAR TRANSACCIONES 02-06 NOV
+─────────────────────────────────────────────────────────────
+Revisar en QB:
+- ¿Están registradas facturas emitidas?
+- ¿Están registrados pagos de tarjetas?
+- ¿Están débitos ahorros?
+
+PASO 5: AJUSTAR LO QUE FALTE
+─────────────────────────────────────────────────────────────
+Registrar transacciones faltantes
+Reconciliar con Balance Sheet 06/11
+
+═══════════════════════════════════════════════════════════════
+PREGUNTAS PARA EL USUARIO
+═══════════════════════════════════════════════════════════════
+
+1. ¿Confirmas que QB se inició el 02/11 (no 01/11)?
+
+2. ¿El Balance Sheet del 06/11 que me mostraste refleja
+   todas las transacciones del 02-06 nov registradas?
+
+3. ¿Preferencia de método contable?
+   A) Cash basis (simple)
+   B) Accrual basis (profesional)
+   C) Híbrido (mi recomendación)
+
+4. ¿Necesitas registrar A/R detallado por cliente, o
+   prefieres solo saldo global?
+
+5. ¿Las facturas de proveedores se están registrando
+   como A/P o directo a gasto cuando se pagan?
+
+═══════════════════════════════════════════════════════════════
