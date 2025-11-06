@@ -6,16 +6,18 @@ Usuario: Alvaro Velasco
 PROGRESO ACTUAL
 ═══════════════════════════════════════════════════════════════
 
-FASE ACTUAL: 0.1 - Preparación
-PASO ACTUAL: 0.2 - Verificar fecha de trabajo
+FASE ACTUAL: 0 - Preparación
+PASO ACTUAL: 0.3 - Imprimir Balance Sheet inicial
 
 COMPLETADO:
 ✅ FASE 0.1 - Backup realizado
    Archivo: Backup_PreActualizacion_06NOV2025.qbb
    Fecha: 06/11/2025
+✅ FASE 0.2 - Fecha trabajo verificada
+   Fecha en QB: 06/11/2025
 
 PENDIENTE:
-□ FASE 0.2 - Verificar fecha trabajo QB
+□ FASE 0.3 - Imprimir Balance Sheet inicial
 □ FASE 0.3 - Imprimir Balance Sheet inicial
 □ FASE 0.4 - Anotar saldos iniciales
 □ FASE 1 - Corrección BAC 9550
