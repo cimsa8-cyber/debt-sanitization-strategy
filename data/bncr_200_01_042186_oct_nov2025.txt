@@ -1,0 +1,35 @@
+BANCO NACIONAL DE COSTA RICA
+Información detallada de la cuenta
+Nombre: ALVARO VELASCO JIMENEZ
+Cuenta: 200-01-087-042186-9
+IBAN: CR28015108720010421866
+Moneda: COLONES
+Estado: Activa
+Periodo: 27/10/2025 - 06/11/2025
+
+SALDOS:
+Saldo disponible: ₡67,950.50
+Saldo bloqueado:  ₡0.00
+Saldo congelado:  ₡0.00
+
+MOVIMIENTOS:
+Fecha       | Documento | Salidas      | Entradas     | Descripción
+05/11/2025  | 91588707  | ₡25,000.00  |              | ALEJANDRA TERAPIA 60015656/BNCR
+05/11/2025  | 96297548  |             | ₡70,000.00   | ADELANTO DE SALARIO/ALVARO VELASCO J.
+03/11/2025  | 90537678  | ₡20,000.00  |              | ALE Y ALVARO 87682761/ARIAS FALLAS ALEJAND
+03/11/2025  | 90535048  |             | ₡24,650.00   | CENA PAS/ALVARO VELASCO J.
+03/11/2025  | 1253526   |             | ₡0.50        | INTERESES GANADOS EN SU CUENTA DE AHORRO/BNCR
+31/10/2025  | 95587806  | ₡25,000.00  |              | ALEJANDRA TERAPIA 60015656/BNCR
+30/10/2025  | 94503925  | ₡6,000.00   |              | TAMALES ALE Y ALVARO 87206357/BNCR
+30/10/2025  | 96755715  |             | ₡49,300.00   | CAMBIO DE MONEDA/ALVARO VELASCO J.
+
+TOTALES:
+Total Salidas:  ₡76,000.00
+Total Entradas: ₡143,950.50
+Flujo Neto:     +₡67,950.50
+
+ANÁLISIS:
+- Cuenta de ahorros en colones
+- Principal entrada: Adelanto salario ₡70,000
+- Cambio de moneda: ₡49,300 (~$86 USD convertidos)
+- Gastos personales y terapias
