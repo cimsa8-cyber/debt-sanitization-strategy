@@ -1,0 +1,22 @@
+TARJETA DE CRÉDITO BAC
+Número: VISA 9550
+Nombre: ALVARO VELASCO JIMENEZ
+Moneda: DOLARES
+
+SALDOS ACTUALES (06/11/2025):
+Saldo CRC: ₡1,419,305.54
+Saldo USD: $209.92
+
+CONVERSIÓN (TC ₡573/USD):
+- CRC: ₡1,419,305.54 = ~$2,477.05 USD
+- USD: $209.92
+TOTAL DEUDA: ~$2,686.97 USD
+
+NOTA:
+Balance Sheet del 3/nov mostraba ₡2,799.42 CRC
+Saldo actual mucho mayor - posibles nuevas compras o error en BS
+Se requiere:
+- Tasas de interés
+- Fecha de corte
+- Límite de crédito
+- Movimientos detallados

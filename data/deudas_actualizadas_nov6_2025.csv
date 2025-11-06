@@ -1,0 +1,10 @@
+tipo,cuenta,banco,moneda,saldo_moneda,saldo_usd,tasa_anual,estado
+tarjeta,VISA 3519,BNCR,DUAL,578648.64_CRC+30.06_USD,1040.00,30.00,activa
+tarjeta,VISA 9837,BNCR,DUAL,2030004.01_CRC+1775.45_USD,5318.00,29.04,activa
+tarjeta,VISA 6386,BNCR,DUAL,300728.61_CRC-1.41_USD,525.00,29.04,activa
+tarjeta,MC 8759,BNCR,DUAL,2841545.17_CRC+126.48_USD,5088.00,29.04,activa
+tarjeta,VISA 9550,BAC,DUAL,1419305.54_CRC+209.92_USD,2687.00,DESCONOCIDO,activa
+tarjeta,SIMAN,SIMAN,CRC,0.00,0.00,0.00,cancelada
+prestamo,Nissan,CarroFacil,USD,20142.00,20142.00,DESCONOCIDO,activa
+cuotas,CCSS,CCSS,USD,706.12,706.12,0.00,activa
+impuestos,Hacienda,Gobierno,USD,9804.00,9804.00,0.00,activa
