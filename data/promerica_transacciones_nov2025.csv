@@ -1,0 +1,14 @@
+TRANSACCIONES POR FECHA;;;;;
+;;;;;
+Banco Promerica Costa Rica;;;;;
+Fecha del reporte: jueves, 6 de noviembre de 2025 11:21;;;;;
+Rango de Fechas: 26/10/2025 - 6/11/2025;;;;;
+Número de cuenta: 10000003881708-SINPE COLONES;;;;;
+Transacciones;;;;;
+Fecha;Documento;Descripción;Débitos;Créditos;Saldo
+03/11/2025;67169898;TEF. ELEC pago CCSS;;360,000.00;360,000.00
+03/11/2025;2162309;CANCELACION FACTURAS CCSS-APL;179,710.00;;180,290.00
+03/11/2025;2248011;CANCELACION FACTURAS CCSS-APL;179,200.00;;1,090.00
+;;;;;
+Total de Débitos;358,910.00;;;;
+Total de Créditos;360,000.00;;;;
