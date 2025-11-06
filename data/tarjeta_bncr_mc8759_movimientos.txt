@@ -1,0 +1,52 @@
+BN-TARJETA DE CRÉDITO
+Movimientos al día de hoy
+
+Tarjeta: 5290-60XX-XXXX-8759
+Cuenta: CR93015114251564153761
+Nombre: ALVARO VELASCO JIMENEZ
+Tipo Tarjeta: TITULAR
+Límite de crédito: $6,000.00 Dólares
+
+TASAS:
+Interés anual (Colones): 35.04%
+Interés anual (Dólares): 29.04%
+
+FECHAS:
+Fecha de corte: 17/10/2025
+Fecha límite de pago: 03/11/2025
+
+SALDOS ACTUALES:
+Saldo disponible: ₡153,949.88 + $301.86
+Saldo Actual: ₡2,841,545.17 + $126.48
+
+MOVIMIENTOS DETALLADOS:
+Ref      | Fecha      | Tipo       | Establecimiento          | Monto          | Moneda
+03/11/2025:
+2961759  | 03/11/2025 | PAGOS      | DB CTA 100020876010664   | -₡300,000.00  | Colones
+
+02/11/2025:
+0        | 02/11/2025 | PAGOS      | PAGO DEBITO AUTOMATICO   | -$10.00       | Dólares
+
+01/11/2025:
+356611   | 01/11/2025 | COMPRAS    | ANTHROPIC                | $10.00        | Dólares
+
+25/10/2025:
+556829   | 25/10/2025 | COMPRAS    | APPLE.COM/BILL           | $39.99        | Dólares
+
+18/10/2025:
+845031   | 18/10/2025 | COMPRAS    | IVA NETFLIX.COM          | $2.47         | Dólares
+845031   | 18/10/2025 | COMPRAS    | NETFLIX.COM              | $18.98        | Dólares
+
+RESUMEN:
+Total débitos:  ₡0.00 + $71.44
+Total créditos: ₡300,000.00 + $10.00
+
+PAGOS REALIZADOS (Nov 2025):
+- 03/11: ₡300,000.00 (desde cuenta 601066) = ~$524 USD
+- 02/11: $10.00 (débito automático)
+TOTAL PAGADO: ₡300,000.00 + $10.00 (~$534 USD)
+
+SUSCRIPCIONES DETECTADAS:
+- Netflix: $21.45/mes (aprox)
+- Apple: $39.99
+- Anthropic (Claude): $10.00/mes
