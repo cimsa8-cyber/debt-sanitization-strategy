@@ -1,0 +1,69 @@
+ANÁLISIS: GASTOS OPERATIVOS VS SALDOS TARJETAS
+Fecha: 06/11/2025
+
+═══════════════════════════════════════════════════════════════
+
+IMPORTANTE: Los gastos operativos pagados con TC ya están
+reflejados en los SALDOS de las tarjetas. NO deben contarse
+como gastos adicionales para evitar DUPLICACIÓN.
+
+═══════════════════════════════════════════════════════════════
+
+GASTOS DETECTADOS PAGADOS CON TC:
+
+1. UNOPETROL (30/10): ₡30,946 (~$54)
+   - Pagado con tarjeta de crédito
+   - YA INCLUIDO en saldo de tarjeta
+
+2. BUENOS AIRES (30/10): ₡111,373 (~$194)
+   - Pagado con tarjeta (Aceptado)
+   - YA INCLUIDO en saldo de tarjeta
+
+═══════════════════════════════════════════════════════════════
+
+CUENTAS POR PAGAR REALES (NO DUPLICADAS):
+
+1. Intcomex - Lenovo (04/11):
+   - Monto: $679.12
+   - Plazo: 30 días
+   - Vence: ~04/12/2025
+
+2. Intcomex - Cloud Services (03/11):
+   - Monto: $2,317.09
+   - Plazo: 30 días
+   - Vence: ~03/12/2025
+
+TOTAL CUENTAS POR PAGAR: $2,996.21
+
+═══════════════════════════════════════════════════════════════
+
+MARGEN BRUTO CORRECTO (Oct 29 - Nov 5):
+
+Ingresos facturados:        $3,726.91
+(-) Costo directo bienes:   $600.99 (Lenovo para Waipio)
+(-) Servicios cloud:         $2,050.52 (IaaS)
+(=) MARGEN BRUTO:           $1,075.40
+
+IVA cobrado:                $484.45
+IVA pagado:                 $344.70
+IVA neto a pagar:           $139.75
+
+═══════════════════════════════════════════════════════════════
+
+GASTOS OPERATIVOS EN TARJETAS (ya en saldo TC):
+- Gasolina: ~$54
+- Suministros: ~$194
+- Suscripciones: ~$71 (Netflix, Apple, Claude)
+- Supermercado/Alimentación: ~$320
+- Otros gastos personales: ~$150
+
+Estos NO se suman a cuentas por pagar porque ya están
+contabilizados en los saldos de las tarjetas de crédito.
+
+═══════════════════════════════════════════════════════════════
+
+RESUMEN:
+✅ Margen bruto período: $1,075.40
+✅ Cuentas por pagar (Dic): $2,996.21
+✅ Gastos operativos: Incluidos en saldo TC
+✅ No hay duplicación de gastos
