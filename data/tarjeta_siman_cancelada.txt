@@ -1,0 +1,11 @@
+TARJETA SIMAN
+Estado: CANCELADA
+
+Fecha de cancelación: 05/11/2025
+Saldo previo: ₡666.63 (~$1.16 USD)
+Pago realizado: PAGO TOTAL
+Saldo actual: ₡0.00
+
+Nota: Cuenta pagada en su totalidad y cancelada según información del usuario.
+Se realizó pago desde cuenta BNCR 100-02-087-601066-4 por $681.42 (05/11/2025)
+que incluía saldo + cierre de cuenta.
