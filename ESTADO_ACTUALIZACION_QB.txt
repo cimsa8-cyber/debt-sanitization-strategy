@@ -45,18 +45,29 @@ DATOS DE REFERENCIA
 ═══════════════════════════════════════════════════════════════
 
 ARCHIVOS CLAVE:
+- PLAN_EJECUTIVO_QB_ACTUALIZADO.txt ⭐ USAR ESTE (3h 10min)
+- SALDOS_INICIALES_01NOV2025.txt (todos los saldos al 01/11)
 - GUIA_QB_PASO_A_PASO.txt (guía original completa)
-- PLAN_RAPIDO_QB_1NOV.txt (plan ejecutivo rápido)
 - CUENTAS_CREAR_EN_QB.txt (lista cuentas a crear)
 - comparacion_BS_vs_real_nov6.txt (análisis diferencias)
 - Carpeta datos: /home/user/debt-sanitization-strategy/data/
 
+DATOS ACTUALIZADOS (desde MD anterior):
+✅ Saldos iniciales 01/11/2025: VERIFICADOS
+✅ A/P total: $6,186.02 USD + ₡144,516 CRC (9 facturas, 5 proveedores)
+  - INTCOMEX: $3,547.35 (⚠️ 27 días mora al 01/11)
+  - EUROCOMP: $2,024.60
+  - SGL: $44.07
+  - Comp. Económicos: $284.91
+  - IBASA/Don Fernando: ₡144,516
+✅ A/R inicial: $10,866.42
+✅ Corrección BAC 9550: +₡1,416,506.11
+
 MOVIMIENTOS A REGISTRAR (01-06 NOV):
-Facturas emitidas: 8 ($3,726.91)
-Compras recibidas: 2 ($2,996.21) + gastos menores
-Pagos tarjetas: ~$2,708
-Corrección crítica: BAC 9550 (+₡1,416,506.11)
-A/R inicial: $10,866.42
+- Facturas emitidas: 8 ($3,726.91)
+- Compras recibidas: 2 Intcomex ($2,996.21)
+- Pagos tarjetas: ~$2,708
+- Pago SIMAN cancelación: $681.42
 
 ═══════════════════════════════════════════════════════════════
 PARA CONTINUAR EN PRÓXIMA SESIÓN
