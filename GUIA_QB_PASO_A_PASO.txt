@@ -1,0 +1,491 @@
+═══════════════════════════════════════════════════════════════
+GUÍA QUICKBOOKS DESKTOP 2013 - PASO A PASO
+Actualización Balance Sheet del 03/11 al 06/11/2025
+Usuario: Alvaro Velasco - Nivel: Principiante
+═══════════════════════════════════════════════════════════════
+
+IMPORTANTE:
+- Hacer backup de QB ANTES de empezar
+- Seguir pasos EN ORDEN
+- Confirmar cada paso antes de continuar
+- Reportar cualquier error o duda
+- Guardar después de cada sección completada
+
+═══════════════════════════════════════════════════════════════
+ÍNDICE DE PASOS
+═══════════════════════════════════════════════════════════════
+
+FASE 0: PREPARACIÓN (antes de empezar)
+FASE 1: CORRECCIÓN BAC 9550 (crítico)
+FASE 2: REGISTRAR FACTURAS EMITIDAS (4 facturas)
+FASE 3: REGISTRAR FACTURAS RECIBIDAS (2 facturas)
+FASE 4: APLICAR COBROS A CLIENTES (5 cobros)
+FASE 5: REGISTRAR PAGO TARJETA SIMAN (cancelación)
+FASE 6: CONCILIACIÓN BANCARIA (3 cuentas)
+FASE 7: VALIDACIÓN FINAL (verificar todo cuadra)
+
+═══════════════════════════════════════════════════════════════
+FASE 0: PREPARACIÓN
+═══════════════════════════════════════════════════════════════
+
+PASO 0.1 - HACER BACKUP
+□ Abrir QuickBooks Desktop 2013
+□ Menú: File → Back Up Company → Create Local Backup
+□ Elegir ubicación segura
+□ Nombre sugerido: "Backup_PreActualizacion_06NOV2025.qbb"
+□ Confirmar que backup se completó
+
+PASO 0.2 - VERIFICAR FECHA DE TRABAJO
+□ Esquina superior derecha de QB
+□ Verificar que esté en: 06/11/2025
+□ Si no, cambiar a esa fecha
+
+PASO 0.3 - IMPRIMIR BALANCE SHEET ACTUAL
+□ Menú: Reports → Company & Financial → Balance Sheet Standard
+□ Cambiar fecha a: 03/11/2025
+□ Imprimir o exportar a PDF
+□ Guardar como: "BalanceSheet_ANTES_03NOV2025.pdf"
+
+PASO 0.4 - VERIFICAR SALDOS INICIALES
+Anota los siguientes saldos actuales:
+
+Cuentas Bancarias:
+- Promerica USD: ____________
+- BNCR CRC 188618: ____________
+- BNCR USD 601066: ____________
+
+Tarjetas de Crédito:
+- VISA 3519 CRC: ____________
+- VISA 9837 CRC: ____________
+- VISA 9837 USD: ____________
+- MC 8759 CRC: ____________
+- MC 8759 USD: ____________
+- BAC 9550 CRC: ____________ (debe mostrar ₡2,799.42 ERROR)
+- BAC 9550 USD: ____________
+
+Cuentas por Cobrar:
+- Total AR: ____________ (debe ser ~$10,866)
+
+Cuentas por Pagar:
+- Total AP: ____________
+
+═══════════════════════════════════════════════════════════════
+FASE 1: CORRECCIÓN CRÍTICA BAC 9550
+═══════════════════════════════════════════════════════════════
+
+PROBLEMA: El saldo de BAC 9550 CRC está incorrecto en QB
+Debe decir: ₡1,419,305.53
+Actualmente dice: ₡2,799.42
+
+PASO 1.1 - CREAR ASIENTO DE AJUSTE
+□ Menú: Company → Make General Journal Entries
+□ Fecha: 03/11/2025
+□ Entry No: (dejar que QB lo asigne automáticamente)
+
+PASO 1.2 - LLENAR ASIENTO
+Línea 1:
+□ Account: 2140 · TC VISA BAC 9550 CRC (buscar en lista)
+□ Debit: 1416506.11
+□ Credit: (dejar vacío)
+□ Memo: "Ajuste corrección saldo inicial tarjeta"
+
+Línea 2:
+□ Account: 3900 · Retained Earnings (o cuenta de ajustes)
+□ Debit: (dejar vacío)
+□ Credit: 1416506.11
+□ Memo: "Ajuste corrección saldo inicial tarjeta"
+
+PASO 1.3 - REVISAR Y GUARDAR
+□ Verificar que Debit = Credit (ambos 1,416,506.11)
+□ Click: Save & Close
+□ Si QB pregunta algo, leer y aceptar
+
+PASO 1.4 - VERIFICAR CORRECCIÓN
+□ Menú: Reports → Company & Financial → Balance Sheet Standard
+□ Fecha: 03/11/2025
+□ Buscar: TC VISA BAC 9550 CRC
+□ DEBE MOSTRAR: ₡1,419,305.53 (aprox)
+□ CONFIRMAR ANTES DE CONTINUAR
+
+⚠️ CHECKPOINT 1:
+Anota el nuevo saldo BAC 9550 CRC: ____________
+Si NO es ~₡1,419,305: DETENTE y reporta
+
+═══════════════════════════════════════════════════════════════
+FASE 2: REGISTRAR FACTURAS EMITIDAS (VENTAS)
+═══════════════════════════════════════════════════════════════
+
+Vamos a registrar 4 facturas emitidas del 04-05/11/2025
+
+PASO 2.1 - FACTURA WAIPIO (04/11)
+□ Menú: Customers → Create Invoices
+□ Customer: WAIPIO SOCIEDAD ANONIMA
+□ Template: (el que uses normalmente)
+□ Date: 04/11/2025
+□ Invoice #: 2554
+
+Línea de detalle:
+□ Item: (crear/usar item de productos)
+□ Description: COMPUTADORA LENOVO V15 G4-NOTEBOOK 15.6
+□ Quantity: 1
+□ Rate: 684.00
+□ Amount: 684.00
+□ Tax: 13% (IVA)
+
+Verificar totales:
+□ Subtotal: $684.00
+□ Tax: $88.92
+□ Total: $772.92
+
+□ Click: Save & Next
+
+PASO 2.2 - FACTURA GRUPO PORCINAS (04/11)
+□ Customer: GRUPO PORCINAS DE LA COSTA SOCIEDAD ANONIMA
+□ Date: 04/11/2025
+□ Invoice #: 2553
+
+Línea de detalle:
+□ Description: Microsoft 365 + Exchange Online
+□ Quantity: 1
+□ Rate: 229.15
+□ Tax: 13%
+
+Verificar totales:
+□ Subtotal: $229.15
+□ Tax: $29.79
+□ Total: $258.94
+
+□ Click: Save & Next
+
+PASO 2.3 - FACTURA OSSENBACH (04/11)
+□ Customer: OSSENBACH SAUTER MANUEL
+□ Date: 04/11/2025
+□ Invoice #: 2552
+
+Línea de detalle:
+□ Description: Soporte Tecnico del mes de Octubre
+□ Quantity: 1
+□ Rate: 100.00
+□ Tax: 13%
+
+Verificar totales:
+□ Subtotal: $100.00
+□ Tax: $13.00
+□ Total: $113.00
+
+□ Click: Save & Next
+
+PASO 2.4 - FACTURA GENTRA (05/11)
+□ Customer: GENTRA DE COSTA RICA SOCIEDAD ANONIMA
+□ Date: 05/11/2025
+□ Invoice #: 2555
+
+Línea de detalle:
+□ Description: Paquete de software de otras aplicaciones
+□ Quantity: 1
+□ Rate: 400.00
+□ Tax: 13%
+
+Verificar totales:
+□ Subtotal: $400.00
+□ Tax: $52.00
+□ Total: $452.00
+
+□ Click: Save & Close
+
+⚠️ CHECKPOINT 2:
+□ Menú: Reports → Customers & Receivables → A/R Aging Summary
+□ Total AR debe haber AUMENTADO en: $1,596.86
+□ Nuevo total AR aproximado: $12,462.86
+□ Anota el total: ____________
+□ CONFIRMAR ANTES DE CONTINUAR
+
+═══════════════════════════════════════════════════════════════
+FASE 3: REGISTRAR FACTURAS RECIBIDAS (COMPRAS)
+═══════════════════════════════════════════════════════════════
+
+Vamos a registrar 2 facturas de proveedores
+
+PASO 3.1 - FACTURA INTCOMEX CLOUD (03/11)
+□ Menú: Vendors → Enter Bills
+□ Vendor: Intcomex Costa Rica
+□ Date: 03/11/2025
+□ Ref. No.: 830260
+□ Amount Due: 2317.09
+□ Terms: Net 30
+
+Pestaña Expenses:
+□ Account: 5000 · Costo de Ventas (o Cost of Goods Sold)
+□ Amount: 2050.52
+□ Memo: Servicios Cloud IaaS Oct 2025
+
+Pestaña Items: (si usas)
+□ IVA Acreditable: 266.57
+
+Verificar:
+□ Total: $2,317.09
+□ Due Date: ~03/12/2025
+
+□ Click: Save & Next
+
+PASO 3.2 - FACTURA INTCOMEX LENOVO (04/11)
+□ Vendor: Intcomex Costa Rica
+□ Date: 04/11/2025
+□ Ref. No.: 830439
+□ Amount Due: 679.12
+□ Terms: Net 30
+
+Pestaña Expenses:
+□ Account: 1100 · Inventario (o 5000 Costo de Ventas)
+□ Amount: 600.99
+□ Memo: Lenovo V15 G4 + Flete
+
+IVA:
+□ IVA Acreditable: 78.13
+
+Verificar:
+□ Total: $679.12
+□ Due Date: ~04/12/2025
+
+□ Click: Save & Close
+
+⚠️ CHECKPOINT 3:
+□ Menú: Reports → Vendors & Payables → A/P Aging Summary
+□ Total AP debe haber AUMENTADO en: $2,996.21
+□ Anota el nuevo total AP: ____________
+□ CONFIRMAR ANTES DE CONTINUAR
+
+═══════════════════════════════════════════════════════════════
+FASE 4: APLICAR COBROS DE CLIENTES
+═══════════════════════════════════════════════════════════════
+
+Vamos a aplicar 5 pagos recibidos de clientes
+
+PASO 4.1 - COBRO AMBIENTES (31/10)
+□ Menú: Customers → Receive Payments
+□ Received From: AMBIENTES CON TECNOLOGIA TECNOAMBIENTES SA
+□ Amount: 1418.15
+□ Date: 31/10/2025
+□ Payment Method: Transferencia (o el que corresponda)
+□ Deposit To: 1010 · Banco Promerica USD Principal
+
+□ Marcar facturas a aplicar (QB debe mostrar facturas pendientes)
+□ Verificar que el monto coincida
+□ Click: Save & Next
+
+PASO 4.2 - COBRO GRUPO ACCION (29/10)
+□ Received From: GRUPO ACCION COMERCIAL S.A.
+□ Amount: 847.00
+□ Date: 29/10/2025
+□ Deposit To: 1030 · BNCR USD Operativa Empresa
+
+□ Marcar facturas a aplicar
+□ Click: Save & Next
+
+PASO 4.3 - COBRO OSSENBACH (29/10)
+□ Received From: OSSENBACH SAUTER MANUEL
+□ Amount: 1747.10
+□ Date: 29/10/2025
+□ Deposit To: 1030 · BNCR USD Operativa Empresa
+
+□ Marcar facturas a aplicar
+□ Click: Save & Next
+
+PASO 4.4 - COBRO SEVILLA (27/10)
+□ Received From: SEVILLA NAVARRO EDGAR
+□ Amount: 113.00
+□ Date: 27/10/2025
+□ Deposit To: 1030 · BNCR USD Operativa Empresa
+
+□ Marcar facturas a aplicar
+□ Click: Save & Next
+
+PASO 4.5 - COBRO PEREZ BENAVIDES (04/11)
+□ Received From: PEREZ BENAVIDES (verificar nombre exacto)
+□ Amount: 761.06
+□ Date: 04/11/2025
+□ Deposit To: 1010 · Banco Promerica USD Principal
+
+□ Marcar facturas a aplicar
+□ Click: Save & Close
+
+⚠️ CHECKPOINT 4:
+□ Menú: Reports → Customers & Receivables → A/R Aging Summary
+□ Total AR debe haber DISMINUIDO en: $4,125.25
+□ Nuevo AR esperado: ~$8,337.61
+□ Anota el total AR: ____________
+□ CONFIRMAR ANTES DE CONTINUAR
+
+═══════════════════════════════════════════════════════════════
+FASE 5: REGISTRAR PAGO TARJETA SIMAN
+═══════════════════════════════════════════════════════════════
+
+PASO 5.1 - PAGO SIMAN (05/11)
+□ Menú: Banking → Write Checks
+□ Bank Account: 1030 · BNCR USD (cuenta 100-02-087-601066-4)
+□ Date: 05/11/2025
+□ Check No: (poner "TFT" o "TRANSFER")
+□ Pay to the Order of: SIMAN (o cuenta interna de tarjeta)
+□ Amount: 681.42
+
+Pestaña Expenses:
+□ Account: 2160 · TC SIMAN CRC
+□ Amount: 681.42
+□ Memo: Pago cancelación total tarjeta SIMAN
+
+□ Click: Save & Close
+
+PASO 5.2 - VERIFICAR SALDO SIMAN
+□ Menú: Reports → Company & Financial → Balance Sheet Standard
+□ Fecha: 06/11/2025
+□ Buscar: TC SIMAN
+□ DEBE MOSTRAR: $0.00 o muy cercano a cero
+□ Si no es así, DETENTE y reporta
+
+⚠️ CHECKPOINT 5:
+Saldo SIMAN después del pago: ____________
+Debe ser $0 o cercano a $0
+
+═══════════════════════════════════════════════════════════════
+FASE 6: CONCILIACIÓN BANCARIA
+═══════════════════════════════════════════════════════════════
+
+PASO 6.1 - CONCILIAR PROMERICA USD
+□ Menú: Banking → Reconcile
+□ Account: 1010 · Banco Promerica USD Principal
+□ Statement Date: 06/11/2025
+□ Ending Balance: 3058.75
+
+□ Marcar transacciones que aparecen en estado de cuenta
+□ Incluir:
+  - Cobro AMBIENTES $1,418.15 (31/10)
+  - Cobro PEREZ BENAVIDES $761.06 (04/11)
+  - Otros movimientos vistos en el estado
+
+□ Verificar que la diferencia sea $0.00
+□ Click: Reconcile Now
+
+Si no cuadra:
+□ DETENTE y reporta la diferencia
+
+PASO 6.2 - CONCILIAR BNCR CRC
+□ Account: 1070 · BNCR CRC Operativa Empresa (188618-3)
+□ Statement Date: 06/11/2025
+□ Ending Balance: 337.24 (en colones, convertir si es necesario)
+
+□ Marcar pagos a tarjetas realizados
+□ Incluir adelanto salario
+□ Verificar diferencia = $0.00
+□ Reconcile
+
+PASO 6.3 - CONCILIAR BNCR USD
+□ Account: 1030 · BNCR USD Operativa Empresa (601066-4)
+□ Statement Date: 06/11/2025
+□ Ending Balance: 1326.35
+
+□ Marcar:
+  - Cobros clientes
+  - Pago SIMAN $681.42
+  - Pagos a tarjetas
+  - Ahorros programados
+
+□ Verificar diferencia = $0.00
+□ Reconcile
+
+⚠️ CHECKPOINT 6:
+□ Todas las cuentas bancarias deben estar reconciliadas
+□ Sin diferencias pendientes
+□ CONFIRMAR ANTES DE CONTINUAR
+
+═══════════════════════════════════════════════════════════════
+FASE 7: VALIDACIÓN FINAL
+═══════════════════════════════════════════════════════════════
+
+PASO 7.1 - GENERAR BALANCE SHEET ACTUALIZADO
+□ Menú: Reports → Company & Financial → Balance Sheet Standard
+□ Dates: As of 06/11/2025
+□ Exportar a PDF
+□ Guardar como: "BalanceSheet_DESPUES_06NOV2025.pdf"
+
+PASO 7.2 - VERIFICAR SALDOS BANCARIOS
+Comparar con saldos reales:
+
+Promerica USD:
+- QB debe mostrar: $3,058.75
+- Saldo real: $3,058.75
+- ¿Coincide? □ Sí □ No
+
+BNCR CRC:
+- QB debe mostrar: ₡337.24
+- Saldo real: ₡337.24
+- ¿Coincide? □ Sí □ No
+
+BNCR USD:
+- QB debe mostrar: $1,326.35
+- Saldo real: $1,326.35
+- ¿Coincide? □ Sí □ No
+
+PASO 7.3 - VERIFICAR CUENTAS POR COBRAR
+□ Menú: Reports → Customers & Receivables → A/R Aging Summary
+□ Total AR esperado: ~$8,337.61
+□ Total AR en QB: ____________
+□ Diferencia aceptable: < $10
+
+PASO 7.4 - VERIFICAR CUENTAS POR PAGAR
+□ Menú: Reports → Vendors & Payables → A/P Aging Summary
+□ Debe incluir:
+  - Intcomex Cloud $2,317.09
+  - Intcomex Lenovo $679.12
+□ Total AP en QB: ____________
+
+PASO 7.5 - VERIFICAR TARJETA SIMAN
+□ Balance Sheet → Buscar TC SIMAN
+□ Debe mostrar: $0.00
+□ ¿Coincide? □ Sí □ No
+
+PASO 7.6 - VERIFICAR TARJETA BAC 9550
+□ Balance Sheet → Buscar TC BAC 9550 CRC
+□ Debe mostrar: ~₡1,419,305.53
+□ Saldo mostrado: ____________
+□ ¿Coincide? □ Sí □ No
+
+PASO 7.7 - GENERAR PROFIT & LOSS
+□ Menú: Reports → Company & Financial → Profit & Loss Standard
+□ Dates: 01/11/2025 to 06/11/2025
+□ Verificar ingresos incluyen las 4 facturas nuevas
+□ Exportar a PDF
+
+PASO 7.8 - BACKUP FINAL
+□ Menú: File → Back Up Company → Create Local Backup
+□ Nombre: "Backup_PostActualizacion_06NOV2025_COMPLETO.qbb"
+□ Confirmar backup exitoso
+
+═══════════════════════════════════════════════════════════════
+RESUMEN DE CAMBIOS REALIZADOS
+═══════════════════════════════════════════════════════════════
+
+✅ Corrección BAC 9550: +₡1,416,506.11
+✅ Facturas emitidas: +$1,596.86 a AR
+✅ Facturas recibidas: +$2,996.21 a AP
+✅ Cobros aplicados: -$4,125.25 de AR
+✅ Pago SIMAN: -$681.42 (tarjeta cancelada)
+✅ 3 Cuentas bancarias conciliadas
+✅ Balance Sheet actualizado al 06/11/2025
+
+═══════════════════════════════════════════════════════════════
+PRÓXIMOS PASOS (POST-ACTUALIZACIÓN)
+═══════════════════════════════════════════════════════════════
+
+□ Revisar estado de cuenta BAC 9550 cuando llegue
+□ Registrar ajuste VISA 6386 (Clearcheck $200 + ₡159k)
+□ Preparar pago BAC 9550 (vence 13/11)
+□ Actualizar proyecciones flujo de caja
+□ Generar reportes financieros mensuales
+
+═══════════════════════════════════════════════════════════════
+FIN DE LA GUÍA
+═══════════════════════════════════════════════════════════════
+
+CONTACTO/SOPORTE:
+Si encuentras errores o tienes dudas en cualquier paso,
+DETENTE y consulta antes de continuar.
