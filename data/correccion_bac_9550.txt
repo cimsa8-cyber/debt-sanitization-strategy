@@ -1,0 +1,67 @@
+CORRECCIÓN BAC VISA 9550 - ERROR DE CAPTURA QB
+Fecha corrección: 06/11/2025
+
+═══════════════════════════════════════════════════════════════
+
+PROBLEMA IDENTIFICADO:
+Error en Balance Sheet (03/11/2025) - Tarjeta BAC VISA 9550
+
+DATO INCORRECTO EN QB:
+TC VISA BAC 9550 CRC:  ₡2,799.42 ❌ (mal ubicado/registrado)
+TC VISA BAC 9550 USD:  $209.92 ✅
+
+═══════════════════════════════════════════════════════════════
+
+CORRECCIÓN REQUERIDA:
+
+ELIMINAR del Balance Sheet:
+- Cuenta: TC VISA BAC 9550 CRC
+- Monto erróneo: ₡2,799.42
+
+REGISTRAR correctamente:
+- Cuenta: TC VISA BAC 9550 CRC
+- Monto correcto: ₡1,419,305.53
+- Cuenta: TC VISA BAC 9550 USD
+- Monto: $209.92 (ya correcto)
+
+═══════════════════════════════════════════════════════════════
+
+VERIFICACIÓN POST-CORRECCIÓN:
+
+SALDO CORREGIDO QB (03/11):
+- CRC: ₡1,419,305.53
+- USD: $209.92
+- EQUIVALENTE USD: ~$2,687
+
+SALDO REAL ACTUAL (06/11):
+- CRC: ₡1,419,305.54
+- USD: $209.92
+- EQUIVALENTE USD: ~$2,687
+
+DIFERENCIA: ₡0.01 (redondeo) ✅
+
+═══════════════════════════════════════════════════════════════
+
+CONCLUSIÓN:
+✅ No hay compras misteriosas
+✅ No hay transacciones sin explicar
+✅ Solo fue error de captura en QuickBooks
+✅ Saldo real coincide con saldo correcto
+
+ACCIÓN EN QB:
+1. Editar cuenta "TC VISA BAC 9550 CRC"
+2. Cambiar monto de ₡2,799.42 a ₡1,419,305.53
+3. Verificar que USD permanezca en $209.92
+4. Regenerar Balance Sheet
+
+ASIENTO DE CORRECCIÓN:
+--------------------------------------
+DEBE  | 2140 TC VISA BAC 9550 CRC | ₡1,416,506.11
+HABER | 3000 Ajustes (Equity)     | ₡1,416,506.11
+Concepto: Corrección error captura saldo inicial tarjeta
+
+═══════════════════════════════════════════════════════════════
+
+RESULTADO FINAL:
+Todos los saldos de tarjetas ahora coinciden correctamente.
+No hay discrepancias pendientes de investigar.
