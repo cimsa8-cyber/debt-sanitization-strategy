@@ -1,0 +1,21 @@
+BANCO NACIONAL DE COSTA RICA
+Información detallada de la cuenta
+Nombre: ALVARO VELASCO JIMENEZ
+Cuenta: 200-02-087-009589-4
+IBAN: CR21015108720020095899
+Moneda: DOLARES
+Estado: Activa
+Periodo: 27/10/2025 - 06/11/2025
+
+SALDOS:
+Saldo disponible: $0.43
+Saldo bloqueado:  $0.00
+Saldo congelado:  $0.00
+
+MOVIMIENTOS:
+Sin movimientos en el periodo
+
+TOTALES:
+Total Salidas:  $0.00
+Total Entradas: $0.00
+Flujo Neto:     $0.00
