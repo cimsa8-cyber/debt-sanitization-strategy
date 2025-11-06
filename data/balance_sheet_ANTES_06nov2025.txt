@@ -1,0 +1,68 @@
+BALANCE SHEET INICIAL - ANTES DE ACTUALIZACIÓN
+Fecha: 06/11/2025
+QuickBooks Desktop 2013
+
+═══════════════════════════════════════════════════════════════
+ASSETS
+═══════════════════════════════════════════════════════════════
+
+CHECKING/SAVINGS:
+1010 · Banco Promerica USD Principal        $3,030.89
+1030 · BNCR USD Operativa Empresa          $3,149.94
+1040 · BNCR USD Reservas                   $0.43
+1070 · BNCR CRC Operativa Empresa          $148.59
+1080 · BNCR USD Personal Alvaro            $21.84
+1090 · BNCR CRC Personal Alvaro            $45.27
+1110 · Ahorro Impuestos Marchamo           $2,262.03
+1120 · Ahorro Vehiculo                     $4,485.19
+1130 · Ahorro Matrimonio                   $930.30
+1140 · Ahorro Black Friday                 $260.25
+                                           -----------
+TOTAL CHECKING/SAVINGS:                    $14,334.73
+
+TOTAL ASSETS:                              $14,334.73
+
+═══════════════════════════════════════════════════════════════
+LIABILITIES
+═══════════════════════════════════════════════════════════════
+
+CREDIT CARDS:
+1610 · VISA 6386 Credito a Favor          -$200.00
+2010 · TC VISA 9837 USD                    $1,775.45
+2030 · TC MC 8759 USD                      $116.48
+2040 · TC VISA BAC 9550 USD                $209.92
+2110 · TC VISA 9837 CRC                    $4,003.96
+2120 · TC VISA 3519 CRC                    $702.98
+2130 · TC MC 8759 CRC                      $6,196.35
+2140 · TC VISA BAC 9550 CRC                $2,799.42  ❌ ERROR
+2150 · TC VISA 6386 CRC                    $906.76
+2160 · TC SIMAN CRC                        $666.63
+2610 · CCSS Cuotas Pendientes              $706.12
+                                           -----------
+TOTAL CREDIT CARDS:                        $17,884.07
+
+OTHER CURRENT LIABILITIES:
+2510 · Hacienda Impuestos Pendientes       $9,804.00
+2520 · Nissan Financiamiento               $20,142.00
+                                           -----------
+TOTAL OTHER CURRENT LIABILITIES:           $29,946.00
+
+TOTAL LIABILITIES:                         $47,830.07
+
+═══════════════════════════════════════════════════════════════
+EQUITY
+═══════════════════════════════════════════════════════════════
+
+3010 · Capital Social - Empresa            -$8,045,366.09
+3020 · Capital - Personal Alvaro           $22,972.34
+Net Income                                 $7,988,898.41
+                                           -----------
+TOTAL EQUITY:                              -$33,495.34
+
+═══════════════════════════════════════════════════════════════
+TOTAL LIABILITIES & EQUITY:                $14,334.73
+═══════════════════════════════════════════════════════════════
+
+ERROR IDENTIFICADO:
+2140 · TC VISA BAC 9550 CRC: $2,799.42
+DEBE SER: $1,419,305.53 (en colones, ~$2,477 USD)

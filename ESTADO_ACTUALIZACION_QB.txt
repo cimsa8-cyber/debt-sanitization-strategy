@@ -16,9 +16,11 @@ COMPLETADO:
 ✅ FASE 0.2 - Fecha trabajo verificada
    Fecha en QB: 06/11/2025
 
+✅ FASE 0.3 - Balance Sheet inicial capturado
+   Archivo: balance_sheet_ANTES_06nov2025.txt
+   Fecha BS: 06/11/2025
+
 PENDIENTE:
-□ FASE 0.3 - Imprimir Balance Sheet inicial
-□ FASE 0.3 - Imprimir Balance Sheet inicial
 □ FASE 0.4 - Anotar saldos iniciales
 □ FASE 1 - Corrección BAC 9550
 □ FASE 2 - Registrar facturas emitidas
