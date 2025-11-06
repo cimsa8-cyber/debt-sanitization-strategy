@@ -1,0 +1,95 @@
+CONSOLIDADO PAGOS A TARJETAS
+Periodo: 27/10/2025 - 06/11/2025
+
+═══════════════════════════════════════════════════════════════
+
+PAGOS REALIZADOS DESDE CUENTAS BNCR:
+
+═══════════════════════════════════════════════════════════════
+
+CUENTA CRC 100-01-000-188618-3:
+
+03/11/2025:
+- MC 8759:              ₡5,070.00       (~$9)
+- VISA 9837:            ₡31,434.00      (~$55)
+- VISA 9837:            ₡271,600.00     (~$474)
+
+27/10/2025:
+- VISA 3519:            ₡10,000.00      (~$17)
+
+SUBTOTAL CRC:           ₡318,104.00     (~$555)
+
+═══════════════════════════════════════════════════════════════
+
+CUENTA USD 100-02-087-601066-4:
+
+05/11/2025:
+- SIMAN (cancelación):  $681.42         ✅ PAGADA
+
+03/11/2025:
+- MC 8759:              $607.29
+- VISA 6386:            $321.86
+
+27/10/2025:
+- VISA 3519:            $200.00
+
+SUBTOTAL USD:           $1,810.57
+
+═══════════════════════════════════════════════════════════════
+
+CUENTA USD 200-02-087-011112-1:
+
+30/10/2025:
+- VISA 3519:            $202.84
+- VISA 3519:            $139.72
+
+SUBTOTAL USD:           $342.56
+
+═══════════════════════════════════════════════════════════════
+
+TOTAL PAGOS REALIZADOS:
+- CRC:                  ₡318,104.00     (~$555)
+- USD:                  $2,153.13
+- EQUIVALENTE USD:      ~$2,708
+
+═══════════════════════════════════════════════════════════════
+
+MOVIMIENTOS PENDIENTES VISA 6386 (post-corte 17/10):
+
+Según usuario:
+1. Cargo: $200 a Clearcheck Mexico (para usar crédito a favor)
+2. Abono: ₡159,000 al saldo de colones
+
+Estado actual reportado:
+- Saldo CRC: ₡300,728.61
+- Saldo USD: -$1.41 (crédito a favor)
+
+Estado proyectado después de movimientos:
+- Saldo CRC: ₡300,728.61 - ₡159,000 = ₡141,728.61 (~$247)
+- Saldo USD: -$1.41 + $200 = $198.59
+
+NUEVO SALDO PROYECTADO 6386: ~$446 (vs $525 anterior)
+
+═══════════════════════════════════════════════════════════════
+
+RESUMEN SALDOS DESPUÉS DE PAGOS:
+
+TARJETA          | SALDO ORIGINAL | PAGADO   | NUEVO SALDO*
+VISA 3519        | $1,040        | $742     | $298
+VISA 9837        | $5,318        | $529     | $4,789
+VISA 6386        | $525          | $322+aju | $446 (proj)
+MC 8759          | $5,088        | $616     | $4,472
+BAC 9550         | $2,687        | $0       | $2,687 ⚠️
+SIMAN            | $667          | $681     | $0 ✅
+
+TOTAL TC:        | $15,325       | $2,890   | $12,692
+
+*Saldos al 6/nov, algunos movimientos post-corte pendientes
+
+═══════════════════════════════════════════════════════════════
+
+NOTA IMPORTANTE:
+Los saldos mostrados en las consultas del 6/nov pueden no reflejar
+todos los cargos/abonos posteriores al corte. Los movimientos en
+VISA 6386 (Clearcheck $200 + abono ₡159k) aparecerán en el
+próximo estado de cuenta.
