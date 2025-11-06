@@ -1,0 +1,376 @@
+PLAN EJECUTIVO QUICKBOOKS - ACTUALIZADO CON DATOS REALES
+Fecha: 06/11/2025
+Inicio QB: 01/11/2025
+
+═══════════════════════════════════════════════════════════════
+DATOS CONFIRMADOS ✅
+═══════════════════════════════════════════════════════════════
+
+✅ Saldos iniciales al 01/11/2025: VERIFICADOS
+✅ A/P (Cuentas por Pagar): $6,186.02 USD + ₡144,516 CRC
+✅ A/R (Cuentas por Cobrar): $10,866.42 USD
+✅ Error BAC 9550: +₡1,416,506.11 confirmado
+✅ Catálogo de cuentas: Definido (del MD anterior)
+
+═══════════════════════════════════════════════════════════════
+OPCIÓN RECOMENDADA: HÍBRIDO PRAGMÁTICO (3-4 HORAS)
+═══════════════════════════════════════════════════════════════
+
+Razón: Tienes todos los datos necesarios, pero necesitas QB
+       operativo YA para seguir facturando y pagando.
+
+═══════════════════════════════════════════════════════════════
+FASE 1: CREAR CUENTAS EN QB (20 minutos)
+═══════════════════════════════════════════════════════════════
+
+Menu: Lists → Chart of Accounts → Account → New
+
+ACTIVOS (1000-1999):
+─────────────────────────────────────────────────────────────
+✅ 1010 · Banco Promerica USD Principal (Bank, USD)
+✅ 1030 · BNCR USD Operativa Empresa (Bank, USD)
+✅ 1040 · BNCR USD Reservas (Bank, USD)
+✅ 1070 · BNCR CRC Operativa Empresa (Bank, CRC)
+✅ 1080 · BNCR USD Personal Alvaro (Bank, USD)
+✅ 1090 · BNCR CRC Personal Alvaro (Bank, CRC)
+✅ 1110 · Ahorro Impuestos Marchamo (Bank, USD)
+✅ 1120 · Ahorro Vehículo (Bank, USD)
+✅ 1130 · Ahorro Matrimonio (Bank, USD)
+✅ 1140 · Ahorro Black Friday (Bank, USD)
+
+NUEVAS (agregar a las que ya tienes):
+─────────────────────────────────────────────────────────────
+□ 1200 · Cuentas por Cobrar (Accounts Receivable)
+□ 1150 · IVA Crédito Fiscal (Other Current Asset)
+
+PASIVOS (2000-2999):
+─────────────────────────────────────────────────────────────
+✅ 2010 · TC VISA 9837 USD (Credit Card, USD)
+✅ 2030 · TC MC 8759 USD (Credit Card, USD)
+✅ 2040 · TC VISA BAC 9550 USD (Credit Card, USD)
+□ 2045 · TC VISA 6386 USD (Credit Card, USD) ← NUEVA
+✅ 2110 · TC VISA 9837 CRC (Credit Card, CRC)
+✅ 2120 · TC VISA 3519 CRC (Credit Card, CRC)
+✅ 2130 · TC MC 8759 CRC (Credit Card, CRC)
+✅ 2140 · TC VISA BAC 9550 CRC (Credit Card, CRC)
+✅ 2150 · TC VISA 6386 CRC (Credit Card, CRC)
+✅ 2160 · TC SIMAN CRC (Credit Card, CRC)
+✅ 2510 · Hacienda Impuestos Pendientes (Other Current Liability)
+✅ 2520 · Nissan Financiamiento (Long Term Liability, USD)
+✅ 2610 · CCSS Cuotas Pendientes (Other Current Liability, USD)
+
+NUEVAS (agregar):
+─────────────────────────────────────────────────────────────
+□ 2000 · Cuentas por Pagar (Accounts Payable)
+□ 2015 · IVA Débito Fiscal (Other Current Liability)
+
+PATRIMONIO (3000-3999):
+─────────────────────────────────────────────────────────────
+□ 3000 · Capital Social (Equity)
+□ 3900 · Ajustes de Apertura (Equity)
+
+INGRESOS (4000-4999):
+─────────────────────────────────────────────────────────────
+□ 4010 · Servicios Profesionales (Income)
+□ 4020 · Venta de Equipos (Income)
+□ 4030 · Servicios Cloud (Income)
+□ 4040 · Licencias Software (Income)
+
+COSTO DE VENTAS (5000-5999):
+─────────────────────────────────────────────────────────────
+□ 5100 · Costo Equipos (COGS)
+□ 5200 · Costo Licencias (COGS)
+□ 5300 · Costo Servicios Cloud (COGS)
+
+GASTOS (6000-6999):
+─────────────────────────────────────────────────────────────
+□ 6100 · Combustible (Expense)
+□ 6200 · Suministros (Expense)
+□ 6400 · Intereses Financieros (Expense)
+□ 6600 · Comisiones Bancarias (Expense)
+□ 6900 · Otros Gastos (Expense)
+
+═══════════════════════════════════════════════════════════════
+FASE 2: SALDOS INICIALES (30 minutos)
+═══════════════════════════════════════════════════════════════
+
+Menu: Lists → Chart of Accounts
+Seleccionar cada cuenta → Edit Account → Opening Balance
+
+Usar archivo: SALDOS_INICIALES_01NOV2025.txt
+
+BANCOS (11 cuentas):
+─────────────────────────────────────────────────────────────
+1010 Promerica USD:           $3,030.89     | Fecha: 01/11/2025
+1030 BNCR 10664 USD:          $4,867.33     | Fecha: 01/11/2025
+1040 BNCR 009589 USD:         $0.43         | Fecha: 01/11/2025
+1070 BNCR 188618 CRC:         ₡70,337.24    | Fecha: 01/11/2025
+1080 BNCR 011112 USD:         $21.84        | Fecha: 01/11/2025
+1090 BNCR 042186 CRC:         ₡45.27        | Fecha: 01/11/2025
+1110 Ahorro Impuestos:        $2,262.03     | Fecha: 01/11/2025
+1120 Ahorro Vehículo:         $4,485.19     | Fecha: 01/11/2025
+1130 Ahorro Matrimonio:       $930.30       | Fecha: 01/11/2025
+1140 Ahorro Black Friday:     $260.25       | Fecha: 01/11/2025
+
+TARJETAS (11 cuentas):
+─────────────────────────────────────────────────────────────
+2010 VISA 9837 USD:           $1,775.45     | 01/11/2025
+2030 MC 8759 USD:             $116.48       | 01/11/2025
+2040 BAC 9550 USD:            $209.92       | 01/11/2025
+2045 VISA 6386 USD:           -$200.00      | 01/11/2025 ⚠️ Crédito
+2110 VISA 9837 CRC:           ₡4,003.96     | 01/11/2025
+2120 VISA 3519 CRC:           ₡702.98       | 01/11/2025
+2130 MC 8759 CRC:             ₡6,196.35     | 01/11/2025
+2140 BAC 9550 CRC:            ₡2,799.42     | 01/11/2025 ⚠️ ERROR
+2150 VISA 6386 CRC:           ₡906.76       | 01/11/2025
+2160 SIMAN CRC:               ₡666.63       | 01/11/2025
+
+OTRAS DEUDAS (3 cuentas):
+─────────────────────────────────────────────────────────────
+2510 Hacienda:                $9,804.00     | 01/11/2025
+2520 Nissan:                  $20,142.00    | 01/11/2025
+2610 CCSS:                    $706.12       | 01/11/2025
+
+═══════════════════════════════════════════════════════════════
+FASE 3: CORREGIR ERROR BAC 9550 (5 minutos)
+═══════════════════════════════════════════════════════════════
+
+Menu: Company → Make General Journal Entries
+
+Fecha: 01/11/2025
+Entry #: GJ-001
+
+CUENTA                          | DEBE          | HABER
+─────────────────────────────────────────────────────────────
+2140 TC VISA BAC 9550 CRC       | ₡1,416,506.11 |
+3900 Ajustes de Apertura        |               | ₡1,416,506.11
+
+Memo: Corrección error captura saldo inicial BAC 9550
+
+VERIFICACIÓN:
+Después del asiento, 2140 debe mostrar:
+₡2,799.42 + ₡1,416,506.11 = ₡1,419,305.53 ✅
+
+═══════════════════════════════════════════════════════════════
+FASE 4: CREAR PROVEEDORES (10 minutos)
+═══════════════════════════════════════════════════════════════
+
+Menu: Vendors → Vendor Center → New Vendor
+
+PROVEEDOR 1:
+─────────────────────────────────────────────────────────────
+Vendor Name: INTCOMEX Costa Rica
+Company: INTCOMEX Costa Rica
+Account No: XCR017742
+Payment Terms: Net 30
+Currency: USD
+Tax ID: (si tienes)
+
+PROVEEDOR 2:
+─────────────────────────────────────────────────────────────
+Vendor Name: EUROCOMP DE COSTA RICA SA
+Company: EUROCOMP DE COSTA RICA S.A.
+Tax ID: 3-101-294674
+Payment Terms: Net 30
+Currency: USD
+
+PROVEEDOR 3:
+─────────────────────────────────────────────────────────────
+Vendor Name: SEA GLOBAL LOGISTICS
+Company: SEA GLOBAL LOGISTICS (SGL)
+Tax ID: 3-101-542077
+Payment Terms: Net 30
+Currency: USD
+
+PROVEEDOR 4:
+─────────────────────────────────────────────────────────────
+Vendor Name: COMPUTADORES ECONOMICOS SA
+Company: COMPUTADORES ECONOMICOS S.A.
+Tax ID: 3-101-306247
+Payment Terms: Net 30
+Currency: USD
+
+PROVEEDOR 5:
+─────────────────────────────────────────────────────────────
+Vendor Name: INDUSTRIAS BUENOS AIRES
+Company: INDUSTRIAS BUENOS AIRES (Don Fernando)
+Tax ID: 3-101-017589
+Payment Terms: Net 30
+Currency: CRC
+
+PROVEEDOR 6:
+─────────────────────────────────────────────────────────────
+Vendor Name: Intcomex Costa Rica
+(Ya registrado para las facturas Nov 3-4)
+
+═══════════════════════════════════════════════════════════════
+FASE 5: REGISTRAR A/P INICIAL (20 minutos)
+═══════════════════════════════════════════════════════════════
+
+Menu: Vendors → Enter Bills
+
+BILL 1 - INTCOMEX:
+─────────────────────────────────────────────────────────────
+Vendor: INTCOMEX Costa Rica
+Date: 04/10/2025
+Ref No: 2502060
+Amount Due: $410.09
+Terms: Net 30
+Due Date: 04/10/2025 (⚠️ VENCIDA 27 días al 01/11)
+Account: 5100 Costo Equipos (o según corresponda)
+Memo: Factura histórica - saldo pendiente
+
+BILL 2 - INTCOMEX:
+─────────────────────────────────────────────────────────────
+Vendor: INTCOMEX Costa Rica
+Date: 31/10/2025
+Ref No: 2509011
+Amount Due: $3,137.26
+Terms: Net 30
+Due Date: 31/10/2025 (⚠️ VENCIDA 1 día al 01/11)
+Account: 5100 Costo Equipos
+Memo: Factura histórica - saldo pendiente
+
+BILL 3 - EUROCOMP:
+─────────────────────────────────────────────────────────────
+Vendor: EUROCOMP DE COSTA RICA SA
+Date: 17/10/2025
+Ref No: 203637
+Amount Due: $2,007.68
+Terms: Net 30
+Due Date: 16/11/2025
+Account: 5100 Costo Equipos
+
+BILL 4 - EUROCOMP:
+─────────────────────────────────────────────────────────────
+Vendor: EUROCOMP DE COSTA RICA SA
+Date: 20/10/2025
+Ref No: 203831
+Amount Due: $16.92
+Terms: Net 30
+Due Date: 19/11/2025
+Account: 5100 Costo Equipos
+
+BILL 5, 6, 7 - SGL:
+─────────────────────────────────────────────────────────────
+Vendor: SEA GLOBAL LOGISTICS
+Date: 03/10/2025, Ref: 003214, Amount: $14.69
+Date: 06/10/2025, Ref: 003220, Amount: $14.69
+Date: 10/10/2025, Ref: 003226, Amount: $14.69
+Account: 6900 Otros Gastos
+Due Date: ~30 días después de cada fecha
+
+BILL 8 - COMP ECONOMICOS:
+─────────────────────────────────────────────────────────────
+Vendor: COMPUTADORES ECONOMICOS SA
+Date: 24/10/2025
+Ref No: 012616
+Amount Due: $284.91
+Terms: Net 30
+Due Date: 23/11/2025
+Account: 5100 Costo Equipos
+
+BILL 9 - IBASA:
+─────────────────────────────────────────────────────────────
+Vendor: INDUSTRIAS BUENOS AIRES
+Date: 27/09/2025
+Ref No: 004210
+Amount Due: ₡144,515.99
+Terms: Net 30
+Due Date: 27/10/2025 (⚠️ VENCIDA)
+Account: 6200 Suministros
+Currency: CRC
+
+VERIFICACIÓN DESPUÉS:
+Reports → Vendors & Payables → A/P Aging Summary
+Debe mostrar: $5,901.02 USD + ₡144,515.99 CRC ✅
+
+═══════════════════════════════════════════════════════════════
+FASE 6: REGISTRAR A/R INICIAL (15 minutos)
+═══════════════════════════════════════════════════════════════
+
+OPCIÓN A - RÁPIDA (Saldo global):
+─────────────────────────────────────────────────────────────
+Menu: Company → Make General Journal Entries
+Fecha: 01/11/2025
+
+CUENTA                          | DEBE       | HABER
+─────────────────────────────────────────────────────────────
+1200 Cuentas por Cobrar         | $10,866.42 |
+3900 Ajustes de Apertura        |            | $10,866.42
+
+Memo: Saldo inicial A/R al 01/11/2025 (desde SWS)
+
+OPCIÓN B - DETALLADA (Por cliente):
+─────────────────────────────────────────────────────────────
+NECESITO: Detalle de A/R por cliente al 01/11/2025
+
+Si tienes ese reporte de SWS, puedo preparar formato
+para registrar cada cliente individualmente.
+
+VENTAJA: Estados de cuenta individuales por cliente
+TIEMPO: +30 minutos adicionales
+
+═══════════════════════════════════════════════════════════════
+FASE 7: MOVIMIENTOS 01-06 NOVIEMBRE (60-90 min)
+═══════════════════════════════════════════════════════════════
+
+FACTURAS EMITIDAS (Customers → Create Invoices):
+─────────────────────────────────────────────────────────────
+Tienes 8 facturas ya documentadas:
+- 29/10: 2 facturas (SWS x2)
+- 03/11: 2 facturas (Perez, CIO)
+- 04/11: 3 facturas (Waipio, Grupo Porcinas, Ossenbach)
+- 05/11: 1 factura (Gentra)
+
+Total: $3,726.91
+
+COMPRAS RECIBIDAS (Vendors → Enter Bills):
+─────────────────────────────────────────────────────────────
+03/11: Intcomex Cloud $2,317.09
+04/11: Intcomex Lenovo $679.12
+
+PAGOS REALIZADOS (Banking → Write Checks o Pay Bills):
+─────────────────────────────────────────────────────────────
+03/11: Pago tarjetas desde 10664 USD
+03/11: Pago tarjetas desde 188618 CRC
+05/11: Pago SIMAN cancelación $681.42
+
+═══════════════════════════════════════════════════════════════
+RESUMEN DE TIEMPOS
+═══════════════════════════════════════════════════════════════
+
+Fase 1 - Crear cuentas:         20 min
+Fase 2 - Saldos iniciales:      30 min
+Fase 3 - Corregir BAC 9550:     5 min
+Fase 4 - Crear proveedores:     10 min
+Fase 5 - A/P inicial:           20 min
+Fase 6 - A/R inicial (rápido):  15 min
+Fase 7 - Movimientos 1-6 nov:   90 min
+─────────────────────────────────────────────────────────────
+TOTAL ESTIMADO:                 190 min (3 horas 10 min)
+
+═══════════════════════════════════════════════════════════════
+RESULTADO FINAL
+═══════════════════════════════════════════════════════════════
+
+✅ QB con saldos correctos al 01/11/2025
+✅ A/P completo ($6,186)
+✅ A/R registrado ($10,866)
+✅ Error BAC 9550 corregido
+✅ Movimientos 1-6 nov registrados
+✅ Listo para operar desde 07/11/2025
+
+═══════════════════════════════════════════════════════════════
+¿EMPEZAMOS?
+═══════════════════════════════════════════════════════════════
+
+Confirma que:
+1. Tienes QB abierto
+2. Estás en fecha de trabajo 06/11/2025
+3. Backup hecho
+4. Listo para crear cuentas
+
+¡Vamos paso a paso!
+
+═══════════════════════════════════════════════════════════════

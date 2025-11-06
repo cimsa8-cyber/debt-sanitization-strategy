@@ -1,0 +1,172 @@
+SALDOS INICIALES QUICKBOOKS - 01 NOVIEMBRE 2025
+Empresa: ALVARO VELASCONET SRL
+Cédula Jurídica: 3-102-795556
+
+═══════════════════════════════════════════════════════════════
+FUENTE: Datos verificados de conversación anterior
+FECHA CORTE: 01/11/2025
+═══════════════════════════════════════════════════════════════
+
+ACTIVOS - BANCOS Y CUENTAS
+═══════════════════════════════════════════════════════════════
+
+CUENTAS OPERATIVAS EMPRESA:
+─────────────────────────────────────────────────────────────
+1010 · Banco Promerica USD Principal          $3,030.89
+1030 · BNCR USD Operativa Empresa (10664)     $4,867.33
+1040 · BNCR USD Reservas (009589)             $0.43
+1070 · BNCR CRC Operativa Empresa (188618)    ₡70,337.24
+
+CUENTAS PERSONALES ALVARO:
+─────────────────────────────────────────────────────────────
+1080 · BNCR USD Personal Alvaro (011112)      $21.84
+1090 · BNCR CRC Personal Alvaro (042186)      ₡45.27
+
+CUENTAS DE AHORRO:
+─────────────────────────────────────────────────────────────
+1110 · Ahorro Impuestos Marchamo              $2,262.03
+1120 · Ahorro Vehículo                        $4,485.19
+1130 · Ahorro Matrimonio                      $930.30
+1140 · Ahorro Black Friday                    $260.25
+
+SUBTOTAL ACTIVOS LÍQUIDOS:
+USD: $16,858.26
+CRC: ₡70,382.51 (≈ $138.82 @ TC 507)
+TOTAL EQUIVALENTE: $16,997.08
+
+═══════════════════════════════════════════════════════════════
+PASIVOS - TARJETAS DE CRÉDITO
+═══════════════════════════════════════════════════════════════
+
+TARJETAS - PORCIÓN USD:
+─────────────────────────────────────────────────────────────
+2010 · TC VISA 9837 USD                       $1,775.45
+2030 · TC MC 8759 USD                         $116.48
+2040 · TC VISA BAC 9550 USD                   $209.92
+2045 · TC VISA 6386 USD                       -$200.00 (crédito)
+
+TARJETAS - PORCIÓN CRC:
+─────────────────────────────────────────────────────────────
+2110 · TC VISA 9837 CRC                       ₡4,003.96
+2120 · TC VISA 3519 CRC                       ₡702.98
+2130 · TC MC 8759 CRC                         ₡6,196.35
+2140 · TC VISA BAC 9550 CRC                   ₡2,799.42 ⚠️ ERROR
+2150 · TC VISA 6386 CRC                       ₡906.76
+2160 · TC SIMAN CRC                           ₡666.63
+
+NOTA CRÍTICA - BAC 9550 CRC:
+El saldo ₡2,799.42 es INCORRECTO
+DEBE SER: ₡1,419,305.54
+Corrección: +₡1,416,506.11 (asiento de ajuste)
+
+OTRAS DEUDAS:
+─────────────────────────────────────────────────────────────
+2510 · Hacienda Impuestos Pendientes          $9,804.00
+2520 · Nissan Financiamiento                  $20,142.00
+2610 · CCSS Cuotas Pendientes                 $706.12
+
+SUBTOTAL PASIVOS (sin corregir BAC):
+USD: $32,729.42
+CRC: ₡15,276.10 (≈ $30.13)
+TOTAL EQUIVALENTE: $32,759.55
+
+DESPUÉS DE CORREGIR BAC 9550:
+Total Pasivos: $35,554.48
+
+═══════════════════════════════════════════════════════════════
+CUENTAS POR PAGAR - 01/11/2025
+═══════════════════════════════════════════════════════════════
+
+PROVEEDORES CON FACTURAS PENDIENTES:
+
+INTCOMEX Costa Rica:
+─────────────────────────────────────────────────────────────
+Factura: 2502060
+Fecha: 04/10/2025
+Vencimiento: 04/10/2025
+Monto: $410.09
+Estado: 27 DÍAS MORA ⚠️
+
+Factura: 2509011
+Fecha: 31/10/2025
+Vencimiento: 31/10/2025
+Monto: $3,137.26
+Estado: 1 DÍA MORA
+
+SUBTOTAL INTCOMEX: $3,547.35
+
+EUROCOMP DE COSTA RICA S.A. (3-101-294674):
+─────────────────────────────────────────────────────────────
+Factura: 203637
+Fecha: 17/10/2025
+Términos: Neto 30
+Vencimiento: ~16/11/2025
+Monto: $2,007.68
+Estado: Vigente
+
+Factura: 203831
+Fecha: 20/10/2025
+Términos: Neto 30
+Vencimiento: ~19/11/2025
+Monto: $16.92
+Estado: Vigente
+
+SUBTOTAL EUROCOMP: $2,024.60
+
+SEA GLOBAL LOGISTICS (3-101-542077):
+─────────────────────────────────────────────────────────────
+Factura: 003214, Fecha: 03/10/2025, $14.69
+Factura: 003220, Fecha: 06/10/2025, $14.69
+Factura: 003226, Fecha: 10/10/2025, $14.69
+
+SUBTOTAL SGL: $44.07
+
+COMPUTADORES ECONOMICOS S.A. (3-101-306247):
+─────────────────────────────────────────────────────────────
+Factura: 012616
+Fecha: 24/10/2025
+Monto: $284.91
+
+INDUSTRIAS BUENOS AIRES - Don Fernando (3-101-017589):
+─────────────────────────────────────────────────────────────
+Factura: 004210
+Fecha: 27/09/2025
+Monto: ₡144,515.99
+Estado: Vigente
+
+═══════════════════════════════════════════════════════════════
+TOTAL CUENTAS POR PAGAR AL 01/11/2025:
+USD: $5,901.02
+CRC: ₡144,515.99 (≈ $285)
+TOTAL: $6,186.02
+═══════════════════════════════════════════════════════════════
+
+PATRIMONIO NETO (EQUITY):
+─────────────────────────────────────────────────────────────
+Activos:           $16,997.08
+Menos Pasivos:     -$35,554.48 (con corrección BAC)
+Menos A/P:         -$6,186.02
+Menos A/R:         +$10,866.42 (por registrar)
+═══════════════════════════════════════════════════────────────
+PATRIMONIO NETO:   -$13,877.00
+
+NOTA: Patrimonio negativo indica que los pasivos superan
+los activos actuales. Esto es común en empresas operativas
+con financiamiento mediante tarjetas de crédito.
+
+El A/R de $10,866 mejora la posición, pero aún hay que
+cobrar esas facturas.
+
+═══════════════════════════════════════════════════════════════
+PRÓXIMOS PASOS EN QUICKBOOKS
+═══════════════════════════════════════════════════════════════
+
+1. ✅ Crear catálogo de cuentas
+2. ✅ Ingresar saldos iniciales (estos datos)
+3. ✅ Corregir error BAC 9550
+4. ✅ Crear proveedores
+5. ✅ Registrar A/P (facturas pendientes)
+6. ✅ Registrar A/R ($10,866 saldo inicial)
+7. ✅ Registrar movimientos 01-06 nov
+
+═══════════════════════════════════════════════════════════════
