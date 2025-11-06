@@ -1,0 +1,26 @@
+TARJETA DE CRÉDITO BNCR
+Número: 4831-26XX-XXXX-6386
+Tipo: VISA PLATINO EMV - TARJETA ADICIONAL
+Nombre: ALEJANDRA ARIAS FALLAS
+Cuenta IBAN: CR12015114852189682581
+Moneda: DOLARES
+
+TASAS:
+Interés anual dólares: 29.04%
+Interés anual colones: 35.04%
+
+FECHAS:
+Fecha del corte: 17/10/2025
+Fecha del pago: 03/11/2025
+
+SALDOS (06/11/2025):
+                    COLONES         DOLARES
+Pago mínimo:        ₡0.00          $0.00
+Pago al corte:      ₡300,728.61    $-200.00
+Saldo actual:       ₡300,728.61    $-1.41
+
+ANÁLISIS:
+- Saldo CRC: ₡300,728.61 = ~$525 USD (usando TC 573)
+- Saldo USD: -$1.41 (CRÉDITO A FAVOR)
+- Tarjeta adicional de Alejandra
+- Nota: Usuario indicó excluir cuentas de Alejandra - verificar si aplicar
