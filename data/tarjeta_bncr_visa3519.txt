@@ -1,0 +1,29 @@
+TARJETA DE CRÉDITO BNCR
+Número: 4641-37XX-XXXX-3519
+Tipo: VISA CLASICA EMV - TITULAR
+Nombre: ALVARO VELASCO JIMENEZ
+Cuenta IBAN: CR11015114551953127065
+Moneda: DOLARES
+Límite crédito: $1,200.00
+
+TASAS:
+Interés anual dólares: 30%
+Interés anual colones: 36%
+
+FECHAS:
+Fecha del corte: 21/10/2025
+Fecha del pago: 06/11/2025
+
+SALDOS (06/11/2025):
+                    COLONES         DOLARES
+Pago mínimo:        ₡0.00          $0.00
+Pago al corte:      ₡350,209.29    $0.00
+Saldo actual:       ₡578,648.64    $30.06
+Disponible compras: ₡8,468.45      $16.60
+Disponible avances: ₡7,621.61      $14.94
+
+ANÁLISIS:
+- Saldo total aprox: ₡578,648.64 + $30.06 = ~$1,040 USD (usando TC 573)
+- Utilización: 87% del límite
+- Tasa efectiva mensual USD: 2.5% (30%/12)
+- Interés mensual estimado: ~$26 USD
