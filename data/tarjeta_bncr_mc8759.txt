@@ -1,0 +1,31 @@
+TARJETA DE CRÉDITO BNCR
+Número: 5290-60XX-XXXX-8759
+Tipo: MC ORO INTER EMV - TITULAR
+Nombre: ALVARO VELASCO JIMENEZ
+Cuenta IBAN: CR93015114251564153761
+Moneda: DOLARES
+Límite crédito: $6,000.00
+
+TASAS:
+Interés anual dólares: 29.04%
+Interés anual colones: 35.04%
+
+FECHAS:
+Fecha del corte: 17/10/2025
+Fecha del pago: 03/11/2025
+
+SALDOS (06/11/2025):
+                    COLONES           DOLARES
+Pago mínimo:        ₡0.00            $0.00
+Pago al corte:      ₡2,841,545.17    $55.04
+Saldo actual:       ₡2,841,545.17    $126.48
+Disponible compras: ₡153,949.88      $301.86
+Disponible avances: ₡138,554.89      $271.67
+
+ANÁLISIS:
+- Saldo total: ₡2,841,545.17 + $126.48 = ~$5,088 USD (usando TC 573)
+- Saldo CRC equivalente: ~$4,960
+- Saldo USD: $126.48
+- Utilización: 85% del límite
+- Tasa efectiva mensual USD: 2.42% (29.04%/12)
+- Interés mensual estimado: ~$123
