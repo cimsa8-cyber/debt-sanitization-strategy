@@ -1,0 +1,247 @@
+ANÁLISIS QUICKBOOKS - ACTUALIZACIÓN REQUERIDA
+Balance Sheet base: 03/11/2025
+Datos actuales: 06/11/2025
+Período a actualizar: 04/11 - 06/11/2025
+
+═══════════════════════════════════════════════════════════════
+1. DATOS FALTANTES EN QUICKBOOKS
+═══════════════════════════════════════════════════════════════
+
+A) FACTURAS EMITIDAS (por registrar):
+   ✅ Registradas hasta 03/11 (según AR existe al 3/11)
+
+   PENDIENTES DE REGISTRAR (04-05/11):
+   - 04/11: WAIPIO $772.92
+   - 04/11: GRUPO PORCINAS $258.94
+   - 04/11: OSSENBACH $113.00
+   - 05/11: GENTRA $452.00
+
+   TOTAL A REGISTRAR: $1,596.86
+
+B) FACTURAS RECIBIDAS (por registrar):
+
+   PROVEEDORES (pendientes):
+   - 03/11: Intcomex Cloud $2,317.09 (30 días)
+   - 04/11: Intcomex Lenovo $679.12 (30 días)
+   - 30/10: UNOPETROL ₡30,946 (~$54) - PAGADO CON TC
+   - 30/10: Buenos Aires ₡111,373 (~$194) - PAGADO CON TC
+
+   TOTAL A REGISTRAR: $3,244.21
+
+C) PAGOS A TARJETAS (04-06/11):
+
+   05/11: SIMAN $681.42 (cancelación total)
+
+   Otros pagos ya reflejados en movimientos del 3/11
+
+D) COBROS DE CLIENTES (por registrar):
+
+   31/10: AMBIENTES CON TECNOLOGIA $1,418.15
+   29/10: GRUPO ACCION COMERCIAL $847.00
+   29/10: OSSENBACH $1,747.10
+   27/10: SEVILLA NAVARRO $113.00
+
+   TOTAL COBRADO: $4,125.25
+
+E) MOVIMIENTOS BANCARIOS (04-06/11):
+
+   Promerica USD:
+   - 04/11: Ingreso PEREZ BENAVIDES $761.06
+
+   BNCR:
+   - 05/11: Adelanto salario ₡70,000
+   - 05/11: Pago SIMAN $681.42
+
+F) SALDOS BANCARIOS ACTUALIZADOS (06/11):
+
+   Balance Sheet mostraba (03/11):
+   - Promerica USD: $3,030.89
+   - BNCR CRC: ₡337.24
+   - BNCR USD: $1,348.62
+
+   Saldos reales (06/11):
+   - Promerica USD: $3,058.75 (+$27.86)
+   - BNCR CRC: ₡337.24 (igual)
+   - BNCR USD Total: $1,348.62 (distribuido)
+
+G) SALDOS TARJETAS ACTUALIZADOS (post-pagos):
+
+   Balance Sheet mostraba (03/11):
+   - VISA 3519 CRC: ₡578,649
+   - VISA 9837: ₡2,030,004 + $1,775
+   - MC 8759: ₡2,841,545 + $126
+   - BAC 9550: ₡2,799 + $210
+   - SIMAN: ₡667
+
+   Saldos reales (06/11):
+   - BAC 9550: ₡1,419,306 + $210 ⚠️ (AUMENTÓ)
+   - SIMAN: $0 ✅ (cancelada)
+   - Otros: Pendiente corte siguiente
+
+═══════════════════════════════════════════════════════════════
+2. DISCREPANCIAS CRÍTICAS DETECTADAS
+═══════════════════════════════════════════════════════════════
+
+⚠️ TARJETA BAC 9550:
+   - Balance Sheet (03/11): ₡2,799.42 + $209.92
+   - Saldo real (06/11): ₡1,419,305.54 + $209.92
+   - DIFERENCIA: +₡1,416,506 (~$2,472)
+
+   ACCIÓN: Revisar transacciones BAC del 4-6/11
+   Posible causa: Compras grandes no registradas
+
+⚠️ CUENTAS POR COBRAR:
+   - AR Balance Sheet (03/11): $10,866.42
+   - Facturas nuevas (04-05/11): $1,596.86
+   - Cobros realizados (27/10-06/11): $4,125.25
+   - AR PROYECTADO (06/11): $10,866 + $1,597 - $4,125 = $8,338
+
+═══════════════════════════════════════════════════════════════
+3. PLAN DE ACCIÓN - ACTUALIZACIÓN QUICKBOOKS
+═══════════════════════════════════════════════════════════════
+
+FASE 1: REGISTRAR INGRESOS (04-05/11)
+□ Factura 2554: WAIPIO $772.92 (04/11)
+□ Factura 2553: GRUPO PORCINAS $258.94 (04/11)
+□ Factura 2552: OSSENBACH $113.00 (04/11)
+□ Factura 2555: GENTRA $452.00 (05/11)
+
+FASE 2: REGISTRAR GASTOS/COMPRAS (03-04/11)
+□ Factura Intcomex 830260: Cloud $2,317.09 (03/11)
+□ Factura Intcomex 830439: Lenovo $679.12 (04/11)
+□ UNOPETROL: ₡30,946 (30/10) - asignar a TC
+□ Buenos Aires: ₡111,373 (30/10) - asignar a TC
+
+FASE 3: REGISTRAR COBROS
+□ AMBIENTES: $1,418.15 (31/10) - aplicar a AR
+□ GRUPO ACCION: $847.00 (29/10) - aplicar a AR
+□ OSSENBACH: $1,747.10 (29/10) - aplicar a AR
+□ SEVILLA: $113.00 (27/10) - aplicar a AR
+□ PEREZ BENAVIDES: $761.06 (04/11) - aplicar a AR
+
+FASE 4: REGISTRAR PAGOS TARJETAS
+□ SIMAN: $681.42 (05/11) - pago total y cierre
+□ Verificar movimientos BAC 9550 (investigar aumento)
+
+FASE 5: CONCILIACIÓN BANCARIA
+□ Conciliar Promerica USD (al 06/11)
+□ Conciliar BNCR CRC (al 06/11)
+□ Conciliar BNCR USD (al 06/11)
+
+FASE 6: ACTUALIZAR CUENTAS POR PAGAR
+□ Registrar Intcomex Cloud: $2,317.09 (vence ~03/12)
+□ Registrar Intcomex Lenovo: $679.12 (vence ~04/12)
+
+FASE 7: VERIFICAR SALDOS TARJETAS
+□ Obtener estado de cuenta BAC 9550 actualizado
+□ Registrar cargos post-corte en VISA 3519
+□ Registrar ajustes VISA 6386 (Clearcheck + abono)
+
+═══════════════════════════════════════════════════════════════
+4. ASIENTOS CONTABLES REQUERIDOS
+═══════════════════════════════════════════════════════════════
+
+ASIENTO 1: Factura WAIPIO (04/11)
+-----------------------------------------
+DEBE  | 1200 Cuentas por Cobrar    | $772.92
+HABER | 4000 Ingresos por Ventas   | $684.00
+HABER | 2200 IVA por Pagar         | $88.92
+
+ASIENTO 2: Factura GRUPO PORCINAS (04/11)
+-----------------------------------------
+DEBE  | 1200 Cuentas por Cobrar    | $258.94
+HABER | 4000 Ingresos por Ventas   | $229.15
+HABER | 2200 IVA por Pagar         | $29.79
+
+ASIENTO 3: Factura OSSENBACH (04/11)
+-----------------------------------------
+DEBE  | 1200 Cuentas por Cobrar    | $113.00
+HABER | 4000 Ingresos por Ventas   | $100.00
+HABER | 2200 IVA por Pagar         | $13.00
+
+ASIENTO 4: Factura GENTRA (05/11)
+-----------------------------------------
+DEBE  | 1200 Cuentas por Cobrar    | $452.00
+HABER | 4000 Ingresos por Ventas   | $400.00
+HABER | 2200 IVA por Pagar         | $52.00
+
+ASIENTO 5: Compra Intcomex Cloud (03/11)
+-----------------------------------------
+DEBE  | 5000 Costo de Ventas       | $2,050.52
+DEBE  | 1150 IVA Acreditable       | $266.57
+HABER | 2000 Cuentas por Pagar     | $2,317.09
+
+ASIENTO 6: Compra Intcomex Lenovo (04/11)
+-----------------------------------------
+DEBE  | 1100 Inventario            | $600.99
+DEBE  | 1150 IVA Acreditable       | $78.13
+HABER | 2000 Cuentas por Pagar     | $679.12
+
+ASIENTO 7: Cobro AMBIENTES (31/10)
+-----------------------------------------
+DEBE  | 1010 Banco Promerica USD   | $1,418.15
+HABER | 1200 Cuentas por Cobrar    | $1,418.15
+
+ASIENTO 8: Cobro GRUPO ACCION (29/10)
+-----------------------------------------
+DEBE  | 1030 BNCR USD              | $847.00
+HABER | 1200 Cuentas por Cobrar    | $847.00
+
+ASIENTO 9: Cobro OSSENBACH (29/10)
+-----------------------------------------
+DEBE  | 1030 BNCR USD              | $1,747.10
+HABER | 1200 Cuentas por Cobrar    | $1,747.10
+
+ASIENTO 10: Pago SIMAN (05/11)
+-----------------------------------------
+DEBE  | 2160 TC SIMAN              | $681.42
+HABER | 1030 BNCR USD              | $681.42
+
+ASIENTO 11: Gasolina UNOPETROL (30/10)
+-----------------------------------------
+DEBE  | 6100 Gastos Operativos     | ₡30,946.00
+HABER | 2030 TC MC 8759 CRC        | ₡30,946.00
+
+ASIENTO 12: Buenos Aires (30/10)
+-----------------------------------------
+DEBE  | 6100 Gastos Operativos     | ₡111,373.43
+HABER | 2XXX Tarjeta (verificar)   | ₡111,373.43
+
+═══════════════════════════════════════════════════════════════
+5. PRIORIDADES DE ACTUALIZACIÓN
+═══════════════════════════════════════════════════════════════
+
+🔴 URGENTE (HOY):
+1. Investigar BAC 9550 (+$2,472 no explicado)
+2. Registrar facturas emitidas 04-05/11 ($1,597)
+3. Registrar cobros realizados ($4,125)
+
+🟡 IMPORTANTE (ESTA SEMANA):
+4. Registrar compras Intcomex ($2,996)
+5. Conciliar cuentas bancarias (3 cuentas)
+6. Actualizar saldos tarjetas post-pagos
+
+🟢 SEGUIMIENTO (PRÓXIMA SEMANA):
+7. Verificar cortes de tarjetas siguientes
+8. Registrar ajustes VISA 6386
+9. Actualizar proyecciones flujo de caja
+
+═══════════════════════════════════════════════════════════════
+6. VALIDACIÓN POST-ACTUALIZACIÓN
+═══════════════════════════════════════════════════════════════
+
+Después de registrar, verificar:
+
+□ Saldo Cuentas por Cobrar: $8,338 (aprox)
+□ Saldo Cuentas por Pagar: $2,996.21
+□ Saldo Promerica USD: $3,058.75
+□ Saldo BNCR agregado: ~$1,468
+□ IVA neto por pagar: Recalcular
+□ Balance cuadra con bancos: Sí/No
+
+REPORTE MENSUAL SUGERIDO:
+- Profit & Loss (Oct-Nov)
+- Balance Sheet actualizado (06/11)
+- Cash Flow Statement
+- AR Aging Report
+- AP Aging Report
