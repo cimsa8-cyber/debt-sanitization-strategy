@@ -1,0 +1,57 @@
+CUENTAS POR COBRAR (AR)
+Fecha: 03/11/2025
+
+TOTAL PENDIENTE DE COBRO: $10,866.42
+
+═══════════════════════════════════════════════════════════════
+
+TOP 5 CLIENTES CON MAYOR DEUDA:
+
+1. VWR INTERNATIONAL LTDA.              $2,800.00  (25.8%)
+2. GRUPO ACCION COMERCIAL S.A.          $1,689.04  (15.5%)
+3. ALMACEN FISCAL ALFIPAC S.A.          $761.05    (7.0%)
+4. 3-102-887892 S.R.L.                  $691.56    (6.4%)
+5. CENTRO INTEGRAL ONCOLOGIA CIO        $687.05    (6.3%)
+
+Top 5 representa: $6,628.70 (61% del total)
+
+═══════════════════════════════════════════════════════════════
+
+CLIENTES CON SALDO $0 (PAGADOS):
+- VOLIO PARTNERS
+- AMBIENTES CON TECNOLOGIA TECNOAMBIENTES S.A.
+- SOLORZANO CASTILLO GABRIEL MAURICIO
+- GRUPO PORCINAS DE LA COSTA S.A.
+
+═══════════════════════════════════════════════════════════════
+
+ANÁLISIS DE LIQUIDEZ PROYECTADA:
+
+Activos líquidos actuales (06/11):
+- Promerica USD: $3,058.75
+- BNCR CRC: ₡68,287.74 (~$119)
+- BNCR USD: $1,348.62
+TOTAL DISPONIBLE: ~$4,526
+
+Cuentas por cobrar: $10,866.42
+
+LIQUIDEZ POTENCIAL: ~$15,393
+
+═══════════════════════════════════════════════════════════════
+
+IMPLICACIONES:
+
+✅ AR > Deudas urgentes
+   - BAC 9550 vence 13/nov: $2,687
+   - AR disponible: $10,866
+   - Ratio: 4:1 (saludable si se cobra)
+
+⚠️ DEPENDENCIA DE COBRANZA:
+   - 61% concentrado en 5 clientes
+   - VWR tiene $2,800 pendiente (26% del total)
+   - Riesgo si hay demora en pagos
+
+💡 RECOMENDACIÓN:
+   - Acelerar cobranza a VWR y Grupo Acción Comercial
+   - Considerar factoring si necesitas liquidez inmediata
+   - Negociar extensión BAC 9550 si AR se retrasa
