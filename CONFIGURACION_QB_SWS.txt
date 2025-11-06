@@ -1,0 +1,94 @@
+CONFIGURACIÓN SISTEMA CONTABLE
+QuickBooks Desktop 2013 + SWS-Software
+Fecha: 06/11/2025
+
+═══════════════════════════════════════════════════════════════
+SISTEMA ACTUAL
+═══════════════════════════════════════════════════════════════
+
+SWS-SOFTWARE (Operativo):
+- Facturación electrónica CR (XML validado Hacienda)
+- Recibos de pago electrónicos (XML)
+- Gestión cuentas por cobrar (AR: $10,866)
+- Clientes: 90% crédito 30 días
+- Pagos: Transferencia bancaria
+
+QUICKBOOKS DESKTOP 2013 (Contable):
+- Instalado: Hace 1 semana
+- Estado: Configuración inicial
+- Saldos de apertura: En proceso
+- Objetivo: Contabilidad centralizada
+
+═══════════════════════════════════════════════════════════════
+WORKFLOW ACTUAL
+═══════════════════════════════════════════════════════════════
+
+1. FACTURACIÓN:
+   Cliente compra → Factura en SWS → XML a Hacienda →
+   Confirmación Hacienda → Email a cliente
+
+2. COBRO:
+   Cliente transfiere → Revisar banco → Confirmar depósito →
+   Recibo en SWS → XML a Hacienda → Confirmación
+
+═══════════════════════════════════════════════════════════════
+DECISIONES PENDIENTES PARA QB
+═══════════════════════════════════════════════════════════════
+
+PREGUNTAS CRÍTICAS:
+
+1. NIVEL DE DETALLE EN QB:
+   A) Cada factura individual importada/registrada
+   B) Resumen mensual de ventas (más simple)
+   C) Solo movimientos bancarios (más simple aún)
+
+   Recomendación: Opción B o C para empezar
+
+2. FECHA INICIO OFICIAL QB:
+   ¿Desde cuándo QB lleva la contabilidad?
+   - 01/11/2025
+   - 03/11/2025
+   - 06/11/2025
+   - Otro
+
+   Todo ANTES = Saldos iniciales
+   Todo DESPUÉS = Movimientos en QB
+
+3. CUENTAS POR COBRAR ($10,866):
+   A) Poner como saldo inicial en QB
+   B) Dejar en SWS, solo registrar cuando se cobre
+
+   Recomendación: Opción B (más simple)
+
+4. PLAN DE CUENTAS (CHART OF ACCOUNTS):
+   ¿Ya está completo en QB?
+   - Cuentas de bancos: ✅
+   - Cuentas de tarjetas: ✅
+   - Cuentas de ingresos: ¿?
+   - Cuentas de gastos: ¿?
+   - Cuentas de costos: ¿?
+   - IVA por cobrar/pagar: ¿?
+
+═══════════════════════════════════════════════════════════════
+ESTRATEGIA RECOMENDADA (para empezar simple)
+═══════════════════════════════════════════════════════════════
+
+FASE 1 - CONFIGURACIÓN BÁSICA:
+□ Corregir BAC 9550
+□ Completar plan de cuentas
+□ Definir fecha de inicio
+□ Saldos iniciales correctos
+
+FASE 2 - REGISTRO MENSUAL:
+□ SWS: Operación diaria (facturas, recibos)
+□ QB: Registro mensual de:
+  - Resumen de ventas
+  - Cobros recibidos
+  - Gastos pagados
+  - Conciliación bancaria
+
+FASE 3 - REFINAMIENTO:
+□ Ajustar según necesidades
+□ Agregar más detalle si necesario
+
+═══════════════════════════════════════════════════════════════
