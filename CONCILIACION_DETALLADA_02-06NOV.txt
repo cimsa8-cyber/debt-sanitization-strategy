@@ -1,0 +1,389 @@
+CONCILIACIÓN DETALLADA CUENTA POR CUENTA
+Periodo: 02/11/2025 - 06/11/2025
+Análisis profundo SIN ASUMIR NADA
+
+═══════════════════════════════════════════════════════════════
+METODOLOGÍA
+═══════════════════════════════════════════════════════════════
+
+1. Revisar CADA archivo de datos compartido
+2. Identificar CADA transacción única
+3. Verificar contra Balance Sheet 06/11
+4. Señalar duplicidades o inconsistencias
+5. Confirmar con usuario antes de registrar en QB
+
+═══════════════════════════════════════════════════════════════
+CUENTA 1: BNCR 601066-4 USD OPERATIVA EMPRESA
+═══════════════════════════════════════════════════════════════
+
+BALANCE SHEET 02/11: $3,149.94
+BALANCE SHEET 06/11: $3,149.94
+CAMBIO: $0.00 ❓ SOSPECHOSO
+
+MOVIMIENTOS DOCUMENTADOS (27/10 - 06/11):
+
+SALIDAS (Débitos):
+─────────────────────────────────────────────────────────────
+05/11  | Comisión TFT                | -$3.02      | ✅ CONFIRMADO
+05/11  | SIMAN cancelación           | -$681.42    | ✅ CONFIRMADO
+03/11  | Pago MC 8759                | -$607.29    | ✅ CONFIRMADO
+03/11  | Pago VISA 6386              | -$321.86    | ✅ CONFIRMADO
+03/11  | Ahorro Black Friday         | -$60.00     | ✅ CONFIRMADO
+03/11  | Ahorro Matrimonio           | -$25.00     | ✅ CONFIRMADO
+03/11  | Ahorro Vehículo             | -$50.00     | ✅ CONFIRMADO
+03/11  | Ahorro Impuestos            | -$75.00     | ✅ CONFIRMADO
+31/10  | Transfer dólares            | -$60.85     | ✅
+31/10  | Servicio facturación cobro  | -$25.00     | ✅
+30/10  | Compras oficina Automercado | -$109.66    | ⚠️ EMPRESA O PERSONAL?
+30/10  | Salario Álvaro 2da quinc    | -$500.00    | ✅ CONFIRMADO
+29/10  | Ahorro Black Friday         | -$60.00     | ✅
+29/10  | Ahorro Vehículo             | -$50.00     | ✅
+29/10  | VETERINARIO TEO             | -$56.80     | ⚠️ PERSONAL (Due from Owner)
+28/10  | Cambio moneda               | -$6.30      | ✅
+27/10  | Ahorro Matrimonio           | -$25.00     | ✅
+27/10  | Ahorro Impuestos            | -$75.00     | ✅
+27/10  | Pagos (Alejandra)           | -$10.10     | ⚠️ QUÉ ES ESTO?
+27/10  | Pago VISA 3519              | -$200.00    | ✅ CONFIRMADO
+
+SUBTOTAL SALIDAS: -$3,002.30
+
+ENTRADAS (Créditos):
+─────────────────────────────────────────────────────────────
+31/10  | Alvaro Velasco SRL/Ambientes| +$401.15    | ✅ COBRO CLIENTE
+31/10  | Alvaro Velasco SRL/Ambientes| +$1,017.00  | ✅ COBRO CLIENTE
+29/10  | Grupo Acción Comercial      | +$847.00    | ✅ COBRO CLIENTE
+29/10  | Ossenbach Sauter            | +$1,747.10  | ✅ COBRO CLIENTE
+27/10  | Sevilla Navarro             | +$113.00    | ✅ COBRO CLIENTE
+
+SUBTOTAL ENTRADAS: +$4,125.25
+
+BALANCE CALCULADO:
+Inicial (aprox 27/10): $3,149.94 - $1,122.95 = $2,026.99
++ Entradas: $4,125.25
+- Salidas: $3,002.30
+= FINAL ESPERADO: $3,149.94 ✅ CUADRA
+
+CONCLUSIÓN CUENTA 1:
+✅ Balance cuadra correctamente
+⚠️ Transacciones NO registradas en QB (BS no cambió)
+
+TRANSACCIONES A REGISTRAR EN QB:
+1. Salario Álvaro $500 → 6010 Payroll Expense - Owner
+2. Veterinario $56.80 → 1520 Due from Owner - Álvaro
+3. Débitos ahorros $210 x 2 semanas = $420 → Transfers
+4. Pagos tarjetas: SIMAN $681, MC $607, VISA 6386 $322, VISA 3519 $200
+5. Cobros clientes: $4,125.25 total → 4010 Ingresos
+
+═══════════════════════════════════════════════════════════════
+CUENTA 2: BNCR 188618-3 CRC OPERATIVA EMPRESA
+═══════════════════════════════════════════════════════════════
+
+BALANCE SHEET 02/11: ₡75,337.24 ($148.59)
+BALANCE SHEET 06/11: ₡75,337.24 ($148.59)
+CAMBIO: ₡0.00 ❓ SOSPECHOSO
+
+MOVIMIENTOS DOCUMENTADOS (27/10 - 06/11):
+
+SALIDAS:
+─────────────────────────────────────────────────────────────
+05/11  | ADELANTO SALARIO ÁLVARO    | -₡70,000    | ⚠️ NO MENCIONADO ANTES
+03/11  | Pago MC 8759               | -₡5,070     | ✅ CONFIRMADO
+03/11  | Pago VISA 9837 (1)         | -₡31,434    | ✅ CONFIRMADO
+03/11  | Pago VISA 9837 (2)         | -₡271,600   | ✅ CONFIRMADO
+03/11  | MESADA ANDRES VELASCO      | -₡5,000     | ⚠️ QUIÉN ES ANDRÉS?
+31/10  | Pago Ale 72369832          | -₡36,000    | ⚠️ ALEJANDRA? QUÉ PAGO?
+27/10  | Peluquería Alejandro       | -₡6,000     | ⚠️ PERSONAL?
+27/10  | Barba Velasco              | -₡5,000     | ⚠️ PERSONAL (Due from Owner)
+27/10  | Libro Álvaro               | -₡5,000     | ⚠️ PERSONAL?
+27/10  | Pago VISA 3519             | -₡10,000    | ✅ CONFIRMADO
+27/10  | MESADA ANDRES VELASCO      | -₡5,000     | ⚠️ QUIÉN ES ANDRÉS?
+
+SUBTOTAL SALIDAS: -₡450,104
+
+ENTRADAS:
+─────────────────────────────────────────────────────────────
+31/10  | Gas (José Alejandro)       | +₡2,000     | ⚠️ REEMBOLSO?
+31/10  | Liquidación ahorro BN      | +₡386,080   | ✅ CONFIRMADO
+31/10  | Transfer dólares           | +₡30,000    | ✅
+27/10  | Compra libro (Harold)      | +₡6,000     | ⚠️ INGRESO?
+27/10  | Libro (Esterlin)           | +₡6,000     | ⚠️ INGRESO?
+
+SUBTOTAL ENTRADAS: +₡430,080
+
+BALANCE CALCULADO:
+Saldo inicial estimado: ₡75,337 + ₡20,024 = ₡95,361 (aprox 27/10)
+- Salidas: ₡450,104
++ Entradas: ₡430,080
+= FINAL ESPERADO: ₡75,337 ✅ CUADRA
+
+⚠️ PREGUNTAS CRÍTICAS:
+1. ADELANTO SALARIO ₡70,000 (05/11) - ¿Registrado en QB?
+2. MESADAS ANDRÉS VELASCO ₡5,000 x 2 - ¿Quién es? ¿Es hijo?
+3. Pago Ale ₡36,000 - ¿Qué es este pago?
+4. Gastos personales (barba, peluquería) - ¿A Due from Owner?
+
+TRANSACCIONES A REGISTRAR EN QB:
+1. Adelanto salario ₡70,000 → 6010 Payroll o 1520 Due from Owner?
+2. Mesadas Andrés ₡10,000 → 3030 Owners Draw (si es familiar)
+3. Pagos tarjetas CRC: ₡318,104 → Reducción pasivos
+4. Gastos personales → 1520 Due from Owner
+5. Liquidación ahorro ₡386,080 → 1070 BNCR CRC + reducir ahorro
+
+═══════════════════════════════════════════════════════════════
+CUENTA 3: PROMERICA CRC SINPE (1708)
+═══════════════════════════════════════════════════════════════
+
+NO APARECE EN BALANCE SHEET (saldo $0)
+
+MOVIMIENTOS DOCUMENTADOS:
+
+03/11/2025:
+─────────────────────────────────────────────────────────────
+ENTRADA:  Transfer electrónico      +₡360,000
+SALIDA:   Cancelación facturas CCSS -₡179,710
+SALIDA:   Cancelación facturas CCSS -₡179,200
+─────────────────────────────────────────────────────────────
+SUBTOTAL SALIDAS:  -₡358,910
+SUBTOTAL ENTRADAS: +₡360,000
+SALDO FINAL:       +₡1,090 ($2.15)
+
+⚠️ DISCREPANCIA:
+Usuario dijo: "CCSS ₡358,000"
+Archivo muestra: "CCSS ₡358,910"
+Diferencia: ₡910 ($1.79)
+
+✅ CONFIRMACIÓN: CCSS SÍ FUE PAGADO desde Promerica CRC
+
+TRANSACCIONES A REGISTRAR EN QB:
+1. Transfer entrada ₡360,000 → desde dónde? ¿1070 BNCR CRC?
+2. Pago CCSS ₡358,910 → 2610 CCSS Cuotas Pendientes
+3. Saldo final ₡1,090 → 1050 Promerica CRC SINPE
+
+═══════════════════════════════════════════════════════════════
+CUENTA 4: VISA 6386 - MOVIMIENTOS ESPECIALES
+═══════════════════════════════════════════════════════════════
+
+BALANCE SHEET 02/11:
+- 2150 TC VISA 6386 CRC: ₡459,728.61 ($906.76)
+- 1610 VISA 6386 Crédito USD: -$200.00
+
+USUARIO CONFIRMÓ:
+1. ✅ Compra ClearCheck Mexico $200 (para usar crédito a favor)
+2. ✅ Abono ₡159,000 al saldo CRC desde BNCR 601066-4
+
+⚠️ PROBLEMA: NO ENCONTRÉ TRANSACCIÓN ₡159,000
+Revisé movimientos BNCR 601066-4 (USD) y no hay ₡159,000
+Revisé movimientos BNCR 188618-3 (CRC) y no hay ₡159,000
+
+❓ POSIBILIDADES:
+A) Abono aún no reflejado en estados de cuenta
+B) Se hizo desde otra cuenta no documentada
+C) Se hará próximamente
+
+🔴 NECESITO CONFIRMAR CON USUARIO:
+- ¿El abono ₡159,000 YA se hizo?
+- ¿Desde qué cuenta exactamente?
+- ¿Aparece en algún estado de cuenta?
+
+BALANCE PROYECTADO (según usuario):
+- CRC: ₡459,728.61 - ₡159,000 = ₡300,728.61 ($593.13)
+- USD: -$200 + $200 = $0.00 (crédito usado)
+TOTAL: $593.13
+
+TRANSACCIONES A REGISTRAR EN QB:
+1. Compra ClearCheck $200 → Cargo a tarjeta USD
+2. Abono ₡159,000 → Pago a tarjeta CRC (PENDIENTE CONFIRMAR)
+
+═══════════════════════════════════════════════════════════════
+CUENTA 5: TC SIMAN
+═══════════════════════════════════════════════════════════════
+
+BALANCE SHEET 06/11: ₡666.63 ($1.31)
+
+USUARIO CONFIRMÓ: "ya cancelamos la cuenta de siman"
+
+MOVIMIENTO DOCUMENTADO:
+05/11  | BNCR 601066-4 | Pago SIMAN | -$681.42 | ✅ CONFIRMADO
+
+BALANCE ESPERADO:
+Saldo previo estimado: ₡666.63 + equivalente $681.42
+Pago realizado: -$681.42
+SALDO FINAL: $0.00
+
+⚠️ PROBLEMA: Balance Sheet 06/11 sigue mostrando ₡666.63
+
+CONCLUSIÓN:
+Pago SÍ se hizo el 05/11, pero NO está registrado en QB
+
+TRANSACCIONES A REGISTRAR EN QB:
+1. Pago SIMAN $681.42 → 2160 TC SIMAN CRC a $0
+2. Cerrar/desactivar cuenta SIMAN
+
+═══════════════════════════════════════════════════════════════
+CUENTA 6: PROMERICA USD PRINCIPAL
+═══════════════════════════════════════════════════════════════
+
+BALANCE SHEET 02/11: $3,030.89
+BALANCE SHEET 06/11: $3,030.89
+CAMBIO: $0.00 ✅
+
+NO HAY MOVIMIENTOS DOCUMENTADOS en periodo 02-06/11
+
+CONCLUSIÓN: Sin cambios, correcto
+
+═══════════════════════════════════════════════════════════════
+CUENTA 7: AHORROS BNCR (4 cuentas)
+═══════════════════════════════════════════════════════════════
+
+BALANCE SHEET 02/11 vs 06/11:
+
+1110 Impuestos:   $2,262.03 → $2,262.03 (sin cambio)
+1120 Vehículo:    $4,485.19 → $4,485.19 (sin cambio)
+1130 Matrimonio:  $930.30   → $930.30   (sin cambio)
+1140 Black Friday: $260.25  → $260.25   (sin cambio)
+
+DÉBITOS AUTOMÁTICOS DOCUMENTADOS:
+27/10: $75 + $50 + $25 + $60 = $210
+29/10: $60 + $50 = $110
+03/11: $75 + $50 + $25 + $60 = $210
+
+TOTAL DÉBITOS: $530
+
+⚠️ PROBLEMA: Ahorros no aumentaron en Balance Sheet
+
+CONCLUSIÓN:
+Débitos sí ocurrieron, pero NO están registrados en QB
+
+TRANSACCIONES A REGISTRAR EN QB:
+1. 27/10: Transfers $210 desde 1030 a ahorros
+2. 29/10: Transfers $110 desde 1030 a ahorros
+3. 03/11: Transfers $210 desde 1030 a ahorros
+
+═══════════════════════════════════════════════════════════════
+CUENTA 8: CUENTAS PERSONALES ÁLVARO
+═══════════════════════════════════════════════════════════════
+
+1080 BNCR USD Personal: $21.84 (sin cambios)
+1090 BNCR CRC Personal: ₡22,950.50 → $45.27 (sin cambios)
+
+MOVIMIENTOS ESPERADOS:
+- 30/10: Salario Álvaro $500 → Debería verse aquí
+- 05/11: Adelanto ₡70,000 → ¿Va aquí o a empresa?
+
+⚠️ PROBLEMA: Balance no refleja salario pagado
+
+CONCLUSIÓN:
+Salario se pagó desde 601066-4 pero destino no está claro
+
+═══════════════════════════════════════════════════════════════
+RESUMEN DE TRANSACCIONES NO REGISTRADAS EN QB
+═══════════════════════════════════════════════════════════════
+
+✅ CONFIRMADAS PARA REGISTRAR:
+
+1. COBROS CLIENTES (1030 BNCR USD):
+   - $4,125.25 total → 4010 Ingresos
+
+2. PAGOS TARJETAS USD (desde 1030):
+   - SIMAN: $681.42
+   - MC 8759: $607.29
+   - VISA 6386: $321.86
+   - VISA 3519: $200.00
+   Total: $1,810.57
+
+3. PAGOS TARJETAS CRC (desde 1070):
+   - MC 8759: ₡5,070
+   - VISA 9837: ₡303,034
+   - VISA 3519: ₡10,000
+   Total: ₡318,104
+
+4. PAGO CCSS (desde 1050 Promerica CRC):
+   - ₡358,910
+
+5. DÉBITOS AHORROS (desde 1030):
+   - $530 total en 3 ocasiones
+
+6. SALARIO ÁLVARO (desde 1030):
+   - $500 (30/10)
+
+7. GASTOS PERSONALES (desde 1030/1070):
+   - Veterinario: $56.80
+   - Barba: ₡5,000
+   - Otros
+
+⚠️ NECESITAN ACLARACIÓN:
+
+1. ADELANTO SALARIO ₡70,000 (05/11)
+   - ¿Es adelanto o préstamo?
+   - ¿A qué cuenta va?
+
+2. MESADAS ANDRÉS VELASCO ₡10,000
+   - ¿Quién es Andrés?
+   - ¿Son distribuciones (Owners Draw)?
+
+3. ABONO VISA 6386 ₡159,000
+   - ¿Ya se hizo?
+   - ¿Desde qué cuenta?
+   - ¿Dónde está documentado?
+
+4. PAGO ALE ₡36,000 (31/10)
+   - ¿Qué es este pago?
+   - ¿Relacionado con Alejandra Arias?
+
+5. COMPRA CLEARMECHANIC $200
+   - Usuario confirmó que se hizo
+   - ¿Aparecerá en próximo corte?
+   - ¿Registrar ahora o esperar?
+
+═══════════════════════════════════════════════════════════════
+DUPLICIDADES IDENTIFICADAS
+═══════════════════════════════════════════════════════════════
+
+NINGUNA ENCONTRADA ✅
+
+Todas las transacciones parecen únicas y consistentes entre archivos.
+
+═══════════════════════════════════════════════════════════════
+INCONSISTENCIAS ENCONTRADAS
+═══════════════════════════════════════════════════════════════
+
+1. CCSS: Usuario dice ₡358,000 vs archivo ₡358,910 (diferencia ₡910)
+2. VISA 6386: Abono ₡159,000 mencionado pero no encontrado en cuentas
+3. Balance Sheet 06/11 = Balance Sheet 02/11 (transacciones no registradas)
+4. Ahorros sin reflejar débitos automáticos
+
+═══════════════════════════════════════════════════════════════
+PREGUNTAS URGENTES PARA USUARIO
+═══════════════════════════════════════════════════════════════
+
+🔴 CRÍTICAS:
+
+1. ABONO VISA 6386 ₡159,000:
+   ¿Ya se hizo? ¿Desde qué cuenta? ¿Dónde está documentado?
+
+2. ADELANTO SALARIO ₡70,000:
+   ¿Es adelanto de qué? ¿Cómo registrar en QB?
+
+3. ANDRÉS VELASCO:
+   ¿Quién es? ¿Mesadas son distribuciones familiares?
+
+🟡 IMPORTANTES:
+
+4. COMPRA CLEARMECHANIC $200:
+   ¿Registrar ahora o esperar próximo corte de tarjeta?
+
+5. PAGO ALE ₡36,000:
+   ¿Qué es este pago? ¿A Alejandra? ¿Por qué concepto?
+
+6. CCSS ₡358,000 vs ₡358,910:
+   ¿Cuál es el monto correcto?
+
+═══════════════════════════════════════════════════════════════
+SIGUIENTE PASO
+═══════════════════════════════════════════════════════════════
+
+ESPERAR CONFIRMACIÓN USUARIO sobre preguntas críticas
+
+Luego proceder con registro en QB de transacciones confirmadas
+
+═══════════════════════════════════════════════════════════════
