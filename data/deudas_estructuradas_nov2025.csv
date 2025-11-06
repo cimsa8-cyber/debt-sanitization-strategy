@@ -1,0 +1,13 @@
+tipo,cuenta,moneda,monto_usd,categoria
+tarjeta_credito,TC VISA 9837,USD,1775.45,tarjeta
+tarjeta_credito,TC MC 8759,USD,116.48,tarjeta
+tarjeta_credito,TC VISA BAC 9550,USD,209.92,tarjeta
+tarjeta_credito,TC VISA 9837,CRC,4003.96,tarjeta
+tarjeta_credito,TC VISA 3519,CRC,702.98,tarjeta
+tarjeta_credito,TC MC 8759,CRC,6196.35,tarjeta
+tarjeta_credito,TC VISA BAC 9550,CRC,2799.42,tarjeta
+tarjeta_credito,TC VISA 6386,CRC,906.76,tarjeta
+tarjeta_credito,TC SIMAN,CRC,666.63,tarjeta
+cuotas,CCSS Cuotas Pendientes,USD,706.12,servicio
+impuestos,Hacienda Impuestos Pendientes,USD,9804.00,gobierno
+prestamo,Nissan Financiamiento,USD,20142.00,vehiculo
