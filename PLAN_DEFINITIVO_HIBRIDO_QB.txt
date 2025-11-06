@@ -1,0 +1,885 @@
+PLAN DEFINITIVO HÍBRIDO - QUICKBOOKS
+Actualización 02-06 Noviembre 2025
+Opción 3 - Personalizado según situación real
+
+═══════════════════════════════════════════════════════════════
+OBJETIVO
+═══════════════════════════════════════════════════════════════
+
+Poner QB al día desde 02/11 hasta 06/11/2025:
+1. Crear 3 cuentas faltantes críticas
+2. Corregir error BAC 9550 (+₡1,416,506)
+3. Registrar A/R inicial $10,866
+4. Registrar TODAS transacciones 02-06/11 confirmadas
+5. Balance Sheet actualizado y preciso al 06/11
+
+TIEMPO ESTIMADO: 2.5 - 3 horas
+MÉTODO: Paso a paso, verificando cada entrada
+
+═══════════════════════════════════════════════════════════════
+ANTES DE EMPEZAR
+═══════════════════════════════════════════════════════════════
+
+□ QuickBooks Desktop 2013 abierto
+□ Archivo correcto: AlvaroVelascoNet (o como se llame)
+□ Fecha de trabajo QB: 06/11/2025
+□ BACKUP creado (File > Create Backup)
+   Nombre sugerido: AlvaroVelascoNet_ANTES_actualizacion_06nov.qbb
+
+═══════════════════════════════════════════════════════════════
+FASE 1: CREAR CUENTAS FALTANTES (10 minutos)
+═══════════════════════════════════════════════════════════════
+
+Lists → Chart of Accounts → Account (botón abajo) → New
+
+CUENTA 1: AJUSTES DE APERTURA
+─────────────────────────────────────────────────────────────
+Account Type: Equity
+Number: 3900
+Account Name: Ajustes de Apertura
+Description: Para correcciones y ajustes contables
+Tax Line: <Unassigned>
+Opening Balance: 0.00 as of 02/11/2025
+
+Click OK
+
+CUENTA 2: IVA CRÉDITO FISCAL
+─────────────────────────────────────────────────────────────
+Account Type: Other Current Asset
+Number: 1150
+Account Name: IVA Crédito Fiscal
+Description: IVA pagado en compras (13% - Costa Rica)
+Tax Line: <Unassigned>
+Opening Balance: 0.00 as of 02/11/2025
+
+Click OK
+
+CUENTA 3: IVA DÉBITO FISCAL
+─────────────────────────────────────────────────────────────
+Account Type: Other Current Liability
+Number: 2015
+Account Name: IVA Débito Fiscal
+Description: IVA cobrado en ventas (13% - Costa Rica)
+Tax Line: <Unassigned>
+Opening Balance: 0.00 as of 02/11/2025
+
+Click OK
+
+VERIFICACIÓN FASE 1:
+□ Cuenta 3900 visible en lista
+□ Cuenta 1150 visible en lista
+□ Cuenta 2015 visible en lista
+
+═══════════════════════════════════════════════════════════════
+FASE 2: ACTUALIZAR TIPO DE CAMBIO (3 minutos)
+═══════════════════════════════════════════════════════════════
+
+Company → Manage Currency → Currency List
+
+Double-click: CRC - Costa Rican Colon
+
+Click: Add rate (botón abajo)
+
+Date: 11/02/2025
+Exchange Rate: 0.00197239
+(Esto equivale a ₡507 = $1 USD)
+(Cálculo: 1 ÷ 507 = 0.00197239)
+
+Click OK
+
+Repetir para fechas intermedias si es necesario:
+- 11/03/2025: 0.00197239
+- 11/04/2025: 0.00197239
+- 11/05/2025: 0.00197239
+- 11/06/2025: 0.00197239
+
+NOTA: Ajustarás semanalmente según BNCR
+
+═══════════════════════════════════════════════════════════════
+FASE 3: CORREGIR ERROR BAC 9550 (5 minutos)
+═══════════════════════════════════════════════════════════════
+
+Company → Make General Journal Entries
+
+Date: 11/02/2025
+Entry No.: (automático)
+Memo: Corrección error captura saldo inicial BAC 9550
+
+LÍNEA 1:
+Account: 2140 · TC VISA BAC 9550 CRC
+Debit: 1416506.11
+Credit: (vacío)
+Memo: Ajuste saldo inicial correcto
+Name: (vacío)
+
+LÍNEA 2:
+Account: 3900 · Ajustes de Apertura
+Debit: (vacío)
+Credit: 1416506.11
+Memo: Contrapartida ajuste BAC 9550
+Name: (vacío)
+
+VERIFICAR:
+Difference: 0.00 ✅
+Debit Total: 1416506.11
+Credit Total: 1416506.11
+
+Click Save & Close
+
+VERIFICACIÓN FASE 3:
+Reports → Balance Sheet Standard
+Date: 11/02/2025
+Buscar: 2140 TC VISA BAC 9550 CRC
+Debe mostrar: ₡1,419,305.54 ($2,799.42 equiv)
+
+═══════════════════════════════════════════════════════════════
+FASE 4: REGISTRAR A/R INICIAL (10 minutos)
+═══════════════════════════════════════════════════════════════
+
+OPCIÓN A - Saldo Global (RÁPIDO - Recomendado):
+─────────────────────────────────────────────────────────────
+Company → Make General Journal Entries
+
+Date: 11/02/2025
+Entry No.: (automático)
+Memo: Saldo inicial Cuentas por Cobrar
+
+LÍNEA 1:
+Account: 1510 · Cuentas por Cobrar Clientes
+Debit: 10866.42
+Credit: (vacío)
+Memo: Saldo A/R inicial desde SWS
+Name: (vacío)
+
+LÍNEA 2:
+Account: 3900 · Ajustes de Apertura
+Debit: (vacío)
+Credit: 10866.42
+Memo: Contrapartida A/R inicial
+Name: (vacío)
+
+Click Save & Close
+
+OPCIÓN B - Detallado por Cliente (MÁS TIEMPO):
+─────────────────────────────────────────────────────────────
+Si tienes detalle por cliente del SWS al 02/11, puedes
+registrar factura por factura usando:
+Customers → Create Invoices
+
+(Omitir si usaste Opción A)
+
+VERIFICACIÓN FASE 4:
+Reports → Balance Sheet Standard
+Date: 11/02/2025
+Buscar: 1510 Cuentas por Cobrar
+Debe mostrar: $10,866.42
+
+═══════════════════════════════════════════════════════════════
+FASE 5: REGISTRAR TRANSACCIONES 27/10 - 02/11 (45 min)
+═══════════════════════════════════════════════════════════════
+
+IMPORTANTE: Registrar en orden cronológico
+
+TRANSACCIÓN 1: COBRO SEVILLA NAVARRO (27/10)
+─────────────────────────────────────────────────────────────
+Banking → Make Deposits
+
+Deposit To: 1030 · BNCR USD Operativa Empresa
+Date: 10/27/2025
+
+Received From: Sevilla Navarro Edgar
+From Account: 4010 · Ingresos por Servicios USD
+Memo: Servicios profesionales
+Amount: 113.00
+
+Click Save & Close
+
+TRANSACCIÓN 2: PAGO VISA 3519 USD (27/10)
+─────────────────────────────────────────────────────────────
+Banking → Write Checks
+
+Bank Account: 1030 · BNCR USD Operativa Empresa
+No.: 12956019 (o dejar automático)
+Date: 10/27/2025
+Pay to the Order of: BNCR - VISA 3519
+Amount: 200.00
+Memo: Pago tarjeta VISA 3519
+
+Expenses tab:
+Account: 2020 · TC VISA 3519 USD
+Amount: 200.00
+Memo: Pago 27/10
+
+Click Save & Close
+
+TRANSACCIÓN 3: PAGO VISA 3519 CRC (27/10)
+─────────────────────────────────────────────────────────────
+Banking → Write Checks
+
+Bank Account: 1070 · BNCR CRC Operativa Empresa
+No.: (automático)
+Date: 10/27/2025
+Pay to the Order of: BNCR - VISA 3519
+Amount: 10000.00 (₡10,000 sin símbolos)
+Memo: Pago tarjeta VISA 3519 CRC
+
+Expenses tab:
+Account: 2120 · TC VISA 3519 CRC
+Amount: 10000.00
+Memo: Pago 27/10
+
+Click Save & Close
+
+TRANSACCIÓN 4: DÉBITOS AHORROS (27/10)
+─────────────────────────────────────────────────────────────
+4 transfers separados:
+
+Banking → Transfer Funds
+
+Transfer 1:
+From: 1030 · BNCR USD Operativa
+To: 1110 · Ahorro Impuestos Marchamo
+Amount: 75.00
+Date: 10/27/2025
+Memo: Débito automático semanal
+Save & New
+
+Transfer 2:
+From: 1030 · BNCR USD Operativa
+To: 1140 · Ahorro Black Friday
+Amount: 60.00
+Date: 10/27/2025
+Memo: Débito automático semanal
+Save & New
+
+Transfer 3:
+From: 1030 · BNCR USD Operativa
+To: 1130 · Ahorro Matrimonio
+Amount: 25.00
+Date: 10/27/2025
+Memo: Débito automático semanal
+Save & Close
+
+NOTA: No hay débito vehículo este día según registro
+
+TRANSACCIÓN 5: GASTOS PERSONALES ÁLVARO (27/10)
+─────────────────────────────────────────────────────────────
+Banking → Write Checks
+
+Bank Account: 1070 · BNCR CRC Operativa
+No.: (automático)
+Date: 10/27/2025
+Pay to the Order of: Varios gastos personales
+Amount: 16000.00 (₡16,000)
+Memo: Barba + libros + peluquería
+
+Expenses tab:
+Account: 1520 · Due from Owner - Alvaro
+Amount: 16000.00
+Memo: Gastos personales: barba ₡5k + libros ₡11k
+(₡5,000 barba + ₡5,000 libro + ₡6,000 peluquería)
+
+Click Save & Close
+
+TRANSACCIÓN 6: MESADA ANDRÉS (27/10)
+─────────────────────────────────────────────────────────────
+Banking → Write Checks
+
+Bank Account: 1070 · BNCR CRC Operativa
+No.: (automático)
+Date: 10/27/2025
+Pay to the Order of: Andrés Velasco
+Amount: 5000.00 (₡5,000)
+Memo: Mesada semanal soporte técnico
+
+Expenses tab:
+Account: 6100 · Gastos Operativos
+Amount: 5000.00
+Memo: Mesada Andrés - Soporte técnico temporal
+
+Click Save & Close
+
+TRANSACCIÓN 7: COBRO OSSENBACH (29/10)
+─────────────────────────────────────────────────────────────
+Banking → Make Deposits
+
+Deposit To: 1030 · BNCR USD Operativa
+Date: 10/29/2025
+
+Received From: Ossenbach Sauter Manuel
+From Account: 4010 · Ingresos por Servicios USD
+Memo: Computadora para equipo
+Amount: 1747.10
+
+Click Save & Close
+
+TRANSACCIÓN 8: COBRO GRUPO ACCIÓN (29/10)
+─────────────────────────────────────────────────────────────
+Banking → Make Deposits
+
+Deposit To: 1030 · BNCR USD Operativa
+Date: 10/29/2025
+
+Received From: Grupo Acción Comercial
+From Account: 4010 · Ingresos por Servicios USD
+Memo: Servicios varios
+Amount: 847.00
+
+Click Save & Close
+
+TRANSACCIÓN 9: VETERINARIO TEO (29/10)
+─────────────────────────────────────────────────────────────
+Banking → Write Checks
+
+Bank Account: 1030 · BNCR USD Operativa
+No.: (automático)
+Date: 10/29/2025
+Pay to the Order of: Veterinaria
+Amount: 56.80
+Memo: Revisión Teo - Gasto personal
+
+Expenses tab:
+Account: 1520 · Due from Owner - Alvaro
+Amount: 56.80
+Memo: Veterinario Teo - Personal
+
+Click Save & Close
+
+TRANSACCIÓN 10: DÉBITOS AHORROS (29/10)
+─────────────────────────────────────────────────────────────
+Banking → Transfer Funds
+
+Transfer 1:
+From: 1030 · BNCR USD Operativa
+To: 1140 · Ahorro Black Friday
+Amount: 60.00
+Date: 10/29/2025
+Memo: Débito automático
+Save & New
+
+Transfer 2:
+From: 1030 · BNCR USD Operativa
+To: 1120 · Ahorro Vehículo
+Amount: 50.00
+Date: 10/29/2025
+Memo: Débito automático
+Save & Close
+
+TRANSACCIÓN 11: SALARIO ÁLVARO (30/10)
+─────────────────────────────────────────────────────────────
+Banking → Write Checks
+
+Bank Account: 1030 · BNCR USD Operativa
+No.: (automático)
+Date: 10/30/2025
+Pay to the Order of: Alvaro Velasco
+Amount: 500.00
+Memo: Salario 2da quincena octubre
+
+Expenses tab:
+Account: 6010 · Payroll Expense - Owner
+Amount: 500.00
+Memo: Salario 2da quincena octubre
+
+Click Save & Close
+
+NOTA: El salario fue a cuenta personal pero desde QB
+basta registrar el gasto. Si quieres ser preciso:
+Luego hacer Transfer:
+From: 1030 BNCR USD Operativa
+To: 1080 BNCR USD Personal Alvaro
+Amount: 500.00
+
+TRANSACCIÓN 12: COMPRAS AUTOMERCADO (30/10)
+─────────────────────────────────────────────────────────────
+⚠️ DECISIÓN NECESARIA: ¿Es empresa o personal?
+Dice "Reintegro compras oficina"
+
+Si es EMPRESA:
+Banking → Write Checks
+Account: 6100 Gastos Operativos
+
+Si es PERSONAL:
+Account: 1520 Due from Owner - Alvaro
+
+Asumiendo EMPRESA:
+Banking → Write Checks
+Bank Account: 1030 · BNCR USD Operativa
+Date: 10/30/2025
+Pay to: Automercado
+Amount: 109.66
+Memo: Compras oficina
+
+Expenses:
+Account: 6100 Gastos Operativos
+Amount: 109.66
+Memo: Suministros oficina
+
+Save & Close
+
+TRANSACCIÓN 13: LIQUIDACIÓN AHORRO BN (31/10)
+─────────────────────────────────────────────────────────────
+Banking → Make Deposits
+
+Deposit To: 1070 · BNCR CRC Operativa
+Date: 10/31/2025
+
+Received From: Liquidación BN Ahorro
+From Account: ⚠️ ¿Qué cuenta de ahorro se liquidó?
+Memo: Liq. aut. BNAHORRO 01002061574
+Amount: 386080.45 (₡386,080.45)
+
+⚠️ NECESITO SABER: ¿Cuál de las 4 cuentas de ahorro?
+Por ahora dejo pendiente
+
+TRANSACCIÓN 14: PAGO ALE ₡36,000 (31/10)
+─────────────────────────────────────────────────────────────
+Banking → Write Checks
+
+Bank Account: 1070 · BNCR CRC Operativa
+No.: (automático)
+Date: 10/31/2025
+Pay to: Alejandra Arias
+Amount: 36000.00 (₡36,000)
+Memo: Pago urgente personal
+
+Expenses tab:
+Account: 1520 · Due from Owner - Alvaro
+Amount: 36000.00
+Memo: Pago urgente Ale - Gasto personal de Álvaro
+
+Click Save & Close
+
+TRANSACCIÓN 15: COBROS AMBIENTES CON TECNOLOGÍA (31/10)
+─────────────────────────────────────────────────────────────
+Banking → Make Deposits
+
+Deposit To: 1030 · BNCR USD Operativa
+Date: 10/31/2025
+
+LÍNEA 1:
+Received From: Ambientes con Tecnología
+From Account: 4010 · Ingresos por Servicios USD
+Memo: Doc 11
+Amount: 1017.00
+
+LÍNEA 2:
+Received From: Ambientes con Tecnología
+From Account: 4010 · Ingresos por Servicios USD
+Memo: Doc 12
+Amount: 401.15
+
+Total: 1418.15
+
+Click Save & Close
+
+═══════════════════════════════════════════════════════════════
+FASE 6: TRANSACCIONES 03 NOVIEMBRE (60 minutos)
+═══════════════════════════════════════════════════════════════
+
+TRANSACCIÓN 16: DÉBITOS AHORROS (03/11)
+─────────────────────────────────────────────────────────────
+4 transfers:
+
+Banking → Transfer Funds
+
+From: 1030 · BNCR USD Operativa
+To: 1110 · Ahorro Impuestos
+Amount: 75.00
+Date: 11/03/2025
+Save & New
+
+From: 1030 · BNCR USD Operativa
+To: 1120 · Ahorro Vehículo
+Amount: 50.00
+Date: 11/03/2025
+Save & New
+
+From: 1030 · BNCR USD Operativa
+To: 1130 · Ahorro Matrimonio
+Amount: 25.00
+Date: 11/03/2025
+Save & New
+
+From: 1030 · BNCR USD Operativa
+To: 1140 · Ahorro Black Friday
+Amount: 60.00
+Date: 11/03/2025
+Save & Close
+
+TRANSACCIÓN 17: PAGO MC 8759 USD (03/11)
+─────────────────────────────────────────────────────────────
+Banking → Write Checks
+
+Bank Account: 1030 · BNCR USD Operativa
+Date: 11/03/2025
+Pay to: BNCR - MC 8759
+Amount: 607.29
+Memo: Pago tarjeta
+
+Expenses:
+Account: 2030 · TC MC 8759 USD
+Amount: 607.29
+
+Save & Close
+
+TRANSACCIÓN 18: PAGO VISA 6386 USD (03/11)
+─────────────────────────────────────────────────────────────
+Banking → Write Checks
+
+Bank Account: 1030 · BNCR USD Operativa
+Date: 11/03/2025
+Pay to: BNCR - VISA 6386
+Amount: 321.86
+Memo: Pago porción USD
+
+Expenses:
+Account: 2050 · TC VISA 6386 USD
+Amount: 321.86
+
+Save & Close
+
+TRANSACCIÓN 19: PAGO VISA 6386 CRC (03/11)
+─────────────────────────────────────────────────────────────
+⚠️ IMPORTANTE: Conversión USD→CRC
+
+Company → Make General Journal Entries
+
+Date: 11/03/2025
+Memo: Pago VISA 6386 CRC - Conversión USD
+
+LÍNEA 1:
+Account: 2150 · TC VISA 6386 CRC
+Debit: 159000.00 (₡159,000)
+Credit: (vacío)
+Memo: Abono tarjeta CRC
+
+LÍNEA 2:
+Account: 1030 · BNCR USD Operativa
+Debit: (vacío)
+Credit: 313.61 (₡159,000 ÷ 507)
+Memo: Pago convertido USD→CRC
+
+Verify: Difference = 0.00
+Save & Close
+
+TRANSACCIÓN 20: PAGO MC 8759 CRC (03/11)
+─────────────────────────────────────────────────────────────
+Banking → Write Checks
+
+Bank Account: 1070 · BNCR CRC Operativa
+Date: 11/03/2025
+Pay to: BNCR - MC 8759
+Amount: 5070.00 (₡5,070)
+
+Expenses:
+Account: 2130 · TC MC 8759 CRC
+Amount: 5070.00
+
+Save & Close
+
+TRANSACCIÓN 21: PAGO VISA 9837 CRC (03/11 - 2 pagos)
+─────────────────────────────────────────────────────────────
+Banking → Write Checks
+
+Pago 1:
+Bank Account: 1070 · BNCR CRC Operativa
+Date: 11/03/2025
+Pay to: BNCR - VISA 9837
+Amount: 31434.00 (₡31,434)
+Expenses: 2110 · TC VISA 9837 CRC
+Save & New
+
+Pago 2:
+Bank Account: 1070 · BNCR CRC Operativa
+Date: 11/03/2025
+Pay to: BNCR - VISA 9837
+Amount: 271600.00 (₡271,600)
+Expenses: 2110 · TC VISA 9837 CRC
+Save & Close
+
+TRANSACCIÓN 22: MESADA ANDRÉS (03/11)
+─────────────────────────────────────────────────────────────
+Banking → Write Checks
+
+Bank Account: 1070 · BNCR CRC Operativa
+Date: 11/03/2025
+Pay to: Andrés Velasco
+Amount: 5000.00 (₡5,000)
+Memo: Mesada semanal soporte
+
+Expenses:
+Account: 6100 · Gastos Operativos
+Amount: 5000.00
+Memo: Mesada Andrés - Soporte técnico
+
+Save & Close
+
+TRANSACCIÓN 23: TRANSFER USD→CRC PARA CCSS (03/11)
+─────────────────────────────────────────────────────────────
+⚠️ Conversión de moneda:
+
+Company → Make General Journal Entries
+
+Date: 11/03/2025
+Memo: Transfer USD→CRC para pagar CCSS
+
+LÍNEA 1:
+Account: 1050 · Banco Promerica CRC SINPE
+Debit: 360000.00 (₡360,000)
+Credit: (vacío)
+Memo: Transfer recibido en CRC
+
+LÍNEA 2:
+Account: 1010 · Banco Promerica USD Principal
+(O la cuenta USD que usaste)
+Debit: (vacío)
+Credit: 710.06 (₡360,000 ÷ 507)
+Memo: Transfer enviado en USD convertido
+
+Save & Close
+
+TRANSACCIÓN 24: PAGO CCSS (03/11)
+─────────────────────────────────────────────────────────────
+Banking → Write Checks
+
+Bank Account: 1050 · Banco Promerica CRC SINPE
+Date: 11/03/2025
+Pay to: CCSS
+Amount: 358910.00 (₡358,910)
+Memo: Pago cuotas atrasadas + mora
+
+Expenses:
+Account: 2610 · CCSS Cuotas Pendientes
+Amount: 358910.00
+Memo: 2 cuotas + pago tardío
+
+Save & Close
+
+═══════════════════════════════════════════════════════════════
+FASE 7: TRANSACCIONES 05 NOVIEMBRE (20 minutos)
+═══════════════════════════════════════════════════════════════
+
+TRANSACCIÓN 25: PAGO SIMAN - CANCELACIÓN (05/11)
+─────────────────────────────────────────────────────────────
+Banking → Write Checks
+
+Bank Account: 1030 · BNCR USD Operativa
+Date: 11/05/2025
+Pay to: SIMAN
+Amount: 681.42
+Memo: Cancelación total tarjeta SIMAN
+
+Expenses:
+Account: 2160 · TC SIMAN CRC
+Amount: 681.42
+Memo: Cancelación cuenta
+
+Save & Close
+
+TRANSACCIÓN 26: ADELANTO SALARIO ÁLVARO (05/11)
+─────────────────────────────────────────────────────────────
+Banking → Write Checks
+
+Bank Account: 1070 · BNCR CRC Operativa
+Date: 11/05/2025
+Pay to: Alvaro Velasco
+Amount: 70000.00 (₡70,000)
+Memo: Adelanto salario
+
+Expenses:
+Account: 1520 · Due from Owner - Alvaro
+Amount: 70000.00
+Memo: Adelanto salario - Ajustar salario futuro
+
+Save & Close
+
+NOTA: Este adelanto indica que salario $1,000/mes
+es insuficiente. Analizar gastos personales reales.
+
+═══════════════════════════════════════════════════════════════
+FASE 8: TRANSACCIÓN ESPECIAL - CLEARCHECK (pendiente)
+═══════════════════════════════════════════════════════════════
+
+CLEARCHECK $200 - PASS THROUGH GLOBAL AUTOMOTRIZ
+
+⚠️ DECISIÓN: ¿Registrar ahora o esperar corte tarjeta?
+
+SI REGISTRAS AHORA:
+
+PASO 1: Cobro a Global Automotriz
+Banking → Make Deposits
+Deposit To: 1010 · Banco Promerica USD Principal
+Date: (fecha depósito)
+From: Global Automotriz
+Account: 4010 · Ingresos por Servicios USD
+Amount: 200.00
+Memo: Pass-through ClearCheck
+
+PASO 2: Cargo tarjeta VISA 6386
+Credit Card Charges → Enter Credit Card Charges
+Credit Card: 2050 · TC VISA 6386 USD
+Date: (fecha cargo)
+Purchased From: ClearCheck Mexico
+Amount: 200.00
+Expenses tab:
+  Account: 5000 · Costo de Ventas (o 6100 Gastos Operativos)
+  Amount: 200.00
+  Memo: Pass-through ClearCheck
+
+RESULTADO NETO: $0 (ingreso $200 = gasto $200)
+
+═══════════════════════════════════════════════════════════════
+FASE 9: VERIFICACIÓN FINAL (15 minutos)
+═══════════════════════════════════════════════════════════════
+
+VERIFICACIÓN 1: BALANCE SHEET
+─────────────────────────────────────────────────────────────
+Reports → Company & Financial → Balance Sheet Standard
+Dates: As of 11/06/2025
+
+VERIFICAR:
+
+ACTIVOS:
+□ 1030 BNCR USD Operativa: $1,326.35 ✅
+  (saldo conocido del estado de cuenta)
+
+□ 1070 BNCR CRC Operativa: ₡337.24 ✅
+  (saldo conocido)
+
+□ Ahorros aumentaron: +$530 total ✅
+
+□ 1510 Cuentas por Cobrar: $10,866.42 ✅
+
+PASIVOS:
+□ 2140 TC BAC 9550 CRC: ₡1,419,305.54 ✅
+
+□ 2160 TC SIMAN: $0.00 ✅ (cancelada)
+
+□ 2610 CCSS: ~$0.00 ✅ (pagada)
+
+□ Tarjetas reducidas por pagos ✅
+
+VERIFICACIÓN 2: PROFIT & LOSS
+─────────────────────────────────────────────────────────────
+Reports → Profit & Loss Standard
+Dates: 10/27/2025 to 11/06/2025
+
+VERIFICAR:
+
+INGRESOS:
+□ 4010 Ingresos Servicios USD: $4,125.25
+  (+ $200 ClearCheck si registraste)
+
+GASTOS:
+□ 6010 Payroll Owner: $500.00 ✅
+□ 6100 Gastos Operativos: ₡10,000 + otros ✅
+□ Otros gastos varios
+
+NET INCOME: Positivo (esperado)
+
+VERIFICACIÓN 3: DUE FROM OWNER
+─────────────────────────────────────────────────────────────
+Reports → Custom Reports → Transaction Detail
+Filter: Account 1520
+
+DEBE MOSTRAR:
+- Veterinario: $56.80
+- Barba: ₡5,000 (~$9.86)
+- Otros gastos personales
+- Pago Ale: ₡36,000 (~$71.00)
+- Adelanto salario: ₡70,000 (~$138.07)
+
+TOTAL DUE FROM OWNER: ~$275 USD equiv
+
+ANÁLISIS: Álvaro necesita más salario o reducir gastos
+
+═══════════════════════════════════════════════════════════════
+FASE 10: BACKUP FINAL Y CIERRE (5 minutos)
+═══════════════════════════════════════════════════════════════
+
+File → Create Backup
+
+Nombre: AlvaroVelascoNet_ACTUALIZADO_06nov2025.qbb
+Ubicación: Disco externo + Nube
+
+Incluir en backup:
+✅ Todas las transacciones
+✅ Corrección BAC 9550
+✅ A/R inicial
+✅ Todo el periodo 27/10 - 06/11
+
+═══════════════════════════════════════════════════════════════
+RESUMEN EJECUTIVO
+═══════════════════════════════════════════════════════════════
+
+COMPLETADO:
+✅ 3 cuentas creadas (3900, 1150, 2015)
+✅ Error BAC 9550 corregido (+₡1,416,506)
+✅ A/R inicial registrado ($10,866)
+✅ ~26 transacciones del 27/10 al 06/11
+✅ CCSS pagada y cerrada
+✅ SIMAN cancelada
+✅ Salarios y gastos personales registrados
+✅ Pagos tarjetas aplicados
+✅ Cobros clientes registrados
+
+PENDIENTE (opcionales):
+⚠️ ClearCheck $200 (esperar corte tarjeta)
+⚠️ Liquidación ahorro ₡386k (aclarar origen)
+⚠️ Facturas emitidas individuales (si quieres detalle)
+
+RESULTADO:
+QB al día desde 02/11 hasta 06/11 ✅
+Balance Sheet preciso ✅
+Listo para operación diaria desde 07/11 ✅
+
+═══════════════════════════════════════════════════════════════
+ANÁLISIS EMPRESA/PERSONAL
+═══════════════════════════════════════════════════════════════
+
+DUE FROM OWNER - ÁLVARO: ~$275 USD
+
+COMPONENTES:
+- Gastos menores personales: ~$65
+- Pago urgente Ale: ~$71
+- Adelanto salario: ~$138
+
+CONCLUSIÓN:
+Salario $1,000/mes ES INSUFICIENTE
+
+RECOMENDACIÓN:
+Analizar gastos reales de Álvaro:
+- Gastos fijos mensuales
+- Gastos variables
+- Ajustar salario a ~$1,200-1,400/mes
+- O reducir gastos personales
+
+═══════════════════════════════════════════════════════════════
+PRÓXIMOS PASOS
+═══════════════════════════════════════════════════════════════
+
+DESDE 07/11/2025:
+1. Registrar transacciones DIARIAS
+2. Actualizar TC semanalmente (lunes)
+3. Débitos ahorros semanales
+4. Salario quincenal Álvaro
+5. Monitorear "Due from Owner"
+6. Backup semanal
+
+MENSUAL:
+1. P&L del mes
+2. Balance Sheet
+3. Análisis salario vs gastos reales
+4. Conciliar todas las cuentas
+5. Ajustar presupuestos
+
+═══════════════════════════════════════════════════════════════
+FIN DEL PLAN
+═══════════════════════════════════════════════════════════════
+
+Tiempo total estimado: 2.5 - 3 horas
+Estado: Listo para ejecutar paso a paso
+
+¿Alguna duda antes de empezar?
+═══════════════════════════════════════════════════════════════
