@@ -1,0 +1,272 @@
+CUENTAS QUE FALTAN EN QUICKBOOKS
+Fecha: 06/11/2025
+Para: Alvaro Velasco
+
+═══════════════════════════════════════════════════════════════
+PLAN DE ACCIÓN INMEDIATO
+═══════════════════════════════════════════════════════════════
+
+Antes de corregir el error BAC 9550 y registrar transacciones,
+necesitas crear estas cuentas en QuickBooks.
+
+═══════════════════════════════════════════════════════════════
+PARTE 1: CUENTAS DE BALANCE SHEET
+═══════════════════════════════════════════════════════════════
+
+ACTIVO CIRCULANTE:
+──────────────────────────────────────────────────────────────
+
+1200 · Cuentas por Cobrar Clientes (Accounts Receivable)
+     Tipo: Accounts Receivable
+     Descripción: Facturas pendientes de cobro
+     Saldo inicial: $0 (o $10,866.42 si decides importar A/R)
+
+1150 · IVA Crédito Fiscal
+     Tipo: Other Current Asset
+     Descripción: IVA pagado en compras (13%)
+     Saldo inicial: $0
+
+PASIVO CIRCULANTE:
+──────────────────────────────────────────────────────────────
+
+2000 · Cuentas por Pagar Proveedores (Accounts Payable)
+     Tipo: Accounts Payable
+     Descripción: Facturas pendientes de pago
+     Saldo inicial: $0
+
+2015 · IVA Débito Fiscal
+     Tipo: Other Current Liability
+     Descripción: IVA cobrado en ventas (13%)
+     Saldo inicial: $0
+
+2018 · IVA por Pagar a Hacienda
+     Tipo: Other Current Liability
+     Descripción: IVA neto mensual a declarar
+     Saldo inicial: $0
+
+═══════════════════════════════════════════════════════════════
+PARTE 2: CUENTAS DE PROFIT & LOSS (P&L)
+═══════════════════════════════════════════════════════════════
+
+INGRESOS (INCOME):
+──────────────────────────────────────────────────────────────
+
+4000 · INGRESOS POR SERVICIOS
+     Tipo: Income
+     Descripción: Categoría principal
+
+4100 · Servicios Profesionales TI
+     Tipo: Income
+     Sub-cuenta de: 4000
+     Descripción: Soporte técnico, consultoría
+
+4200 · Venta Software y Licencias
+     Tipo: Income
+     Sub-cuenta de: 4000
+     Descripción: Microsoft 365, licencias
+
+4300 · Venta Hardware y Equipos
+     Tipo: Income
+     Sub-cuenta de: 4000
+     Descripción: Computadoras, equipos
+
+4400 · Servicios Cloud y Hosting
+     Tipo: Income
+     Sub-cuenta de: 4000
+     Descripción: IaaS, servicios en la nube
+
+COSTO DE VENTAS (COST OF GOODS SOLD):
+──────────────────────────────────────────────────────────────
+
+5000 · COSTO DE VENTAS
+     Tipo: Cost of Goods Sold
+     Descripción: Categoría principal
+
+5100 · Costo Licencias Software
+     Tipo: Cost of Goods Sold
+     Sub-cuenta de: 5000
+     Descripción: Costo Microsoft 365, etc.
+
+5200 · Costo Hardware
+     Tipo: Cost of Goods Sold
+     Sub-cuenta de: 5000
+     Descripción: Costo computadoras, equipos
+
+5300 · Costo Servicios Cloud
+     Tipo: Cost of Goods Sold
+     Sub-cuenta de: 5000
+     Descripción: Costo Intcomex Cloud, etc.
+
+GASTOS OPERATIVOS (EXPENSES):
+──────────────────────────────────────────────────────────────
+
+6000 · GASTOS OPERATIVOS
+     Tipo: Expense
+     Descripción: Categoría principal
+
+6100 · Combustible y Transporte
+     Tipo: Expense
+     Sub-cuenta de: 6000
+     Descripción: Gasolina, peajes, etc.
+
+6200 · Suministros de Oficina
+     Tipo: Expense
+     Sub-cuenta de: 6000
+     Descripción: Papelería, materiales
+
+6300 · Servicios Públicos
+     Tipo: Expense
+     Sub-cuenta de: 6000
+     Descripción: Luz, agua, internet, teléfono
+
+6400 · Intereses Tarjetas de Crédito
+     Tipo: Expense
+     Sub-cuenta de: 6000
+     Descripción: Intereses financieros TC
+
+6500 · Intereses Préstamos
+     Tipo: Expense
+     Sub-cuenta de: 6000
+     Descripción: Intereses Nissan, otros
+
+6600 · Comisiones Bancarias
+     Tipo: Expense
+     Sub-cuenta de: 6000
+     Descripción: Comisiones y cargos bancos
+
+6700 · Impuestos y Licencias
+     Tipo: Expense
+     Sub-cuenta de: 6000
+     Descripción: Timbres, patentes, marchamo
+
+6800 · Seguros
+     Tipo: Expense
+     Sub-cuenta de: 6000
+     Descripción: Seguros varios
+
+6900 · Gastos Varios
+     Tipo: Expense
+     Sub-cuenta de: 6000
+     Descripción: Otros gastos menores
+
+OTROS GASTOS:
+──────────────────────────────────────────────────────────────
+
+7000 · GASTOS FINANCIEROS
+     Tipo: Other Expense
+     Descripción: Categoría separada para financieros
+
+7100 · Intereses Financiamiento Vehículo
+     Tipo: Other Expense
+     Sub-cuenta de: 7000
+
+7200 · Otros Gastos Financieros
+     Tipo: Other Expense
+     Sub-cuenta de: 7000
+
+═══════════════════════════════════════════════════════════════
+PARTE 3: CUENTA ESPECIAL PARA AJUSTES
+═══════════════════════════════════════════════════════════════
+
+3900 · Ajustes de Apertura
+     Tipo: Equity
+     Descripción: Para correcciones y ajustes iniciales
+
+NOTA: Esta cuenta se usará para el ajuste del error BAC 9550
+      y otros ajustes de saldos iniciales.
+
+═══════════════════════════════════════════════════════════════
+INSTRUCCIONES PARA CREAR CUENTAS EN QB
+═══════════════════════════════════════════════════════════════
+
+PASO A PASO:
+
+1. Menú: Lists → Chart of Accounts (o Ctrl+A)
+
+2. Botón: Account → New (abajo izquierda)
+
+3. Para cada cuenta:
+
+   a) Seleccionar TIPO de cuenta según lista arriba
+
+   b) Ingresar NÚMERO de cuenta (ej: 4100)
+
+   c) Ingresar NOMBRE de cuenta (ej: Servicios Profesionales TI)
+
+   d) Si es SUB-CUENTA:
+      ✅ Marcar checkbox "Subaccount of"
+      ✅ Seleccionar cuenta padre
+
+   e) Descripción (opcional pero recomendado)
+
+   f) Saldo inicial: $0.00 (por ahora)
+
+   g) Click OK
+
+4. Repetir para TODAS las cuentas de la lista
+
+5. VERIFICAR al final:
+   Lists → Chart of Accounts
+   Revisar que todas estén creadas
+
+═══════════════════════════════════════════════════════════════
+ORDEN RECOMENDADO DE CREACIÓN
+═══════════════════════════════════════════════════════════════
+
+PRIORIDAD 1 - Cuentas críticas para corrección BAC 9550:
+✅ 3900 · Ajustes de Apertura
+
+PRIORIDAD 2 - Cuentas para registrar operaciones básicas:
+✅ 1200 · Cuentas por Cobrar
+✅ 2000 · Cuentas por Pagar
+✅ 1150 · IVA Crédito Fiscal
+✅ 2015 · IVA Débito Fiscal
+✅ 4000 · Ingresos por Servicios (y subcuentas)
+✅ 5000 · Costo de Ventas (y subcuentas)
+
+PRIORIDAD 3 - Cuentas para gastos detallados:
+✅ 6000 · Gastos Operativos (y subcuentas)
+✅ 7000 · Gastos Financieros (y subcuentas)
+
+═══════════════════════════════════════════════════════════════
+DESPUÉS DE CREAR TODAS LAS CUENTAS
+═══════════════════════════════════════════════════════════════
+
+SIGUIENTE PASO: Corregir error BAC 9550
+
+El asiento será:
+──────────────────────────────────────────────────────────────
+DEBE  | 2140 · TC VISA BAC 9550 CRC  | ₡1,416,506.11
+HABER | 3900 · Ajustes de Apertura   | ₡1,416,506.11
+──────────────────────────────────────────────────────────────
+Concepto: Corrección error captura saldo inicial
+
+═══════════════════════════════════════════════════════════════
+PREGUNTAS CRÍTICAS ANTES DE CONTINUAR
+═══════════════════════════════════════════════════════════════
+
+1. ¿Cuál es la FECHA OFICIAL de inicio de QB?
+   □ 01/11/2025
+   □ 03/11/2025
+   □ 06/11/2025
+   □ Otra: ___________
+
+2. ¿Registrar A/R ($10,866) como saldo inicial en QB?
+   □ SÍ - Importar desde SWS
+   □ NO - Dejar en SWS, registrar solo cobros
+
+3. ¿Nivel de detalle para ventas en QB?
+   □ Cada factura individual
+   □ Resumen mensual
+   □ Solo movimientos bancarios
+
+═══════════════════════════════════════════════════════════════
+
+TIEMPO ESTIMADO:
+- Crear cuentas: 20-30 minutos
+- Verificar: 5 minutos
+- TOTAL: ~35 minutos
+
+¡Estás listo para comenzar!
+
+═══════════════════════════════════════════════════════════════

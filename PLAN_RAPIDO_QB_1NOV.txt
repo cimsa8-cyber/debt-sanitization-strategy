@@ -1,0 +1,255 @@
+PLAN RÁPIDO QUICKBOOKS - INICIO 1 NOVIEMBRE 2025
+Fecha ejecución: 06/11/2025
+Usuario: Alvaro Velasco
+
+═══════════════════════════════════════════════════════════════
+ESTRATEGIA CONFIRMADA
+═══════════════════════════════════════════════════════════════
+
+✅ FECHA INICIO QB: 01/11/2025
+✅ A/R INICIAL: $10,866.42 (importar como saldo de apertura)
+✅ SWS-SOFTWARE: Continúa para facturación oficial Hacienda
+✅ QUICKBOOKS: Contabilidad + Estados de cuenta clientes
+✅ OBJETIVO: Poner al día del 1 al 6 de noviembre
+
+═══════════════════════════════════════════════════════════════
+FASE 1: CREAR CUENTAS FALTANTES (15-20 min)
+═══════════════════════════════════════════════════════════════
+
+En QuickBooks: Lists → Chart of Accounts → Account → New
+
+CRÍTICAS (crear primero):
+─────────────────────────────────────────────────────────────
+3900 · Ajustes de Apertura (Equity)
+1200 · Cuentas por Cobrar (Accounts Receivable)
+2000 · Cuentas por Pagar (Accounts Payable)
+1150 · IVA Crédito Fiscal (Other Current Asset)
+2015 · IVA Débito Fiscal (Other Current Liability)
+
+INGRESOS (necesarias para facturas):
+─────────────────────────────────────────────────────────────
+4000 · Ingresos por Servicios (Income)
+  4100 · Servicios Profesionales TI (Income, sub de 4000)
+  4200 · Venta Software y Licencias (Income, sub de 4000)
+  4300 · Venta Hardware y Equipos (Income, sub de 4000)
+  4400 · Servicios Cloud (Income, sub de 4000)
+
+COSTOS (necesarias para compras):
+─────────────────────────────────────────────────────────────
+5000 · Costo de Ventas (COGS)
+  5100 · Costo Licencias Software (COGS, sub de 5000)
+  5200 · Costo Hardware (COGS, sub de 5000)
+  5300 · Costo Servicios Cloud (COGS, sub de 5000)
+
+GASTOS (para operaciones):
+─────────────────────────────────────────────────────────────
+6000 · Gastos Operativos (Expense)
+  6100 · Combustible (Expense, sub de 6000)
+  6200 · Suministros (Expense, sub de 6000)
+  6400 · Intereses TC (Expense, sub de 6000)
+  6600 · Comisiones Bancarias (Expense, sub de 6000)
+
+═══════════════════════════════════════════════════════════════
+FASE 2: AJUSTAR SALDOS INICIALES AL 01/11/2025 (10 min)
+═══════════════════════════════════════════════════════════════
+
+PROBLEMA: El Balance Sheet actual tiene saldos al 06/11
+SOLUCIÓN: Necesitamos retroceder al 01/11
+
+AJUSTES REQUERIDOS (restar movimientos del 1-6 nov):
+
+TARJETAS - Revertir pagos hechos 1-6 nov:
+─────────────────────────────────────────────────────────────
+VISA 3519: Saldo actual ~$1,040
+  + Pagos realizados 1-6 nov: $542.56 + ₡10k (~$560)
+  = Saldo al 01/11: ~$1,600
+
+VISA 9837: Saldo actual ~$5,318
+  + Pagos realizados 1-6 nov: ~$529
+  = Saldo al 01/11: ~$5,847
+
+MC 8759: Saldo actual ~$5,088
+  + Pagos realizados 1-6 nov: ~$616
+  = Saldo al 01/11: ~$5,704
+
+VISA 6386: Saldo actual ~$525
+  + Pago realizado 3 nov: $322
+  = Saldo al 01/11: ~$847
+
+SIMAN: Saldo actual $0
+  + Pago cancelación 5 nov: $681.42
+  = Saldo al 01/11: $681.42
+
+BANCOS - Revertir movimientos 1-6 nov:
+─────────────────────────────────────────────────────────────
+NECESITO CONFIRMAR: ¿Tienes los saldos exactos de cada
+cuenta bancaria al 01/11/2025?
+
+Si no, podemos:
+a) Usar saldos actuales y registrar movimientos día a día
+b) Pedirle a los bancos saldos al 01/11
+
+═══════════════════════════════════════════════════════════════
+FASE 3: CORREGIR ERROR BAC 9550 (3 min)
+═══════════════════════════════════════════════════════════════
+
+Menú: Company → Make General Journal Entries
+
+Fecha: 01/11/2025
+Entry No: 1
+
+CUENTA                          | DEBE          | HABER
+─────────────────────────────────────────────────────────────
+2140 TC VISA BAC 9550 CRC       | ₡1,416,506.11 |
+3900 Ajustes de Apertura        |               | ₡1,416,506.11
+
+Memo: Corrección error captura saldo inicial tarjeta BAC
+
+═══════════════════════════════════════════════════════════════
+FASE 4: REGISTRAR A/R INICIAL (5 min)
+═══════════════════════════════════════════════════════════════
+
+OPCIÓN A - SALDO GLOBAL (más rápido):
+─────────────────────────────────────────────────────────────
+Menú: Company → Make General Journal Entries
+
+Fecha: 01/11/2025
+
+CUENTA                          | DEBE          | HABER
+─────────────────────────────────────────────────────────────
+1200 Cuentas por Cobrar         | $10,866.42    |
+3900 Ajustes de Apertura        |               | $10,866.42
+
+Memo: Saldo inicial A/R al 01/11/2025
+
+DESVENTAJA: No tendrás detalle por cliente
+
+OPCIÓN B - DETALLE POR CLIENTE (recomendado):
+─────────────────────────────────────────────────────────────
+NECESITO: El detalle de A/R por cliente al 01/11/2025
+
+Si tienes ese dato de SWS, te preparo el formato para
+importar o registrar uno por uno.
+
+VENTAJA: Podrás emitir estados de cuenta individuales
+desde QB con saldos correctos por cliente.
+
+═══════════════════════════════════════════════════════════════
+FASE 5: REGISTRAR MOVIMIENTOS 01-06 NOVIEMBRE
+═══════════════════════════════════════════════════════════════
+
+Una vez tengamos saldos correctos al 01/11, registramos:
+
+DÍA 1 - Viernes 01/11:
+─────────────────────────────────────────────────────────────
+(Revisar si hubo movimientos este día)
+
+DÍA 2 - Sábado 02/11:
+─────────────────────────────────────────────────────────────
+(Revisar si hubo movimientos)
+
+DÍA 3 - Domingo 03/11:
+─────────────────────────────────────────────────────────────
+• Factura #2550 PEREZ MORALES: $56.50
+• Factura #2549 CIO: $687.04
+• Pago tarjetas: MC 8759 $607.29, VISA 6386 $321.86
+• Compra Intcomex Cloud: $2,317.09
+
+DÍA 4 - Lunes 04/11:
+─────────────────────────────────────────────────────────────
+• Factura #2554 WAIPIO: $772.92
+• Factura #2553 GRUPO PORCINAS: $258.94
+• Factura #2552 OSSENBACH: $113.00
+• Compra Intcomex Lenovo: $679.12
+
+DÍA 5 - Martes 05/11:
+─────────────────────────────────────────────────────────────
+• Factura #2555 GENTRA: $452.00
+• Pago SIMAN cancelación: $681.42
+
+DÍA 6 - Miércoles 06/11:
+─────────────────────────────────────────────────────────────
+• Revisar movimientos adicionales
+
+═══════════════════════════════════════════════════════════════
+DECISIÓN URGENTE NECESARIA
+═══════════════════════════════════════════════════════════════
+
+¿Qué prefieres para AVANZAR RÁPIDO?
+
+OPCIÓN 1 - Arranque Simple (2-3 horas):
+─────────────────────────────────────────────────────────────
+✅ Crear cuentas básicas
+✅ Corregir BAC 9550
+✅ A/R como saldo global ($10,866)
+✅ Registrar solo facturas emitidas 1-6 nov
+✅ Registrar solo compras 1-6 nov
+✅ Dejar pagos de tarjetas para después
+
+RESULTADO: QB operativo para seguir facturando
+TIEMPO: 2-3 horas
+COMPLETUD: 60%
+
+OPCIÓN 2 - Arranque Completo (5-6 horas):
+─────────────────────────────────────────────────────────────
+✅ Crear TODAS las cuentas
+✅ Corregir BAC 9550
+✅ A/R detallado por cliente
+✅ Registrar todas las facturas
+✅ Registrar todas las compras
+✅ Registrar todos los pagos de tarjetas
+✅ Conciliar todas las cuentas bancarias
+
+RESULTADO: QB 100% al día
+TIEMPO: 5-6 horas
+COMPLETUD: 100%
+
+OPCIÓN 3 - Híbrido Pragmático (3-4 horas):
+─────────────────────────────────────────────────────────────
+✅ Crear cuentas esenciales
+✅ Corregir BAC 9550
+✅ A/R detallado top 5 clientes, resto agrupado
+✅ Facturas 1-6 nov completas
+✅ Compras 1-6 nov completas
+✅ Pagos tarjetas principales
+
+RESULTADO: QB operativo y ~80% preciso
+TIEMPO: 3-4 horas
+COMPLETUD: 80%
+
+═══════════════════════════════════════════════════════════════
+INFORMACIÓN QUE NECESITO DE TU PARTE
+═══════════════════════════════════════════════════════════════
+
+Para proceder, necesito:
+
+1. ¿Qué opción prefieres? (1, 2, o 3)
+
+2. A/R detallado por cliente al 01/11/2025
+   (si no lo tienes al 01/11, dame el del 03/11 que ya
+   tengo y lo ajustamos)
+
+3. Saldos bancarios al 01/11/2025
+   (si no los tienes exactos, usamos los del 06/11 y
+   restamos los movimientos)
+
+4. ¿Hubo cobros a clientes del 1-6 nov?
+   (transferencias recibidas que redujeron el A/R)
+
+5. ¿Quieres que prepare un archivo de importación, o
+   prefieres que te dé instrucciones paso a paso para
+   ingresar manualmente?
+
+═══════════════════════════════════════════════════════════════
+SIGUIENTE PASO INMEDIATO
+═══════════════════════════════════════════════════════════════
+
+Mientras decides, puedes EMPEZAR AHORA con:
+
+1. Abrir QuickBooks
+2. Crear las cuentas de FASE 1 (15-20 min)
+3. Volver aquí cuando termines
+
+Luego seguimos con las correcciones y registros.
+
+═══════════════════════════════════════════════════════════════

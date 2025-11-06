@@ -1,0 +1,284 @@
+COMPARACIÓN: BALANCE SHEET QB vs DATOS REALES
+Fecha análisis: 06/11/2025
+
+═══════════════════════════════════════════════════════════════
+OBJETIVO: Identificar diferencias entre saldos en QB y realidad
+═══════════════════════════════════════════════════════════════
+
+METODOLOGÍA:
+- Balance Sheet QB: Capturado 06/11/2025
+- Datos reales: Cortes de tarjetas/bancos al 06/11/2025
+- TC usado para conversión: ₡507/$1 (promedio)
+
+═══════════════════════════════════════════════════════════════
+TARJETAS DE CRÉDITO - ANÁLISIS DETALLADO
+═══════════════════════════════════════════════════════════════
+
+1. VISA 9837 (BNCR):
+   ─────────────────────────────────────────────────────────
+   QB muestra:
+   - USD: $1,775.45
+   - CRC: $4,003.96 (equivalente, real ₡2,030,004)
+
+   REAL al 06/11:
+   - USD: $1,775.45 ✅
+   - CRC: ₡2,030,004.01 = $4,003.96 ✅
+
+   DIFERENCIA: NINGUNA ✅
+
+   PAGOS REALIZADOS (27/10-06/11):
+   - ₡303,034 (~$529 USD)
+   ─────────────────────────────────────────────────────────
+
+2. VISA 3519 (BNCR):
+   ─────────────────────────────────────────────────────────
+   QB muestra:
+   - USD: No aparece línea separada
+   - CRC: $702.98 (equivalente ₡356,410)
+
+   REAL al 06/11:
+   - USD: $30.06
+   - CRC: ₡578,648.64 = $1,141.32
+
+   DIFERENCIA:
+   - Falta USD: +$30.06
+   - Falta CRC: +₡222,237.78 (+$438.36)
+   - TOTAL DIFERENCIA: +$468.42 ❌
+
+   POSIBLE CAUSA:
+   Balance inicial capturado ANTES de cargos recientes,
+   o no se incluyó porción USD en QB.
+
+   PAGOS REALIZADOS (27/10-06/11):
+   - $542.56 USD + ₡10,000 CRC (~$560 total)
+   ─────────────────────────────────────────────────────────
+
+3. MC 8759 (BNCR):
+   ─────────────────────────────────────────────────────────
+   QB muestra:
+   - USD: $116.48
+   - CRC: $6,196.35 (equivalente ₡3,141,549)
+
+   REAL al 06/11:
+   - USD: $126.48
+   - CRC: ₡2,841,545.17 = $5,604.62
+
+   DIFERENCIA:
+   - USD: +$10.00 más en realidad
+   - CRC: -₡300,003.83 (-$591.73) menos en realidad
+
+   ANÁLISIS:
+   - USD real > QB: Indica cargo nuevo de ~$10
+   - CRC real < QB: Indica que se pagó ₡300k
+   - Estos movimientos no reflejados en BS
+
+   PAGOS REALIZADOS (27/10-06/11):
+   - $607.29 USD + ₡5,070 CRC (~$616 total)
+   ─────────────────────────────────────────────────────────
+
+4. VISA BAC 9550:
+   ─────────────────────────────────────────────────────────
+   QB muestra:
+   - USD: $209.92 ✅
+   - CRC: $2,799.42 ❌❌❌ ERROR CONOCIDO
+
+   REAL al 06/11:
+   - USD: $209.92 ✅
+   - CRC: ₡1,419,305.54 = $2,799.42 si fuera en USD
+
+   ERROR IDENTIFICADO:
+   Se ingresó el valor en COLONES (₡1,419,305.54) en el
+   campo equivocado, y QB lo interpretó como $1,419,305
+   y lo convirtió a equivalente de presentación.
+
+   CORRECCIÓN REQUERIDA:
+   - Eliminar: $2,799.42
+   - Agregar: ₡1,419,305.54 (que equivale a $2,799.42)
+   - Ajuste neto en Balance: +₡1,416,506.11
+
+   PAGOS REALIZADOS (27/10-06/11):
+   - NINGUNO ⚠️ (fecha límite 13/11)
+   ─────────────────────────────────────────────────────────
+
+5. VISA 6386 (BNCR):
+   ─────────────────────────────────────────────────────────
+   QB muestra:
+   - USD Crédito a Favor: -$200.00
+   - CRC: $906.76 (equivalente ₡459,727)
+
+   REAL al 06/11:
+   - USD: -$1.41 (crédito a favor)
+   - CRC: ₡300,728.61 = $593.13
+
+   DIFERENCIA:
+   - USD: -$200 en QB vs -$1.41 real = $198.59 diferencia
+   - CRC: $906.76 en QB vs $593.13 real = $313.63 diferencia
+
+   ANÁLISIS:
+   Balance Sheet podría tener saldo ANTERIOR a uso del
+   crédito y pago de ₡159k mencionado en consolidado.
+
+   MOVIMIENTOS POST-CORTE:
+   - Cargo $200 a Clearcheck Mexico (usar crédito)
+   - Abono ₡159,000 al saldo CRC
+
+   PAGOS REALIZADOS (27/10-06/11):
+   - $321.86 USD
+   ─────────────────────────────────────────────────────────
+
+6. SIMAN:
+   ─────────────────────────────────────────────────────────
+   QB muestra:
+   - CRC: $666.63 (equivalente ₡337,900)
+
+   REAL al 06/11:
+   - SALDO: $0.00 ✅ CANCELADA
+
+   DIFERENCIA:
+   Balance Sheet tiene saldo viejo. Tarjeta se canceló
+   el 05/11/2025 con pago de $681.42.
+
+   CORRECCIÓN REQUERIDA:
+   Registrar pago de cancelación y cerrar cuenta.
+   ─────────────────────────────────────────────────────────
+
+═══════════════════════════════════════════════════════════════
+CUENTAS DE AHORRO/CORRIENTES - ANÁLISIS
+═══════════════════════════════════════════════════════════════
+
+NOTA: No tengo los saldos REALES actualizados de todas las
+cuentas bancarias al 06/11 para hacer comparación detallada.
+
+El usuario proporcionó MOVIMIENTOS de las cuentas, pero no
+los saldos finales actualizados de cada cuenta al 06/11.
+
+CUENTAS EN QB:
+✅ 1010 · Banco Promerica USD Principal: $3,030.89
+✅ 1030 · BNCR USD Operativa Empresa: $3,149.94
+✅ 1040 · BNCR USD Reservas: $0.43
+✅ 1070 · BNCR CRC Operativa Empresa: $148.59
+✅ 1080 · BNCR USD Personal Alvaro: $21.84
+✅ 1090 · BNCR CRC Personal Alvaro: $45.27
+✅ 1110 · Ahorro Impuestos Marchamo: $2,262.03
+✅ 1120 · Ahorro Vehiculo: $4,485.19
+✅ 1130 · Ahorro Matrimonio: $930.30
+✅ 1140 · Ahorro Black Friday: $260.25
+
+VERIFICACIÓN REQUERIDA:
+Confirmar saldos actuales de cada cuenta bancaria.
+
+═══════════════════════════════════════════════════════════════
+OTRAS OBLIGACIONES
+═══════════════════════════════════════════════════════════════
+
+CCSS Cuotas Pendientes:
+- QB: $706.12
+- Real: $706.12 ✅
+
+Hacienda Impuestos Pendientes:
+- QB: $9,804.00
+- Real: $9,804.00 ✅
+
+Nissan Financiamiento:
+- QB: $20,142.00
+- Real: $20,142.00 ✅
+
+═══════════════════════════════════════════════════════════════
+CUENTAS POR COBRAR (A/R)
+═══════════════════════════════════════════════════════════════
+
+QB muestra: $0.00 ❌
+
+REAL (según SWS-Software al 03/11):
+- Total A/R: $10,866.42
+
+DECISIÓN PENDIENTE:
+¿Registrar A/R en QB como saldo inicial, o dejar en SWS
+y solo registrar cuando se cobre?
+
+Recomendación previa: Dejar en SWS por simplicidad.
+
+═══════════════════════════════════════════════════════════════
+CUENTAS POR PAGAR (A/P)
+═══════════════════════════════════════════════════════════════
+
+QB muestra: $0.00 ❌
+
+REAL (facturas recibidas Nov):
+- Intcomex Cloud: $2,317.09 (crédito 30 días, fecha 03/11)
+- Intcomex Lenovo: $679.12 (crédito 30 días, fecha 04/11)
+- TOTAL: $2,996.21
+
+GASTOS DE CONTADO:
+- UNOPETROL gasolina: $54 (pagado con TC)
+- Buenos Aires productos: $194 (pagado con TC)
+
+NOTA: Los gastos de contado YA están reflejados en los
+saldos de tarjetas, NO crear A/P para estos.
+
+═══════════════════════════════════════════════════════════════
+INGRESOS (SALES/REVENUE)
+═══════════════════════════════════════════════════════════════
+
+QB muestra: No hay cuentas de ingresos definidas ❌
+
+FACTURAS EMITIDAS (29/10 - 05/11):
+8 facturas, total $3,726.91
+
+DECISIÓN PENDIENTE:
+¿Registrar facturas individuales en QB, o solo resumen
+mensual de ventas?
+
+Recomendación previa: Resumen mensual.
+
+═══════════════════════════════════════════════════════════════
+RESUMEN DE DIFERENCIAS CRÍTICAS
+═══════════════════════════════════════════════════════════════
+
+ERRORES DE CAPTURA EN QB (corregir):
+1. ❌ BAC 9550 CRC: +₡1,416,506.11 (ERROR CRÍTICO)
+2. ❌ VISA 3519: Falta ~$468 (cargos recientes)
+3. ❌ MC 8759: Descuadre CRC vs USD
+4. ❌ VISA 6386: Descuadre en crédito a favor
+5. ❌ SIMAN: Mostrar como cancelada ($0)
+
+CUENTAS FALTANTES EN QB:
+1. ❌ Cuentas de Ingresos (Revenue)
+2. ❌ Cuentas de Gastos Operativos
+3. ❌ Cuentas de Costo de Ventas (COGS)
+4. ❌ Cuenta IVA por Cobrar (de ventas)
+5. ❌ Cuenta IVA por Pagar (de compras)
+6. ❌ Cuenta IVA Crédito Fiscal
+7. ❌ Cuentas por Cobrar (A/R) clientes
+8. ❌ Cuentas por Pagar (A/P) proveedores
+
+TRANSACCIONES NO REGISTRADAS:
+- Facturas emitidas: $3,726.91
+- Facturas recibidas: $2,996.21
+- Pagos tarjetas: ~$2,708
+- Cobros recibidos: (pendiente de confirmar)
+
+═══════════════════════════════════════════════════════════════
+RECOMENDACIÓN INMEDIATA
+═══════════════════════════════════════════════════════════════
+
+ANTES de corregir el error BAC 9550, es CRÍTICO:
+
+1. Definir FECHA DE CORTE oficial para QB
+   (¿01/11, 03/11, o 06/11?)
+
+2. Obtener SALDOS EXACTOS de todas las cuentas a esa fecha
+
+3. Crear PLAN DE CUENTAS completo en QB:
+   - 4000-4999: Ingresos
+   - 5000-5999: Costo de Ventas
+   - 6000-6999: Gastos Operativos
+   - 1200: Cuentas por Cobrar
+   - 2000: Cuentas por Pagar
+   - 1150: IVA Crédito Fiscal
+   - 2015: IVA Débito Fiscal
+
+4. VERIFICAR saldos bancarios actuales
+   (usuario solo dio movimientos, no saldos finales)
+
+═══════════════════════════════════════════════════════════════

@@ -20,13 +20,23 @@ COMPLETADO:
    Archivo: balance_sheet_ANTES_06nov2025.txt
    Fecha BS: 06/11/2025
 
+✅ FASE 0.4 - Análisis comparativo BS vs Real
+   Archivo: comparacion_BS_vs_real_nov6.txt
+   Fecha: 06/11/2025
+   Hallazgos: Múltiples discrepancias identificadas
+
+DECISIONES TOMADAS:
+✅ Fecha inicio QB: 01/11/2025
+✅ A/R: Registrar $10,866 como saldo inicial
+✅ SWS: Continúa para facturación oficial
+✅ QB: Contabilidad + estados de cuenta clientes
+
 PENDIENTE:
-□ FASE 0.4 - Anotar saldos iniciales
-□ FASE 1 - Corrección BAC 9550
-□ FASE 2 - Registrar facturas emitidas
-□ FASE 3 - Registrar facturas recibidas
-□ FASE 4 - Aplicar cobros
-□ FASE 5 - Pago SIMAN
+□ FASE 1 - Crear cuentas faltantes en QB
+□ FASE 2 - Corregir error BAC 9550
+□ FASE 3 - Ajustar saldos iniciales al 01/11
+□ FASE 4 - Registrar A/R inicial
+□ FASE 5 - Registrar movimientos 01-06 nov
 □ FASE 6 - Conciliación bancaria
 □ FASE 7 - Validación final
 
@@ -34,13 +44,19 @@ PENDIENTE:
 DATOS DE REFERENCIA
 ═══════════════════════════════════════════════════════════════
 
-Archivo guía completa: GUIA_QB_PASO_A_PASO.txt
-Carpeta datos: /home/user/debt-sanitization-strategy/data/
+ARCHIVOS CLAVE:
+- GUIA_QB_PASO_A_PASO.txt (guía original completa)
+- PLAN_RAPIDO_QB_1NOV.txt (plan ejecutivo rápido)
+- CUENTAS_CREAR_EN_QB.txt (lista cuentas a crear)
+- comparacion_BS_vs_real_nov6.txt (análisis diferencias)
+- Carpeta datos: /home/user/debt-sanitization-strategy/data/
 
-Facturas a registrar: 4 ($1,596.86)
-Compras a registrar: 2 ($2,996.21)
-Cobros a aplicar: 5 ($4,125.25)
+MOVIMIENTOS A REGISTRAR (01-06 NOV):
+Facturas emitidas: 8 ($3,726.91)
+Compras recibidas: 2 ($2,996.21) + gastos menores
+Pagos tarjetas: ~$2,708
 Corrección crítica: BAC 9550 (+₡1,416,506.11)
+A/R inicial: $10,866.42
 
 ═══════════════════════════════════════════════════════════════
 PARA CONTINUAR EN PRÓXIMA SESIÓN
