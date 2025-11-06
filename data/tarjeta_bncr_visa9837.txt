@@ -1,0 +1,33 @@
+TARJETA DE CRÉDITO BNCR
+Número: 4831-26XX-XXXX-9837
+Tipo: VISA PLATINO EMV - TITULAR
+Nombre: ALVARO VELASCO JIMENEZ
+Cuenta IBAN: CR53015114252173665233
+Moneda: DOLARES
+Límite crédito: $9,000.00
+
+TASAS:
+Interés anual dólares: 29.04%
+Interés anual colones: 35.04%
+
+FECHAS:
+Fecha del corte: 17/10/2025
+Fecha del pago: 03/11/2025
+
+SALDOS (06/11/2025):
+                    COLONES           DOLARES
+Pago mínimo:        ₡0.00            $0.00
+Pago al corte:      ₡2,030,004.01    $1,500.45
+Saldo actual:       ₡2,030,004.01    $1,775.45
+Disponible compras: ₡463,450.72      $908.72
+Disponible avances: ₡417,105.64      $817.85
+
+ANÁLISIS:
+- Saldo total: ₡2,030,004.01 + $1,775.45 = ~$5,318 USD (usando TC 573)
+- Saldo USD puro: $1,775.45
+- Saldo CRC equivalente: ~$3,543
+- Utilización: 59% del límite
+- Tasa efectiva mensual USD: 2.42% (29.04%/12)
+- Interés mensual estimado USD: ~$43
+- Interés mensual estimado CRC: ~$86
+- Total interés mensual estimado: ~$129
