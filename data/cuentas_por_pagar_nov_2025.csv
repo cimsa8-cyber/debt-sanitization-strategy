@@ -1,3 +1,5 @@
-fecha,numero,proveedor,concepto,subtotal_usd,iva_usd,total_usd,condicion,plazo_dias,tc_colon
-2025-11-04,00100002010000830439,Intcomex Costa Rica,Lenovo V15 G4 + Flete,600.99,78.13,679.12,credito,30,507.69
-2025-11-03,00100001010000830260,Intcomex Costa Rica,Servicios Cloud IaaS Oct 2025,2050.52,266.57,2317.09,credito,30,507.73
+fecha,numero,proveedor,concepto,subtotal_crc,iva_crc,total_crc,total_usd,condicion,plazo_dias,tc_colon,medio_pago
+2025-11-04,00100002010000830439,Intcomex Costa Rica,Lenovo V15 G4 + Flete,0,0,0,679.12,credito,30,507.69,
+2025-11-03,00100001010000830260,Intcomex Costa Rica,Servicios Cloud IaaS Oct 2025,0,0,0,2317.09,credito,30,507.73,
+2025-10-30,01600055010000677054,UNOPETROL CR,Gasolina Super 45.71L,30946.00,0,30946.00,54.00,contado,0,573.00,TC
+2025-10-30,00100013010000005480,INDUSTRIAS BUENOS AIRES,Productos varios,104809.22,6564.21,111373.43,194.00,contado,0,574.00,Aceptado
