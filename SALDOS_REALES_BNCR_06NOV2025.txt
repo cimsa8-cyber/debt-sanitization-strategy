@@ -1,0 +1,171 @@
+SALDOS REALES BNCR - 06/11/2025 23:12
+Comparación Balance Sheet QB vs Realidad Bancaria
+
+═══════════════════════════════════════════════════════════════
+CUENTAS EMPRESA
+═══════════════════════════════════════════════════════════════
+
+1. BNCR 188618-3 CRC OPERATIVA EMPRESA (1070)
+   Balance Sheet QB: ₡75,337.24 ($148.59)
+   Saldo Real BNCR:  ₡337.24 ($0.67)
+   DIFERENCIA:       -₡75,000 (-$147.92)
+   ⚠️ PROBLEMA GRAVE: Falta ₡75,000 en QB o transacciones no registradas
+
+2. BNCR 601066-4 USD OPERATIVA EMPRESA (1030)
+   Balance Sheet QB: $3,149.94
+   Saldo Real BNCR:  $1,326.35
+   DIFERENCIA:       -$1,823.59
+   ⚠️ PROBLEMA GRAVE: Faltan $1,823.59 en QB o transacciones no registradas
+
+═══════════════════════════════════════════════════════════════
+CUENTAS PERSONALES ÁLVARO
+═══════════════════════════════════════════════════════════════
+
+3. BNCR 042186-9 CRC PERSONAL ÁLVARO (1090)
+   Balance Sheet QB: ₡22,950.50 ($45.27)
+   Saldo Real BNCR:  ₡67,950.50 ($134.00)
+   DIFERENCIA:       +₡45,000 (+$88.73)
+   ✅ MÁS DINERO: Probablemente adelanto ₡70k menos gastos
+
+4. BNCR 009589-4 USD RESERVAS (1040)
+   Balance Sheet QB: $0.43
+   Saldo Real BNCR:  $0.43
+   DIFERENCIA:       $0.00
+   ✅ CORRECTO
+
+5. BNCR 011112-1 USD PERSONAL ÁLVARO (1080)
+   Balance Sheet QB: $21.84
+   Saldo Real BNCR:  $21.84
+   DIFERENCIA:       $0.00
+   ✅ CORRECTO
+
+═══════════════════════════════════════════════════════════════
+CUENTAS NO REGISTRADAS EN QB
+═══════════════════════════════════════════════════════════════
+
+6. ARIAS FALLAS ALEJANDRA - 200-01-030-013718-0 CRC
+   Balance Sheet QB: NO EXISTE
+   Saldo Real BNCR:  ₡11,964.04 ($23.60)
+   ⚠️ CUENTA NO REGISTRADA: ¿Es personal? ¿Es empresa?
+
+7. ALEJANDRA ARIAS FALLAS - 200-02-171-001288-3 USD
+   Balance Sheet QB: NO EXISTE
+   Saldo Real BNCR:  $0.00
+   ℹ️ Cuenta cerrada o sin movimiento
+
+═══════════════════════════════════════════════════════════════
+RESUMEN CRÍTICO
+═══════════════════════════════════════════════════════════════
+
+EFECTIVO REAL DISPONIBLE EMPRESA:
+- USD Operativa:  $1,326.35 (vs $3,149.94 en QB)
+- CRC Operativa:  $0.67 (vs $148.59 en QB)
+- USD Reservas:   $0.43
+TOTAL EMPRESA:    $1,327.45 (vs $3,299.39 en QB)
+DÉFICIT:          -$1,971.94
+
+EFECTIVO PERSONAL ÁLVARO:
+- USD Personal:   $21.84
+- CRC Personal:   $134.00
+TOTAL PERSONAL:   $155.84
+
+TOTAL DISPONIBLE: $1,483.29 (empresa + personal)
+
+═══════════════════════════════════════════════════════════════
+IMPACTO EN ESTRATEGIA DE PAGOS
+═══════════════════════════════════════════════════════════════
+
+ANTES (según Balance Sheet):
+Efectivo disponible: $6,329.42
+Con ahorros: $14,267.19
+Con A/R: $25,133.61
+
+AHORA (según saldos reales):
+Efectivo disponible: $1,327.45 (solo empresa BNCR)
+⚠️ FALTAN: Promerica USD, Ahorros - NECESITO CONFIRMAR
+
+DEUDA HACIENDA: ~$19,604+ (ISR + IVA)
+DEUDA TARJETAS: $16,790
+
+CONCLUSIÓN: SITUACIÓN DE INSOLVENCIA SEVERA
+
+═══════════════════════════════════════════════════════════════
+PREGUNTAS URGENTES
+═══════════════════════════════════════════════════════════════
+
+1. ¿Dónde están los $1,823.59 de diferencia en 601066-4 USD?
+   - ¿Transacciones no registradas en QB?
+   - ¿Gastos adicionales 02-06/11?
+
+2. ¿Dónde están los ₡75,000 de diferencia en 188618-3 CRC?
+   - ¿Transacciones no registradas en QB?
+   - ¿Gastos adicionales?
+
+3. Cuenta Alejandra ₡11,964.04:
+   - ¿Es cuenta personal o empresa?
+   - ¿Disponible para usar?
+
+4. Banco Promerica:
+   - ¿Saldos actualizados?
+   - ¿Siguen siendo $3,030.89 USD?
+
+5. Cuentas de ahorro BNCR:
+   - ¿Saldos actuales reales?
+   - ¿Siguen siendo $7,937.77 total?
+
+═══════════════════════════════════════════════════════════════
+
+═══════════════════════════════════════════════════════════════
+BANCO PROMERICA - SALDOS REALES 06/11/2025 23:16
+═══════════════════════════════════════════════════════════════
+
+1. PROMERICA 10000003881708 SINPE CRC (1050)
+   Balance Sheet QB: $0.00
+   Saldo Real:       ₡1,090.00 ($2.15)
+   DIFERENCIA:       +$2.15
+   ✅ CORRECTO: Saldo residual después pago CCSS
+
+2. PROMERICA 20000003881691 AHORROS USD (1020)
+   Balance Sheet QB: $0.00
+   Saldo Real:       $0.00
+   DIFERENCIA:       $0.00
+   ✅ CORRECTO
+
+3. PROMERICA 30000003904229 CORRIENTE CRC (1060)
+   Balance Sheet QB: $0.00
+   Saldo Real:       ₡0.00
+   DIFERENCIA:       $0.00
+   ✅ CORRECTO
+
+4. PROMERICA 40000003881774 CORRIENTE USD (1010)
+   Balance Sheet QB: $3,030.89
+   Saldo Real:       $2,999.24
+   DIFERENCIA:       -$31.65
+   ⚠️ Diferencia menor: Comisión bancaria?
+
+═══════════════════════════════════════════════════════════════
+EFECTIVO REAL TOTAL EMPRESA - 06/11/2025 23:16
+═══════════════════════════════════════════════════════════════
+
+BANCO NACIONAL (BNCR):
+- USD Operativa 601066-4:    $1,326.35
+- CRC Operativa 188618-3:       $0.67
+- USD Reservas 009589-4:        $0.43
+Subtotal BNCR:                $1,327.45
+
+BANCO PROMERICA:
+- USD Principal 881774:      $2,999.24
+- CRC SINPE 881708:             $2.15
+Subtotal Promerica:          $3,001.39
+
+TOTAL EFECTIVO EMPRESA:      $4,328.84
+
+═══════════════════════════════════════════════════════════════
+COMPARACIÓN BRUTAL
+═══════════════════════════════════════════════════════════════
+
+Balance Sheet QB decía: $6,329.42 (solo checking/savings empresa)
+Realidad bancaria:      $4,328.84
+FALTANTE:               -$2,000.58 (31.6% menos efectivo)
+
+═══════════════════════════════════════════════════════════════
