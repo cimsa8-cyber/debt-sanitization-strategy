@@ -57,8 +57,9 @@
 
 ### Documentación Estratégica
 - `SOLICITUD_ARREGLO_PAGO_HACIENDA.txt` - Arreglo DGV-523678-M6W1
-- `PLAN_DEFINITIVO_HIBRIDO_QB.txt` - Plan actualización QuickBooks
+- `PLAN_DEFINITIVO_HIBRIDO_QB.txt` - Plan actualización QuickBooks (obsoleto - ver Preguntas Pendientes)
 - `LECCIONES_QB_DESKTOP_2013.md` - Lecciones técnicas aprendidas
+- `PREGUNTAS_PENDIENTES_ANTES_INICIAR_QB.md` - ⭐ 22 preguntas + análisis estrategia QB
 
 ### Instrucciones y Continuidad
 - `COMO_CONTINUAR_MAÑANA.txt` - Frase mágica para continuar
@@ -153,4 +154,44 @@ Ver CHANGELOG.md para historial completo
 
 ---
 
-**Próxima actualización:** Después de crear ESTADO_FINANCIERO_ACTUAL.json
+**Próxima actualización:** Después de verificar saldos reales bancos/TC mañana
+
+---
+
+## 🔔 RECORDATORIO PARA MAÑANA
+
+**LO PRIMERO QUE DEBES HACER:**
+
+1. **Verificar saldos desde apps (20 min):**
+   - ✅ BNCR: Todas las cuentas (corrientes + ahorros)
+   - ✅ Promerica: Todas las cuentas
+   - ✅ BAC: Las 4 tarjetas de crédito
+   - 📸 Screenshot de cada una
+
+2. **Responder las 4 preguntas CRÍTICAS:**
+   - Ver: `PREGUNTAS_PENDIENTES_ANTES_INICIAR_QB.md`
+   - Sección: "CRÍTICAS (Necesarias para decidir QB)"
+
+3. **Decidir estrategia QB:**
+   - Opción A (Corte Radical) - RECOMENDADA ⭐
+   - Opción B (Histórico) - No recomendada
+   - Opción C (Híbrido) - Viable
+
+4. **Ejecutar la opción elegida**
+   - Backup QB primero
+   - Seguir instrucciones en PREGUNTAS_PENDIENTES
+   - Backup QB después
+
+5. **COBRAR Y PAGAR (prioridad)**
+   - Llamar VWR $2,800
+   - Llamar Grupo Acción $1,689
+   - Pagar IVA $534
+   - Pagar TeamViewer $200
+   - Pagar Intcomex $410
+
+**Total tiempo QB:** ~1h 15min
+**Total tiempo ACCIONES:** Resto del día (lo importante)
+
+---
+
+**Última actualización MASTER_INDEX:** 07/11/2025 01:45

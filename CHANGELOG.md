@@ -1,5 +1,111 @@
 # CHANGELOG - AlvaroVelasco.Net SRL
 
+## 2025-11-07 01:30 - A/R Completo + Preguntas Pendientes QB + Análisis Estrategia
+
+### Actualizado
+- 🔄 `ESTADO_FINANCIERO_ACTUAL.json` - A/R completo 26 clientes
+
+### Creado
+- ✅ `PREGUNTAS_PENDIENTES_ANTES_INICIAR_QB.md` - 22 preguntas categorizadas
+
+### Datos Actualizados
+
+**Cuentas por Cobrar - COMPLETO:**
+- Total: $10,866.42 (verificado)
+- Clientes: 26 totales, 22 con saldo pendiente
+- Top 2 (CRÍTICA): $4,489.04 (41.3%)
+  - VWR International: $2,800
+  - Grupo Acción: $1,689
+- Top 6: $7,316 (67.3% del total)
+- 4 clientes con $0.00 (al día o inactivos)
+
+**Categorización por prioridad:**
+- CRÍTICA: 2 clientes, $4,489 (contactar 48h)
+- ALTA: 4 clientes, $2,827 (contactar 7 días)
+- MEDIA: 6 clientes, $2,358
+- BAJA: 10 clientes, $1,192
+- CERO: 4 clientes, $0
+
+**Estrategia cobro actualizada:**
+- Meta 48h: $4,489 (VWR + Grupo Acción)
+- Meta 10 días: $7,316 (top 6)
+- Impacto: Cubriría A/P vencido + Eurocomp + gastos críticos
+
+### Análisis QB Estrategia
+
+**Usuario considerando:** "Empezar QB de ceros con un par de asientos"
+
+**Análisis realizado:**
+- ✅ **OPCIÓN A (Corte Radical):** RECOMENDADA
+  - Tiempo: 30-45 minutos
+  - Sostenible: 15 min/día mantenimiento
+  - QB correcto desde HOY
+  - No persigue tren en movimiento
+
+- ⚠️ **OPCIÓN B (Histórico):** NO RECOMENDADA
+  - Tiempo: 6+ horas
+  - Insostenible: cada día +3-5 transacciones
+  - Riesgo errores acumulados
+  - Frustración repetida
+
+- 🔶 **OPCIÓN C (Híbrido):** VIABLE
+  - Tiempo: 2-3 horas
+  - Corte para cuentas problemáticas
+  - Histórico para cuentas correctas
+
+**Veredicto:** Opción A tiene sentido lógico y estratégico
+
+**Razón clave (palabras del usuario ayer):**
+> "Cada día que nos atrasamos se suman más movimientos"
+
+### Preguntas Documentadas
+
+**22 preguntas categorizadas en 4 niveles:**
+
+**CRÍTICAS (4):**
+1. ¿Opción A, B o C para QB?
+2. ¿Confirmar saldos bancarios exactos?
+3. ¿Saldos ahorros BNCR?
+4. ¿Saldos tarjetas crédito exactos?
+
+**ALTAS (9):**
+- Hacienda DGV-523678-M6W1 detalles
+- ISR 202401 monto
+- IVA Octubre 2025
+- Cuenta Alejandra
+- Préstamos "Otros" $20,891
+- Y otras...
+
+**MEDIAS (5):**
+- Gastos operativos mensuales completos
+- Ingresos proyectados Nov
+- Separación empresa/personal
+- Y otras...
+
+**BAJAS (4):**
+- Facturación SWS workflow
+- Clientes $0 status
+- Presupuesto 2025
+- Estrategia tarjetas
+
+### Plan Mañana Propuesto
+
+1. ☕ Verificar saldos (apps bancos + TC) - 20 min
+2. 📊 Actualizar JSON con reales - 10 min
+3. ✅ Decidir opción QB - 5 min
+4. 🔧 Ejecutar QB (probablemente A) - 30-45 min
+5. 💰 Acciones financieras (cobrar/pagar) - resto día
+6. 📝 Actualizar estado - 10 min
+
+**Tiempo QB:** 1h 10min
+**Tiempo COBROS/PAGOS:** 6+ horas
+**ROI:** Infinito vs frustración
+
+### Commit
+Pendiente - esperando cierre total
+
+---
+
 ## 2025-11-07 01:00 - Sistema Memoria Permanente + Gastos Operativos Críticos
 
 ### Creado

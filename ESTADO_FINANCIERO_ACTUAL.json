@@ -1,11 +1,11 @@
 {
   "metadata": {
-    "ultima_actualizacion": "2025-11-07T01:00:00",
+    "ultima_actualizacion": "2025-11-07T01:30:00",
     "ultima_verificacion_bancos": "2025-11-06T23:16:00",
     "tipo_cambio_usd_crc": 507,
-    "commit_git": "aa392a3",
+    "commit_git": "c6f8f68",
     "actualizador": "Claude Code",
-    "notas": "Agregados gastos operativos críticos (TeamViewer, MS Maps, SWS Maps)"
+    "notas": "A/R completo 26 clientes + 22 preguntas pendientes documentadas + análisis QB estrategia"
   },
 
   "efectivo": {
@@ -92,49 +92,95 @@
   "cuentas_por_cobrar": {
     "total_usd": 10866.42,
     "fecha_corte": "2025-11-03",
-    "fuente": "data/analisis_cuentas_por_cobrar.txt",
-    "clientes_top_5": [
-      {
-        "nombre": "VWR INTERNATIONAL LTDA",
-        "monto_usd": 2800.00,
-        "porcentaje": 25.8,
-        "prioridad": "ALTA",
-        "notas": "Cliente más grande - contactar urgente"
-      },
-      {
-        "nombre": "GRUPO ACCION COMERCIAL S.A.",
-        "monto_usd": 1689.04,
-        "porcentaje": 15.5,
-        "prioridad": "ALTA",
-        "notas": "Segundo más grande"
-      },
-      {
-        "nombre": "ALMACEN FISCAL ALFIPAC S.A.",
-        "monto_usd": 761.05,
-        "porcentaje": 7.0,
-        "prioridad": "MEDIA"
-      },
-      {
-        "nombre": "3-102-887892 S.R.L.",
-        "monto_usd": 691.56,
-        "porcentaje": 6.4,
-        "prioridad": "MEDIA"
-      },
-      {
-        "nombre": "CENTRO INTEGRAL ONCOLOGIA CIO",
-        "monto_usd": 687.05,
-        "porcentaje": 6.3,
-        "prioridad": "MEDIA"
-      }
+    "fecha_actualizacion": "2025-11-07T01:15:00",
+    "fuente": "Usuario - Lista completa 07/11/2025",
+    "cantidad_clientes": 26,
+
+    "todos_los_clientes": [
+      {"nombre": "VWR INTERNATIONAL LTDA", "monto_usd": 2800.00, "porcentaje": 25.8, "prioridad": "CRÍTICA"},
+      {"nombre": "GRUPO ACCION COMERCIAL S.A.", "monto_usd": 1689.04, "porcentaje": 15.5, "prioridad": "CRÍTICA"},
+      {"nombre": "ALMACEN FISCAL DEL PACIFICO ALFIPAC SOCIEDAD ANONIMA", "monto_usd": 761.05, "porcentaje": 7.0, "prioridad": "ALTA"},
+      {"nombre": "3-102-887892 SOCIEDAD DE RESPONSABILIDAD LIMITADA", "monto_usd": 691.56, "porcentaje": 6.4, "prioridad": "ALTA"},
+      {"nombre": "WAIPIO SOCIEDAD ANONIMA", "monto_usd": 687.27, "porcentaje": 6.3, "prioridad": "ALTA"},
+      {"nombre": "CENTRO INTEGRAL DE ONCOLOGIA CIO SRL", "monto_usd": 687.05, "porcentaje": 6.3, "prioridad": "ALTA"},
+      {"nombre": "ORTODONCIA DE LA CRUZ", "monto_usd": 494.50, "porcentaje": 4.5, "prioridad": "MEDIA"},
+      {"nombre": "GLOBAL AUTOMOTRIZ DE COSTA RICA GACR SOCIEDAD ANONIMA", "monto_usd": 439.61, "porcentaje": 4.0, "prioridad": "MEDIA"},
+      {"nombre": "SOLUSA CONSOLIDATORS AND FORWARDIG, S.A.", "monto_usd": 378.35, "porcentaje": 3.5, "prioridad": "MEDIA"},
+      {"nombre": "ASOCIACION COSTARRICENSE DE AGENCIAS DE CARGA Y LOGISTICA INTERNACIONAL ACACIA", "monto_usd": 333.35, "porcentaje": 3.1, "prioridad": "MEDIA"},
+      {"nombre": "CEMSO", "monto_usd": 333.92, "porcentaje": 3.1, "prioridad": "MEDIA"},
+      {"nombre": "RODRIGUEZ ROJAS CARLOS HUMBERTO", "monto_usd": 282.50, "porcentaje": 2.6, "prioridad": "BAJA"},
+      {"nombre": "SUPPLY NET C.R.W.H SOCIEDAD ANONIMA", "monto_usd": 276.85, "porcentaje": 2.5, "prioridad": "BAJA"},
+      {"nombre": "OPERATION MANAGMENT OF TIERRA MAGNIFICA", "monto_usd": 209.06, "porcentaje": 1.9, "prioridad": "BAJA"},
+      {"nombre": "GENTRA DE COSTA RICA SOCIEDAD ANONIMA", "monto_usd": 183.63, "porcentaje": 1.7, "prioridad": "BAJA"},
+      {"nombre": "SEVILLA NAVARRO EDGAR", "monto_usd": 169.50, "porcentaje": 1.6, "prioridad": "BAJA"},
+      {"nombre": "GOMEZ AJOY EDGAR LUIS", "monto_usd": 113.00, "porcentaje": 1.0, "prioridad": "BAJA"},
+      {"nombre": "MELENDEZ MORALES MONICA", "monto_usd": 113.00, "porcentaje": 1.0, "prioridad": "BAJA"},
+      {"nombre": "BANDOGO SOLUCIONES TECNOLOGICAS SOCIEDAD ANONIMA", "monto_usd": 67.80, "porcentaje": 0.6, "prioridad": "BAJA"},
+      {"nombre": "CPF SERVICIOS RADIOLÓGICOS S.A.", "monto_usd": 56.50, "porcentaje": 0.5, "prioridad": "BAJA"},
+      {"nombre": "ORTODEC S.A.", "monto_usd": 56.50, "porcentaje": 0.5, "prioridad": "BAJA"},
+      {"nombre": "PEREZ MORALES FRANCISCO", "monto_usd": 42.38, "porcentaje": 0.4, "prioridad": "BAJA"},
+      {"nombre": "VOLIO PARTNERS.", "monto_usd": 0.00, "porcentaje": 0.0, "prioridad": "NINGUNA"},
+      {"nombre": "AMBIENTES CON TECNOLOGIA TECNOAMBIENTES SOCIEDAD ANONIMA", "monto_usd": 0.00, "porcentaje": 0.0, "prioridad": "NINGUNA"},
+      {"nombre": "SOLORZANO CASTILLO GABRIEL MAURICIO", "monto_usd": 0.00, "porcentaje": 0.0, "prioridad": "NINGUNA"},
+      {"nombre": "GRUPO PORCINAS DE LA COSTA SOCIEDAD ANONIMA", "monto_usd": 0.00, "porcentaje": 0.0, "prioridad": "NINGUNA"}
     ],
-    "estrategia_cobro": {
-      "meta_10_dias": 5000,
-      "meta_esta_semana": 3000,
-      "contactar_primero": ["VWR INTERNATIONAL LTDA", "GRUPO ACCION COMERCIAL S.A."]
+
+    "resumen_por_prioridad": {
+      "critica": {
+        "total_usd": 4489.04,
+        "porcentaje": 41.3,
+        "clientes": 2,
+        "lista": ["VWR INTERNATIONAL LTDA", "GRUPO ACCION COMERCIAL S.A."]
+      },
+      "alta": {
+        "total_usd": 2826.93,
+        "porcentaje": 26.0,
+        "clientes": 4,
+        "lista": ["ALMACEN FISCAL ALFIPAC", "3-102-887892 SRL", "WAIPIO SA", "CIO SRL"]
+      },
+      "media": {
+        "total_usd": 2358.13,
+        "porcentaje": 21.7,
+        "clientes": 6
+      },
+      "baja": {
+        "total_usd": 1192.32,
+        "porcentaje": 11.0,
+        "clientes": 10
+      },
+      "cero": {
+        "total_usd": 0.00,
+        "clientes": 4,
+        "notas": "Clientes al día o sin saldo pendiente"
+      }
     },
+
+    "estrategia_cobro": {
+      "prioridad_1_inmediata": {
+        "meta_usd": 4489.04,
+        "clientes": ["VWR INTERNATIONAL LTDA ($2,800)", "GRUPO ACCION COMERCIAL S.A. ($1,689)"],
+        "plazo": "48 horas",
+        "accion": "Llamada directa + correo formal"
+      },
+      "prioridad_2_semana_1": {
+        "meta_usd": 2826.93,
+        "clientes": 4,
+        "plazo": "7 días",
+        "accion": "Correo recordatorio + seguimiento telefónico"
+      },
+      "objetivo_total_10_dias": {
+        "meta_usd": 7315.97,
+        "porcentaje_total": 67.3,
+        "impacto": "Suficiente para cubrir A/P vencido + Eurocomp + gastos críticos"
+      }
+    },
+
     "notas": [
-      "Top 5 representa 61% del total",
-      "Cobro agresivo necesario para liquidez"
+      "26 clientes totales, 22 con saldo pendiente",
+      "Top 2 representa 41.3% del total ($4,489)",
+      "Top 6 representa 67.3% del total ($7,316)",
+      "Cobrar top 6 cubriría: A/P vencido + A/P próximos 15 días + gastos operativos",
+      "4 clientes con $0.00 - verificar si están al día o tienen crédito"
     ]
   },
 
