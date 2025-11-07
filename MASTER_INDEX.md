@@ -1,6 +1,7 @@
 # MASTER INDEX - AlvaroVelasco.Net SRL
 ## Sistema de Fuente Única de Verdad
-**Última actualización:** 07/11/2025 (Commit: aa392a3)
+**Última actualización:** 07/11/2025 08:00 (Commit: c282b51)
+**ESTADO:** ✅ READY TO EXECUTE QB OPCIÓN A
 
 ---
 
@@ -73,39 +74,57 @@
 
 ## 🎯 DATOS CRÍTICOS (Snapshot Actual)
 
-**Efectivo Total:** $4,328.84 (06/11/2025 23:16)
-- BNCR: $1,327.45
-- Promerica: $3,001.39
+**Efectivo Total Empresa:** $4,302.10 (07/11/2025 07:54)
+- BNCR 601066-4 USD: $1,240.87
+- BNCR 188618-3 CRC: ₡30,337.24 ($59.84)
+- Promerica 40000003881774 USD: $2,999.24
+- Promerica 10000003881708 CRC: ₡1,090 ($2.15)
 
-**Gastos Operativos Comprometidos:** $1,395
-- TeamViewer: $200 (INMEDIATO - herramienta crítica)
-- MS Maps: $295 (próximos días)
-- SWS Maps: $900 (vence 17/12, pago recibido $1,200 - utilidad $300)
+**Ahorros Empresa:** $8,053.97 (✅ CONFIRMADO van en QB empresa)
+- 4 cuentas BNCR confirmadas
 
-**Efectivo Post-Gastos Críticos:** $2,845.83
-- Después IVA + TeamViewer + Intcomex + MS Maps + SEA
+**Gastos Fijos Mensuales:** $2,809.38/mes (✅ COMPLETO)
+- Salario Álvaro: $1,000
+- CCSS: ₡179,000 ($353.26)
+- ICE: ₡192,804 ($380.24)
+- TeamViewer: $200
+- Apple One: $16.85
+- Nissan: $800 (EMPRESA confirmado)
+- Parqueos: ₡30,000 ($59.17) (EMPRESA confirmado)
+
+**Cobertura Efectivo:** 1.53 meses (45 días sin facturar)
 
 **Cuentas por Cobrar (A/R):** $10,866.42
-- Top: VWR $2,800 | Grupo Acción $1,689
+- Top 2 CRÍTICO: VWR $2,800 + Grupo Acción $1,689 = $4,489 (41.3%)
 
 **Cuentas por Pagar (A/P):** $6,103.66
-- Vencido: $454.16 (Intcomex, SEA)
+- Vencido: $454.16 (Intcomex $410 + SEA $44)
 - Próximos 15 días: $2,309.51 (Eurocomp, Compueco)
 
-**IVA Vencido:** $533.92
-- Agosto: $481.44 (52 días mora)
-- Septiembre: $52.48 (14 días mora)
+**IVA Vencido:** $533.92 (Ago $481.44 + Sep $52.48)
 
-**Deuda Hacienda:** ~$19,604+
-- ISR 2020-2024: $9,265.71+
+**Deuda Hacienda:** $9,265.71 (ISR 2020-2023)
 - Solicitud: DGV-523678-M6W1 (en trámite)
+- ISR 2024: Pendiente confirmar
 
-**Tarjetas Crédito:** $16,790
-- Más urgente: VISA 9837 CRC $4,003.96 (35% interés)
+**Tarjetas Crédito:** $16,382.69 (5 tarjetas - 4 BNCR + 1 BAC)
+- 4 TC BNCR VENCIDAS: $13,295.02
+- TC 6386 Alejandra adicional: 100% EMPRESA confirmado
 
-**TOTAL DEUDA:** $63,923.25+
-**TOTAL RECURSOS:** $23,312.47 (efectivo + ahorros + A/R)
-**DÉFICIT:** -$40,610.78
+**TOTAL RECURSOS:** $23,222.49
+- Efectivo: $4,302.10
+- Ahorros: $8,053.97
+- A/R: $10,866.42
+
+**TOTAL DEUDA:** $51,483.67
+- TC: $16,382.69
+- A/P: $6,103.66
+- IVA: $533.92
+- Hacienda: $9,265.71
+- Nissan: $19,197.69
+
+**DÉFICIT:** -$28,261.18
+**RATIO:** 45.1% recursos/deuda
 
 ---
 
@@ -194,4 +213,16 @@ Ver CHANGELOG.md para historial completo
 
 ---
 
-**Última actualización MASTER_INDEX:** 07/11/2025 01:45
+**Última actualización MASTER_INDEX:** 07/11/2025 08:00
+
+---
+
+## 📄 NUEVO DOCUMENTO CRÍTICO
+
+**RESUMEN_EJECUTIVO_ANTES_QB_07NOV2025.md**
+- Plan completo QB Opción A (Fases 1-5)
+- Confirmación total todas las cuentas
+- Gastos fijos mensuales $2,809.38
+- Estructura QB definitiva
+- ✅ NO HAY PREGUNTAS PENDIENTES
+- ✅ READY TO EXECUTE (45 min estimados)

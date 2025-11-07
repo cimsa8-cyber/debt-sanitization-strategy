@@ -3,7 +3,7 @@
     "ultima_actualizacion": "2025-11-07T08:00:00",
     "ultima_verificacion_bancos": "2025-11-07T07:54:00",
     "tipo_cambio_usd_crc": 507,
-    "commit_git": "PENDIENTE",
+    "commit_git": "c282b51",
     "actualizador": "Claude Code",
     "estado_proyecto": "READY TO EXECUTE QB OPCIÓN A",
     "notas": "CONFIRMACIÓN TOTAL: Todas cuentas clasificadas (empresa/personal/descartado) + Gastos fijos completos $2,809.38/mes + Resumen ejecutivo creado + LISTO PARA QB"
