@@ -1340,3 +1340,981 @@ Para modificaciones:
 - NO mezclar gastos
 - Transfer empresa → personal registrados ambos lados
 
+---
+
+## 📊 POWER BI: DASHBOARDS EJECUTIVOS
+
+### **PROPÓSITO POWER BI:**
+Visualización interactiva datos Excel para análisis ejecutivo rápido
+
+### **CONEXIÓN DATOS:**
+```
+Origen: Archivos Excel OneDrive
+- AlvaroVelascoNet_EMPRESA.xlsx
+- AlvaroVelasco_PERSONAL.xlsx
+
+Actualización: Automática cada hora
+Tecnología: Power Query + DirectQuery
+```
+
+---
+
+### **DASHBOARD 1: EXECUTIVE SUMMARY** (Principal)
+
+**KPIs Principales (Cards):**
+```
+┌─────────────┬─────────────┬─────────────┬─────────────┐
+│ EFECTIVO    │ DEUDA TOTAL │ A/R         │ COBERTURA   │
+│ $4,302      │ $51,484     │ $10,866     │ 45 días     │
+│ 🔴 Crítico  │ 🔴 Alta     │ 🟡 Cobrar   │ 🔴 Bajo     │
+└─────────────┴─────────────┴─────────────┴─────────────┘
+```
+
+**Gráfico 1: Recursos vs Deuda (Gauge)**
+```
+[Gauge semicircular]
+Ratio Recursos/Deuda: 45.1%
+Meta: 100%
+Zona roja <50%, amarilla 50-80%, verde >80%
+```
+
+**Gráfico 2: Composición Deuda (Donut)**
+```
+[Gráfico donut interactivo]
+- TC: $16,383 (31.8%) - Rojo
+- Nissan: $19,198 (37.3%) - Gris
+- Hacienda: $9,266 (18.0%) - Amarillo
+- A/P: $6,104 (11.9%) - Naranja
+- IVA: $534 (1.0%) - Rojo oscuro
+
+Click en segmento → Drill down detalles
+```
+
+**Gráfico 3: Flujo Caja 90 Días (Área)**
+```
+[Gráfico área con líneas]
+Eje X: Días (07/11 → 07/02)
+Eje Y: Balance USD
+
+Áreas:
+- Entradas (verde claro arriba)
+- Salidas (rojo claro abajo)
+
+Líneas:
+- Balance neto (azul gruesa)
+- Umbral crítico $2,000 (línea punteada roja)
+
+Tooltips: Mostrar concepto + monto al pasar mouse
+```
+
+**Tabla Resumen Alertas:**
+```
+| Prioridad | Alerta                      | Acción               | Días |
+|-----------|-----------------------------|----------------------|------|
+| 🔴 CRIT   | 4 TC BNCR vencidas $13,295  | Negociar plan pago   | HOY  |
+| 🔴 CRIT   | IVA vencido $534            | Pagar + multas       | HOY  |
+| 🟡 ALTA   | VWR $2,800 mora 30 días     | Llamar cobrar        | 48h  |
+| 🟡 ALTA   | Efectivo solo 45 días       | Cobrar A/R urgente   | 7d   |
+```
+
+**Filtros interactivos:**
+- Rango fechas (slider)
+- Categoría gasto (dropdown)
+- Banco (checkboxes)
+
+---
+
+### **DASHBOARD 2: CASH FLOW ANALYSIS**
+
+**Gráfico 1: Waterfall Chart Mensual**
+```
+[Gráfico cascada]
+Muestra flujo mes:
+Balance inicial → +Entradas → -Salidas → Balance final
+
+Ejemplo Nov 2025:
+$4,302 (ini) + $10,750 (cobros) - $9,658 (pagos) = $5,394 (fin)
+
+Barras verdes: entradas
+Barras rojas: salidas
+Barra azul: balance
+```
+
+**Gráfico 2: Comparativo Mensual Ingresos vs Gastos**
+```
+[Gráfico columnas agrupadas + línea]
+Eje X: Meses (últimos 12 + proyección 3)
+Eje Y Principal: Monto USD
+Eje Y Secundario: Resultado neto
+
+Columnas:
+- Verde: Ingresos
+- Roja: Gastos
+
+Línea amarilla: Resultado (Ingresos - Gastos)
+Zona sombreada: Resultado negativo
+```
+
+**Gráfico 3: Categorías Gasto Trending**
+```
+[Gráfico líneas múltiples]
+Eje X: Meses
+Eje Y: Monto USD
+
+7 líneas (una por categoría):
+- Nómina (azul)
+- Vehículo (verde)
+- Servicios (naranja)
+- Impuestos (rojo)
+- Software (morado)
+- Proveedores (gris)
+- Otros (negro punteado)
+
+Interactivo: Click en leyenda oculta/muestra línea
+```
+
+**Tabla Dinámica:**
+```
+Pivot table con drill-down:
+Nivel 1: Mes
+  Nivel 2: Categoría
+    Nivel 3: Concepto individual
+      Nivel 4: Transacciones detalle
+```
+
+---
+
+### **DASHBOARD 3: DEBT SANITIZATION**
+
+**Gráfico 1: Timeline Liquidación Deuda**
+```
+[Gantt chart / Timeline]
+Eje X: Meses 1-24
+Eje Y: Tipos deuda
+
+Barras horizontales:
+- TC 9837: Mes 1-4 (rojo)
+- TC 8759: Mes 5-8 (rojo)
+- TC 3519: Mes 9-10 (naranja)
+- TC 6386: Mes 11 (amarillo)
+- Hacienda ISR: Mes 1-24 (gris - cuotas)
+- Nissan: Mes 1-24 (azul - continúa después)
+
+Hitos marcados:
+- Mes 6: TC 50% liquidadas
+- Mes 12: TC 100% liquidadas ✅
+- Mes 24: Meta vivienda alcanzada 🏠
+```
+
+**Gráfico 2: Progreso Sanitización (Stacked Area)**
+```
+[Gráfico área apilada]
+Muestra reducción deuda total en tiempo
+
+Eje X: Mes 1-24
+Eje Y: Deuda USD
+
+Áreas apiladas (de abajo arriba):
+- Nissan (gris claro - constante)
+- Hacienda (amarillo - decreciente lento)
+- A/P (naranja - desaparece mes 2)
+- TC (rojo - desaparece mes 12)
+
+Total área decrece de $51,484 → $19,198
+```
+
+**Gráfico 3: Intereses Ahorrados**
+```
+[Gráfico barras comparativo]
+Escenario 1: Pago mínimo
+   Interés: $17,450 | Tiempo: 8.5 años
+
+Escenario 2: Plan 12 meses
+   Interés: $2,450 | Tiempo: 12 meses
+
+AHORRO: $15,000 ✅ (barra verde grande)
+```
+
+**Card Progreso Vivienda:**
+```
+┌───────────────────────────────────────┐
+│ 🏠 AHORRO VIVIENDA                    │
+├───────────────────────────────────────┤
+│ Meta: $45,000                         │
+│ Actual: $8,054                        │
+│ Por ahorrar: $36,946                  │
+│                                       │
+│ [████░░░░░░░░░░░░░░░] 17.9%           │
+│                                       │
+│ Proyección mes 24: $45,054 ✅         │
+│ Estado: EN CAMINO                     │
+└───────────────────────────────────────┘
+```
+
+---
+
+### **DASHBOARD 4: ACCOUNTS RECEIVABLE**
+
+**Gráfico 1: A/R Aging (Funnel)**
+```
+[Gráfico embudo]
+Muestra distribución A/R por antigüedad
+
+0-30 días:   $3,550 (32.7%) ✅
+31-60 días:  $3,766 (34.6%) ⚠️
+61-90 días:  $2,827 (26.0%) 🔴
+>90 días:    $723 (6.7%)    🔴
+
+Colores degradados verde → rojo
+```
+
+**Gráfico 2: Top 10 Clientes (Barras horizontales)**
+```
+[Gráfico barras horizontal]
+Ordenado mayor → menor
+
+VWR International:       $2,800 ████████████████
+Grupo Acción:            $1,689 ██████████
+Alfipac:                 $761 ████
+3-102-887892:            $692 ███
+Waipio:                  $687 ███
+... hasta 10 clientes
+
+Colores:
+- Rojo: >45 días mora
+- Amarillo: 15-45 días
+- Verde: <15 días
+```
+
+**Gráfico 3: Proyección Cobranza**
+```
+[Gráfico cascada cobranza]
+Semana 1: +$4,489 (VWR + Grupo Acción)
+Semana 2: +$2,827 (Top 4-7)
+Semana 3: +$2,358 (Resto prioritarios)
+Semana 4: +$1,192 (Otros)
+
+Total mes: $10,866 (100% cobrado) - OPTIMISTA
+Realista (70%): $7,606
+```
+
+**Tabla Gestión Cobranza:**
+```
+| Cliente       | Monto | Mora | Última Gestión | Próxima Acción | Responsable |
+|---------------|-------|------|----------------|----------------|-------------|
+| VWR           | 2800  | 30   | 05/11 Email    | 08/11 Llamada  | Álvaro      |
+| Grupo Acción  | 1689  | 28   | 06/11 Email    | 08/11 Visita   | Álvaro      |
+...
+
+Filtros: Por responsable, por estado, por prioridad
+```
+
+---
+
+### **CARACTERÍSTICAS AVANZADAS POWER BI:**
+
+**1. SLICERS (Filtros visuales):**
+```
+- Fecha (range slider)
+- Categoría (tiles)
+- Banco (dropdown)
+- Prioridad (botones)
+- Estado (checkboxes)
+```
+
+**2. DRILL-THROUGH:**
+```
+Click en cualquier gráfico → Ver detalle transacciones
+Ejemplo: Click en "TC $16,383" → Lista todas las 5 tarjetas
+```
+
+**3. TOOLTIPS PERSONALIZADOS:**
+```
+Hover sobre dato → Muestra:
+- Valor exacto
+- % del total
+- Variación vs mes anterior
+- Tendencia (↑↓)
+- Mini-gráfico sparkline
+```
+
+**4. BOOKMARKS (Vistas guardadas):**
+```
+- Vista Ejecutiva (todo colapsado)
+- Vista Detalle (todo expandido)
+- Vista Alertas (solo críticas)
+- Vista Proyección (futuro)
+```
+
+**5. MOBILE LAYOUT:**
+```
+Dashboard optimizado para celular
+Prioridad:
+1. KPIs principales
+2. Alertas críticas
+3. Efectivo disponible
+4. Próximos 7 días
+```
+
+**6. ALERTAS AUTOMÁTICAS:**
+```
+Configurar en Power BI Service:
+- Email si Efectivo < $2,000
+- Push notification si cliente >60 días mora
+- Teams message si presupuesto excedido >20%
+```
+
+---
+
+### **IMPLEMENTACIÓN POWER BI:**
+
+**Paso 1: Conectar Excel**
+```
+1. Power BI Desktop → Obtener datos → Excel
+2. Seleccionar OneDrive Business
+3. Elegir archivo AlvaroVelascoNet_EMPRESA.xlsx
+4. Seleccionar todas las tablas (15 pestañas)
+5. Transformar datos → Power Query
+```
+
+**Paso 2: Modelar Relaciones**
+```
+Crear relaciones entre tablas:
+- Efectivo.Fecha → Proyección.Fecha
+- A/R.Cliente → Efectivo.Concepto (lookup)
+- Gastos.Categoría → Presupuesto.Categoría
+```
+
+**Paso 3: Crear Medidas DAX**
+```dax
+Total Efectivo = SUM(Efectivo[Balance])
+
+Cobertura Días =
+    DIVIDE([Total Efectivo], [Gastos Mensuales]/30)
+
+% Presupuesto =
+    DIVIDE([Gastos Real], [Gastos Presupuesto])
+
+Razón Corriente =
+    DIVIDE([Total Activos], [Total Pasivos])
+
+Proyección 30 Días =
+    CALCULATE([Balance],
+        FILTER(Proyección,
+            Proyección[Fecha] <= TODAY()+30))
+```
+
+**Paso 4: Publicar y Compartir**
+```
+1. Publicar a Power BI Service
+2. Configurar actualización automática (cada hora)
+3. Compartir dashboard con Álvaro
+4. Configurar app móvil
+```
+
+---
+
+## 📋 PLAN DE IMPLEMENTACIÓN PASO A PASO
+
+### **FASE 0: PREPARACIÓN (Día 0 - 30 min)**
+
+**Checklist pre-implementación:**
+```
+☐ Tener Office 365 instalado y actualizado
+☐ Cuenta OneDrive activa con espacio suficiente (5GB)
+☐ Power BI Desktop descargado (gratis)
+☐ Acceso a datos bancarios actualizados
+☐ Lista A/R y A/P completa
+☐ 2 horas disponibles ininterrumpidas
+```
+
+---
+
+### **FASE 1: CREAR ARCHIVOS EXCEL BASE (Día 1 - 2 horas)**
+
+**PASO 1.1: Crear AlvaroVelascoNet_EMPRESA.xlsx**
+```
+Tiempo: 60 minutos
+
+1. Crear archivo nuevo Excel
+2. Guardar en OneDrive: "Finanzas/AlvaroVelascoNet_EMPRESA.xlsx"
+3. Crear 15 pestañas con nombres exactos:
+   - Dashboard
+   - Efectivo
+   - Ahorros
+   - A/R
+   - A/P
+   - TC
+   - GastosFijos
+   - Presupuesto
+   - Proyeccion90
+   - KPIs
+   - Hacienda
+   - Nissan
+   - AhorroVivienda
+   - Analisis
+   - Config
+
+4. Copiar estructura tablas desde plan maestro
+5. Agregar fórmulas básicas:
+   - SUMA()
+   - SI()
+   - HOY()
+   - BUSCARV()
+
+✅ Checkpoint: Archivo creado con 15 pestañas vacías
+```
+
+**PASO 1.2: Crear AlvaroVelasco_PERSONAL.xlsx**
+```
+Tiempo: 30 minutos
+
+1. Crear archivo nuevo Excel
+2. Guardar en OneDrive: "Finanzas/AlvaroVelasco_PERSONAL.xlsx"
+3. Crear 8 pestañas:
+   - Dashboard_Personal
+   - Efectivo_Personal
+   - Ingresos_Personal
+   - Gastos_Personal
+   - Presupuesto_Personal
+   - Ahorro_Personal
+   - Proyeccion_Personal
+   - Config_Personal
+
+4. Estructura más simple que empresa
+5. Enfoque: Control básico $1,000/mes salario
+
+✅ Checkpoint: Archivo personal creado
+```
+
+**PASO 1.3: Configurar validaciones datos**
+```
+Tiempo: 30 minutos
+
+1. Pestaña Config → Crear listas categorías:
+   Gastos: Nómina, Impuestos, Servicios, Software, Vehículo...
+   Ingresos: Facturación, Servicios, Productos...
+   Bancos: Promerica USD, BNCR USD, BNCR CRC, Promerica CRC
+
+2. Aplicar validación datos:
+   - Columna "Categoría" → Lista desde Config!A2:A20
+   - Columna "Banco" → Lista desde Config!B2:B10
+
+3. Agregar mensaje validación:
+   "Seleccione categoría de la lista desplegable"
+
+✅ Checkpoint: Listas desplegables funcionando
+```
+
+---
+
+### **FASE 2: CARGAR DATOS INICIALES (Día 2 - 3 horas)**
+
+**PASO 2.1: Ingresar saldos iniciales 07/11/2025**
+```
+Tiempo: 45 minutos
+
+Pestaña EFECTIVO:
+Fila 1: Promerica USD | 40000003881774 | Saldo Inicial | - | - | - | 2999.24
+Fila 2: BNCR USD | 601066-4 | Saldo Inicial | - | - | - | 1240.87
+Fila 3: BNCR CRC | 188618-3 | Saldo Inicial | - | - | - | 59.84
+Fila 4: Promerica CRC | 10000003881708 | Saldo Inicial | - | - | - | 2.15
+
+Pestaña AHORROS:
+Fila 1: 1002335826 | Matrimonio | 1006.06 | 0 | 0 | 1006.06 | 2000 | 50%
+... (4 cuentas)
+
+✅ Checkpoint: Saldos iniciales cargados
+```
+
+**PASO 2.2: Ingresar A/R completo (26 clientes)**
+```
+Tiempo: 60 minutos
+
+Pestaña A/R:
+Copiar desde JSON los 26 clientes:
+VWR International | 2800.00 | 09/10/2025 | 30 | 30 | CRÍTICA | ...
+Grupo Acción | 1689.04 | 11/10/2025 | 30 | 28 | CRÍTICA | ...
+... hasta completar 26
+
+Verificar fórmula días mora:
+=SI(HOY()>C2, HOY()-C2, 0)
+
+Verificar SUMA total = $10,866.42
+
+✅ Checkpoint: 26 clientes cargados, total cuadra
+```
+
+**PASO 2.3: Ingresar A/P completo**
+```
+Tiempo: 30 minutos
+
+Pestaña A/P:
+Intcomex | 2502060 | 410.09 | - | 04/09/2025 | 04/10/2025 | ...
+... (9 facturas)
+
+Total debe ser: $6,103.66
+
+✅ Checkpoint: A/P completo
+```
+
+**PASO 2.4: Ingresar TC (5 tarjetas)**
+```
+Tiempo: 20 minutos
+
+Pestaña TC:
+3519 | BNCR | Álvaro | 1192.44 | 3000 | =B2/C2 | 06/11/2025 | ...
+... (5 tarjetas)
+
+Total: $16,382.69
+
+✅ Checkpoint: TC completas
+```
+
+**PASO 2.5: Gastos Fijos Mensuales**
+```
+Tiempo: 15 minutos
+
+Pestaña GastosFijos:
+Salario Álvaro | Nómina | 1000.00 | - | 1000.00 | ...
+... (7 conceptos)
+
+Total: $2,809.38/mes
+
+✅ Checkpoint: Gastos fijos configurados
+```
+
+**PASO 2.6: Presupuesto mensual**
+```
+Tiempo: 30 minutos
+
+Pestaña Presupuesto:
+Copiar estructura desde plan
+Ingresar presupuestos por categoría
+Total Gastos: $5,559.38
+Total Ingresos: $6,000.00
+
+✅ Checkpoint: Presupuesto base creado
+```
+
+---
+
+### **FASE 3: FÓRMULAS Y AUTOMATIZACIÓN (Día 3 - 2 horas)**
+
+**PASO 3.1: Dashboard fórmulas**
+```
+Tiempo: 60 minutos
+
+Celda B2 (Efectivo HOY):
+=SUMA(Efectivo!G:G) - último balance por banco
+
+Celda B3 (Ahorros):
+=SUMA(Ahorros!F:F)
+
+Celda B4 (A/R):
+=SUMA(AR!B:B)
+
+Celda B5 (Recursos Total):
+=B2+B3+B4
+
+Celda B6 (Deuda Total):
+=TC!Total+AP!Total+Hacienda!Total+Nissan!Saldo
+
+Celda B7 (Déficit):
+=B5-B6
+
+Celda B9 (Meses cobertura):
+=B2/(GastosFijos!Total/30)
+
+Celda B10 (Alerta):
+=SI(B9<1.5,"🔴 CRÍTICO",SI(B9<2.5,"🟡 PRECAUCIÓN","✅ OK"))
+
+✅ Checkpoint: Dashboard calcula automático
+```
+
+**PASO 3.2: Formato condicional**
+```
+Tiempo: 30 minutos
+
+Dashboard!B2 (Efectivo):
+- Si <$2,000 → Fondo rojo
+- Si $2,000-$4,000 → Fondo amarillo
+- Si >$4,000 → Fondo verde
+
+A/R!D:D (Días Mora):
+- Si >60 → Rojo
+- Si 30-60 → Naranja
+- Si 15-30 → Amarillo
+- Si <15 → Verde
+
+TC!F:F (Uso %):
+- Si >80% → Rojo
+- Si 50-80% → Amarillo
+- Si <50% → Verde
+
+✅ Checkpoint: Colores automáticos funcionando
+```
+
+**PASO 3.3: Gráficos principales**
+```
+Tiempo: 30 minutos
+
+Dashboard:
+1. Gráfico pie: Composición gastos por categoría
+   Datos: GastosFijos!Categoría + GastosFijos!Monto
+
+2. Gráfico línea: Efectivo últimos 30 días
+   Datos: Efectivo!Fecha + Efectivo!Balance
+
+3. Gráfico barra: A/R por prioridad
+   Datos: AR!Prioridad + AR!Monto
+
+✅ Checkpoint: 3 gráficos principales creados
+```
+
+---
+
+### **FASE 4: POWER BI SETUP (Día 4 - 2 horas)**
+
+**PASO 4.1: Conectar Excel a Power BI**
+```
+Tiempo: 30 minutos
+
+1. Abrir Power BI Desktop
+2. Obtener datos → Excel → OneDrive
+3. Seleccionar AlvaroVelascoNet_EMPRESA.xlsx
+4. Marcar todas las pestañas
+5. Cargar
+
+✅ Checkpoint: Datos cargados en Power BI
+```
+
+**PASO 4.2: Crear medidas DAX**
+```
+Tiempo: 45 minutos
+
+Crear 10 medidas principales:
+
+Total Efectivo = SUM(Efectivo[Balance])
+Total Deuda = SUM(TC[Saldo]) + SUM(AP[Monto]) + ...
+Razón Corriente = DIVIDE([Total Activos], [Total Pasivos])
+Cobertura Días = DIVIDE([Total Efectivo], [Gastos Mensuales]/30)
+% AR Vencido = DIVIDE(CALCULATE(SUM(AR[Monto]), AR[Mora]>30), [Total AR])
+
+... (resto medidas)
+
+✅ Checkpoint: 10 medidas creadas
+```
+
+**PASO 4.3: Crear Dashboard 1 (Executive)**
+```
+Tiempo: 45 minutos
+
+1. Agregar 4 cards: Efectivo, Deuda, A/R, Cobertura
+2. Agregar gauge: Razón Corriente
+3. Agregar donut: Composición Deuda
+4. Agregar tabla: Alertas críticas
+5. Agregar slicer: Rango fechas
+
+Organizar visualmente
+Aplicar tema profesional
+
+✅ Checkpoint: Dashboard 1 completo
+```
+
+---
+
+### **FASE 5: PRUEBAS Y AJUSTES (Día 5 - 1 hora)**
+
+**PASO 5.1: Prueba transacciones**
+```
+Tiempo: 20 minutos
+
+Test 1: Registrar entrada $100 Promerica
+   - Verificar balance actualiza
+   - Verificar dashboard refleja
+   - Verificar Power BI (refresh)
+
+Test 2: Cambiar presupuesto categoría
+   - Verificar alerta si excede
+   - Verificar color cambia
+
+Test 3: Agregar cliente A/R
+   - Verificar total suma
+   - Verificar prioridad calcula
+
+✅ Checkpoint: Todas las pruebas pasan
+```
+
+**PASO 5.2: Ajustar fórmulas si necesario**
+```
+Tiempo: 20 minutos
+
+Revisar:
+- Errores #REF, #DIV/0, #N/A
+- Rangos fórmulas dinámicos
+- Formato números (2 decimales)
+- Fechas formato correcto
+
+✅ Checkpoint: Cero errores
+```
+
+**PASO 5.3: Backup inicial**
+```
+Tiempo: 10 minutos
+
+1. Guardar archivo Excel
+2. Exportar copia:
+   "AlvaroVelascoNet_EMPRESA_BACKUP_07NOV2025.xlsx"
+3. Guardar en carpeta separada
+4. Power BI: Publicar a Service
+5. Configurar refresh automático
+
+✅ Checkpoint: Backup creado y publicado
+```
+
+**PASO 5.4: Documentar cambios personalizados**
+```
+Tiempo: 10 minutos
+
+Crear pestaña "README":
+- Fecha creación
+- Versión
+- Modificaciones vs plan maestro
+- Contactos importantes
+- Notas especiales
+
+✅ Checkpoint: Sistema documentado
+```
+
+---
+
+### **FASE 6: OPERACIÓN DIARIA (Ongoing - 5-10 min/día)**
+
+**Rutina matutina (5 min):**
+```
+1. Abrir Excel empresa
+2. Ir pestaña Efectivo
+3. Registrar transacciones ayer:
+   - Fecha
+   - Banco
+   - Concepto
+   - Categoría (lista)
+   - Monto
+4. Verificar balance cuadra
+5. Revisar Dashboard alertas
+6. Guardar (Ctrl+S → OneDrive sync automático)
+
+Listo para el día ✅
+```
+
+**Rutina semanal (15 min - Lunes):**
+```
+1. Pestaña A/R:
+   - Identificar clientes vencer esta semana
+   - Llamar top 3 morosos
+   - Actualizar columna "Última Gestión"
+
+2. Pestaña A/P:
+   - Revisar facturas vencer semana
+   - Agendar pagos según proyección
+
+3. Pestaña Proyección:
+   - Actualizar si hubo cambios grandes
+   - Verificar no hay puntos críticos <$2,000
+
+4. Power BI:
+   - Abrir app móvil
+   - Revisar KPIs semana
+   - Screenshot para histórico
+
+Semana planificada ✅
+```
+
+**Cierre mensual (30 min - Día 1 mes siguiente):**
+```
+1. Presupuesto:
+   - Copiar "Real" mes pasado
+   - Comparar vs presupuesto
+   - Analizar variaciones >10%
+   - Ajustar presupuesto próximo mes
+
+2. KPIs:
+   - Screenshot dashboard
+   - Guardar en carpeta "Histórico Mensual"
+   - Anotar 3 insights clave
+
+3. Ahorro Vivienda:
+   - Registrar depósito mensual (si hubo)
+   - Actualizar % progreso
+   - Ajustar proyección
+
+4. Backup:
+   - Guardar copia mensual
+   - "AlvaroVelascoNet_Nov2025.xlsx"
+   - Mantener últimos 6 meses
+
+Mes cerrado ✅
+```
+
+---
+
+## 📌 RESUMEN EJECUTIVO FINAL
+
+### **LO QUE HEMOS CREADO:**
+
+**1. SISTEMA EXCEL COMPLETO**
+- ✅ 2 archivos Excel (Empresa + Personal)
+- ✅ 23 pestañas especializadas total
+- ✅ Fórmulas Office 365 avanzadas
+- ✅ Validaciones y alertas automáticas
+- ✅ Multi-moneda USD/CRC
+
+**2. FEATURES PRINCIPALES:**
+
+**Control Operativo:**
+- Dashboard ejecutivo vista 360°
+- Control diario efectivo 4 bancos
+- Seguimiento 4 ahorros empresa
+- Gestión 26 clientes A/R
+- Control 9 proveedores A/P
+- Tracking 5 tarjetas crédito
+
+**Presupuestos:**
+- Presupuesto empresa por categoría
+- Comparación real vs plan mensual
+- Alertas automáticas excesos
+- Límites rígidos gastos fijos
+
+**Sanitización Deuda:**
+- Plan pago TC 12 meses (ahorro $18k intereses)
+- Estrategia Hacienda ISR
+- 3 escenarios Nissan
+- Timeline completo 24 meses
+
+**Ahorro Vivienda:**
+- Meta $45,000 en 24 meses
+- 3 fases: Sanitización → Transición → Aceleración
+- Tracking mensual progreso
+- Proyección detallada mes a mes
+
+**Análisis:**
+- 15 KPIs salud financiera
+- 6 gráficos comportamiento
+- Proyección flujo caja 90 días
+- Escenarios optimista/realista/pesimista
+
+**3. POWER BI DASHBOARDS**
+- ✅ 4 dashboards interactivos
+- ✅ Actualización automática cada hora
+- ✅ App móvil
+- ✅ Alertas push notifications
+
+**4. DOCUMENTACIÓN**
+- ✅ Plan maestro completo (este documento)
+- ✅ Instrucciones uso diario/semanal/mensual
+- ✅ Troubleshooting
+- ✅ Plan implementación paso a paso
+
+---
+
+### **BENEFICIOS CLAVE:**
+
+**Vs QuickBooks:**
+- ⚡ 10x más rápido implementar (5 días vs 10+ horas sin terminar)
+- 💰 $0 costo vs frustración
+- 🎯 100% personalizado a tu negocio
+- 📱 Acceso desde cualquier dispositivo
+- 🔄 Fácil modificar y adaptar
+
+**Resultados esperados:**
+
+**Corto plazo (30 días):**
+- Control diario efectivo
+- Cobro $7,316 A/R top 6 (67%)
+- Pago IVA + A/P vencido
+- Negociación plan TC BNCR
+
+**Mediano plazo (12 meses):**
+- TC 100% liquidadas (ahorro $18k intereses)
+- Buffer efectivo 3 meses ($8,428)
+- Presupuesto cumplido >90%
+- Ahorro vivienda iniciado $12k
+
+**Largo plazo (24 meses):**
+- Meta vivienda alcanzada $45k ✅
+- Solo queda Nissan como deuda
+- Salud financiera normalizada
+- Sistema funcionando autopilot
+
+---
+
+### **PRÓXIMOS PASOS INMEDIATOS:**
+
+**HOY:**
+1. ☐ Decidir implementar sistema Excel
+2. ☐ Reservar 2 horas implementación
+3. ☐ Descargar Power BI Desktop
+
+**MAÑANA:**
+4. ☐ Empezar Fase 1: Crear archivos base
+5. ☐ Cargar saldos iniciales
+
+**PRÓXIMOS 7 DÍAS:**
+6. ☐ Completar implementación completa
+7. ☐ Primer dashboard Power BI
+8. ☐ Primer cierre semanal
+
+**PRÓXIMOS 30 DÍAS:**
+9. ☐ Cobrar VWR + Grupo Acción
+10. ☐ Negociar plan TC BNCR
+11. ☐ Pagar IVA vencido
+12. ☐ Primer cierre mensual
+
+---
+
+### **MÉTRICAS ÉXITO:**
+
+**Mes 1:**
+- ✅ Sistema funcionando 100%
+- ✅ Registro diario sin faltas
+- ✅ Efectivo >$4,000
+- ✅ A/R cobrado >$5,000
+
+**Mes 6:**
+- ✅ TC 50% liquidadas
+- ✅ Buffer 2 meses
+- ✅ Presupuesto cumplido 95%
+- ✅ Cero TC vencidas
+
+**Mes 12:**
+- ✅ TC 100% liquidadas
+- ✅ Ahorro vivienda $12k
+- ✅ Sistema en autopilot
+- ✅ Salud financiera estable
+
+**Mes 24:**
+- ✅ Meta vivienda $45k alcanzada 🏠
+- ✅ Solo Nissan como deuda
+- ✅ Empresa sostenible
+- ✅ Control total finanzas
+
+---
+
+## 🎉 FIN DEL PLAN MAESTRO
+
+**Sistema completo diseñado y listo para implementar.**
+
+**Tiempo total implementación:** 5 días (10-12 horas trabajo)
+**Mantenimiento:** 5-10 min/día
+**ROI:** Ahorro $18k intereses + Control total + Paz mental
+
+**Versión:** 1.0
+**Fecha:** 07/11/2025
+**Creado por:** Claude AI
+**Para:** Álvaro Velasco - AlvaroVelasco.Net SRL
+
+---
+
+**¿Listo para empezar? 🚀**
+
