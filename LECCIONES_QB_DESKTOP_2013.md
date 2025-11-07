@@ -86,19 +86,27 @@ QB Desktop tiene checkbox **"Home Currency Adjustment"** en Journal Entries que 
 
 **Restricciones QB Desktop 2013:**
 
-| Tipo de Cuenta | ¿Permite moneda extranjera? |
-|----------------|----------------------------|
-| Bank | ✅ Sí |
-| Credit Card | ✅ Sí |
-| Accounts Receivable | ✅ Sí (auto-creado) |
-| Accounts Payable | ✅ Sí (auto-creado) |
-| Other Current Asset | ❌ NO |
-| Other Current Liability | ❌ NO |
-| Equity | ✅ Sí (pero usar USD como home currency) |
+| Tipo de Cuenta | ¿Permite moneda extranjera? | Notas |
+|----------------|----------------------------|-------|
+| Bank | ✅ Sí | Checkbox "Foreign Currency" disponible |
+| Credit Card | ⚠️ **SÍ pero SIN checkbox** | **HALLAZGO 07/11:** NO aparece checkbox "Foreign Currency" al crear, pero acepta transacciones en moneda extranjera |
+| Accounts Receivable | ✅ Sí (auto-creado) | |
+| Accounts Payable | ✅ Sí (auto-creado) | |
+| Other Current Asset | ❌ NO | |
+| Other Current Liability | ❌ NO | |
+| Equity | ✅ Sí (pero usar USD como home currency) | |
+
+**IMPORTANTE - Descubrimiento 07/11/2025:**
+
+Al crear cuenta tipo **Credit Card**, QuickBooks Desktop 2013:
+- ❌ **NO muestra** el checkbox "Foreign Currency" durante creación
+- ✅ **SÍ permite** registrar transacciones en CRC después de creada
+- ✅ La cuenta **SÍ funciona** correctamente con moneda extranjera
+- ⚠️ Comportamiento diferente a cuentas tipo Bank
 
 **Workarounds necesarios:**
-- IVA Crédito Fiscal (asset CRC): Crear como **Bank** + nota en descripción
-- IVA Débito Fiscal (liability CRC): Crear como **Credit Card** + nota en descripción
+- IVA Crédito Fiscal (asset CRC): Crear como **Bank** + nota en descripción ✅ checkbox disponible
+- IVA Débito Fiscal (liability CRC): Crear como **Credit Card** + nota en descripción ⚠️ checkbox NO aparece pero funciona
 
 ---
 
