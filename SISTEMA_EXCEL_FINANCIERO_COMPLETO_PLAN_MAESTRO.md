@@ -702,3 +702,641 @@ PESIMISTA (50% cobros A/R):
 - Zona amarilla: $2,000-$4,000 (precaución)
 - Zona verde: >$4,000 (seguro)
 
+---
+
+### **PESTAÑA 10: 📈 KPIs & MÉTRICAS**
+
+**Propósito:** Indicadores clave salud financiera
+
+**KPIs Principales:**
+```
+┌──────────────────────────────────────────────────────────┐
+│ INDICADORES CLAVE - Actualización Automática            │
+├──────────────────────────────────────────────────────────┤
+│                                                          │
+│ LIQUIDEZ:                                                │
+│ • Razón Corriente:        0.45  🔴 (Meta: >1.5)         │
+│   Activos/Pasivos                                        │
+│                                                          │
+│ • Días Cobertura Efectivo: 45  🔴 (Meta: >90)           │
+│   Efectivo/(Gastos/30)                                   │
+│                                                          │
+│ • Working Capital:      -$28,261  🔴 (Meta: >$10k)      │
+│   Activos - Pasivos                                      │
+│                                                          │
+│ COBRANZA:                                                │
+│ • DSO (Days Sales Out):   45 días  ⚠️ (Meta: <30)       │
+│   (A/R / Ventas) * 30                                    │
+│                                                          │
+│ • % A/R >30 días:        67.3%  🔴 (Meta: <20%)         │
+│                                                          │
+│ • Concentración Top 2:   41.3%  ⚠️ (Meta: <30%)         │
+│   Top 2 clientes / Total A/R                             │
+│                                                          │
+│ DEUDA:                                                   │
+│ • Ratio Deuda/Activos:   2.22  🔴 (Meta: <1.0)          │
+│                                                          │
+│ • Cobertura Intereses:   0x  🔴 (Meta: >2x)             │
+│   EBITDA / Intereses                                     │
+│                                                          │
+│ • % TC vencidas:         81.1%  🔴 (Meta: 0%)           │
+│                                                          │
+│ OPERATIVO:                                               │
+│ • Margen Bruto:          N/A  ⚠️ (Falta data ventas)    │
+│                                                          │
+│ • Gastos Fijos/Ingresos: 47%  🔴 (Meta: <35%)           │
+│                                                          │
+│ • Burn Rate:           $2,809/mes  ⚠️                    │
+│   Gastos mensuales sin ingresos                          │
+│                                                          │
+│ AHORRO:                                                  │
+│ • Meta Vivienda:         0%  🔴 (Meta: 100% en 24m)     │
+│   Ahorrado / $45,000                                     │
+│                                                          │
+│ • Tasa Ahorro Mensual:   0%  🔴 (Meta: 30%)             │
+│   Ahorro / Ingresos                                      │
+│                                                          │
+└──────────────────────────────────────────────────────────┘
+```
+
+**Fórmulas Excel:**
+```excel
+Razón Corriente = (Efectivo+Ahorros+AR)/(TC+AP+IVA+Hacienda+Nissan)
+Días Cobertura = Efectivo/(GastosFijos!Total/30)
+Working Capital = TotalActivos - TotalPasivos
+DSO = (AR!Total / (Ingresos!Promedio3Meses)) * 30
+% AR >30 días = SUMAR.SI(AR!DíasMora,">30",AR!Monto) / AR!Total
+```
+
+**Dashboard visual:**
+```
+[Gauge circular - Razón Corriente]
+   0.45 / 1.5 meta
+   Rojo <1, Amarillo 1-1.5, Verde >1.5
+
+[Termómetro - Días Cobertura]
+   45 días actual
+   Zona crítica <60, Precaución 60-90, Seguro >90
+
+[Barra progreso - Meta Vivienda]
+   $0 / $45,000
+   0% completado
+```
+
+**Tendencias (gráficos línea):**
+- Efectivo últimos 6 meses
+- A/R últimos 6 meses
+- Deuda total últimos 6 meses
+- Gastos vs Ingresos comparativo mensual
+
+---
+
+### **PESTAÑA 11: 🏛️ HACIENDA (Impuestos)**
+
+**Propósito:** Control deuda fiscal + plan arreglo
+
+**IVA Vencido:**
+```
+| Período | Mes          | Monto CRC | Monto USD | Vence      | Días Mora | Multa Est | Total+Multa |
+|---------|--------------|-----------|-----------|------------|-----------|-----------|-------------|
+| 202508  | Agosto 2025  | 244129    | 481.44    | 16/09/2025 | 52        | 48.14     | 529.58      |
+| 202509  | Sept 2025    | 26608     | 52.48     | 24/10/2025 | 14        | 2.62      | 55.10       |
+|---------|--------------|-----------|-----------|------------|-----------|-----------|-------------|
+| TOTAL   |              | 270737    | 533.92    |            |           | 50.76     | 584.68      |
+```
+
+**ISR Pendiente:**
+```
+| Año | Período | Monto CRC | Monto USD | Estado           | Incluido Arreglo |
+|-----|---------|-----------|-----------|------------------|------------------|
+| 2020| 202001  | 981664    | 1936.30   | Vencido          | ✅ Sí            |
+| 2021| 202101  | 1442277   | 2844.62   | Vencido          | ✅ Sí            |
+| 2022| 202201  | 1448546   | 2856.99   | Vencido          | ✅ Sí            |
+| 2023| 202301  | 825297    | 1627.80   | Vencido          | ✅ Sí            |
+| 2024| 202401  | ?         | ?         | Por confirmar    | ⚠️ Verificar     |
+|-----|---------|-----------|-----------|------------------|------------------|
+| TOTAL (2020-2023) | 4697784 | 9265.71 | En arreglo       | DGV-523678-M6W1  |
+```
+
+**Solicitud Arreglo Pago:**
+```
+Número: DGV-523678-M6W1
+Fecha solicitud: 19/08/2025 (estimado)
+Estado: EN TRÁMITE - Esperando resolución
+Monto solicitado: ₡4,697,784 ($9,265.71) ISR 2020-2023
+
+Acción requerida:
+☐ Llamar 800-TRIBUT para seguimiento
+☐ Entrar ATV Hacienda verificar estado
+☐ Confirmar si incluye IVA vencido o solo ISR
+☐ Preparar estados financieros actualizados si solicitan
+```
+
+**Plan propuesto (pendiente aprobación):**
+```
+Opción A: Quita + Cuotas
+   - Quita: 30% ($2,780)
+   - Saldo: $6,486
+   - Cuotas: 24 meses de $270/mes
+   - Total pagar: $6,486
+
+Opción B: Solo Cuotas
+   - Saldo completo: $9,266
+   - Cuotas: 36 meses de $257/mes
+   - Total pagar: $9,266
+
+Preferencia: OPCIÓN A
+```
+
+**Calendario pagos (si aprueban):**
+```
+| Mes    | IVA Vencido | ISR Arreglo | Total Hacienda | Acumulado |
+|--------|-------------|-------------|----------------|-----------|
+| Nov 25 | 585         | -           | 585            | 585       |
+| Dic 25 | -           | 270         | 270            | 855       |
+| Ene 26 | -           | 270         | 270            | 1,125     |
+| ... 24 meses hasta liquidar
+```
+
+**Alerta crítica:**
+```
+🔴 IVA vencido creciendo multas e intereses diariamente
+🔴 Llamar Hacienda URGENTE para:
+   1. Verificar estado arreglo DGV-523678-M6W1
+   2. Informar pago IVA vencido esta semana
+   3. Solicitar suspensión multas mientras se resuelve
+```
+
+---
+
+### **PESTAÑA 12: 🚗 NISSAN FRONTIER (Préstamo)**
+
+**Propósito:** Control préstamo vehículo + proyección liquidación
+
+**Datos préstamo:**
+```
+Vehículo: Nissan Frontier UD202840
+Saldo actual: $19,197.69 (confirmado 07/11/2025)
+Cuota mensual: $800.00
+Tasa interés: PENDIENTE CONFIRMAR
+Plazo restante: PENDIENTE CONFIRMAR
+Fecha vencimiento cuota: Día 10 cada mes
+Cuenta pago: BNCR 601066-4 USD
+```
+
+**Tabla amortización (estimada - pendiente confirmar):**
+```
+| Mes    | Cuota   | Capital | Interés | Saldo Rest | % Pagado |
+|--------|---------|---------|---------|------------|----------|
+| Nov 25 | 800.00  | 700.00  | 100.00  | 18,497.69  | 3.6%     |
+| Dic 25 | 800.00  | 703.00  | 97.00   | 17,794.69  | 7.3%     |
+| Ene 26 | 800.00  | 706.03  | 93.97   | 17,088.66  | 11.0%    |
+| ... proyección hasta liquidar
+```
+
+**Escenarios liquidación:**
+
+**ESCENARIO 1: Solo cuota mínima ($800/mes)**
+```
+Tiempo: 24 meses
+Interés total: $3,802 (estimado)
+Total pagar: $23,000
+Fecha liquidación: Nov 2027
+```
+
+**ESCENARIO 2: Cuota + extra $200/mes ($1,000/mes)**
+```
+Tiempo: 19 meses
+Interés total: $2,450
+Total pagar: $21,647
+AHORRO: $1,353
+Fecha liquidación: Jun 2027
+```
+
+**ESCENARIO 3: Pago agresivo $1,500/mes**
+```
+Tiempo: 13 meses
+Interés total: $1,200
+Total pagar: $20,397
+AHORRO: $2,603
+Fecha liquidación: Dic 2026
+```
+
+**RECOMENDACIÓN:**
+```
+MES 1-12: Pagar solo mínimo ($800) mientras se liquidan TC
+MES 13-24: Aumentar a $1,500/mes después de TC liquidadas
+Balance: Entre sanitizar TC primero (mayor interés) vs aliviar flujo mensual
+
+Acción inmediata:
+☐ Solicitar banco estado de cuenta detallado
+☐ Confirmar tasa interés exacta
+☐ Confirmar plazo restante
+☐ Evaluar refinanciamiento si tasa >12%
+```
+
+**Gráfico progreso:**
+```
+[Barra horizontal - Progreso liquidación]
+$0 ────────────────────────────────── $19,197.69
+Pagado: 0% | Restante: 100%
+
+[Proyección 3 escenarios - línea]
+Eje X: Meses
+Eje Y: Saldo
+3 líneas: Mínimo, +$200, +$700
+```
+
+---
+
+### **PESTAÑA 13: 💾 AHORRO VIVIENDA 2 AÑOS**
+
+**Propósito:** Plan ahorro $45,000 en 24 meses
+
+**META VIVIENDA:**
+```
+┌────────────────────────────────────────────────┐
+│ 🏠 META: CUOTA INICIAL VIVIENDA                │
+├────────────────────────────────────────────────┤
+│ Monto objetivo:           $45,000              │
+│ Plazo:                    24 meses             │
+│ Fecha meta:               Noviembre 2027       │
+│ Ahorro mensual requerido: $1,875/mes           │
+│ Ahorro actual:            $8,054 (ahorros)     │
+│ Por ahorrar:              $36,946              │
+│ Avance:                   17.9%                │
+│ Estado:                   🟡 INICIANDO         │
+└────────────────────────────────────────────────┘
+```
+
+**ESTRATEGIA AHORRO (fases):**
+
+**FASE 1: SANITIZACIÓN (Meses 1-6)**
+```
+Objetivo: Liquidar deuda urgente primero
+
+Prioridad:
+1. IVA vencido $585 ✅ Mes 1
+2. A/P vencido $454 ✅ Mes 1
+3. TC BNCR inicio pago plan
+4. Buffer emergencia $5,000
+
+Ahorro vivienda: $0/mes (PAUSA)
+Razón: Pagar deuda alta tasa > ahorrar tasa 0%
+```
+
+**FASE 2: TRANSICIÓN (Meses 7-12)**
+```
+Objetivo: Balance entre liquidar TC y empezar ahorro
+
+TC restante: ~$8,000
+Plan pago TC: $1,000/mes
+Ahorro vivienda: $500/mes (INICIO)
+
+Total necesario: $1,500/mes
+```
+
+**FASE 3: ACELERACIÓN (Meses 13-24)**
+```
+Objetivo: TC liquidadas, ahorro agresivo
+
+TC: ✅ Liquidadas
+Ahorro vivienda: $2,500/mes (MÁXIMO)
+Nissan extra: $500/mes
+
+En 12 meses: $2,500 x 12 = $30,000
+```
+
+**PROYECCIÓN 24 MESES:**
+```
+| Mes | TC Pago | Ahorro Viv | Nissan Extra | Acumulado Viv | % Meta |
+|-----|---------|------------|--------------|---------------|--------|
+| 1   | 1445    | 0          | 0            | 8,054         | 17.9%  |
+| 2   | 1445    | 0          | 0            | 8,054         | 17.9%  |
+| 3   | 1445    | 0          | 0            | 8,054         | 17.9%  |
+| 4   | 1445    | 0          | 0            | 8,054         | 17.9%  |
+| 5   | 1433    | 0          | 0            | 8,054         | 17.9%  |
+| 6   | 1433    | 0          | 0            | 8,054         | 17.9%  |
+| 7   | 1000    | 500        | 0            | 8,554         | 19.0%  |
+| 8   | 1000    | 500        | 0            | 9,054         | 20.1%  |
+| 9   | 1000    | 500        | 0            | 9,554         | 21.2%  |
+| 10  | 1000    | 500        | 0            | 10,054        | 22.3%  |
+| 11  | 592     | 1000       | 0            | 11,054        | 24.6%  |
+| 12  | 592     | 1000       | 0            | 12,054        | 26.8%  |
+| 13  | 0       | 2500       | 500          | 14,554        | 32.3%  |
+| 14  | 0       | 2500       | 500          | 17,054        | 37.9%  |
+| ... hasta mes 24
+| 24  | 0       | 2500       | 500          | 45,054        | 100.1% |
+```
+
+**AJUSTES DINÁMICOS:**
+```
+SI(EfectivoDisponible > $10,000):
+   Aumentar ahorro a $3,000/mes
+
+SI(A/R cobrado > proyectado):
+   Bonus 50% extra → Ahorro vivienda
+
+SI(Gasto inesperado >$2,000):
+   Reducir ahorro mes siguiente (mantener liquidez)
+```
+
+**Cuentas sugeridas ahorro:**
+```
+Primaria: BNCR 17000002201 (Vehículo Nuevo)
+   Actual: $4,559
+   Depositar: Mensual automático
+
+Secundaria: Nueva cuenta vivienda específica
+   Recomendación: Abrir cuenta ahorro plazo
+   Tasa: Buscar mejor tasa mercado (3-5%)
+```
+
+**Gráfico progreso:**
+```
+[Barra acumulativa 24 meses]
+Meta: $45,000
+Línea proyectada vs línea real
+Hitos: $10k, $20k, $30k, $40k, $45k
+```
+
+---
+
+### **PESTAÑA 14: 🔍 ANÁLISIS & GRÁFICOS**
+
+**Propósito:** Visualizaciones comportamiento financiero
+
+**GRÁFICO 1: Evolución Efectivo (12 meses)**
+```
+[Gráfico línea]
+Eje X: Nov 2024 → Nov 2025
+Eje Y: Efectivo USD
+Línea azul: Balance mensual
+Puntos críticos: <$2,000 marcados rojos
+Promedio: Línea punteada
+```
+
+**GRÁFICO 2: Composición Gastos (Pie)**
+```
+[Gráfico circular]
+Nómina: 35.6%
+Vehículo: 30.6%
+Servicios: 13.5%
+Impuestos: 12.6%
+Software: 7.7%
+```
+
+**GRÁFICO 3: A/R Aging (Columnas apiladas)**
+```
+[Gráfico columnas]
+Eje X: Noviembre
+Eje Y: Monto USD
+Segmentos:
+- 0-30 días (verde)
+- 31-60 días (amarillo)
+- 61-90 días (naranja)
+- >90 días (rojo)
+```
+
+**GRÁFICO 4: Deuda Total Trending**
+```
+[Gráfico área]
+Eje X: Mes
+Eje Y: Deuda USD
+Áreas apiladas:
+- TC (rojo oscuro)
+- A/P (naranja)
+- Hacienda (amarillo)
+- Nissan (gris)
+```
+
+**GRÁFICO 5: Ingresos vs Gastos**
+```
+[Gráfico barras agrupadas]
+Eje X: Meses
+Eje Y: Monto USD
+Barras verdes: Ingresos
+Barras rojas: Gastos
+Línea: Diferencia (profit/loss)
+```
+
+**GRÁFICO 6: Proyección Sanitización Deuda**
+```
+[Gráfico línea proyección]
+Eje X: Mes 1-24
+Eje Y: Deuda total USD
+Línea descendente: De $51,484 → $19,198 (Nissan)
+Hitos marcados: TC liquidadas (mes 12)
+```
+
+**TABLA RESUMEN MENSUAL:**
+```
+| Mes    | Ingresos | Gastos | Resultado | TC Pagadas | Ahorro Viv | Efectivo Fin |
+|--------|----------|--------|-----------|------------|------------|--------------|
+| Nov 25 | 10,750   | 9,658  | +1,092    | 0          | 0          | 5,394        |
+| Dic 25 | 6,500    | 8,590  | -2,090    | 1,445      | 0          | 3,304        |
+| Ene 26 | 5,000    | 4,254  | +746      | 1,445      | 0          | 4,050        |
+| ... proyección 24 meses
+```
+
+---
+
+### **PESTAÑA 15: ⚙️ CONFIGURACIÓN & HELP**
+
+**Propósito:** Parámetros sistema + ayuda usuario
+
+**PARÁMETROS GLOBALES:**
+```
+┌─────────────────────────────────────────────┐
+│ CONFIGURACIÓN SISTEMA                       │
+├─────────────────────────────────────────────┤
+│ Tipo Cambio USD/CRC:        507             │
+│ Última actualización TC:    07/11/2025      │
+│ Actualizar automático:      [ ] Sí [X] No   │
+│                                             │
+│ Tasa interés estimada:                      │
+│ - TC BNCR:                  30%             │
+│ - TC BAC:                   26%             │
+│ - Préstamo Nissan:          12% (estim)     │
+│                                             │
+│ Alertas activadas:                          │
+│ [X] Efectivo < $2,000                       │
+│ [X] Factura vence 7 días                    │
+│ [X] Cliente >45 días mora                   │
+│ [X] Presupuesto excedido >10%               │
+│                                             │
+│ Backup automático OneDrive:  [X] Activado   │
+│ Frecuencia backup:           Diario 23:00   │
+└─────────────────────────────────────────────┘
+```
+
+**CATEGORÍAS (Listas desplegables):**
+```
+Categorías Gastos:
+- Nómina
+- Impuestos
+- Servicios
+- Software
+- Vehículo
+- Proveedores
+- Marketing
+- Capacitación
+- Mantenimiento
+- Imprevistos
+- Otros
+
+Categorías Ingresos:
+- Facturación Clientes
+- Servicios Profesionales
+- Productos
+- Otros Ingresos
+```
+
+**INSTRUCCIONES USO DIARIO:**
+```
+📝 RUTINA DIARIA (5-10 minutos):
+
+1. Abrir pestaña EFECTIVO
+2. Registrar transacciones del día:
+   - Fecha (HOY)
+   - Banco correspondiente
+   - Concepto breve
+   - Categoría (lista desplegable)
+   - Monto en Entrada o Salida
+3. Verificar balance actualizado automáticamente
+4. Revisar DASHBOARD alertas críticas
+5. Guardar archivo (Ctrl+S)
+
+✅ Listo - Sistema actualizado
+```
+
+**INSTRUCCIONES SEMANAL:**
+```
+📊 REVISIÓN SEMANAL (15 minutos):
+
+Lunes:
+1. Revisar pestaña A/R
+   - Identificar clientes próximos a vencer
+   - Hacer llamadas cobranza
+   - Actualizar "Última Gestión"
+
+2. Revisar pestaña A/P
+   - Verificar facturas próxima semana
+   - Planificar pagos según proyección
+
+3. Revisar PROYECCIÓN 90 DÍAS
+   - Ajustar si hubo cambios grandes
+   - Verificar puntos críticos
+
+4. Backup manual adicional
+```
+
+**INSTRUCCIONES MENSUAL:**
+```
+📈 CIERRE MENSUAL (30 minutos):
+
+Día 1 mes siguiente:
+1. Pestaña PRESUPUESTO
+   - Copiar columna "Real" mes anterior
+   - Comparar vs presupuesto
+   - Analizar variaciones >10%
+   - Ajustar presupuesto mes siguiente si necesario
+
+2. Pestaña KPIs
+   - Revisar todos los indicadores
+   - Tomar screenshot para histórico
+   - Identificar tendencias preocupantes
+
+3. Pestaña AHORRO VIVIENDA
+   - Registrar depósito mensual
+   - Actualizar % progreso
+   - Ajustar proyección si necesario
+
+4. Crear archivo mensual:
+   - Guardar copia: "AlvaroVelascoNet_Nov2025.xlsx"
+   - Mantener archivo activo para mes nuevo
+```
+
+**FÓRMULAS CLAVE USADAS:**
+```excel
+Efectivo Total:
+=SUMA(Efectivo!B:B) - SUMA(Efectivo!C:C)
+
+Meses Cobertura:
+=Efectivo!Total / (GastosFijos!Total/30)
+
+% Presupuesto:
+=Real/Presupuesto
+
+Días Mora A/R:
+=SI(HOY()>VenceFact, HOY()-VenceFact, 0)
+
+Proyección Balance:
+=BalanceAnterior + Entradas - Salidas
+```
+
+**TROUBLESHOOTING:**
+```
+Problema: Balance no cuadra
+Solución:
+1. Verificar no hay celdas vacías en columnas clave
+2. Revisar fórmulas balance = anterior + entrada - salida
+3. Usar Ctrl+` para ver fórmulas
+
+Problema: Gráfico no actualiza
+Solución:
+1. Click derecho gráfico → Seleccionar datos
+2. Verificar rango correcto
+3. F9 para recalcular todo
+
+Problema: Categorías no aparecen
+Solución:
+1. Pestaña Configuración → verificar listas
+2. Asegurar validación datos activa
+3. Re-crear lista si necesario
+```
+
+**CONTACTO SOPORTE:**
+```
+Creador sistema: Claude AI
+Versión: 1.0
+Fecha: 07/11/2025
+Usuario: Álvaro Velasco (AlvaroVelasco.Net SRL)
+
+Para modificaciones:
+- Documentar cambios en CHANGELOG
+- Backup antes de editar fórmulas complejas
+- Probar en copia antes de producción
+```
+
+---
+
+## 📁 ARCHIVO PERSONAL: ESTRUCTURA
+
+### **ARCHIVO: AlvaroVelasco_PERSONAL.xlsx**
+
+**Propósito:** Control finanzas personales Álvaro separado de empresa
+
+**8 PESTAÑAS:**
+
+1. **Dashboard Personal** - Vista rápida efectivo, gastos, ahorro
+2. **Efectivo Personal** - 3 cuentas BNCR personal
+3. **Ingresos Personal** - Salario empresa + otros ingresos
+4. **Gastos Personal** - Categorización gastos personales/familia
+5. **Presupuesto Personal** - $1,000/mes salario → distribución
+6. **Ahorro Personal** - Metas personales (emergencia, educación, etc)
+7. **Proyección Personal** - 90 días flujo caja personal
+8. **Config Personal** - Categorías gastos personales
+
+**Estructura más simple que empresa:**
+- Control básico entrada/salida
+- Presupuesto mensual $1,000
+- Identificar si salario suficiente
+- Alertas sobregasto categorías
+- Separación TOTAL empresa/personal
+
+**Conexión con empresa:**
+- Recibe salario 2 tractos quincenales
+- NO mezclar gastos
+- Transfer empresa → personal registrados ambos lados
+
