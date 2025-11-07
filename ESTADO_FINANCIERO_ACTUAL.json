@@ -1,55 +1,49 @@
 {
   "metadata": {
-    "ultima_actualizacion": "2025-11-07T01:30:00",
-    "ultima_verificacion_bancos": "2025-11-06T23:16:00",
+    "ultima_actualizacion": "2025-11-07T08:00:00",
+    "ultima_verificacion_bancos": "2025-11-07T07:54:00",
     "tipo_cambio_usd_crc": 507,
-    "commit_git": "c6f8f68",
+    "commit_git": "PENDIENTE",
     "actualizador": "Claude Code",
-    "notas": "A/R completo 26 clientes + 22 preguntas pendientes documentadas + análisis QB estrategia"
+    "estado_proyecto": "READY TO EXECUTE QB OPCIÓN A",
+    "notas": "CONFIRMACIÓN TOTAL: Todas cuentas clasificadas (empresa/personal/descartado) + Gastos fijos completos $2,809.38/mes + Resumen ejecutivo creado + LISTO PARA QB"
   },
 
   "efectivo": {
-    "total_usd": 4328.84,
-    "ultima_verificacion": "2025-11-06T23:16:00",
+    "total_usd": 4302.10,
+    "ultima_verificacion": "2025-11-07T07:54:00",
     "cuentas": {
       "bncr": {
-        "subtotal_usd": 1327.45,
+        "subtotal_usd": 1300.71,
         "cuentas": [
           {
             "numero": "601066-4",
+            "codigo": "100-02-087-601066-4",
             "nombre": "USD Operativa Empresa",
             "qb_account": "1030",
             "moneda": "USD",
-            "saldo_real": 1326.35,
+            "saldo_real": 1240.87,
             "saldo_qb": 3149.94,
-            "diferencia": -1823.59,
-            "fecha_verificacion": "2025-11-06T23:16:00",
-            "estado": "DISCREPANCIA - Falta investigar"
+            "diferencia": -1909.07,
+            "fecha_verificacion": "2025-11-07T07:52:00",
+            "clasificacion": "EMPRESA",
+            "estado": "QB se ajustará con Opción A"
           },
           {
             "numero": "188618-3",
+            "codigo": "100-01-087-188618-3",
             "nombre": "CRC Operativa Empresa",
             "qb_account": "1070",
             "moneda": "CRC",
-            "saldo_real_crc": 337.24,
-            "saldo_real_usd": 0.67,
+            "saldo_real_crc": 30337.24,
+            "saldo_real_usd": 59.84,
             "saldo_qb_crc": 75337.24,
             "saldo_qb_usd": 148.59,
-            "diferencia_crc": -75000,
-            "diferencia_usd": -147.92,
-            "fecha_verificacion": "2025-11-06T23:16:00",
-            "estado": "DISCREPANCIA - Falta investigar"
-          },
-          {
-            "numero": "009589-4",
-            "nombre": "USD Reservas",
-            "qb_account": "1040",
-            "moneda": "USD",
-            "saldo_real": 0.43,
-            "saldo_qb": 0.43,
-            "diferencia": 0,
-            "fecha_verificacion": "2025-11-06T23:16:00",
-            "estado": "CORRECTO"
+            "diferencia_crc": -45000,
+            "diferencia_usd": -88.75,
+            "fecha_verificacion": "2025-11-07T07:54:00",
+            "clasificacion": "EMPRESA",
+            "estado": "QB se ajustará con Opción A"
           }
         ]
       },
@@ -64,8 +58,9 @@
             "saldo_real": 2999.24,
             "saldo_qb": 3030.89,
             "diferencia": -31.65,
-            "fecha_verificacion": "2025-11-06T23:16:00",
-            "estado": "Diferencia menor - posible comisión"
+            "fecha_verificacion": "2025-11-07T07:54:00",
+            "clasificacion": "EMPRESA",
+            "estado": "QB se ajustará con Opción A"
           },
           {
             "numero": "10000003881708",
@@ -76,16 +71,88 @@
             "saldo_real_usd": 2.15,
             "saldo_qb_usd": 0,
             "diferencia_usd": 2.15,
-            "fecha_verificacion": "2025-11-06T23:16:00",
-            "estado": "CORRECTO - Saldo residual post CCSS"
+            "fecha_verificacion": "2025-11-07T07:54:00",
+            "clasificacion": "EMPRESA",
+            "estado": "QB se ajustará con Opción A"
+          },
+          {
+            "numero": "20000003881691",
+            "nombre": "Ahorros USD",
+            "moneda": "USD",
+            "saldo_real": 0.00,
+            "fecha_verificacion": "2025-11-07T07:54:00",
+            "clasificacion": "EMPRESA",
+            "estado": "Saldo cero - no crear cuenta QB"
+          },
+          {
+            "numero": "30000003904229",
+            "nombre": "Corriente CRC",
+            "moneda": "CRC",
+            "saldo_real_crc": 0.00,
+            "fecha_verificacion": "2025-11-07T07:54:00",
+            "clasificacion": "EMPRESA",
+            "estado": "Saldo cero - no crear cuenta QB"
           }
         ]
       }
     },
+    "cuentas_personal_alvaro": {
+      "total_usd": 156.28,
+      "nota": "Estas cuentas van en QB SEPARADO - AlvaroVelascoPersonal",
+      "cuentas": [
+        {
+          "numero": "009589-4",
+          "codigo": "200-02-087-009589-4",
+          "nombre": "USD Personal",
+          "moneda": "USD",
+          "saldo_real": 0.43,
+          "fecha_verificacion": "2025-11-07",
+          "clasificacion": "PERSONAL ALVARO"
+        },
+        {
+          "numero": "011112-1",
+          "codigo": "200-02-087-011112-1",
+          "nombre": "USD Personal",
+          "moneda": "USD",
+          "saldo_real": 21.84,
+          "fecha_verificacion": "2025-11-07",
+          "clasificacion": "PERSONAL ALVARO"
+        },
+        {
+          "numero": "042186-9",
+          "codigo": "200-01-087-042186-9",
+          "nombre": "CRC Personal",
+          "moneda": "CRC",
+          "saldo_real_crc": 67950.50,
+          "saldo_real_usd": 134.01,
+          "fecha_verificacion": "2025-11-07",
+          "clasificacion": "PERSONAL ALVARO"
+        }
+      ]
+    },
+    "cuentas_descartadas": {
+      "nota": "NO van en ningún QB",
+      "cuentas": [
+        {
+          "numero": "013718-0",
+          "codigo": "200-01-030-013718-0",
+          "titular": "Alejandra Arias",
+          "saldo_crc": 15864.04,
+          "razon": "Personal Alejandra - ella llevará sus propias finanzas"
+        },
+        {
+          "numero": "001288-3",
+          "codigo": "200-02-171-001288-3",
+          "titular": "Alejandra Arias",
+          "saldo_usd": 0.00,
+          "razon": "Personal Alejandra - ella llevará sus propias finanzas"
+        }
+      ]
+    },
     "notas": [
-      "Balance Sheet QB decía $6,329.42 pero realidad es $4,328.84",
-      "Faltante total: -$2,000.58 (31.6% sobrestimado en QB)",
-      "CRÍTICO: Investigar diferencias BNCR 601066-4 y 188618-3"
+      "Balance Sheet QB decía $6,329.42 pero realidad 07/11 es $4,302.10",
+      "Diferencias se ajustarán con Opción A - Corte Radical",
+      "Sistema código BNCR: 100-xx=EMPRESA, 200-xx=PERSONAL"
     ]
   },
 
@@ -337,83 +404,143 @@
     }
   },
 
-  "gastos_operativos_comprometidos": {
-    "total_usd": 1395,
-    "descripcion": "Gastos operativos críticos para operación del negocio",
-    "fecha_actualizacion": "2025-11-07T01:00:00",
+  "gastos_operativos_mensuales": {
+    "total_mensual_usd": 2809.38,
+    "total_mensual_usd_divisa": 2016.85,
+    "total_mensual_crc": 401804,
+    "total_mensual_crc_usd_equiv": 792.53,
+    "descripcion": "Gastos fijos mensuales recurrentes empresa",
+    "fecha_actualizacion": "2025-11-07T08:00:00",
+    "fuente": "Usuario - Información completa 07/11/2025",
 
-    "gastos_inmediatos": {
-      "total_usd": 495,
-      "items": [
-        {
-          "concepto": "TeamViewer",
-          "monto_usd": 200,
-          "tipo": "Software remoto",
-          "urgencia": "CRÍTICA",
-          "notas": "Sin esto nos quedamos sin herramienta de soporte remoto",
-          "fecha_limite": "INMEDIATO",
-          "prioridad": 1
-        },
-        {
-          "concepto": "Microsoft Maps",
-          "monto_usd": 295,
-          "tipo": "Licencia operativa",
-          "urgencia": "ALTA",
-          "fecha_limite": "Próximos días",
-          "prioridad": 2
-        }
-      ]
+    "gastos_mensuales": [
+      {
+        "concepto": "Salario Álvaro Velasco",
+        "monto_usd": 1000.00,
+        "frecuencia": "2 tractos quincenales",
+        "cuenta_pago": "Cuentas personales Álvaro (009589-4, 011112-1, 042186-9)",
+        "notas": "Se registra en QB empresa como gasto, luego transfer a cuentas personales",
+        "clasificacion": "NÓMINA",
+        "prioridad": 1
+      },
+      {
+        "concepto": "CCSS",
+        "monto_crc": 179000,
+        "monto_usd": 353.26,
+        "frecuencia": "Mensual",
+        "cuenta_pago": "Promerica 10000003881708 SINPE CRC",
+        "clasificacion": "IMPUESTOS",
+        "prioridad": 1
+      },
+      {
+        "concepto": "ICE (Factura mensual)",
+        "monto_crc": 192804.15,
+        "monto_usd": 380.24,
+        "frecuencia": "Mensual recurrente",
+        "detalle": "Internet 300MB + 7 líneas celulares + TV + servicios",
+        "archivo_detalle": "FACTURA_ICE_MENSUAL_OCT2025.md",
+        "clasificacion": "SERVICIOS",
+        "prioridad": 1
+      },
+      {
+        "concepto": "TeamViewer",
+        "monto_usd": 200.00,
+        "frecuencia": "Mensual",
+        "tipo": "Software soporte remoto",
+        "notas": "Herramienta crítica - sin esto no hay soporte remoto",
+        "clasificacion": "SOFTWARE",
+        "prioridad": 1
+      },
+      {
+        "concepto": "Apple One",
+        "monto_usd": 16.85,
+        "frecuencia": "Mensual",
+        "tipo": "Suscripción operativa",
+        "clasificacion": "SOFTWARE",
+        "prioridad": 2
+      },
+      {
+        "concepto": "Nissan Frontier UD202840",
+        "monto_usd": 800.00,
+        "frecuencia": "Mensual",
+        "clasificacion": "VEHÍCULO EMPRESA",
+        "confirmacion_usuario": "los gastos de 800 dolares de la nissan son gastos operativos de la empresa, no de alvaro velasco",
+        "notas": "CORREGIDO: Es gasto empresa, no personal",
+        "prioridad": 1
+      },
+      {
+        "concepto": "Parqueos / QuickPass",
+        "monto_crc": 30000,
+        "monto_usd": 59.17,
+        "frecuencia": "Mensual recurrente",
+        "clasificacion": "VEHÍCULO EMPRESA",
+        "confirmacion_usuario": "los gastos de 30mil colones son gastos operativos de la empresa, no de alvaro velasco",
+        "notas": "CORREGIDO: Es gasto empresa, no personal. Transfer recurrente mensual desde 1070 BNCR CRC",
+        "prioridad": 2
+      }
+    ],
+
+    "resumen_por_moneda": {
+      "gastos_usd": 2016.85,
+      "gastos_crc": 401804.15,
+      "gastos_crc_en_usd": 792.53,
+      "total_usd": 2809.38
     },
 
-    "compromisos_venta": {
-      "total_compromiso_usd": 900,
-      "items": [
-        {
-          "concepto": "SWS-Software Maps Renewal",
-          "monto_por_pagar_usd": 900,
-          "monto_recibido_usd": 1200,
-          "utilidad_bruta_usd": 300,
-          "cliente": "SWS-Software",
-          "fecha_vencimiento": "2025-12-17",
-          "estado": "PAGO ANTICIPADO RECIBIDO",
-          "registrado_en": "Estados banco Promerica",
-          "notas": [
-            "Cliente ya pagó $1,200+ anticipadamente",
-            "Debemos pagar a proveedor $900 antes del 17/12",
-            "Genera utilidad neta ~$300",
-            "Es venta de producto, no gasto"
-          ],
-          "urgencia": "MEDIA",
-          "dias_disponibles": 40
-        }
-      ]
+    "resumen_por_categoria": {
+      "nomina": 1000.00,
+      "impuestos": 353.26,
+      "servicios": 380.24,
+      "software": 216.85,
+      "vehiculo": 859.17
     },
 
-    "impacto_flujo_caja": {
-      "efectivo_actual": 4328.84,
-      "menos_gastos_inmediatos": -495,
-      "efectivo_post_gastos": 3833.84,
-      "compromiso_sws_cubierto": true,
+    "compromisos_adicionales": {
+      "microsoft_maps": {
+        "monto_usd": 295,
+        "tipo": "Licencia operativa",
+        "urgencia": "ALTA",
+        "fecha_limite": "Próximos días",
+        "notas": "Pago único pendiente, luego mensual"
+      },
+      "sws_maps": {
+        "monto_por_pagar_usd": 900,
+        "monto_recibido_usd": 1200,
+        "utilidad_bruta_usd": 300,
+        "cliente": "SWS-Software",
+        "fecha_vencimiento": "2025-12-17",
+        "estado": "PAGO ANTICIPADO RECIBIDO",
+        "notas": "Es venta, no gasto. Cliente ya pagó. Genera utilidad $300."
+      }
+    },
+
+    "analisis_flujo_caja": {
+      "efectivo_actual": 4302.10,
+      "gastos_fijos_mes": 2809.38,
+      "cobertura_meses": 1.53,
+      "gap_mensual": -2809.38,
+      "ingresos_necesarios_mes": 2809.38,
+      "estado": "CRÍTICO - Efectivo solo cubre 1.5 meses sin ingresos",
       "notas": [
-        "SWS Maps no afecta caja inmediata (pago recibido)",
-        "TeamViewer + MS Maps reducen liquidez inmediata",
-        "Efectivo quedaría en $3,833.84 después de gastos críticos"
+        "Sin facturación: empresa sobrevive 45 días",
+        "Con facturación normal: break-even",
+        "Necesita cobrar A/R urgente para buffer"
       ]
     },
 
-    "prioridad_vs_otros_gastos": {
+    "prioridad_pagos": {
       "orden_sugerido": [
         "1. IVA Hacienda vencido: $533.92 (multas creciendo)",
-        "2. TeamViewer: $200 (herramienta crítica)",
-        "3. A/P vencido Intcomex: $410.09 (relación proveedor)",
-        "4. Microsoft Maps: $295 (operativo)",
-        "5. A/P SEA Global: $44.07 (completar vencidos)",
-        "6. SWS Maps: $900 (plazo hasta 17/12, pago recibido)"
-      ],
-      "total_inmediato_critico": 1483.01,
-      "efectivo_disponible": 4328.84,
-      "balance_post_criticos": 2845.83,
-      "suficiente": true
+        "2. Salario Álvaro: $1,000 (nomina)",
+        "3. CCSS: ₡179,000 ($353) (impuesto)",
+        "4. TeamViewer: $200 (herramienta crítica)",
+        "5. ICE: ₡192,804 ($380) (servicios)",
+        "6. A/P vencido Intcomex: $410.09 (relación proveedor)",
+        "7. Microsoft Maps: $295 (operativo)",
+        "8. Nissan: $800 (vehículo)",
+        "9. Parqueos: ₡30,000 ($59) (vehículo)",
+        "10. Apple One: $16.85 (software)"
+      ]
     }
   },
 
@@ -475,106 +602,175 @@
   },
 
   "tarjetas_credito": {
-    "total_usd": 16790,
-    "fecha_aproximada": "2025-11-03",
-    "fuente": "ESTADO_FINAL_07NOV2025_0000H.txt",
+    "total_usd": 16382.69,
+    "fecha_verificacion": "2025-11-07T08:00:00",
+    "fuente": "Usuario - Saldos reales verificados 07/11/2025",
+    "clasificacion": "EMPRESA - Todas las 5 tarjetas",
     "tarjetas": [
       {
-        "banco": "BAC",
+        "banco": "BNCR",
+        "numero": "3519",
+        "titular": "Álvaro Velasco",
+        "saldo_usd": 1192.44,
+        "fecha_vencimiento": "06/11/2025",
+        "estado": "VENCIDA",
+        "clasificacion": "EMPRESA",
+        "prioridad": "CRÍTICA"
+      },
+      {
+        "banco": "BNCR",
         "numero": "9837",
-        "tipo": "VISA CRC",
-        "saldo_usd": 4003.96,
-        "tasa_interes": 35,
-        "prioridad": "CRÍTICA",
-        "notas": "Tasa más alta - atacar primero después de A/P vencido"
+        "titular": "Álvaro Velasco",
+        "saldo_usd": 5779.40,
+        "fecha_vencimiento": "03/11/2025",
+        "estado": "VENCIDA",
+        "clasificacion": "EMPRESA",
+        "notas": "Tarjeta principal - ligada a adicional 6386",
+        "prioridad": "CRÍTICA"
       },
       {
-        "banco": "BAC",
-        "numero": "8759",
-        "tipo": "MC CRC",
-        "saldo_usd": 6196.35,
-        "tasa_interes": 35,
-        "prioridad": "CRÍTICA",
-        "notas": "Segunda tasa más alta"
-      },
-      {
-        "banco": "BAC",
-        "numero": "9550",
-        "tipo": "VISA CRC",
-        "saldo_usd": 2921.75,
-        "tasa_interes": 30,
-        "prioridad": "ALTA",
-        "notas": "QB Account 2140 - tuvo problemas de balance"
-      },
-      {
-        "banco": "BAC",
+        "banco": "BNCR",
         "numero": "6386",
-        "tipo": "MC USD",
-        "saldo_usd": 3667.94,
-        "tasa_interes": 25,
-        "prioridad": "MEDIA"
+        "titular": "Alejandra Arias (adicional)",
+        "saldo_usd": 591.70,
+        "fecha_vencimiento": "03/11/2025",
+        "estado": "VENCIDA",
+        "clasificacion": "EMPRESA",
+        "confirmacion_usuario": "100% EMPRESA a pesar de que este a nombre de alejandra, es para gastos operativos de alvarovelasconet",
+        "notas": "Adicional de 9837 - Gastos operativos empresa",
+        "prioridad": "CRÍTICA"
+      },
+      {
+        "banco": "BNCR",
+        "numero": "8759",
+        "titular": "Álvaro Velasco",
+        "saldo_usd": 5731.48,
+        "fecha_vencimiento": "03/11/2025",
+        "estado": "VENCIDA",
+        "clasificacion": "EMPRESA",
+        "prioridad": "CRÍTICA"
+      },
+      {
+        "banco": "BAC",
+        "numero": "BAC",
+        "titular": "Álvaro Velasco",
+        "saldo_usd": 3087.67,
+        "estado": "Activa",
+        "clasificacion": "EMPRESA",
+        "notas": "Solo 1 tarjeta BAC activa confirmada por usuario",
+        "prioridad": "ALTA"
       }
     ],
+    "resumen": {
+      "total_bncr": 13295.02,
+      "cantidad_bncr": 4,
+      "total_bac": 3087.67,
+      "cantidad_bac": 1,
+      "total_vencido": 13295.02,
+      "cantidad_vencida": 4
+    },
     "estrategia": {
-      "fase_1": "Pagar A/P vencido primero",
-      "fase_2": "Con efectivo restante: pago parcial VISA 9837",
-      "fase_3": "Con cobros A/R: atacar MC 8759",
-      "objetivo": "Reducir intereses mensuales ~$200/mes"
+      "fase_1": "Pagar IVA vencido $533.92 HOY",
+      "fase_2": "Pagar A/P vencido (Intcomex + SEA)",
+      "fase_3": "Negociar plan pago BNCR 4 tarjetas vencidas",
+      "fase_4": "Con cobros A/R: pago parcial tarjetas",
+      "objetivo": "Regularizar vencidas + reducir intereses"
     },
     "notas": [
-      "Saldos no verificados directamente - actualizar de apps",
-      "Prioridad absoluta: IVA > A/P vencido > Tarjetas altas tasas"
+      "4 tarjetas BNCR vencidas - negociar plan pago urgente",
+      "TC 6386 adicional Alejandra es 100% EMPRESA confirmado",
+      "Prioridad: IVA > A/P vencido > Negociar TC > Pagar TC"
     ]
   },
 
   "ahorros": {
-    "total_estimado_usd": 7937.77,
-    "estado": "PENDIENTE VERIFICAR SALDOS REALES",
+    "total_usd": 8053.97,
+    "estado": "CONFIRMADO - Todas van en QB EMPRESA",
+    "fecha_confirmacion": "2025-11-07T08:00:00",
+    "clasificacion": "EMPRESA",
     "cuentas_bncr": [
       {
-        "tipo": "Ahorro programado",
-        "saldo_estimado_usd": "VERIFICAR",
-        "notas": "Confirmar saldo real desde app"
+        "codigo": "1002335826",
+        "descripcion": "Matrimonio",
+        "saldo_usd": 1006.06,
+        "clasificacion": "EMPRESA",
+        "notas": "Confirmado por usuario - fondos salen de empresa"
       },
       {
-        "tipo": "Otras cuentas ahorro",
-        "cantidad": 3,
-        "saldo_estimado_usd": "VERIFICAR",
-        "notas": "Confirmar saldos reales desde app"
+        "codigo": "1002273441",
+        "descripcion": "Impuestos Municipales",
+        "saldo_usd": 2263.15,
+        "clasificacion": "EMPRESA",
+        "notas": "Confirmado por usuario"
+      },
+      {
+        "codigo": "1002388223",
+        "descripcion": "Black Friday",
+        "saldo_usd": 225.43,
+        "clasificacion": "EMPRESA",
+        "notas": "Confirmado por usuario"
+      },
+      {
+        "codigo": "17000002201",
+        "descripcion": "Vehículo Nuevo",
+        "saldo_usd": 4559.33,
+        "clasificacion": "EMPRESA",
+        "notas": "Confirmado por usuario"
       }
     ],
-    "acciones": [
-      "Verificar saldo real 4 cuentas ahorro BNCR",
-      "Decidir si usar para emergencia (IVA/A/P vencido)"
-    ]
+    "usuario_confirmo": "si van en QB todas las 4 cuentas en la cuenta de empresa. son fondos que salen de la empresa y van para esas cuentas de ahorros",
+    "disponible_emergencia": true
   },
 
   "resumen_global": {
-    "total_recursos": 23312.47,
+    "total_recursos": 23222.49,
     "desglose_recursos": {
-      "efectivo": 4328.84,
-      "ahorros_estimado": 7937.77,
+      "efectivo_empresa": 4302.10,
+      "ahorros_empresa": 8053.97,
       "cuentas_por_cobrar": 10866.42,
-      "otros": 179.44
+      "efectivo_personal_alvaro": 156.28
     },
-    "total_deuda": 63923.25,
+    "total_deuda": 51483.67,
     "desglose_deuda": {
-      "hacienda_estimado": 19604,
-      "tarjetas_credito": 16790,
+      "tarjetas_credito": 16382.69,
       "cuentas_por_pagar": 6103.66,
       "iva_vencido": 533.92,
-      "prestamos_otros": 20891.67
+      "hacienda_isr_2020_2023": 9265.71,
+      "nissan_frontier": 19197.69
     },
-    "deficit": -40610.78,
-    "ratio_recursos_deuda": 0.36,
+    "deficit": -28261.18,
+    "ratio_recursos_deuda": 0.451,
     "estado": "INSOLVENCIA TÉCNICA",
+    "fecha_actualizacion": "2025-11-07T08:00:00",
     "notas": [
-      "36% de recursos vs deuda",
-      "Requiere estrategia agresiva cobro A/R",
-      "Requiere arreglo Hacienda aprobado",
-      "Requiere reducción gastos operativos 30%",
-      "Requiere ingresos nuevos $2-3k/mes"
-    ]
+      "45.1% de recursos vs deuda (actualizado 07/11)",
+      "Recursos totales incluyen efectivo + ahorros + A/R",
+      "Deuda NO incluye ISR 2024 (pendiente confirmar monto)",
+      "Requiere estrategia agresiva cobro A/R top 6 ($7,316)",
+      "Requiere arreglo Hacienda aprobado DGV-523678-M6W1",
+      "Gastos fijos mensuales: $2,809.38 (efectivo cubre 1.5 meses)",
+      "4 TC BNCR vencidas - negociar plan pago urgente"
+    ],
+    "analisis_critico": {
+      "efectivo_vs_gastos_mensuales": {
+        "efectivo": 4302.10,
+        "gastos_mensuales": 2809.38,
+        "meses_cobertura": 1.53,
+        "estado": "CRÍTICO - Solo 45 días de operación sin facturar"
+      },
+      "ar_cobranza_urgente": {
+        "total_ar": 10866.42,
+        "top_2_critico": 4489.04,
+        "porcentaje": "41.3%",
+        "objetivo": "Cobrar $4,489 en 48h cubre gastos 1.6 meses adicionales"
+      },
+      "tc_vencidas": {
+        "total_vencido": 13295.02,
+        "cantidad": 4,
+        "banco": "BNCR",
+        "accion": "Negociar plan pago - evitar embargo/cierre cuentas"
+      }
+    }
   },
 
   "decisiones_pendientes": {
