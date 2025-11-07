@@ -1,0 +1,6 @@
+Fecha,Banco,Cuenta,Concepto,Categoría,Entrada USD,Salida USD,Balance USD,Notas
+2025-11-07,Promerica,40000003881774,Balance inicial cuenta USD principal,APERTURA,,,$2999.24,Saldo real verificado 07/11/2025
+2025-11-07,Promerica,10000003881708,Balance inicial SINPE CRC,APERTURA,,,$2.15,₡1090 a TC 507
+2025-11-07,BNCR,601066-4,Balance inicial USD operativa empresa,APERTURA,,,$1240.87,Saldo real verificado 07/11/2025
+2025-11-07,BNCR,188618-3,Balance inicial CRC operativa empresa,APERTURA,,,$59.84,₡30337.24 a TC 507
+,,,,TOTAL EFECTIVO:,,,$4302.10,Cuatro cuentas bancarias activas

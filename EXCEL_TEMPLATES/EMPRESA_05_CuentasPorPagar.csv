@@ -1,0 +1,11 @@
+Proveedor,Factura,Monto USD,Moneda,Fecha Vencimiento,Días para Vencer,Días Mora,Estado,Prioridad,Notas
+Intcomex,2502060,$410.09,USD,2025-10-04,,-33,VENCIDO,CRÍTICA,Proveedor principal - mantener relación
+SEA Global,Antiguas,$44.07,USD,2025-10-10,,-27,VENCIDO,ALTA,Facturas antiguas pendientes
+Eurocomp,203637,$2007.68,USD,2025-11-16,9,,PRÓXIMO,ALTA,Factura grande - negociar extensión si necesario
+Eurocomp,203831,$16.92,USD,2025-11-19,12,,VIGENTE,MEDIA,
+Compueconomicos,012616,$284.91,USD,2025-11-23,16,,VIGENTE,MEDIA,
+Intcomex,Cloud Services,$2317.09,USD,2025-12-03,26,,VIGENTE,NORMAL,Servicios cloud mensuales
+Intcomex,Lenovo Equipment,$679.12,USD,2025-12-04,27,,VIGENTE,NORMAL,Equipo Lenovo
+SEA Global,Nueva,$58.76,USD,2025-12-06,29,,VIGENTE,NORMAL,Factura nueva
+IBASA,Pendiente,$285.02,CRC,2025-12-05,28,,VIGENTE,NORMAL,₡144516 a TC 507
+,TOTAL A/P:,$6103.66,,,,,,,"Vencido urgente: $454.16, Próximos 15 días: $2309.51"

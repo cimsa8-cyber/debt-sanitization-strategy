@@ -1,0 +1,24 @@
+Categoría,Presupuesto Mes USD,Real Mes USD,% Usado,Variación USD,Límite Rígido,Alerta,Notas
+GASTOS FIJOS,,,,,,,
+Nómina,$1000.00,$0.00,0.0%,$0.00,SÍ,,Nunca exceder
+Impuestos (CCSS),$353.26,$0.00,0.0%,$0.00,SÍ,,Obligatorio
+Servicios (ICE),$380.24,$0.00,0.0%,$0.00,SÍ,,Fijo mensual
+Software,$216.85,$0.00,0.0%,$0.00,SÍ,,TeamViewer + Apple
+Vehículo,$859.17,$0.00,0.0%,$0.00,SÍ,,Nissan + parqueos
+SUBTOTAL FIJOS:,$2809.38,$0.00,0.0%,$0.00,SÍ,,No negociable
+,,,,,,,
+GASTOS VARIABLES,,,,,,,
+Marketing,$500.00,$0.00,0.0%,$0.00,NO,,Flexible según necesidad
+Capacitación,$300.00,$0.00,0.0%,$0.00,NO,,Cursos y certificaciones
+Suministros Oficina,$200.00,$0.00,0.0%,$0.00,NO,,Papelería y materiales
+Gastos Operativos,$750.00,$0.00,0.0%,$0.00,NO,,Varios operativos
+Contingencia,$500.00,$0.00,0.0%,$0.00,NO,,Emergencias
+Hosting & Cloud,$500.00,$0.00,0.0%,$0.00,NO,,Servidores y servicios cloud
+SUBTOTAL VARIABLES:,$2750.00,$0.00,0.0%,$0.00,NO,,Ajustable según ingresos
+,,,,,,,
+TOTAL GASTOS:,$5559.38,$0.00,0.0%,$0.00,,,
+,,,,,,,
+INGRESOS,,,,,,,
+Facturación Mensual,$6000.00,$0.00,0.0%,$0.00,,,Meta conservadora
+,,,,,,,
+RESULTADO MENSUAL:,$440.62,$0.00,,,,,"Superávit proyectado +$440/mes (7.9%)"

@@ -1,0 +1,16 @@
+Concepto,Monto USD,Monto CRC,Categoría,Frecuencia,Prioridad,Cuenta Pago,Notas
+Salario Álvaro Velasco,$1000.00,,NÓMINA,Mensual (2 tractos),1,BNCR Personal (009589-4 / 011112-1 / 042186-9),Transfer a cuentas personales
+CCSS,$353.26,₡179000,IMPUESTOS,Mensual,1,Promerica SINPE CRC (10000003881708),Seguridad social obligatoria
+ICE Factura Mensual,$380.24,₡192804,SERVICIOS,Mensual recurrente,1,Promerica o BNCR,Internet 300MB + 7 líneas + TV
+TeamViewer,$200.00,,SOFTWARE,Mensual,1,Tarjeta crédito,Herramienta crítica - sin esto no hay soporte
+Apple One,$16.85,,SOFTWARE,Mensual,2,Tarjeta crédito,Suscripción operativa
+Nissan Frontier UD202840,$800.00,,VEHÍCULO,Mensual,1,BNCR,Préstamo vehículo empresa
+Parqueos / QuickPass,$59.17,₡30000,VEHÍCULO,Mensual recurrente,2,BNCR CRC (188618-3),Transfer mensual desde cuenta CRC
+TOTAL MENSUAL:,$2809.38,₡401804,,,,,
+,,,,,,,
+Por categoría:,,,,,,
+NÓMINA:,$1000.00,,35.6%,,,
+VEHÍCULO:,$859.17,,30.6%,,,
+SERVICIOS:,$380.24,,13.5%,,,
+IMPUESTOS:,$353.26,,12.6%,,,
+SOFTWARE:,$216.85,,7.7%,,,

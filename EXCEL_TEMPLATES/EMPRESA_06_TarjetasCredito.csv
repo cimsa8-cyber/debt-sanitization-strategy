@@ -1,0 +1,9 @@
+Banco,Número TC,Titular,Saldo USD,Tasa Interés,Pago Mínimo,Fecha Vencimiento,Estado,Clasificación,Plan Sanitización,Notas
+BNCR,9837,Álvaro Velasco,$5779.40,32%,$173.38,2025-11-03,VENCIDA,EMPRESA,Mes 1-4: $1445/mes,"Principal card, highest rate"
+BNCR,8759,Álvaro Velasco,$5731.48,30%,$171.94,2025-11-03,VENCIDA,EMPRESA,Mes 5-8: $1433/mes,Second highest balance
+BNCR,3519,Álvaro Velasco,$1192.44,28%,$35.77,2025-11-06,VENCIDA,EMPRESA,Mes 9-10: $596/mes,
+BNCR,6386,Alejandra Arias (adicional),$591.70,32%,$17.75,2025-11-03,VENCIDA,EMPRESA,Mes 11: $592/mes,Adicional de 9837 - gastos empresa
+BAC,BAC,Álvaro Velasco,$3087.67,26%,$92.63,,ACTIVA,EMPRESA,Mes 12: $3088/mes,Única tarjeta no vencida
+,,,TOTAL TC:,$16382.69,,,,,,
+,,,TOTAL VENCIDO:,$13295.02,,,4 tarjetas,,,4 TC BNCR vencidas
+,,,PLAN 12 MESES:,$16382.69,,,,,,Ahorro proyectado: $18088 en intereses

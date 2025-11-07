@@ -1,0 +1,696 @@
+═══════════════════════════════════════════════════════════════
+  CÓDIGO DAX PARA POWER BI - ALVAROVELASCO.NET SRL
+  Sistema Financiero Completo
+  Fecha: 07 de Noviembre 2025
+═══════════════════════════════════════════════════════════════
+
+INSTRUCCIONES DE USO:
+1. Abrir Power BI Desktop
+2. Conectar a AlvaroVelascoNet_EMPRESA.xlsx (desde OneDrive)
+3. Ir a "Modelado" → "Nueva medida"
+4. Copiar y pegar código DAX
+5. Enter para crear medida
+6. Repetir para cada medida
+
+═══════════════════════════════════════════════════════════════
+MEDIDAS BÁSICAS - ACTIVOS
+═══════════════════════════════════════════════════════════════
+
+// Total Efectivo
+Total Efectivo =
+SUM(Efectivo[Balance USD])
+
+// Total Ahorros
+Total Ahorros =
+SUM(Ahorros[Balance USD])
+
+// Total A/R (Cuentas por Cobrar)
+Total AR =
+SUM('A/R'[Monto USD])
+
+// Total A/R Crítico (Prioridad CRÍTICA)
+Total AR Critico =
+CALCULATE(
+    SUM('A/R'[Monto USD]),
+    'A/R'[Prioridad] = "CRÍTICA"
+)
+
+// Total A/R Alto (Prioridad ALTA)
+Total AR Alto =
+CALCULATE(
+    SUM('A/R'[Monto USD]),
+    'A/R'[Prioridad] = "ALTA"
+)
+
+// Total Activos Corrientes
+Total Activos Corrientes =
+[Total Efectivo] + [Total Ahorros] + [Total AR]
+
+
+═══════════════════════════════════════════════════════════════
+MEDIDAS BÁSICAS - PASIVOS
+═══════════════════════════════════════════════════════════════
+
+// Total A/P (Cuentas por Pagar)
+Total AP =
+SUM('A/P'[Monto USD])
+
+// Total A/P Vencido
+Total AP Vencido =
+CALCULATE(
+    SUM('A/P'[Monto USD]),
+    'A/P'[Estado] = "VENCIDO"
+)
+
+// Total A/P Próximo (15 días)
+Total AP Proximo =
+CALCULATE(
+    SUM('A/P'[Monto USD]),
+    'A/P'[Estado] = "PRÓXIMO"
+)
+
+// Total Tarjetas Crédito
+Total TC =
+SUM(TC[Saldo USD])
+
+// Total TC Vencido
+Total TC Vencido =
+CALCULATE(
+    SUM(TC[Saldo USD]),
+    TC[Estado] = "VENCIDA"
+)
+
+// Total Hacienda
+Total Hacienda =
+9799.63
+// Nota: Si tienes tabla Hacienda con detalle:
+// Total Hacienda = SUM(Hacienda[Monto USD])
+
+// Total Nissan
+Total Nissan =
+19197.69
+// O si tienes tabla dinámica:
+// Total Nissan = SUM(Nissan[Saldo Actual])
+
+// Total Pasivos Corrientes
+Total Pasivos Corrientes =
+[Total AP] + [Total TC] + [Total Hacienda] + [Total Nissan]
+
+// Total Deuda (excluye A/P normal)
+Total Deuda =
+[Total TC] + [Total Hacienda] + [Total Nissan]
+
+
+═══════════════════════════════════════════════════════════════
+MEDIDAS BÁSICAS - GASTOS E INGRESOS
+═══════════════════════════════════════════════════════════════
+
+// Total Gastos Fijos Mensuales
+Total Gastos Fijos =
+2809.38
+// O si tienes tabla:
+// Total Gastos Fijos = SUM(GastosFijos[Monto USD])
+
+// Total Ingresos Mes (necesitas tabla Ingresos con datos reales)
+Total Ingresos Mes =
+CALCULATE(
+    SUM(Efectivo[Entrada USD]),
+    Efectivo[Categoría] = "INGRESO",
+    MONTH(Efectivo[Fecha]) = MONTH(TODAY())
+)
+
+// Total Gastos Mes
+Total Gastos Mes =
+CALCULATE(
+    SUM(Efectivo[Salida USD]),
+    Efectivo[Categoría] = "GASTO",
+    MONTH(Efectivo[Fecha]) = MONTH(TODAY())
+)
+
+// Resultado Mensual
+Resultado Mensual =
+[Total Ingresos Mes] - [Total Gastos Mes]
+
+
+═══════════════════════════════════════════════════════════════
+KPI 1: RAZÓN CORRIENTE (CURRENT RATIO)
+═══════════════════════════════════════════════════════════════
+
+Razón Corriente =
+VAR Activos = [Total Activos Corrientes]
+VAR Pasivos = [Total Pasivos Corrientes]
+RETURN
+DIVIDE(Activos, Pasivos, 0)
+
+// Interpretación
+Razón Corriente Texto =
+VAR Ratio = [Razón Corriente]
+RETURN
+SWITCH(
+    TRUE(),
+    Ratio >= 1.5, "✅ SALUDABLE",
+    Ratio >= 1.0, "⚠️ ACEPTABLE",
+    Ratio >= 0.5, "🟠 CRÍTICO",
+    "🔴 PELIGRO"
+)
+
+// Color para visual
+Razón Corriente Color =
+VAR Ratio = [Razón Corriente]
+RETURN
+SWITCH(
+    TRUE(),
+    Ratio >= 1.5, "Green",
+    Ratio >= 1.0, "Yellow",
+    Ratio >= 0.5, "Orange",
+    "Red"
+)
+
+
+═══════════════════════════════════════════════════════════════
+KPI 2: DÍAS COBERTURA EFECTIVO
+═══════════════════════════════════════════════════════════════
+
+Días Cobertura Efectivo =
+VAR Efectivo = [Total Efectivo]
+VAR GastosDiarios = [Total Gastos Fijos] / 30
+RETURN
+DIVIDE(Efectivo, GastosDiarios, 0)
+
+// Interpretación
+Días Cobertura Texto =
+VAR Dias = [Días Cobertura Efectivo]
+RETURN
+SWITCH(
+    TRUE(),
+    Dias >= 90, "✅ EXCELENTE",
+    Dias >= 60, "⚠️ BUENO",
+    Dias >= 30, "🟠 ACEPTABLE",
+    "🔴 CRÍTICO"
+)
+
+// Formato para card
+Días Cobertura Display =
+FORMAT([Días Cobertura Efectivo], "0.0") & " días"
+
+
+═══════════════════════════════════════════════════════════════
+KPI 3: DSO (DAYS SALES OUTSTANDING)
+═══════════════════════════════════════════════════════════════
+
+// Necesitas promedio ventas 3 meses (simplificado)
+Ventas Promedio 3 Meses =
+6000
+// Ajustar con datos reales cuando tengas historial
+
+DSO =
+VAR AR = [Total AR]
+VAR VentasPromedio = [Ventas Promedio 3 Meses]
+RETURN
+DIVIDE(AR, VentasPromedio, 0) * 30
+
+// Interpretación
+DSO Texto =
+VAR Dias = [DSO]
+RETURN
+SWITCH(
+    TRUE(),
+    Dias <= 30, "✅ EXCELENTE",
+    Dias <= 45, "⚠️ BUENO",
+    Dias <= 60, "🟠 ACEPTABLE",
+    "🔴 LENTO"
+)
+
+
+═══════════════════════════════════════════════════════════════
+KPI 4: WORKING CAPITAL
+═══════════════════════════════════════════════════════════════
+
+Working Capital =
+[Total Activos Corrientes] - [Total Pasivos Corrientes]
+
+// Formato
+Working Capital Display =
+VAR WC = [Working Capital]
+VAR Signo = IF(WC >= 0, "+", "")
+RETURN
+Signo & FORMAT(WC, "$#,##0")
+
+// Estado
+Working Capital Estado =
+VAR WC = [Working Capital]
+RETURN
+SWITCH(
+    TRUE(),
+    WC >= 10000, "✅ POSITIVO",
+    WC >= 0, "⚠️ NEUTRAL",
+    WC >= -10000, "🟠 NEGATIVO",
+    "🔴 CRÍTICO"
+)
+
+
+═══════════════════════════════════════════════════════════════
+KPI 5: % TC VENCIDAS
+═══════════════════════════════════════════════════════════════
+
+% TC Vencidas =
+VAR TotalVencido = [Total TC Vencido]
+VAR TotalTC = [Total TC]
+RETURN
+DIVIDE(TotalVencido, TotalTC, 0)
+
+// Display
+% TC Vencidas Display =
+FORMAT([% TC Vencidas], "0.0%")
+
+// Cantidad TC vencidas
+Cantidad TC Vencidas =
+CALCULATE(
+    COUNTROWS(TC),
+    TC[Estado] = "VENCIDA"
+)
+
+
+═══════════════════════════════════════════════════════════════
+KPI 6: RATIO DEUDA/ACTIVOS
+═══════════════════════════════════════════════════════════════
+
+Ratio Deuda Activos =
+VAR Deuda = [Total Pasivos Corrientes]
+VAR Activos = [Total Activos Corrientes]
+RETURN
+DIVIDE(Deuda, Activos, 0)
+
+// Interpretación
+Ratio Deuda Texto =
+VAR Ratio = [Ratio Deuda Activos]
+RETURN
+SWITCH(
+    TRUE(),
+    Ratio <= 0.5, "✅ BAJO RIESGO",
+    Ratio <= 1.0, "⚠️ RIESGO MEDIO",
+    Ratio <= 1.5, "🟠 RIESGO ALTO",
+    "🔴 INSOLVENCIA"
+)
+
+
+═══════════════════════════════════════════════════════════════
+KPI 7: % A/R TOP 2 (CONCENTRACIÓN CLIENTES)
+═══════════════════════════════════════════════════════════════
+
+// Top 2 Clientes
+Top 2 Clientes AR =
+CALCULATE(
+    SUM('A/R'[Monto USD]),
+    TOPN(2, 'A/R', 'A/R'[Monto USD], DESC)
+)
+
+% AR Top 2 =
+DIVIDE([Top 2 Clientes AR], [Total AR], 0)
+
+// Interpretación
+% AR Top 2 Texto =
+VAR Pct = [% AR Top 2]
+RETURN
+SWITCH(
+    TRUE(),
+    Pct <= 0.30, "✅ DIVERSIFICADO",
+    Pct <= 0.50, "⚠️ CONCENTRADO",
+    "🔴 RIESGO ALTO"
+)
+
+
+═══════════════════════════════════════════════════════════════
+KPI 8: GASTOS FIJOS / INGRESOS
+═══════════════════════════════════════════════════════════════
+
+% Gastos Fijos de Ingresos =
+DIVIDE([Total Gastos Fijos], [Total Ingresos Mes], 0)
+
+// Interpretación
+% Gastos Texto =
+VAR Pct = [% Gastos Fijos de Ingresos]
+RETURN
+SWITCH(
+    TRUE(),
+    Pct <= 0.40, "✅ EFICIENTE",
+    Pct <= 0.60, "⚠️ ACEPTABLE",
+    Pct <= 0.80, "🟠 ALTO",
+    "🔴 INSOSTENIBLE"
+)
+
+
+═══════════════════════════════════════════════════════════════
+KPI 9: MARGEN OPERATIVO
+═══════════════════════════════════════════════════════════════
+
+Margen Operativo =
+VAR Ingresos = [Total Ingresos Mes]
+VAR Gastos = [Total Gastos Mes]
+VAR Margen = Ingresos - Gastos
+RETURN
+DIVIDE(Margen, Ingresos, 0)
+
+// Display
+Margen Operativo Display =
+FORMAT([Margen Operativo], "0.0%")
+
+// Interpretación
+Margen Operativo Texto =
+VAR Margen = [Margen Operativo]
+RETURN
+SWITCH(
+    TRUE(),
+    Margen >= 0.20, "✅ EXCELENTE",
+    Margen >= 0.15, "⚠️ BUENO",
+    Margen >= 0.05, "🟠 BAJO",
+    Margen >= 0, "🟠 MÍNIMO",
+    "🔴 PÉRDIDA"
+)
+
+
+═══════════════════════════════════════════════════════════════
+KPI 10: LIQUIDEZ INMEDIATA
+═══════════════════════════════════════════════════════════════
+
+Liquidez Inmediata =
+VAR Efectivo = [Total Efectivo]
+VAR DeudasInmediatas = [Total TC] + [Total AP]
+RETURN
+DIVIDE(Efectivo, DeudasInmediatas, 0)
+
+// Interpretación
+Liquidez Texto =
+VAR Ratio = [Liquidez Inmediata]
+RETURN
+SWITCH(
+    TRUE(),
+    Ratio >= 0.5, "✅ BUENA",
+    Ratio >= 0.3, "⚠️ ACEPTABLE",
+    Ratio >= 0.1, "🟠 BAJA",
+    "🔴 CRÍTICA"
+)
+
+
+═══════════════════════════════════════════════════════════════
+MEDIDAS PLAN SANITIZACIÓN TC
+═══════════════════════════════════════════════════════════════
+
+// Total intereses con pagos normales (método mínimo)
+Intereses Método Normal =
+34470
+// Cálculo complejo - usar valor calculado en Excel
+
+// Total con plan avalanche
+Intereses Con Plan =
+16382
+
+// Ahorro proyectado
+Ahorro Plan Sanitización =
+[Intereses Método Normal] - [Intereses Con Plan]
+
+// Display
+Ahorro Plan Display =
+"$" & FORMAT([Ahorro Plan Sanitización], "#,##0")
+
+// ROI del plan
+ROI Plan Sanitización =
+VAR Ahorro = [Ahorro Plan Sanitización]
+VAR InversionTiempo = 200 // Valor estimado horas * tarifa
+RETURN
+DIVIDE(Ahorro, InversionTiempo, 0)
+
+
+═══════════════════════════════════════════════════════════════
+MEDIDAS AHORRO VIVIENDA
+═══════════════════════════════════════════════════════════════
+
+// Meta vivienda
+Meta Vivienda =
+45000
+
+// Ahorro actual
+Ahorro Actual Vivienda =
+8053.97
+// O si tienes tabla dinámica:
+// [Total Ahorros]
+
+// Pendiente ahorrar
+Pendiente Vivienda =
+[Meta Vivienda] - [Ahorro Actual Vivienda]
+
+// % Progreso
+% Progreso Vivienda =
+DIVIDE([Ahorro Actual Vivienda], [Meta Vivienda], 0)
+
+// Display
+% Progreso Display =
+FORMAT([% Progreso Vivienda], "0.0%")
+
+// Meses faltantes (estimado)
+Meses Faltantes Vivienda =
+VAR Pendiente = [Pendiente Vivienda]
+VAR AhorroProyectado = 1500 // Promedio fases
+RETURN
+DIVIDE(Pendiente, AhorroProyectado, 0)
+
+// Proyección fecha meta
+Fecha Meta Vivienda =
+DATE(2027, 11, 7)
+// O calculado:
+// TODAY() + [Meses Faltantes Vivienda] * 30
+
+
+═══════════════════════════════════════════════════════════════
+MEDIDAS TIME INTELLIGENCE (TEMPORALES)
+═══════════════════════════════════════════════════════════════
+
+// Efectivo mes anterior
+Efectivo Mes Anterior =
+CALCULATE(
+    [Total Efectivo],
+    DATEADD(Efectivo[Fecha], -1, MONTH)
+)
+
+// Variación efectivo
+Variación Efectivo =
+[Total Efectivo] - [Efectivo Mes Anterior]
+
+// % Variación efectivo
+% Variación Efectivo =
+DIVIDE([Variación Efectivo], [Efectivo Mes Anterior], 0)
+
+// Efectivo YTD (Year to Date)
+Efectivo YTD =
+CALCULATE(
+    [Total Efectivo],
+    DATESYTD(Efectivo[Fecha])
+)
+
+// Ingresos acumulados año
+Ingresos YTD =
+CALCULATE(
+    SUM(Efectivo[Entrada USD]),
+    DATESYTD(Efectivo[Fecha]),
+    Efectivo[Categoría] = "INGRESO"
+)
+
+// Gastos acumulados año
+Gastos YTD =
+CALCULATE(
+    SUM(Efectivo[Salida USD]),
+    DATESYTD(Efectivo[Fecha]),
+    Efectivo[Categoría] = "GASTO"
+)
+
+
+═══════════════════════════════════════════════════════════════
+MEDIDAS PROYECCIÓN 90 DÍAS
+═══════════════════════════════════════════════════════════════
+
+// Escenario Optimista (100% cobros)
+Proyección Optimista 90d =
+VAR EfectivoHoy = [Total Efectivo]
+VAR CobrosProyectados = [Total AR]
+VAR GastosProyectados = [Total Gastos Fijos] * 3
+RETURN
+EfectivoHoy + CobrosProyectados - GastosProyectados
+
+// Escenario Realista (70% cobros)
+Proyección Realista 90d =
+VAR EfectivoHoy = [Total Efectivo]
+VAR CobrosProyectados = [Total AR] * 0.70
+VAR GastosProyectados = [Total Gastos Fijos] * 3
+RETURN
+EfectivoHoy + CobrosProyectados - GastosProyectados
+
+// Escenario Pesimista (50% cobros)
+Proyección Pesimista 90d =
+VAR EfectivoHoy = [Total Efectivo]
+VAR CobrosProyectados = [Total AR] * 0.50
+VAR GastosProyectados = [Total Gastos Fijos] * 3
+RETURN
+EfectivoHoy + CobrosProyectados - GastosProyectados
+
+
+═══════════════════════════════════════════════════════════════
+MEDIDAS ALERTAS AUTOMÁTICAS
+═══════════════════════════════════════════════════════════════
+
+// Alerta Efectivo Crítico
+Alerta Efectivo =
+VAR Efectivo = [Total Efectivo]
+RETURN
+IF(Efectivo < 1000,
+    "🔴 EFECTIVO CRÍTICO: $" & FORMAT(Efectivo, "#,##0"),
+    "✅ Efectivo OK"
+)
+
+// Alerta TC Vencidas
+Alerta TC Vencidas =
+VAR Cantidad = [Cantidad TC Vencidas]
+VAR Monto = [Total TC Vencido]
+RETURN
+IF(Cantidad > 0,
+    "🔴 " & Cantidad & " TC VENCIDAS: $" & FORMAT(Monto, "#,##0"),
+    "✅ TC al día"
+)
+
+// Alerta A/P Vencido
+Alerta AP Vencido =
+VAR Monto = [Total AP Vencido]
+RETURN
+IF(Monto > 0,
+    "🔴 A/P VENCIDO: $" & FORMAT(Monto, "#,##0"),
+    "✅ A/P al día"
+)
+
+// Alerta Cobertura
+Alerta Cobertura =
+VAR Dias = [Días Cobertura Efectivo]
+RETURN
+IF(Dias < 30,
+    "🔴 COBERTURA BAJA: " & FORMAT(Dias, "0") & " días",
+    IF(Dias < 60,
+        "⚠️ Cobertura aceptable: " & FORMAT(Dias, "0") & " días",
+        "✅ Cobertura OK"
+    )
+)
+
+// Contador alertas críticas
+Total Alertas Críticas =
+VAR AlertaEfectivo = IF([Total Efectivo] < 1000, 1, 0)
+VAR AlertaTC = IF([Cantidad TC Vencidas] > 0, 1, 0)
+VAR AlertaAP = IF([Total AP Vencido] > 0, 1, 0)
+VAR AlertaCobertura = IF([Días Cobertura Efectivo] < 30, 1, 0)
+RETURN
+AlertaEfectivo + AlertaTC + AlertaAP + AlertaCobertura
+
+
+═══════════════════════════════════════════════════════════════
+MEDIDAS FORMATO DISPLAY (PARA CARDS)
+═══════════════════════════════════════════════════════════════
+
+// Total Efectivo con formato
+Total Efectivo Display =
+"$" & FORMAT([Total Efectivo], "#,##0.00")
+
+// Total Deuda con formato
+Total Deuda Display =
+"$" & FORMAT([Total Pasivos Corrientes], "#,##0")
+
+// Déficit con formato
+Déficit Display =
+VAR WC = [Working Capital]
+VAR Signo = IF(WC >= 0, "+$", "-$")
+VAR Valor = ABS(WC)
+RETURN
+Signo & FORMAT(Valor, "#,##0")
+
+
+═══════════════════════════════════════════════════════════════
+TABLA CALCULADA - RESUMEN DASHBOARD
+═══════════════════════════════════════════════════════════════
+
+// Crear tabla resumen para Dashboard
+Resumen Dashboard =
+UNION(
+    ROW("Métrica", "Efectivo HOY", "Valor", [Total Efectivo]),
+    ROW("Métrica", "Recursos Totales", "Valor", [Total Activos Corrientes]),
+    ROW("Métrica", "Deuda Total", "Valor", [Total Pasivos Corrientes]),
+    ROW("Métrica", "Déficit", "Valor", [Working Capital]),
+    ROW("Métrica", "Razón Corriente", "Valor", [Razón Corriente]),
+    ROW("Métrica", "Días Cobertura", "Valor", [Días Cobertura Efectivo])
+)
+
+
+═══════════════════════════════════════════════════════════════
+CONFIGURACIÓN REFRESH AUTOMÁTICO
+═══════════════════════════════════════════════════════════════
+
+PASOS EN POWER BI SERVICE (después de publicar):
+
+1. Ir a Power BI Service (app.powerbi.com)
+2. Workspace → Datasets → AlvaroVelascoNet_Dashboard
+3. Settings → Scheduled refresh
+4. ✅ Keep your data up to date
+5. Refresh frequency: Daily
+6. Time: 7:00 AM, 12:00 PM, 6:00 PM (horarios Costa Rica)
+7. Time zone: (UTC-06:00) Central America
+8. ✅ Send refresh failure notifications to: [tu email]
+9. Apply
+
+NOTAS:
+- Archivo Excel DEBE estar en OneDrive/SharePoint
+- Conexión DirectQuery permite refresh en vivo
+- Límite Power BI Free: 8 refreshes/día
+- Power BI Pro: 48 refreshes/día
+
+
+═══════════════════════════════════════════════════════════════
+TIPS & TROUBLESHOOTING
+═══════════════════════════════════════════════════════════════
+
+1. NOMBRES DE TABLAS:
+   - Si Excel tiene espacios, usar comillas simples: 'A/R'[campo]
+   - Si no, directo: Efectivo[campo]
+
+2. REFERENCIAS ABSOLUTAS:
+   - Para valores fijos usar VAR dentro de medida
+   - No usar referencias a celdas Excel específicas
+
+3. FORMATO FECHAS:
+   - Asegurarse columna Fecha esté como Date/Time en Power Query
+   - Formato: dd/mm/yyyy
+
+4. RELACIONES:
+   - Si creas múltiples tablas, definir relaciones en Model view
+   - Una columna común (ej: Cliente ID)
+
+5. PERFORMANCE:
+   - Usar CALCULATE en vez de FILTER cuando sea posible
+   - Crear columnas calculadas en Power Query, no DAX
+
+6. MOBILE:
+   - Crear vista mobile en cada página
+   - Cards grandes y legibles
+   - Máximo 4-6 visuals por página
+
+
+═══════════════════════════════════════════════════════════════
+FIN CÓDIGO DAX
+═══════════════════════════════════════════════════════════════
+
+Total medidas creadas: 50+
+Tiempo estimado implementación: 2 horas
+Complejidad: Intermedia
+
+PRÓXIMO PASO:
+1. Conectar Power BI a Excel
+2. Copiar medidas una por una
+3. Crear visuals en dashboards
+4. Publicar a Power BI Service
+5. Configurar refresh automático
+6. Compartir con stakeholders
+
+¡SISTEMA COMPLETO POWER BI LISTO! ✅

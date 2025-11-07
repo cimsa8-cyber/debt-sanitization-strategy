@@ -1,0 +1,23 @@
+Tipo Impuesto,Periodo,Monto CRC,Monto USD,Fecha Vencimiento,Días Mora,Estado,Prioridad,Notas
+IVA,Agosto 2025,₡244129,$481.44,2025-09-16,52,VENCIDO,CRÍTICA,Usuario: ese si o si hay que tenerlo al dia
+IVA,Septiembre 2025,₡26608,$52.48,2025-10-24,14,VENCIDO,CRÍTICA,Pagar urgente
+,TOTAL IVA VENCIDO:,₡270737,$533.92,,,,,"Multas e intereses creciendo diariamente"
+,,,,,,,,,
+ISR,2020,₡981664,$1936.30,VENCIDO,,ARREGLO PAGO,ALTA,Incluido en solicitud DGV-523678-M6W1
+ISR,2021,₡1442277,$2844.62,VENCIDO,,ARREGLO PAGO,ALTA,Incluido en solicitud DGV-523678-M6W1
+ISR,2022,₡1448546,$2856.99,VENCIDO,,ARREGLO PAGO,ALTA,Incluido en solicitud DGV-523678-M6W1
+ISR,2023,₡825297,$1627.80,VENCIDO,,ARREGLO PAGO,ALTA,Incluido en solicitud DGV-523678-M6W1
+ISR,2024,PENDIENTE,PENDIENTE,VENCIDO,,POR CONFIRMAR,MEDIA,Monto por verificar
+,TOTAL ISR:,₡4697784,$9265.71,,,,,"4 años confirmados, falta 2024"
+,,,,,,,,,
+,TOTAL HACIENDA:,₡4968521,$9799.63,,,,,"IVA + ISR conocidos"
+,,,,,,,,,
+Solicitud Arreglo,DGV-523678-M6W1,,,,,,EN TRÁMITE,Esperando resolución Hacienda
+,,,,,,,,,
+ACCIONES PENDIENTES:,,,,,,,,,
+1. Pagar IVA vencido $533.92 HOY,,,,,,,,,
+2. Entrar ATV verificar estado solicitud DGV-523678-M6W1,,,,,,,,,
+3. Llamar 800-TRIBUT seguimiento,,,,,,,,,
+4. Confirmar si arreglo incluye IVA o solo ISR,,,,,,,,,
+5. Confirmar monto ISR 2024,,,,,,,,,
+6. Preparar Balance Sheet si solicitan documentación,,,,,,,,,
