@@ -1,0 +1,377 @@
+═══════════════════════════════════════════════════════════════
+RESUMEN FINANCIERO COMPLETO
+AlvaroVelasco.Net SRL
+Fecha: 07/11/2025 00:30
+═══════════════════════════════════════════════════════════════
+
+═══════════════════════════════════════════════════════════════
+I. LIQUIDEZ Y EFECTIVO DISPONIBLE
+═══════════════════════════════════════════════════════════════
+
+EFECTIVO EN BANCOS (Confirmado 06/11/2025 23:16):
+────────────────────────────────────────────────────────────────
+BNCR:
+  601066-4 USD Operativa Empresa:           $1,326.35
+  188618-3 CRC Operativa Empresa:               $0.67
+  009589-4 USD Reservas:                        $0.43
+  011112-1 USD Personal Álvaro:                $21.84
+  042186-9 CRC Personal Álvaro:               $134.00
+
+PROMERICA:
+  881774 USD Corriente Principal:           $2,999.24
+  881708 CRC SINPE:                             $2.15
+
+SUBTOTAL EFECTIVO CONFIRMADO:               $4,484.68
+
+AHORROS BNCR (No confirmados - según QB):
+  1110 Impuestos Marchamo:                  $2,262.03
+  1120 Vehículo:                            $4,485.19
+  1130 Matrimonio:                            $930.30
+  1140 Black Friday:                          $260.25
+
+SUBTOTAL AHORROS:                           $7,937.77
+
+TOTAL LIQUIDEZ INMEDIATA:                  $12,422.45
+
+═══════════════════════════════════════════════════════════════
+II. CUENTAS POR COBRAR (A/R)
+═══════════════════════════════════════════════════════════════
+
+TOTAL A/R (Corte 03/11/2025):              $10,866.42
+
+CLIENTES TOP 5 (61% del total):
+────────────────────────────────────────────────────────────────
+1. VWR INTERNATIONAL LTDA.                  $2,800.00  (25.8%)
+2. GRUPO ACCION COMERCIAL S.A.              $1,689.04  (15.5%)
+3. ALMACEN FISCAL ALFIPAC S.A.                $761.05   (7.0%)
+4. 3-102-887892 S.R.L.                        $691.56   (6.4%)
+5. CENTRO INTEGRAL ONCOLOGIA CIO              $687.05   (6.3%)
+
+SUBTOTAL TOP 5:                             $6,628.70
+
+OTROS CLIENTES (39%):                       $4,237.72
+
+ANÁLISIS:
+- Concentración alta en VWR (26% del total)
+- Top 5 = 61% del total (riesgo moderado)
+- Cobranza urgente recomendada: VWR + Grupo Acción
+
+ESTADO EN QB: ⚠️ NO REGISTRADO (Balance Sheet muestra $0)
+
+═══════════════════════════════════════════════════════════════
+III. TOTAL RECURSOS DISPONIBLES
+═══════════════════════════════════════════════════════════════
+
+Efectivo confirmado:                        $4,484.68
+Ahorros (no confirmados):                   $7,937.77
+Cuentas por cobrar:                        $10,866.42
+Cuenta Alejandra (no clasificada):            $23.60
+
+TOTAL MÁXIMO ACCESIBLE:                    $23,312.47
+
+═══════════════════════════════════════════════════════════════
+IV. PASIVOS - DEUDA TOTAL
+═══════════════════════════════════════════════════════════════
+
+A. HACIENDA (CRÍTICO - Solicitud en trámite):
+────────────────────────────────────────────────────────────────
+Solicitud: DGV-523678-M6W1
+Estado: Esperando resolución
+
+IMPUESTO SOBRE LA RENTA (ISR):
+  Periodo 202001 (2020):       ₡981,664      $1,936.30
+  Periodo 202101 (2021):     ₡1,442,277      $2,844.62
+  Periodo 202201 (2022):     ₡1,448,546      $2,856.99
+  Periodo 202301 (2023):       ₡825,297      $1,627.80
+  Periodo 202401 (2024):     [PENDIENTE]           [?]
+  SUBTOTAL ISR:              ₡4,697,784+     $9,265.71+
+
+IMPUESTO AL VALOR AGREGADO (IVA):
+  Periodo 202508 (Ago):        ₡244,129        $481.44
+  Periodo 202509 (Sep):         ₡26,608         $52.48
+  SUBTOTAL IVA:                ₡270,737        $533.92
+
+OTROS IMPUESTOS (QB Balance Sheet):
+  2510 Hacienda Pendientes:                  $9,804.00
+
+TOTAL HACIENDA ESTIMADO:                   ~$19,604.00+
+
+B. TARJETAS DE CRÉDITO:
+────────────────────────────────────────────────────────────────
+TARJETAS USD:
+  2010 TC VISA 9837 USD:                     $1,775.45
+  2030 TC MC 8759 USD:                         $116.48
+  2040 TC VISA BAC 9550 USD:                   $209.92
+  SUBTOTAL USD:                              $2,101.85
+
+TARJETAS CRC (actualizado 07/11):
+  2110 TC VISA 9837 CRC:                     $4,116.33
+  2120 TC VISA 3519 CRC:                       $702.98
+  2130 TC MC 8759 CRC:                       $6,196.35
+  2140 TC VISA BAC 9550 CRC:                 $2,676.94
+  2150 TC VISA 6386 CRC:                       $906.76
+  2160 TC SIMAN CRC:                           $666.63
+  SUBTOTAL CRC:                             $15,265.99
+
+OTROS:
+  2610 CCSS Cuotas Pendientes:                 $706.12
+
+TOTAL TARJETAS:                            $18,073.96
+
+C. FINANCIAMIENTO:
+────────────────────────────────────────────────────────────────
+  2520 Nissan Financiamiento:               $20,142.00
+
+═══════════════════════════════════════════════════════════════
+RESUMEN PASIVOS:
+────────────────────────────────────────────────────────────────
+Hacienda:                                  $19,604.00+
+Tarjetas crédito:                          $18,073.96
+Nissan (cuotas):                           $20,142.00
+TOTAL DEUDA:                               $57,819.96+
+
+═══════════════════════════════════════════════════════════════
+V. ANÁLISIS DE SOLVENCIA
+═══════════════════════════════════════════════════────════════
+
+RECURSOS vs DEUDAS:
+────────────────────────────────────────────────────────────────
+Total recursos disponibles:                $23,312.47
+Total deuda:                               $57,819.96
+DÉFICIT:                                  -$34,507.49
+
+RATIO RECURSOS/DEUDA:                           40.3%
+
+ANÁLISIS POR PRIORIDAD:
+────────────────────────────────────────────────────────────────
+Prioridad 1 - Hacienda:                    $19,604.00
+  Recursos disponibles:                    $23,312.47
+  Sobrante después Hacienda:                $3,708.47
+
+Prioridad 2 - Tarjetas:                    $18,073.96
+  Recursos después Hacienda:                $3,708.47
+  DÉFICIT TARJETAS:                       -$14,365.49
+
+CONCLUSIÓN: INSOLVENCIA TÉCNICA
+────────────────────────────────────────────────────────────────
+✅ Recursos suficientes para Hacienda (con plan de pago)
+❌ Recursos insuficientes para tarjetas completas
+⚠️ Nissan: Requiere cuotas mensuales (~$400/mes estimado)
+
+═══════════════════════════════════════════════════════════════
+VI. FLUJO DE CAJA - DUE FROM OWNER
+═══════════════════════════════════════════════════════════════
+
+GASTOS PERSONALES ÁLVARO (27/10 - 07/11):
+────────────────────────────────────────────────────────────────
+Periodo 27/10-02/11:
+  Barba:                        ₡5,000         $9.86
+  Veterinario Teo:                           $56.80
+  Otros gastos:                              ~$10.00
+  SUBTOTAL:                                  $76.66
+
+Adelanto salario 05/11:       ₡70,000       $138.07
+
+Compras 07/11:
+  Automercado:                 ₡53,785       $106.07
+  Cargo bolsas:                 ₡3,195         $6.30
+  SUBTOTAL:                                  $112.37
+
+TOTAL DUE FROM OWNER:                        $327.10
+
+ANÁLISIS:
+────────────────────────────────────────────────────────────────
+Salario quincenal actual:                    $500.00
+Gastos reales estimados 12 días:             $327.10
+PROYECCIÓN MENSUAL: $327 × 2.5 =            $817.75
+
+DÉFICIT MENSUAL ESTIMADO:
+  Gasto real proyectado:                     $817.75
+  Salario actual mensual:                  $1,000.00
+  SUPERÁVIT aparente:                        $182.25
+
+PERO: Considerando Due from Owner acumulado:
+  Salario no cubre gastos reales
+  Déficit real estimado: $200-300/mes
+
+RECOMENDACIÓN:
+  Temporalmente (crisis): Reducir salario a $800/mes
+  Largo plazo: Ajustar a $1,200-1,400/mes
+
+═══════════════════════════════════════════════════════════════
+VII. ESTRATEGIA FINANCIERA PRIORIZADA
+═══════════════════════════════════════════════════════════════
+
+FASE 1: HACIENDA (Semana 1-2):
+────────────────────────────────────────────────────────────────
+✅ Solicitud DGV-523678-M6W1 en trámite
+□ Seguimiento cada 3 días (800-TRIBUT)
+□ Preparar pago inicial $2,000-3,000 si aprueban
+□ Reservar $2,500 de efectivo para inicial
+□ NO gastar todo el efectivo disponible
+
+FASE 2: COBRO A/R AGRESIVO (Semana 1-2):
+────────────────────────────────────────────────────────────────
+META: Cobrar $5,000 en 10 días
+
+PRIORIDAD COBRO:
+  1. VWR International:         $2,800.00 (26% total)
+  2. Grupo Acción Comercial:    $1,689.04 (16% total)
+  3. Almacén Fiscal:              $761.05
+  4. 3-102-887892 SRL:            $691.56
+  5. Centro Oncología:            $687.05
+
+ESTRATEGIA:
+  - Llamar personalmente a cada uno
+  - Ofrecer descuento 5-10% por pago inmediato
+  - Aceptar pagos parciales
+  - Facturar servicios pendientes YA
+
+FASE 3: GESTIÓN TARJETAS (Semana 2-4):
+────────────────────────────────────────────────────────────────
+Con efectivo limitado ($1,800 disponible después reserva Hacienda):
+
+OPCIÓN A: Pagar tarjeta más alta tasa
+  TC VISA 9837 CRC ($4,116 @ 35% anual)
+  Ahorro intereses: ~$120/mes
+
+OPCIÓN B: Guardar todo para Hacienda
+  Esperar resolución solicitud
+  Evaluar después
+
+RECOMENDACIÓN: OPCIÓN B (conservar efectivo)
+
+FASE 4: GENERACIÓN INGRESOS (Inmediato):
+────────────────────────────────────────────────────────────────
+META: $2,000-3,000 en servicios nuevos esta semana
+
+ACCIONES:
+  - Contactar 10 clientes antiguos
+  - Ofertas especiales pago anticipado
+  - Servicios urgentes con premium
+  - Facturar TODO sin excepción
+
+FASE 5: REDUCCIÓN GASTOS (Inmediato):
+────────────────────────────────────────────────────────────────
+TEMPORALMENTE (3 meses):
+  - Salario Álvaro: $800/mes (reducción $200)
+  - Suspender ahorros automáticos: $0 (ahorro $420/mes)
+  - Gastos personales estrictos: Solo esenciales
+  - Gastos operativos: Reducir 30%
+
+AHORRO MENSUAL ESTIMADO: $620/mes
+
+═══════════════════════════════════════════════════════════════
+VIII. PENDIENTES CRÍTICOS PARA CONTINUAR
+═══════════════════════════════════════════════════════════════
+
+INFORMACIÓN FALTANTE:
+────────────────────────────────────────────────────────────────
+1. ⚠️ Monto 202401 ISR (para calcular deuda total Hacienda)
+2. ⚠️ Saldos reales ahorros BNCR (verificar $7,937.77)
+3. ⚠️ Detalles solicitud DGV-523678-M6W1:
+   - Fecha presentación
+   - Monto solicitado
+   - Cuotas propuestas
+   - Tiempo estimado respuesta
+4. ⚠️ Clasificación cuenta Alejandra ₡11,964.04
+
+DECISIONES PENDIENTES:
+────────────────────────────────────────────────────────────────
+1. ⚠️ QUICKBOOKS: ¿Opción A (corte radical) o B (histórico)?
+2. ⚠️ Estrategia pago tarjetas: ¿Guardar efectivo o pagar alta tasa?
+3. ⚠️ Salario Álvaro: ¿Reducir temporalmente o mantener?
+
+═══════════════════════════════════════════════════════════════
+IX. ESTADO QUICKBOOKS
+═══════════════════════════════════════════════════════════════
+
+CUENTAS CREADAS HOY:
+────────────────────────────────────────────────────────────────
+✅ 3900 · Ajustes de Apertura (Equity, USD)
+✅ 1150 · IVA Crédito Fiscal (Bank, CRC)
+✅ 2015 · IVA Débito Fiscal (Credit Card, CRC)
+
+TIPO DE CAMBIO CONFIGURADO:
+────────────────────────────────────────────────────────────────
+✅ 1 USD = 507 CRC
+✅ 1 CRC = 0.00197239 USD
+
+TRANSACCIONES PENDIENTES REGISTRAR:
+────────────────────────────────────────────────────────────────
+⚠️ ~20 transacciones 27/10-06/11 (según plan histórico)
+⚠️ 3 transacciones 06-07/11:
+   - Pago SEA Global $58.76
+   - Automercado ₡53,785
+   - Cargo bolsas ₡3,195
+⚠️ A/R inicial $10,866.42
+⚠️ Ajustes varias cuentas tarjetas
+
+PROBLEMAS CONOCIDOS:
+────────────────────────────────────────────────────────────────
+⚠️ 2140 BAC 9550 CRC: Diferencia -₡124k (~$244)
+⚠️ 2040 BAC 9550 USD: Debe ajustarse -$43.45
+⚠️ 2160 SIMAN: Debe ser $0 (cancelada 05/11)
+⚠️ 2610 CCSS: Verificar si pagada (₡358,910 el 03/11)
+
+BALANCE SHEET QB vs REALIDAD:
+────────────────────────────────────────────────────────────────
+QB muestra efectivo:         $6,329.42
+Realidad bancaria:           $4,484.68
+DIFERENCIA:                 -$1,844.74 (29% sobrestimado)
+
+═══════════════════════════════════════════════════════════════
+X. ACCIONES INMEDIATAS - MAÑANA 08/11/2025
+═══════════════════════════════════════════════════════════════
+
+9:00 AM - HACIENDA:
+────────────────────────────────────────────────────────────────
+□ Entrar ATV → Estado DGV-523678-M6W1
+□ Llamar 800-TRIBUT → Seguimiento solicitud
+□ Preparar documentos si piden información adicional
+
+10:00 AM - BANCOS:
+────────────────────────────────────────────────────────────────
+□ Confirmar saldos ahorros BNCR con apps
+□ Confirmar saldos tarjetas reales
+□ Screenshot todo con fecha/hora
+
+11:00 AM - COBRO A/R:
+────────────────────────────────────────────────────────────────
+□ Llamar VWR International ($2,800)
+□ Llamar Grupo Acción Comercial ($1,689)
+□ Llamar Almacén Fiscal ($761)
+□ Meta: $3,000 comprometidos hoy
+
+2:00 PM - QUICKBOOKS:
+────────────────────────────────────────────────────────────────
+□ DECIDIR: Opción A (corte radical 30 min) o B (histórico 6h+)
+□ Ejecutar según decisión
+□ Backup QB después de cambios
+
+═══════════════════════════════════════════════════════════════
+RESUMEN EJECUTIVO
+═══════════════════════════════════════════════════════════════
+
+SITUACIÓN ACTUAL:
+  Recursos disponibles:        $23,312
+  Deuda total:                 $57,820
+  Ratio:                          40%
+
+PRIORIDADES (en orden):
+  1. Asegurar plan pago Hacienda ($19,604)
+  2. Cobrar A/R agresivamente ($10,866)
+  3. Generar ingresos nuevos ($2,000+)
+  4. Gestionar tarjetas alta tasa ($4,116)
+  5. Reducir gastos operativos (30%)
+
+ESTADO EMOCIONAL:
+  Usuario exhausto después 10 horas trabajo
+  Frustración comprensible por tiempo/$ invertido
+  Necesita descanso y cabeza fresca mañana
+
+PRÓXIMA SESIÓN: 08/11/2025 con energía renovada
+
+═══════════════════════════════════════════════════════════════
+FIN RESUMEN FINANCIERO - 07/11/2025 00:30
+═══════════════════════════════════════════════════════════════

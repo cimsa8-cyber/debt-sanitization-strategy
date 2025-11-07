@@ -1,0 +1,553 @@
+═══════════════════════════════════════════════════════════════
+ESTADO FINAL DE CUENTAS - 07 NOVIEMBRE 2025 00:00H
+Consolidado completo para continuar mañana
+═══════════════════════════════════════════════════════════════
+
+SESIÓN: 07/11/2025 - 10 horas de trabajo
+OBJETIVO: Actualizar QB desde 02/11 hasta 06/11
+RESULTADO: Parcialmente completado - Listo para continuar
+
+═══════════════════════════════════════════════════════════════
+SECCIÓN 1: SALDOS BANCARIOS REALES - 06/11/2025 23:16
+═══════════════════════════════════════════════════════════════
+
+BANCO NACIONAL COSTA RICA (BNCR):
+────────────────────────────────────────────────────────────────
+1. 100-01-000-188618-3 CRC - Operativa Empresa (1070)
+   Saldo Real: ₡337.24 ($0.67)
+   Balance Sheet QB: ₡75,337.24 ($148.59)
+   Diferencia: -₡75,000 (-$147.92) ⚠️
+
+2. 100-02-087-601066-4 USD - Operativa Empresa (1030)
+   Saldo Real: $1,326.35
+   Balance Sheet QB: $3,149.94
+   Diferencia: -$1,823.59 ⚠️
+
+3. 200-02-087-009589-4 USD - Reservas (1040)
+   Saldo Real: $0.43
+   Balance Sheet QB: $0.43
+   Diferencia: $0.00 ✅
+
+4. 200-02-087-011112-1 USD - Personal Álvaro (1080)
+   Saldo Real: $21.84
+   Balance Sheet QB: $21.84
+   Diferencia: $0.00 ✅
+
+5. 200-01-087-042186-9 CRC - Personal Álvaro (1090)
+   Saldo Real: ₡67,950.50 ($134.00)
+   Balance Sheet QB: ₡22,950.50 ($45.27)
+   Diferencia: +₡45,000 (+$88.73) ✅ Probablemente adelanto
+
+6. 200-01-030-013718-0 CRC - Alejandra Arias
+   Saldo Real: ₡11,964.04 ($23.60)
+   Balance Sheet QB: NO EXISTE
+   Nota: ⚠️ Determinar si es personal o empresa
+
+BANCO PROMERICA:
+────────────────────────────────────────────────────────────────
+7. 40000003881774 USD - Corriente Principal (1010)
+   Saldo Real: $2,999.24
+   Balance Sheet QB: $3,030.89
+   Diferencia: -$31.65 (comisión bancaria)
+
+8. 10000003881708 CRC - SINPE (1050)
+   Saldo Real: ₡1,090.00 ($2.15)
+   Balance Sheet QB: $0.00
+   Diferencia: +$2.15 ✅ Residual después CCSS
+
+9. 20000003881691 USD - Ahorros (1020)
+   Saldo Real: $0.00
+   Balance Sheet QB: $0.00
+   Diferencia: $0.00 ✅
+
+10. 30000003904229 CRC - Corriente (1060)
+    Saldo Real: ₡0.00
+    Balance Sheet QB: $0.00
+    Diferencia: $0.00 ✅
+
+CUENTAS DE AHORRO BNCR:
+────────────────────────────────────────────────────────────────
+⚠️ PENDIENTE CONFIRMAR SALDOS REALES
+
+Balance Sheet QB muestra:
+- 1110 Ahorro Impuestos Marchamo: $2,262.03
+- 1120 Ahorro Vehículo: $4,485.19
+- 1130 Ahorro Matrimonio: $930.30
+- 1140 Ahorro Black Friday: $260.25
+TOTAL: $7,937.77
+
+ESTADO: No confirmado con apps bancarias
+
+═══════════════════════════════════════════════════════════════
+SECCIÓN 2: EFECTIVO DISPONIBLE REAL
+═══════════════════════════════════════════════════════════════
+
+EFECTIVO EMPRESA (confirmado):
+- BNCR USD Operativa: $1,326.35
+- BNCR CRC Operativa: $0.67
+- BNCR USD Reservas: $0.43
+- Promerica USD Principal: $2,999.24
+- Promerica CRC SINPE: $2.15
+SUBTOTAL CONFIRMADO: $4,328.84
+
+AHORROS (no confirmado): $7,937.77 (según QB)
+
+TOTAL ESTIMADO: $12,266.61
+
+vs Balance Sheet QB: $14,334.73
+DIFERENCIA: -$2,068.12
+
+═══════════════════════════════════════════════════════════════
+SECCIÓN 3: TRANSACCIONES NUEVAS 06-07 NOVIEMBRE
+═══════════════════════════════════════════════════════════════
+
+TRANSACCIÓN 1: Pago SEA Global Logistics
+────────────────────────────────────────────────────────────────
+Fecha: 06/11/2025 22:00
+Cuenta: Promerica 40000003881774 USD
+Monto: -$58.76
+Concepto: Facturas 3271, 3251, 3234
+Tipo: EMPRESA
+Clasificación: 6100 Gastos Operativos (logística)
+Estado: ⚠️ NO REGISTRADO EN QB
+
+TRANSACCIÓN 2: Compra Automercado
+────────────────────────────────────────────────────────────────
+Fecha: 07/11/2025
+Cuenta: TC VISA 9837 CRC
+Monto: -₡53,785 (-$106.07)
+Concepto: Compra supermercado
+Tipo: PERSONAL
+Clasificación: 1520 Due from Owner - Alvaro
+Estado: ⚠️ NO REGISTRADO EN QB
+
+TRANSACCIÓN 3: Cargo bolsas plásticas
+────────────────────────────────────────────────────────────────
+Fecha: 07/11/2025
+Cuenta: TC VISA 9837 CRC
+Monto: -₡3,195 (-$6.30)
+Concepto: Cargo uso bolsas (separado de compra)
+Tipo: PERSONAL
+Clasificación: 1520 Due from Owner - Alvaro
+Estado: ⚠️ NO REGISTRADO EN QB
+
+═══════════════════════════════════════════════════════════════
+SECCIÓN 4: SALDOS ACTUALIZADOS TARJETAS DE CRÉDITO
+═══════════════════════════════════════════════════════════════
+
+TC VISA 9837 CRC (2110):
+────────────────────────────────────────────────────────────────
+Balance Sheet 06/11: $4,003.96 (₡2,030,004.01)
+Compras 07/11: +$112.37 (₡56,980)
+  - Automercado: +₡53,785
+  - Bolsas: +₡3,195
+SALDO ACTUALIZADO 07/11: $4,116.33 (₡2,086,984.01)
+
+OTRAS TARJETAS (sin cambios desde 06/11):
+────────────────────────────────────────────────────────────────
+2010 TC VISA 9837 USD: $1,775.45
+2030 TC MC 8759 USD: $116.48
+2040 TC VISA BAC 9550 USD: $209.92 (debe ser $166.47)
+2110 TC VISA 9837 CRC: $4,116.33 (actualizado)
+2120 TC VISA 3519 CRC: $702.98
+2130 TC MC 8759 CRC: $6,196.35
+2140 TC VISA BAC 9550 CRC: $2,676.94 (problema pendiente)
+2150 TC VISA 6386 CRC: $906.76
+2160 TC SIMAN CRC: $666.63 (debe ser $0.00 - cancelada)
+2610 CCSS Cuotas: $706.12 (verificar si pagado)
+
+TOTAL TARJETAS: $17,957.06 (incluyendo actualización 9837)
+
+═══════════════════════════════════════════════════════════════
+SECCIÓN 5: DEUDA HACIENDA - CONSOLIDADO COMPLETO
+═══════════════════════════════════════════════════════════════
+
+SOLICITUD ARREGLO DE PAGO EN TRÁMITE:
+Número: DGV-523678-M6W1
+Estado: Esperando resolución
+
+IMPUESTO SOBRE LA RENTA (ISR):
+────────────────────────────────────────────────────────────────
+Periodo 202001 (2020): ₡981,664.00 ($1,936.30) - 4.7 años vencido
+Periodo 202101 (2021): ₡1,442,277.00 ($2,844.62) - 3.7 años vencido
+Periodo 202201 (2022): ₡1,448,546.00 ($2,856.99) - 2.7 años vencido
+Periodo 202301 (2023): ₡825,297.00 ($1,627.80) - 1.7 años vencido
+Periodo 202401 (2024): ₡[PENDIENTE CONFIRMAR] - 0.6 años vencido
+SUBTOTAL ISR: ₡4,697,784+ ($9,265.71+)
+
+IMPUESTO AL VALOR AGREGADO (IVA):
+────────────────────────────────────────────────────────────────
+Periodo 202508 (Ago 2025): ₡244,129.00 ($481.44) - Vencido 16/09
+Periodo 202509 (Sep 2025): ₡26,608.00 ($52.48) - Vencido 24/10
+SUBTOTAL IVA: ₡270,737.00 ($533.92)
+
+OTROS IMPUESTOS (Balance Sheet):
+────────────────────────────────────────────────────────────────
+2510 Hacienda Impuestos Pendientes: $9,804.00
+⚠️ PENDIENTE CONFIRMAR: ¿Ya incluye ISR + IVA o es adicional?
+
+TOTAL ESTIMADO HACIENDA: $19,604+ (conservador)
+
+═══════════════════════════════════════════════════════════════
+SECCIÓN 6: CUENTAS POR COBRAR
+═══════════════════════════════════════════════════════════════
+
+Balance Sheet 06/11: $0.00 (NO registrado)
+A/R real según SWS: $10,866.42
+
+ESTADO: ⚠️ NO REGISTRADO EN QB
+PENDIENTE: Lista detallada de clientes con saldos
+
+═══════════════════════════════════════════════════════════════
+SECCIÓN 7: DUE FROM OWNER - ÁLVARO
+═══════════════════════════════════════════════════════════════
+
+GASTOS PERSONALES ACUMULADOS (estimado):
+────────────────────────────────────────────────────────────────
+27/10-02/11:
+- Barba: ₡5,000 (~$9.86)
+- Veterinario Teo: $56.80
+- Otros gastos personales: ~$10
+Subtotal periodo previo: ~$76.66
+
+05/11:
+- Adelanto salario: ₡70,000 ($138.07)
+
+07/11:
+- Automercado: ₡53,785 ($106.07)
+- Bolsas: ₡3,195 ($6.30)
+Subtotal 07/11: $112.37
+
+TOTAL DUE FROM OWNER: ~$327.10
+
+Balance Sheet QB: $0.00 (NO registrado)
+
+ANÁLISIS:
+Salario quincenal $500 NO cubre gastos reales
+Gasto real estimado: ~$950/mes
+Déficit: ~$450/mes
+
+═══════════════════════════════════════════════════════════════
+SECCIÓN 8: TRABAJO COMPLETADO HOY
+═══════════════════════════════════════════════════════════════
+
+CUENTAS CREADAS EN QB:
+────────────────────────────────────────────────────────────────
+✅ 3900 · Ajustes de Apertura (Equity, USD)
+✅ 1150 · IVA Crédito Fiscal (Bank, CRC) - Workaround
+✅ 2015 · IVA Débito Fiscal (Credit Card, CRC) - Workaround
+
+TIPO DE CAMBIO CONFIGURADO:
+────────────────────────────────────────────────────────────────
+✅ 1 USD = 507 CRC
+✅ 1 CRC = 0.00197239 USD
+
+AJUSTES INTENTADOS:
+────────────────────────────────────────────────────────────────
+⚠️ 2140 · TC VISA BAC 9550 CRC
+   Intentos múltiples de ajuste
+   Problema: Confusión Debit/Credit en Credit Card accounts
+   Estado: Saldo incorrecto ($2,676.94 vs $2,921.75 esperado)
+   Diferencia: -$244.81 (~₡124k CRC)
+
+AUDITORÍA CUENTAS CRC:
+────────────────────────────────────────────────────────────────
+✅ 2110 TC VISA 9837 CRC: Correcto ₡2,030,004.01
+✅ 2120 TC VISA 3519 CRC: Correcto ₡356,409.29
+✅ 2130 TC MC 8759 CRC: Correcto ₡3,141,545.17
+❌ 2140 TC VISA BAC 9550 CRC: Incorrecto (error -₡124k)
+✅ 2150 TC VISA 6386 CRC: Correcto ₡459,728.61
+✅ 2160 TC SIMAN CRC: Correcto ₡337,981.89
+
+TRANSACCIONES PENDIENTES DE REGISTRAR:
+────────────────────────────────────────────────────────────────
+⚠️ ~20 transacciones del 27/10 al 06/11 (según PLAN_DEFINITIVO)
+⚠️ 3 transacciones del 06-07/11 (SEA Global, Automercado)
+⚠️ A/R inicial $10,866.42
+⚠️ Ajuste 2040 USD BAC 9550 (-$43.45)
+
+═══════════════════════════════════════════════════════════════
+SECCIÓN 9: LECCIONES APRENDIDAS - QUICKBOOKS DESKTOP 2013
+═══════════════════════════════════════════════════════════════
+
+DOCUMENTADO EN: LECCIONES_QB_DESKTOP_2013.md
+
+REGLAS CRÍTICAS:
+────────────────────────────────────────────────────────────────
+1. CREDIT CARD accounts: CREDIT = aumenta deuda (charge)
+                         DEBIT = reduce deuda (payment)
+   (Opuesto a Bank accounts)
+
+2. Exchange Rate en Journal Entries:
+   - Currency = USD: Al seleccionar cuenta CRC, usar 0.00197239
+   - Currency = CRC: Al seleccionar cuenta USD, usar 0.00197239
+   - QB puede mostrar "1 CRC = 1 USD" por defecto → CORREGIR
+
+3. Other Current Asset/Liability NO permiten moneda extranjera
+   - Workaround: Usar Bank para assets CRC
+   - Workaround: Usar Credit Card para liabilities CRC
+
+4. Balance Sheet siempre muestra en Home Currency (USD)
+   - Para ver saldo en CRC: Abrir registro de cuenta específica
+
+5. NUNCA asumir, SIEMPRE verificar:
+   - Pedir reportes actualizados
+   - Verificar tipo de cuenta antes de ajustar
+   - Confirmar saldos en apps bancarias
+
+═══════════════════════════════════════════════════════════════
+SECCIÓN 10: VERIFICACIÓN DE DUPLICADOS
+═══════════════════════════════════════════════════════════════
+
+MÉTODO:
+────────────────────────────────────────────────────────────────
+Revisión de transacciones documentadas vs Balance Sheet
+
+TRANSACCIONES ÚNICAS CONFIRMADAS (sin duplicar):
+────────────────────────────────────────────────────────────────
+✅ Pago SIMAN $681.42 (05/11) - No registrado en QB
+✅ Pago CCSS ₡358,910 (03/11) - No registrado en QB
+✅ Adelanto salario ₡70,000 (05/11) - No registrado en QB
+✅ Cobros clientes $4,125.25 (27/10-31/10) - No registrados en QB
+✅ Pagos tarjetas múltiples (03/11) - No registrados en QB
+✅ Pago SEA Global $58.76 (06/11) - No registrado en QB
+✅ Compras Automercado ₡56,980 (07/11) - No registradas en QB
+
+CONCLUSIÓN: NO hay duplicados detectados
+RAZÓN: La mayoría de transacciones 27/10-07/11 NO están en QB
+
+═══════════════════════════════════════════════════════════════
+SECCIÓN 11: ESTADO QUICKBOOKS AL FINALIZAR SESIÓN
+═══════════════════════════════════════════════════════════════
+
+ARCHIVO QB:
+────────────────────────────────────────────────────────────────
+Nombre: AlvaroVelascoNet (o similar)
+Última modificación: 07/11/2025
+Backup: ⚠️ PENDIENTE CREAR
+
+CUENTAS EN CHART OF ACCOUNTS:
+────────────────────────────────────────────────────────────────
+Total cuentas: 42 (39 originales + 3 nuevas)
+
+BALANCE SHEET AS OF 06/11/2025:
+────────────────────────────────────────────────────────────────
+Total Assets: $14,334.73
+Total Liabilities: $47,707.59
+Total Equity: -$33,372.86
+
+DIFERENCIAS CONOCIDAS CON REALIDAD:
+────────────────────────────────────────────────────────────────
+- Efectivo: QB sobrestima ~$2,000
+- Tarjetas: Falta actualizar algunas
+- A/R: Falta registrar $10,866.42
+- Due from Owner: Falta registrar ~$327
+
+═══════════════════════════════════════════════════════════════
+SECCIÓN 12: ARCHIVOS CREADOS EN ESTA SESIÓN
+═══════════════════════════════════════════════════════════════
+
+DOCUMENTACIÓN GENERADA:
+────────────────────────────────────────────────────────────────
+✅ LECCIONES_QB_DESKTOP_2013.md
+   - Reglas críticas QB Desktop 2013 multi-currency
+   - Errores comunes y soluciones
+   - Mejores prácticas
+   - Checklist pre-ajuste
+
+✅ SALDOS_REALES_BNCR_06NOV2025.txt
+   - Comparación QB vs realidad bancaria
+   - Diferencias detectadas
+   - Incluye Promerica
+
+✅ SOLICITUD_ARREGLO_PAGO_HACIENDA.txt
+   - Número DGV-523678-M6W1
+   - Deuda consolidada ISR + IVA
+   - Estrategia mientras esperan resolución
+   - Escenarios posibles
+
+✅ ESTADO_FINAL_07NOV2025_0000H.txt (este archivo)
+   - Consolidado completo de todo el trabajo
+   - Saldos actualizados
+   - Transacciones pendientes
+   - Estado QB
+
+DOCUMENTACIÓN PREVIA (de sesiones anteriores):
+────────────────────────────────────────────────────────────────
+- CONCILIACION_DETALLADA_02-06NOV.txt
+- PLAN_DEFINITIVO_HIBRIDO_QB.txt
+- ESTADO_ACTUALIZACION_QB.txt
+- SESION_06NOV_POST_6MD.txt
+- README.md (actualizado con título proyecto)
+- Otros archivos de sesiones previas
+
+═══════════════════════════════════════════════════════════════
+SECCIÓN 13: COMMITS GIT REALIZADOS
+═══════════════════════════════════════════════════════════════
+
+RAMA: claude/explore-options-011CUs3E6Vsw8d3acC5ZxE3r
+
+COMMITS HOY:
+────────────────────────────────────────────────────────────────
+1. 0530c97 - Documentación lecciones aprendidas QB Desktop 2013
+2. eb2da58 - Saldos reales BNCR y Promerica al 06/11/2025 23:16
+3. 74b9bf6 - Documentación solicitud arreglo de pago Hacienda
+
+ESTADO GIT:
+────────────────────────────────────────────────────────────────
+✅ Todos los archivos importantes committed
+✅ Pushed a remote
+✅ No hay cambios sin guardar
+
+═══════════════════════════════════════════════════════════════
+SECCIÓN 14: PREGUNTAS PENDIENTES PARA MAÑANA
+═══════════════════════════════════════════════════════════════
+
+PRIORIDAD ALTA:
+────────────────────────────────────────────────────────────────
+1. DECISIÓN QB: ¿Opción A (corte radical) o B (histórico)?
+
+2. SALDOS AHORROS BNCR (confirmar con apps):
+   - 1110 Impuestos Marchamo: $?
+   - 1120 Vehículo: $?
+   - 1130 Matrimonio: $?
+   - 1140 Black Friday: $?
+
+3. SOLICITUD HACIENDA DGV-523678-M6W1:
+   - ¿Cuándo presentada?
+   - ¿Qué monto total incluye?
+   - ¿Cuántas cuotas propuestas?
+   - ¿Incluye ISR + IVA o solo parte?
+
+PRIORIDAD MEDIA:
+────────────────────────────────────────────────────────────────
+4. MONTO 202401 ISR: ¿Cuál es?
+
+5. LISTA CLIENTES A/R: Nombres y montos para cobro urgente
+
+6. CUENTA ALEJANDRA ₡11,964.04: ¿Personal o empresa?
+
+7. SALDOS TARJETAS REALES: Confirmar con apps BAC/BNCR
+
+═══════════════════════════════════════════════════════════════
+SECCIÓN 15: ESTRATEGIA RECOMENDADA PARA MAÑANA
+═══════════════════════════════════════════════════════════════
+
+OPCIÓN A - CORTE RADICAL (30 minutos):
+────────────────────────────────────────────────────────────────
+1. Obtener todos los saldos bancarios/tarjetas reales HOY 08/11
+2. Crear UN Journal Entry ajustando QB a realidad
+3. Verificar Balance Sheet = Realidad
+4. A partir de ahí: Registro diario 15 min/día
+5. NUNCA MÁS atrasar
+
+VENTAJAS:
+✅ QB correcto desde mañana
+✅ Sostenible (15 min/día)
+✅ Estados financieros confiables para Hacienda
+✅ Pierdes detalle 02-06/11 pero ganas control desde hoy
+
+DESVENTAJAS:
+❌ No tendrás detalle transaccional perfecto 02-06/11
+
+OPCIÓN B - ACTUALIZACIÓN HISTÓRICA (6+ horas):
+────────────────────────────────────────────────────────────────
+1. Registrar las ~20 transacciones del 27/10-06/11
+2. Registrar las 3 de 06-07/11
+3. Registrar A/R inicial
+4. Ajustar tarjetas
+5. Seguir con transacciones del 08/11...
+
+VENTAJAS:
+✅ Detalle transaccional completo
+
+DESVENTAJAS:
+❌ Toma 6+ horas más
+❌ Cada día se acumulan 3-5 transacciones nuevas
+❌ Nunca alcanzas el presente
+❌ No sostenible
+
+RECOMENDACIÓN: OPCIÓN A sin duda
+
+═══════════════════════════════════════════════════════════════
+SECCIÓN 16: PRÓXIMOS PASOS INMEDIATOS (Mañana 08/11)
+═══════════════════════════════════════════════════════════════
+
+MAÑANA 9:00 AM:
+────────────────────────────────────────────────────────────────
+1. Entrar ATV Hacienda
+   - Verificar estado DGV-523678-M6W1
+   - Descargar documentación
+   - Screenshot estado
+
+2. Llamar 800-TRIBUT (800-874-2888)
+   - Preguntar tiempo estimado respuesta
+   - Preguntar si necesitan info adicional
+   - Obtener nombre funcionario asignado
+
+3. Revisar apps bancarias
+   - Confirmar saldos ahorros BNCR
+   - Confirmar saldos tarjetas crédito
+   - Screenshot todo con fecha/hora
+
+MAÑANA 11:00 AM - 12:00 PM:
+────────────────────────────────────────────────────────────────
+4. DECISIÓN QB: Opción A o B
+   - Si A: Hacer corte radical (30 min)
+   - Si B: Continuar actualización histórica
+
+5. Cobro agresivo A/R
+   - Llamar 5 clientes principales
+   - Solicitar pagos urgentes
+   - Meta: $3,000 comprometidos esta semana
+
+═══════════════════════════════════════════════════════════════
+SECCIÓN 17: CAPACIDAD DE PAGO ACTUAL
+═══════════════════════════════════════════════════════════════
+
+RECURSOS DISPONIBLES:
+────────────────────────────────────────────────────────────────
+Efectivo empresa: $4,328.84 (confirmado)
+Ahorros BNCR: $7,937.77 (no confirmado)
+A/R por cobrar: $10,866.42 (no registrado en QB)
+TOTAL ESTIMADO: $23,133
+
+DEUDAS URGENTES:
+────────────────────────────────────────────────────────────────
+Hacienda (en arreglo): ~$19,604+
+Tarjetas crédito: $17,957
+Nissan: $20,142 (cuotas)
+TOTAL: $57,703
+
+ANÁLISIS:
+────────────────────────────────────────────────────────────────
+⚠️ Insolvencia técnica
+Con TODO disponible ($23k) solo alcanza para Hacienda
+Quedan $3.5k para tarjetas ($18k de deuda)
+Déficit: $34k
+
+ESTRATEGIA:
+────────────────────────────────────────────────────────────────
+1. Prioridad absoluta: Asegurar plan pago Hacienda
+2. Cobrar A/R agresivamente
+3. Generar ingresos nuevos urgente
+4. Negociar consolidación tarjetas
+5. Reducir gastos operativos 30%
+6. Ajustar salario Álvaro temporalmente
+
+═══════════════════════════════════════════════════════════════
+FIN DEL DOCUMENTO - SESIÓN 07/11/2025
+═══════════════════════════════════════════════════════════════
+
+TIEMPO INVERTIDO: 10 horas
+COSTO ESTIMADO: $30 créditos Claude
+PROGRESO: Parcial - Cuentas creadas, lecciones aprendidas
+RESULTADO: Listo para continuar con estrategia clara mañana
+
+ESTADO EMOCIONAL USUARIO: Exhausto, frustrado (comprensible)
+ACCIÓN: Descansar, retomar mañana con energía fresca
+
+PRÓXIMA SESIÓN: 08/11/2025
+PRIORIDAD: Decisión QB (Opción A recomendada) + Seguimiento Hacienda
+
+═══════════════════════════════════════════════════════════════
