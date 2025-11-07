@@ -1,0 +1,654 @@
+{
+  "metadata": {
+    "ultima_actualizacion": "2025-11-07T01:00:00",
+    "ultima_verificacion_bancos": "2025-11-06T23:16:00",
+    "tipo_cambio_usd_crc": 507,
+    "commit_git": "aa392a3",
+    "actualizador": "Claude Code",
+    "notas": "Agregados gastos operativos críticos (TeamViewer, MS Maps, SWS Maps)"
+  },
+
+  "efectivo": {
+    "total_usd": 4328.84,
+    "ultima_verificacion": "2025-11-06T23:16:00",
+    "cuentas": {
+      "bncr": {
+        "subtotal_usd": 1327.45,
+        "cuentas": [
+          {
+            "numero": "601066-4",
+            "nombre": "USD Operativa Empresa",
+            "qb_account": "1030",
+            "moneda": "USD",
+            "saldo_real": 1326.35,
+            "saldo_qb": 3149.94,
+            "diferencia": -1823.59,
+            "fecha_verificacion": "2025-11-06T23:16:00",
+            "estado": "DISCREPANCIA - Falta investigar"
+          },
+          {
+            "numero": "188618-3",
+            "nombre": "CRC Operativa Empresa",
+            "qb_account": "1070",
+            "moneda": "CRC",
+            "saldo_real_crc": 337.24,
+            "saldo_real_usd": 0.67,
+            "saldo_qb_crc": 75337.24,
+            "saldo_qb_usd": 148.59,
+            "diferencia_crc": -75000,
+            "diferencia_usd": -147.92,
+            "fecha_verificacion": "2025-11-06T23:16:00",
+            "estado": "DISCREPANCIA - Falta investigar"
+          },
+          {
+            "numero": "009589-4",
+            "nombre": "USD Reservas",
+            "qb_account": "1040",
+            "moneda": "USD",
+            "saldo_real": 0.43,
+            "saldo_qb": 0.43,
+            "diferencia": 0,
+            "fecha_verificacion": "2025-11-06T23:16:00",
+            "estado": "CORRECTO"
+          }
+        ]
+      },
+      "promerica": {
+        "subtotal_usd": 3001.39,
+        "cuentas": [
+          {
+            "numero": "40000003881774",
+            "nombre": "Corriente USD Principal",
+            "qb_account": "1010",
+            "moneda": "USD",
+            "saldo_real": 2999.24,
+            "saldo_qb": 3030.89,
+            "diferencia": -31.65,
+            "fecha_verificacion": "2025-11-06T23:16:00",
+            "estado": "Diferencia menor - posible comisión"
+          },
+          {
+            "numero": "10000003881708",
+            "nombre": "SINPE CRC",
+            "qb_account": "1050",
+            "moneda": "CRC",
+            "saldo_real_crc": 1090,
+            "saldo_real_usd": 2.15,
+            "saldo_qb_usd": 0,
+            "diferencia_usd": 2.15,
+            "fecha_verificacion": "2025-11-06T23:16:00",
+            "estado": "CORRECTO - Saldo residual post CCSS"
+          }
+        ]
+      }
+    },
+    "notas": [
+      "Balance Sheet QB decía $6,329.42 pero realidad es $4,328.84",
+      "Faltante total: -$2,000.58 (31.6% sobrestimado en QB)",
+      "CRÍTICO: Investigar diferencias BNCR 601066-4 y 188618-3"
+    ]
+  },
+
+  "cuentas_por_cobrar": {
+    "total_usd": 10866.42,
+    "fecha_corte": "2025-11-03",
+    "fuente": "data/analisis_cuentas_por_cobrar.txt",
+    "clientes_top_5": [
+      {
+        "nombre": "VWR INTERNATIONAL LTDA",
+        "monto_usd": 2800.00,
+        "porcentaje": 25.8,
+        "prioridad": "ALTA",
+        "notas": "Cliente más grande - contactar urgente"
+      },
+      {
+        "nombre": "GRUPO ACCION COMERCIAL S.A.",
+        "monto_usd": 1689.04,
+        "porcentaje": 15.5,
+        "prioridad": "ALTA",
+        "notas": "Segundo más grande"
+      },
+      {
+        "nombre": "ALMACEN FISCAL ALFIPAC S.A.",
+        "monto_usd": 761.05,
+        "porcentaje": 7.0,
+        "prioridad": "MEDIA"
+      },
+      {
+        "nombre": "3-102-887892 S.R.L.",
+        "monto_usd": 691.56,
+        "porcentaje": 6.4,
+        "prioridad": "MEDIA"
+      },
+      {
+        "nombre": "CENTRO INTEGRAL ONCOLOGIA CIO",
+        "monto_usd": 687.05,
+        "porcentaje": 6.3,
+        "prioridad": "MEDIA"
+      }
+    ],
+    "estrategia_cobro": {
+      "meta_10_dias": 5000,
+      "meta_esta_semana": 3000,
+      "contactar_primero": ["VWR INTERNATIONAL LTDA", "GRUPO ACCION COMERCIAL S.A."]
+    },
+    "notas": [
+      "Top 5 representa 61% del total",
+      "Cobro agresivo necesario para liquidez"
+    ]
+  },
+
+  "cuentas_por_pagar": {
+    "total_usd": 6103.66,
+    "total_usd_divisa": 5818.64,
+    "total_crc": 144516,
+    "total_crc_usd_equiv": 285.02,
+    "fecha_actualizacion": "2025-11-07T00:30:00",
+    "fuente": "AUDITORIA_COMPLETA_07NOV2025.txt",
+
+    "vencido_urgente": {
+      "total_usd": 454.16,
+      "facturas": [
+        {
+          "proveedor": "Intcomex",
+          "factura": "2502060",
+          "monto_usd": 410.09,
+          "fecha_vencimiento": "2025-10-04",
+          "dias_mora": 33,
+          "prioridad": "CRÍTICA",
+          "notas": "Proveedor principal - mantener relación"
+        },
+        {
+          "proveedor": "SEA Global",
+          "tipo": "facturas antiguas",
+          "monto_usd": 44.07,
+          "fecha_vencimiento": "2025-10-10",
+          "dias_mora": 27,
+          "prioridad": "ALTA"
+        }
+      ]
+    },
+
+    "proximo_15_dias": {
+      "total_usd": 2309.51,
+      "facturas": [
+        {
+          "proveedor": "Eurocomp",
+          "factura": "203637",
+          "monto_usd": 2007.68,
+          "fecha_vencimiento": "2025-11-16",
+          "dias_para_vencer": 9,
+          "prioridad": "ALTA",
+          "notas": "Factura grande - negociar extensión si necesario"
+        },
+        {
+          "proveedor": "Eurocomp",
+          "factura": "203831",
+          "monto_usd": 16.92,
+          "fecha_vencimiento": "2025-11-19",
+          "dias_para_vencer": 12,
+          "prioridad": "MEDIA"
+        },
+        {
+          "proveedor": "Compueconomicos",
+          "factura": "012616",
+          "monto_usd": 284.91,
+          "fecha_vencimiento": "2025-11-23",
+          "dias_para_vencer": 16,
+          "prioridad": "MEDIA"
+        }
+      ]
+    },
+
+    "vigente_30_dias": {
+      "total_usd": 3339.99,
+      "facturas": [
+        {
+          "proveedor": "Intcomex",
+          "tipo": "Cloud Services",
+          "monto_usd": 2317.09,
+          "fecha_vencimiento_aprox": "2025-12-03",
+          "prioridad": "NORMAL"
+        },
+        {
+          "proveedor": "Intcomex",
+          "tipo": "Lenovo Equipment",
+          "monto_usd": 679.12,
+          "fecha_vencimiento_aprox": "2025-12-04",
+          "prioridad": "NORMAL"
+        },
+        {
+          "proveedor": "SEA Global",
+          "tipo": "factura nueva",
+          "monto_usd": 58.76,
+          "fecha_vencimiento_aprox": "2025-12-06",
+          "prioridad": "NORMAL"
+        },
+        {
+          "proveedor": "IBASA",
+          "monto_crc": 144516,
+          "monto_usd": 285.02,
+          "fecha_vencimiento_aprox": "2025-12-05",
+          "prioridad": "NORMAL"
+        }
+      ]
+    },
+
+    "estrategia_pago": {
+      "semana_1": ["Intcomex 2502060", "SEA Global antiguas"],
+      "semana_2": ["Eurocomp 203637 - NEGOCIAR"],
+      "semana_3": ["Compueconomicos 012616"],
+      "notas": "Priorizar proveedores estratégicos (Intcomex, Eurocomp)"
+    }
+  },
+
+  "iva": {
+    "credito_fiscal": {
+      "saldo_crc": 0,
+      "saldo_usd": 0,
+      "qb_account": "1150",
+      "notas": "IVA pagado en compras - recuperable"
+    },
+    "debito_fiscal": {
+      "saldo_crc": 0,
+      "saldo_usd": 0,
+      "qb_account": "2015",
+      "notas": "IVA cobrado en ventas - por pagar"
+    },
+    "vencido_hacienda": {
+      "total_crc": 270737,
+      "total_usd": 533.92,
+      "estado": "VENCIDO - PAGAR URGENTE",
+      "periodos": [
+        {
+          "periodo": "202508",
+          "mes": "Agosto 2025",
+          "monto_crc": 244129,
+          "monto_usd": 481.44,
+          "fecha_vencimiento": "2025-09-16",
+          "dias_mora": 52,
+          "prioridad": "CRÍTICA",
+          "notas": "Usuario dijo: 'ese si o si hay que tenerlo al dia'"
+        },
+        {
+          "periodo": "202509",
+          "mes": "Septiembre 2025",
+          "monto_crc": 26608,
+          "monto_usd": 52.48,
+          "fecha_vencimiento": "2025-10-24",
+          "dias_mora": 14,
+          "prioridad": "CRÍTICA"
+        }
+      ],
+      "pendiente_verificar": [
+        {
+          "periodo": "202510",
+          "mes": "Octubre 2025",
+          "fecha_vencimiento_estimada": "2025-11-15",
+          "estado": "Por verificar si fue declarado"
+        }
+      ]
+    }
+  },
+
+  "gastos_operativos_comprometidos": {
+    "total_usd": 1395,
+    "descripcion": "Gastos operativos críticos para operación del negocio",
+    "fecha_actualizacion": "2025-11-07T01:00:00",
+
+    "gastos_inmediatos": {
+      "total_usd": 495,
+      "items": [
+        {
+          "concepto": "TeamViewer",
+          "monto_usd": 200,
+          "tipo": "Software remoto",
+          "urgencia": "CRÍTICA",
+          "notas": "Sin esto nos quedamos sin herramienta de soporte remoto",
+          "fecha_limite": "INMEDIATO",
+          "prioridad": 1
+        },
+        {
+          "concepto": "Microsoft Maps",
+          "monto_usd": 295,
+          "tipo": "Licencia operativa",
+          "urgencia": "ALTA",
+          "fecha_limite": "Próximos días",
+          "prioridad": 2
+        }
+      ]
+    },
+
+    "compromisos_venta": {
+      "total_compromiso_usd": 900,
+      "items": [
+        {
+          "concepto": "SWS-Software Maps Renewal",
+          "monto_por_pagar_usd": 900,
+          "monto_recibido_usd": 1200,
+          "utilidad_bruta_usd": 300,
+          "cliente": "SWS-Software",
+          "fecha_vencimiento": "2025-12-17",
+          "estado": "PAGO ANTICIPADO RECIBIDO",
+          "registrado_en": "Estados banco Promerica",
+          "notas": [
+            "Cliente ya pagó $1,200+ anticipadamente",
+            "Debemos pagar a proveedor $900 antes del 17/12",
+            "Genera utilidad neta ~$300",
+            "Es venta de producto, no gasto"
+          ],
+          "urgencia": "MEDIA",
+          "dias_disponibles": 40
+        }
+      ]
+    },
+
+    "impacto_flujo_caja": {
+      "efectivo_actual": 4328.84,
+      "menos_gastos_inmediatos": -495,
+      "efectivo_post_gastos": 3833.84,
+      "compromiso_sws_cubierto": true,
+      "notas": [
+        "SWS Maps no afecta caja inmediata (pago recibido)",
+        "TeamViewer + MS Maps reducen liquidez inmediata",
+        "Efectivo quedaría en $3,833.84 después de gastos críticos"
+      ]
+    },
+
+    "prioridad_vs_otros_gastos": {
+      "orden_sugerido": [
+        "1. IVA Hacienda vencido: $533.92 (multas creciendo)",
+        "2. TeamViewer: $200 (herramienta crítica)",
+        "3. A/P vencido Intcomex: $410.09 (relación proveedor)",
+        "4. Microsoft Maps: $295 (operativo)",
+        "5. A/P SEA Global: $44.07 (completar vencidos)",
+        "6. SWS Maps: $900 (plazo hasta 17/12, pago recibido)"
+      ],
+      "total_inmediato_critico": 1483.01,
+      "efectivo_disponible": 4328.84,
+      "balance_post_criticos": 2845.83,
+      "suficiente": true
+    }
+  },
+
+  "deuda_hacienda": {
+    "total_estimado_usd": 19604,
+    "solicitud_arreglo": {
+      "numero": "DGV-523678-M6W1",
+      "estado": "En trámite - Esperando resolución",
+      "fecha_solicitud": "PENDIENTE CONFIRMAR",
+      "monto_solicitado": "PENDIENTE CONFIRMAR",
+      "cuotas_propuestas": "PENDIENTE CONFIRMAR"
+    },
+    "isr": {
+      "total_crc": 4697784,
+      "total_usd": 9265.71,
+      "periodos": [
+        {
+          "periodo": "202001",
+          "monto_crc": 981664,
+          "monto_usd": 1936.30,
+          "estado": "Incluido en solicitud arreglo"
+        },
+        {
+          "periodo": "202101",
+          "monto_crc": 1442277,
+          "monto_usd": 2844.62,
+          "estado": "Incluido en solicitud arreglo"
+        },
+        {
+          "periodo": "202201",
+          "monto_crc": 1448546,
+          "monto_usd": 2856.99,
+          "estado": "Incluido en solicitud arreglo"
+        },
+        {
+          "periodo": "202301",
+          "monto_crc": 825297,
+          "monto_usd": 1627.80,
+          "estado": "Incluido en solicitud arreglo"
+        },
+        {
+          "periodo": "202401",
+          "monto_crc": "PENDIENTE CONFIRMAR",
+          "monto_usd": "PENDIENTE CONFIRMAR",
+          "estado": "Por confirmar"
+        }
+      ]
+    },
+    "iva_incluido_solicitud": {
+      "incluye_iva_vencido": "PENDIENTE CONFIRMAR",
+      "notas": "Verificar si DGV-523678-M6W1 incluye IVA Ago-Sep o solo ISR"
+    },
+    "acciones_pendientes": [
+      "Entrar ATV Hacienda verificar estado DGV-523678-M6W1",
+      "Llamar 800-TRIBUT seguimiento",
+      "Confirmar si incluye IVA vencido",
+      "Preparar Balance Sheet actualizado si solicitan docs"
+    ]
+  },
+
+  "tarjetas_credito": {
+    "total_usd": 16790,
+    "fecha_aproximada": "2025-11-03",
+    "fuente": "ESTADO_FINAL_07NOV2025_0000H.txt",
+    "tarjetas": [
+      {
+        "banco": "BAC",
+        "numero": "9837",
+        "tipo": "VISA CRC",
+        "saldo_usd": 4003.96,
+        "tasa_interes": 35,
+        "prioridad": "CRÍTICA",
+        "notas": "Tasa más alta - atacar primero después de A/P vencido"
+      },
+      {
+        "banco": "BAC",
+        "numero": "8759",
+        "tipo": "MC CRC",
+        "saldo_usd": 6196.35,
+        "tasa_interes": 35,
+        "prioridad": "CRÍTICA",
+        "notas": "Segunda tasa más alta"
+      },
+      {
+        "banco": "BAC",
+        "numero": "9550",
+        "tipo": "VISA CRC",
+        "saldo_usd": 2921.75,
+        "tasa_interes": 30,
+        "prioridad": "ALTA",
+        "notas": "QB Account 2140 - tuvo problemas de balance"
+      },
+      {
+        "banco": "BAC",
+        "numero": "6386",
+        "tipo": "MC USD",
+        "saldo_usd": 3667.94,
+        "tasa_interes": 25,
+        "prioridad": "MEDIA"
+      }
+    ],
+    "estrategia": {
+      "fase_1": "Pagar A/P vencido primero",
+      "fase_2": "Con efectivo restante: pago parcial VISA 9837",
+      "fase_3": "Con cobros A/R: atacar MC 8759",
+      "objetivo": "Reducir intereses mensuales ~$200/mes"
+    },
+    "notas": [
+      "Saldos no verificados directamente - actualizar de apps",
+      "Prioridad absoluta: IVA > A/P vencido > Tarjetas altas tasas"
+    ]
+  },
+
+  "ahorros": {
+    "total_estimado_usd": 7937.77,
+    "estado": "PENDIENTE VERIFICAR SALDOS REALES",
+    "cuentas_bncr": [
+      {
+        "tipo": "Ahorro programado",
+        "saldo_estimado_usd": "VERIFICAR",
+        "notas": "Confirmar saldo real desde app"
+      },
+      {
+        "tipo": "Otras cuentas ahorro",
+        "cantidad": 3,
+        "saldo_estimado_usd": "VERIFICAR",
+        "notas": "Confirmar saldos reales desde app"
+      }
+    ],
+    "acciones": [
+      "Verificar saldo real 4 cuentas ahorro BNCR",
+      "Decidir si usar para emergencia (IVA/A/P vencido)"
+    ]
+  },
+
+  "resumen_global": {
+    "total_recursos": 23312.47,
+    "desglose_recursos": {
+      "efectivo": 4328.84,
+      "ahorros_estimado": 7937.77,
+      "cuentas_por_cobrar": 10866.42,
+      "otros": 179.44
+    },
+    "total_deuda": 63923.25,
+    "desglose_deuda": {
+      "hacienda_estimado": 19604,
+      "tarjetas_credito": 16790,
+      "cuentas_por_pagar": 6103.66,
+      "iva_vencido": 533.92,
+      "prestamos_otros": 20891.67
+    },
+    "deficit": -40610.78,
+    "ratio_recursos_deuda": 0.36,
+    "estado": "INSOLVENCIA TÉCNICA",
+    "notas": [
+      "36% de recursos vs deuda",
+      "Requiere estrategia agresiva cobro A/R",
+      "Requiere arreglo Hacienda aprobado",
+      "Requiere reducción gastos operativos 30%",
+      "Requiere ingresos nuevos $2-3k/mes"
+    ]
+  },
+
+  "decisiones_pendientes": {
+    "critica": {
+      "quickbooks_strategy": {
+        "opcion_a": {
+          "nombre": "Corte Radical",
+          "tiempo": "30 minutos",
+          "pros": "QB correcto desde HOY, sostenible 15min/día",
+          "contras": "Detalle 02-06/11 no perfecto",
+          "recomendacion": "RECOMENDADA"
+        },
+        "opcion_b": {
+          "nombre": "Actualización Histórica",
+          "tiempo": "6+ horas",
+          "pros": "Detalle perfecto",
+          "contras": "Nunca alcanzamos presente, atraso continuo",
+          "recomendacion": "NO RECOMENDADA"
+        },
+        "debe_decidir": "Álvaro",
+        "urgencia": "ALTA"
+      }
+    },
+    "urgentes_48h": [
+      "Pagar IVA vencido $533.92 HOY (multas creciendo)",
+      "Pagar TeamViewer $200 (herramienta crítica - sin esto no hay soporte remoto)",
+      "Pagar Intcomex vencido $410.09 (relación proveedor)",
+      "Pagar Microsoft Maps $295 (licencia operativa)",
+      "Seguimiento Hacienda DGV-523678-M6W1",
+      "Cobrar VWR $2,800 (26% del A/R total)",
+      "Cobrar Grupo Acción $1,689 (16% del A/R total)"
+    ],
+    "proximos_7_dias": [
+      "Verificar saldos reales ahorros BNCR",
+      "Verificar saldos reales tarjetas desde apps",
+      "Confirmar monto ISR 202401",
+      "Negociar extensión Eurocomp 203637 ($2,007.68) si necesario",
+      "Decidir QB Strategy y ejecutar",
+      "Registrar en QB pago anticipado SWS-Software $1,200+",
+      "Calendarlizar pago SWS Maps $900 para antes del 17/12"
+    ]
+  },
+
+  "quickbooks_state": {
+    "version": "Desktop 2013",
+    "moneda_base": "USD",
+    "moneda_secundaria": "CRC",
+    "tipo_cambio": 507,
+    "estado_actual": "Congelado desde 02/11, necesita actualización a 06-07/11",
+    "cuentas_creadas": [
+      {
+        "numero": "3900",
+        "nombre": "Ajustes de Apertura",
+        "tipo": "Equity",
+        "moneda": "USD",
+        "estado": "Creada"
+      },
+      {
+        "numero": "1150",
+        "nombre": "IVA Crédito Fiscal",
+        "tipo": "Bank (workaround)",
+        "moneda": "CRC",
+        "estado": "Creada",
+        "notas": "Debería ser Other Current Asset pero QB no permite CRC"
+      },
+      {
+        "numero": "2015",
+        "nombre": "IVA Débito Fiscal",
+        "tipo": "Credit Card (workaround)",
+        "moneda": "CRC",
+        "estado": "Creada",
+        "notas": "Debería ser Other Current Liability pero QB no permite CRC"
+      }
+    ],
+    "problemas_identificados": [
+      {
+        "cuenta": "2140 - BAC 9550 VISA CRC",
+        "problema": "Balance incorrecto por ajustes fallidos",
+        "estado": "Pendiente corrección con estrategia elegida"
+      },
+      {
+        "cuenta": "1030 - BNCR 601066-4 USD",
+        "problema": "QB muestra $3,149.94 pero real es $1,326.35",
+        "diferencia": -1823.59,
+        "estado": "Investigar transacciones no registradas"
+      },
+      {
+        "cuenta": "1070 - BNCR 188618-3 CRC",
+        "problema": "QB muestra ₡75,337.24 pero real es ₡337.24",
+        "diferencia_crc": -75000,
+        "estado": "Investigar transacciones no registradas"
+      }
+    ],
+    "integracion_sws": {
+      "estado": "Activa",
+      "proposito": "Facturación electrónica oficial Hacienda",
+      "notas": "No modificar configuración sin consultar"
+    }
+  },
+
+  "lecciones_aprendidas": {
+    "ver_archivo": "LECCIONES_QB_DESKTOP_2013.md",
+    "criticas": [
+      "Credit Card accounts: CREDIT=CHARGE, DEBIT=PAYMENT (invertido vs Bank)",
+      "Exchange rate en JE: Ingresar 0.00197239 no 507",
+      "Reversiones complejas empeoran el problema - usar backup",
+      "Catch-up diario insostenible - mejor corte radical + disciplina forward"
+    ]
+  },
+
+  "sistema_archivos": {
+    "master_index": "MASTER_INDEX.md",
+    "estado_actual": "ESTADO_FINANCIERO_ACTUAL.json (este archivo)",
+    "changelog": "CHANGELOG.md",
+    "historicos": {
+      "auditoria": "AUDITORIA_COMPLETA_07NOV2025.txt",
+      "estado_final": "ESTADO_FINAL_07NOV2025_0000H.txt",
+      "saldos": "SALDOS_REALES_BNCR_06NOV2025.txt",
+      "hacienda": "SOLICITUD_ARREGLO_PAGO_HACIENDA.txt",
+      "lecciones": "LECCIONES_QB_DESKTOP_2013.md"
+    }
+  }
+}
