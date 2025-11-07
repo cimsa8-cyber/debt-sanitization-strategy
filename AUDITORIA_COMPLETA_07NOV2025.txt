@@ -1,0 +1,443 @@
+═══════════════════════════════════════════════════════════════
+AUDITORÍA FINANCIERA COMPLETA
+AlvaroVelasco.Net SRL
+Fecha: 07/11/2025 00:45
+INCLUYE: A/P Proveedores + IVA Hacienda + Análisis completo
+═══════════════════════════════════════════════════════════════
+
+## ⚠️ INFORMACIÓN CRÍTICA QUE FALTABA
+
+Esta auditoría consolida TODO lo que estaba disperso en múltiples archivos.
+
+═══════════════════════════════════════════════════════════════
+I. CUENTAS POR PAGAR (A/P) - PROVEEDORES
+═══════════════════════════════════════════════════════════════
+
+SITUACIÓN AL 01/11/2025 (Según SALDOS_INICIALES):
+────────────────────────────────────────────────────────────────
+1. INTCOMEX Costa Rica:
+   - Factura #2502060: $410.09 (27 días mora al 01/11) 🔴
+   - Factura #2509011: $3,137.26 (1 día mora al 01/11) 🟠
+   SUBTOTAL: $3,547.35
+
+2. EUROCOMP DE COSTA RICA S.A.:
+   - Factura #203637: $2,007.68 (vence 16/11/2025) ⚠️
+   - Factura #203831: $16.92 (vence 19/11/2025)
+   SUBTOTAL: $2,024.60
+
+3. SEA GLOBAL LOGISTICS:
+   - Factura #003214: $14.69 (03/10)
+   - Factura #003220: $14.69 (06/10)
+   - Factura #003226: $14.69 (10/10)
+   SUBTOTAL: $44.07
+
+4. COMPUTADORES ECONOMICOS S.A.:
+   - Factura #012616: $284.91 (vence 23/11/2025)
+   SUBTOTAL: $284.91
+
+5. INDUSTRIAS BUENOS AIRES (IBASA):
+   - Factura #004210: ₡144,515.99 (~$285) (27/09)
+   SUBTOTAL: ₡144,516 ($285.02)
+
+TOTAL A/P AL 01/11/2025:
+────────────────────────────────────────────────────────────────
+USD: $5,901.02
+CRC: ₡144,516 ($285.02)
+TOTAL: $6,186.04
+
+═══════════════════════════════════════════════════════════════
+
+MOVIMIENTOS 03-06/11/2025:
+────────────────────────────────────────────────────────────────
+
+PAGOS REALIZADOS:
+✅ 03/11: Intcomex #2509011 pagado: -$3,137.26
+✅ 03/11: Compueconomicos pagado: -$62.00
+   (Nota: Este pago no corresponde a #012616 listada arriba)
+
+COMPRAS NUEVAS (A CRÉDITO):
+➕ 03/11: Intcomex Cloud (servicios Oct): +$2,317.09 (30 días)
+➕ 04/11: Intcomex Lenovo V15 + Flete: +$679.12 (30 días)
+➕ 06/11: SEA Global Logistics facturas: +$58.76 (⚠️ NUEVA)
+
+═══════════════════════════════════════════════════════════════
+
+A/P ACTUALIZADO AL 07/11/2025:
+────────────────────────────────────────────────────────────────
+
+VENCIDOS (Pagar URGENTE):
+🔴 1. INTCOMEX #2502060:           $410.09  (33 días mora)
+🔴 2. SEA GLOBAL (antiguas):        $44.07  (27+ días mora)
+    SUBTOTAL VENCIDO:              $454.16
+
+POR VENCER PRÓXIMOS 15 DÍAS:
+🟠 3. EUROCOMP #203637:          $2,007.68  (vence 16/11 - 9 días)
+🟠 4. EUROCOMP #203831:             $16.92  (vence 19/11 - 12 días)
+🟠 5. COMPUECONOMICOS #012616:     $284.91  (vence 23/11 - 16 días)
+    SUBTOTAL PRÓXIMO VENCER:     $2,309.51
+
+VIGENTES (30 días):
+🟢 6. INTCOMEX Cloud:            $2,317.09  (vence ~03/12)
+🟢 7. INTCOMEX Lenovo:             $679.12  (vence ~04/12)
+🟢 8. SEA GLOBAL (nueva):           $58.76  (vence ~06/12)
+    SUBTOTAL VIGENTE:            $3,054.97
+
+OTROS:
+🟡 9. IBASA #004210:            ₡144,516    (₡144,516 / $285)
+    SUBTOTAL OTROS:                $285.02
+
+═══════════════════════════════════════════════════════════════
+TOTAL A/P AL 07/11/2025:
+────────────────────────────────────────────────────────────────
+Vencido:                           $454.16  🔴 URGENTE
+Por vencer 15 días:              $2,309.51  🟠 ALTA
+Vigente 30 días:                 $3,054.97  🟢 NORMAL
+Otros CRC:                         $285.02
+────────────────────────────────────────────────────────────────
+TOTAL USD:                       $5,818.64
+TOTAL CRC:                      ₡144,516
+TOTAL EQUIVALENTE:               $6,103.66
+════════════════════════════════════════════════════════════════
+
+═══════════════════════════════════════════════════════════════
+II. IMPUESTO AL VALOR AGREGADO (IVA) - HACIENDA
+═══════════════════════════════════════════════════════════════
+
+⚠️ CRÍTICO: Álvaro indica que IVA DEBE estar al día
+
+IVA PENDIENTE CONFIRMADO:
+────────────────────────────────────────────────────────────────
+📅 Periodo 202508 (Agosto 2025):
+   Monto: ₡244,129.00 ($481.44)
+   Vencimiento: 16/09/2025
+   Días vencido: 52 días 🔴
+   Estado: VENCIDO - MULTAS ACUMULANDO
+
+📅 Periodo 202509 (Septiembre 2025):
+   Monto: ₡26,608.00 ($52.48)
+   Vencimiento: 24/10/2025
+   Días vencido: 14 días 🔴
+   Estado: VENCIDO - MULTAS ACUMULANDO
+
+SUBTOTAL IVA CONFIRMADO VENCIDO: ₡270,737 ($533.92)
+
+═══════════════════════════════════════════════════════════════
+
+⚠️ PENDIENTE VERIFICAR:
+────────────────────────────────────────────────────────────────
+❓ Periodo 202510 (Octubre 2025):
+   Vencimiento: ~15/11/2025
+   Días para vencer: 8 días
+   Estado: ❓ PENDIENTE CONFIRMAR monto
+
+❓ Periodo 202511 (Noviembre 2025):
+   Vencimiento: ~15/12/2025
+   Estado: ❓ PENDIENTE CONFIRMAR si hay monto
+
+═══════════════════════════════════════════════════════════════
+
+ÁLVARO - PREGUNTAS URGENTES SOBRE IVA:
+────────────────────────────────────────────────────────────────
+1. ¿Cuál es el monto de IVA Octubre 2025 (202510)?
+2. ¿Ya se declaró IVA Noviembre 2025 (202511)?
+3. ¿Los montos ₡244,129 + ₡26,608 YA incluyen multas o son montos originales?
+4. ¿La solicitud DGV-523678-M6W1 incluye el IVA o solo ISR?
+
+═══════════════════════════════════════════════════════════════
+III. CONSOLIDADO TOTAL DE PASIVOS URGENTES
+═══════════════════════════════════════════════════════════════
+
+PRIORIDAD 1 - VENCIDO (Pagar HOY/MAÑANA):
+────────────────────────────────────────────────────────────────
+IVA Agosto vencido:                 $481.44  🔴
+IVA Septiembre vencido:              $52.48  🔴
+Intcomex #2502060 (33 días):        $410.09  🔴
+SEA Global antiguas:                 $44.07  🔴
+────────────────────────────────────────────────────────────────
+SUBTOTAL PRIORIDAD 1:               $988.08  🔴 CRÍTICO
+════════════════════════════════════════════════════════════════
+
+PRIORIDAD 2 - PRÓXIMOS 15 DÍAS:
+────────────────────────────────────────────────────────────────
+IVA Octubre (estimado):           $[PENDIENTE] 🟠
+Eurocomp #203637 (9 días):        $2,007.68  🟠
+Eurocomp #203831 (12 días):          $16.92  🟠
+Compueconomicos (16 días):          $284.91  🟠
+────────────────────────────────────────────────────────────────
+SUBTOTAL PRIORIDAD 2:             $2,309.51+ 🟠 ALTA
+════════════════════════════════════════════════════════════════
+
+PRIORIDAD 3 - VIGENTES (30 días):
+────────────────────────────────────────────────────────────────
+Intcomex Cloud:                   $2,317.09  🟢
+Intcomex Lenovo:                    $679.12  🟢
+SEA Global nueva:                    $58.76  🟢
+IBASA CRC:                          $285.02  🟢
+────────────────────────────────────────────────────────────────
+SUBTOTAL PRIORIDAD 3:             $3,339.99  🟢 NORMAL
+════════════════════════════════════════════════════════════════
+
+PRIORIDAD 4 - HACIENDA ISR (Solicitud en trámite):
+────────────────────────────────────────────────────────────────
+ISR 2020-2024:                    $9,265.71+ ⚠️
+Otros Hacienda (QB):              $9,804.00  ❓
+────────────────────────────────────────────────────────────────
+SUBTOTAL PRIORIDAD 4:            $19,069.71+ ⚠️ (En negociación)
+════════════════════════════════════════════════════════════════
+
+PRIORIDAD 5 - TARJETAS CRÉDITO:
+────────────────────────────────────────────────────────────────
+Total tarjetas:                  $18,073.96  🟡
+════════════════════════════════════════════════════════════════
+
+═══════════════════════════════════════════════════════════════
+RESUMEN TOTAL PASIVOS:
+═══════════════════════════════════════════════════════════════
+
+Categoría              |  Monto    | Prioridad | Acción
+─────────────────────────────────────────────────────────────
+IVA vencido            |  $533.92  | 🔴 1      | Pagar YA
+A/P vencido            |  $454.16  | 🔴 1      | Pagar YA
+A/P próx 15 días       | $2,309.51 | 🟠 2      | Pagar sem1-2
+A/P vigente 30 días    | $3,339.99 | 🟢 3      | Pagar sem3-4
+Hacienda ISR (arreglo) |$19,069.71 | ⚠️ 4      | Plan pago
+Tarjetas crédito       |$18,073.96 | 🟡 5      | Gestionar
+─────────────────────────────────────────────────────────────
+TOTAL PASIVOS:         |$43,781.25+| (sin tarjetas ni Nissan)
+═══════════════════════════════════════════════════════════════
+
+═══════════════════════════════════════════════════════════════
+IV. CAPACIDAD DE PAGO ACTUALIZADA
+═══════════════════════════════════════════════════════════════
+
+RECURSOS DISPONIBLES:
+────────────────────────────────────────────────────────────────
+Efectivo confirmado:                $4,484.68
+Ahorros (no confirmado):            $7,937.77
+Cuentas por cobrar:                $10,866.42
+────────────────────────────────────────────────────────────────
+TOTAL DISPONIBLE:                  $23,288.87
+════════════════════════════════════════════════════════════════
+
+ANÁLISIS DE COBERTURA:
+────────────────────────────────────────────────────────────────
+Prioridad 1 (IVA + A/P vencido):      $988.08
+Recursos disponibles:              $23,288.87
+¿Alcanza?: ✅ SÍ (cubre 23.5x)
+
+Prioridad 1+2 (Urgente + 15 días):  $3,297.59+
+Recursos disponibles:              $23,288.87
+¿Alcanza?: ✅ SÍ (cubre 7.1x)
+
+Prioridad 1+2+3 (Todo A/P):         $6,637.58
+Recursos disponibles:              $23,288.87
+¿Alcanza?: ✅ SÍ (cubre 3.5x)
+
+TODO (A/P + IVA + ISR):           $26,607.29+
+Recursos disponibles:              $23,288.87
+¿Alcanza?: ❌ NO (déficit -$3,318)
+
+TODO + Tarjetas:                  $44,681.25+
+Recursos disponibles:              $23,288.87
+¿Alcanza?: ❌ NO (déficit -$21,392)
+
+════════════════════════════════════════════════════════════════
+
+CONCLUSIÓN:
+────────────────────────────────────────────────────────────────
+✅ Recursos suficientes para A/P + IVA completo
+✅ Recursos suficientes para Hacienda ISR (con plan de pago)
+❌ Recursos insuficientes para tarjetas después de pagar todo
+
+═══════════════════════════════════════════════════════════════
+V. ESTRATEGIA DE PAGOS CORREGIDA
+═══════════════════════════════════════════════════════════════
+
+SEMANA 1 (08-15/11):
+────────────────────────────────────────────────────────────────
+URGENTE - Pagar inmediatamente:
+
+□ IVA Agosto ₡244,129 ($481.44) 🔴
+□ IVA Septiembre ₡26,608 ($52.48) 🔴
+□ Intcomex #2502060 ($410.09) 🔴
+□ SEA Global antiguas ($44.07) 🔴
+□ Verificar IVA Octubre y pagar si vence 15/11 🔴
+
+SUBTOTAL SEMANA 1: ~$988 (+ IVA Oct si aplica)
+
+MÉTODO DE PAGO:
+- Usar efectivo disponible $4,484.68
+- Quedan: ~$3,496 después de pagos urgentes
+
+────────────────────────────────────────────────────────────────
+
+SEMANA 2 (16-23/11):
+────────────────────────────────────────────────────────────────
+PRÓXIMO VENCER:
+
+□ Eurocomp #203637 ($2,007.68) - vence 16/11 🟠
+□ Eurocomp #203831 ($16.92) - vence 19/11 🟠
+□ Compueconomicos #012616 ($284.91) - vence 23/11 🟠
+
+SUBTOTAL SEMANA 2: $2,309.51
+
+MÉTODO DE PAGO:
+- Cobrar A/R: VWR ($2,800) + Grupo Acción ($1,689)
+- Pagar con cobros A/R
+
+────────────────────────────────────────────────────────────────
+
+SEMANA 3-4 (24/11-08/12):
+────────────────────────────────────────────────────────────────
+VIGENTES:
+
+□ Intcomex Cloud ($2,317.09) - vence ~03/12 🟢
+□ Intcomex Lenovo ($679.12) - vence ~04/12 🟢
+□ SEA Global nueva ($58.76) - vence ~06/12 🟢
+□ IBASA ₡144,516 ($285.02) 🟢
+
+SUBTOTAL SEMANA 3-4: $3,339.99
+
+MÉTODO DE PAGO:
+- Cobrar resto A/R ($6,377 restantes)
+- Generar ingresos nuevos ($2,000+)
+
+════════════════════════════════════════════════════════════════
+
+HACIENDA ISR:
+────────────────────────────────────────────────────────────────
+⚠️ Esperar resolución solicitud DGV-523678-M6W1
+⚠️ Preparar $2,000-3,000 para pago inicial
+⚠️ Comprometer cuota mensual $500-800
+
+TARJETAS:
+────────────────────────────────────────────────────────────────
+⚠️ Negociar consolidación después de pagar A/P
+⚠️ Priorizar alta tasa: VISA 9837 CRC (35%)
+⚠️ Solicitar congelamiento intereses temporalmente
+
+═══════════════════════════════════════════════════════════════
+VI. QUICKBOOKS - ESTADO A/P
+═══════════════════════════════════════════════════════════════
+
+BALANCE SHEET 06/11/2025:
+────────────────────────────────────────────────────────────────
+2000 · Accounts Payable: NO EXISTE o $0.00
+
+ESTADO: ⚠️ NO se han registrado facturas proveedores en QB
+
+IMPLICACIÓN:
+────────────────────────────────────────────────────────────────
+- A/P no está siendo controlado en QB
+- Facturas solo en archivos/correos
+- Riesgo de olvidar vencimientos
+- No hay alertas automáticas
+
+RECOMENDACIÓN:
+────────────────────────────────────────────────────────────────
+OPCIÓN A: No usar A/P en QB
+  - Mantener control manual en Excel
+  - Crear alertas en calendario
+  - Revisar semanalmente
+
+OPCIÓN B: Registrar A/P en QB (si usas Opción A corte radical)
+  - Crear cuenta 2000 Accounts Payable
+  - Registrar facturas pendientes como Bills
+  - QB alerta automáticamente vencimientos
+  - Reportes A/P Aging disponibles
+
+═══════════════════════════════════════════════════════════════
+VII. ACCIONES INMEDIATAS - MAÑANA 08/11
+═══════════════════════════════════════════════════════════════
+
+8:00 AM - HACIENDA (IVA):
+────────────────────────────────────────────────────────────────
+□ Entrar ATV Hacienda
+□ Verificar monto exacto IVA Agosto (₡244,129 incluye multas?)
+□ Verificar monto exacto IVA Septiembre (₡26,608 incluye multas?)
+□ Verificar si IVA Octubre está declarado y monto
+□ Verificar estado solicitud DGV-523678-M6W1
+  - ¿Incluye IVA vencido o solo ISR?
+  - ¿Se puede agregar IVA a la solicitud?
+
+9:00 AM - PAGO IVA URGENTE:
+────────────────────────────────────────────────────────────────
+□ Si IVA NO está en solicitud arreglo:
+  - Pagar IVA Agosto $481.44 HOY
+  - Pagar IVA Septiembre $52.48 HOY
+  - Pagar IVA Octubre si vence 15/11
+
+10:00 AM - PROVEEDORES:
+────────────────────────────────────────────────────────────────
+□ Pagar Intcomex #2502060 ($410.09) HOY
+□ Pagar SEA Global antiguas ($44.07) HOY
+□ Llamar Eurocomp: Confirmar vencimiento #203637 (16/11)
+□ Negociar extensión 15 días si es necesario
+
+11:00 AM - COBRO A/R:
+────────────────────────────────────────────────────────────────
+□ Llamar VWR International ($2,800) - URGENTE
+□ Llamar Grupo Acción Comercial ($1,689) - URGENTE
+□ Meta: $2,000 comprometidos esta semana
+
+2:00 PM - QUICKBOOKS:
+────────────────────────────────────────────────────────────────
+□ DECIDIR: Opción A (corte radical) o B (histórico)
+□ Si A: Hacer corte en 30 minutos
+□ Registrar transacciones del día
+□ Backup QB
+
+═══════════════════════════════════════════════════════════════
+VIII. PREGUNTAS CRÍTICAS PARA ÁLVARO
+═══════════════════════════════════════════════════════════════
+
+SOBRE IVA (CRÍTICO):
+────────────────────────────────────────────────────────────────
+1. ¿Montos ₡244,129 (Ago) + ₡26,608 (Sep) incluyen multas?
+2. ¿Cuál es el monto IVA Octubre 2025?
+3. ¿Ya se declaró IVA Noviembre 2025?
+4. ¿Solicitud DGV-523678-M6W1 incluye IVA o solo ISR?
+
+SOBRE PROVEEDORES:
+────────────────────────────────────────────────────────────────
+5. ¿Hay otros proveedores con facturas vencidas no listados?
+6. ¿El pago Compueconomicos $62 (03/11) fue qué factura?
+7. ¿Eurocomp #203637 se puede negociar extensión?
+
+SOBRE RECURSOS:
+────────────────────────────────────────────────────────────────
+8. ¿Saldos reales ahorros BNCR confirmados?
+9. ¿Cuenta Alejandra ₡11,964.04 disponible para emergencias?
+
+═══════════════════════════════════════════════════════════════
+RESUMEN EJECUTIVO FINAL
+═══════════════════════════════════════════════════════════════
+
+PASIVOS TOTALES IDENTIFICADOS:
+────────────────────────────────────────────────────────────────
+IVA vencido:                          $533.92  🔴
+A/P vencido:                          $454.16  🔴
+A/P próximo vencer:                 $2,309.51  🟠
+A/P vigente:                        $3,339.99  🟢
+Hacienda ISR (arreglo):            $19,069.71  ⚠️
+Tarjetas crédito:                  $18,073.96  🟡
+Nissan:                            $20,142.00  🟢
+────────────────────────────────────────────────────────────────
+TOTAL DEUDA:                       $63,923.25+
+════════════════════════════════════════════════════════════════
+
+RECURSOS DISPONIBLES:                $23,288.87
+
+RATIO RECURSOS/DEUDA:                     36.4%
+
+PRIORIDAD ABSOLUTA ESTA SEMANA:
+────────────────────────────────────────────────────────────────
+1. Pagar IVA vencido ($533.92)
+2. Pagar A/P vencido ($454.16)
+3. Verificar/pagar IVA Octubre
+4. Seguimiento Hacienda DGV-523678-M6W1
+5. Cobrar A/R mínimo $2,000
+
+════════════════════════════════════════════════════════════════
+FIN AUDITORÍA - 07/11/2025 00:45
+════════════════════════════════════════════════════════════════
