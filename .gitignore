@@ -1,0 +1,49 @@
+# ARCHIVOS SENSIBLES - NUNCA COMMITEAR
+ESTADO_FINANCIERO_ACTUAL.json
+AlvaroVelasco_Finanzas_*.xlsx
+*.xlsx
+
+# Backups
+backups/
+*.backup
+*.bak
+
+# Logs con información sensible
+logs/
+*.log
+
+# Archivos temporales
+*.tmp
+*.temp
+~$*
+
+# CSV con extractos bancarios
+extracto_*.csv
+*_extracto.csv
+
+# Reportes Claude con datos
+claude_audit_mensual_*.json
+
+# Archivos de sistema
+.DS_Store
+Thumbs.db
+*.swp
+*.swo
+*~
+
+# Python
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+.Python
+*.so
+.env
+venv/
+ENV/
+
+# IDEs
+.vscode/
+.idea/
+*.sublime-project
+*.sublime-workspace
