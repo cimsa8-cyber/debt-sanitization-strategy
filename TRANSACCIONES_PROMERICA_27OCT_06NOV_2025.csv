@@ -1,0 +1,26 @@
+Fecha,Tipo,Categoría,Cuenta,Cliente/Proveedor,Concepto,Referencia,Monto,Moneda,Tipo Movimiento,Estado,Prioridad
+27/10/2025,Gasto,Servicios Públicos,Promerica USD,ESPH,Agua y Alcantarillado #108511979,5325194,39.59,USD,Egreso,Completado,MEDIA
+27/10/2025,Gasto,Servicios Públicos,Promerica USD,ESPH,Electricidad y Alumbrado #108506679,5325195,189.73,USD,Egreso,Completado,MEDIA
+27/10/2025,Gasto,Servicios Públicos,Promerica USD,ICE,Teléfono #2025,5325197,392.68,USD,Egreso,Completado,MEDIA
+28/10/2025,Pago Cliente,Cuentas por Cobrar,Promerica USD,CPF SERVICIOS RADIOLÓGICOS,Pago deuda cliente,8241248,56.50,USD,Ingreso,Completado,MEDIA
+28/10/2025,Pago Cliente,Cuentas por Cobrar,Promerica USD,ORTODEC S.A.,Pago deuda cliente,8241249,56.50,USD,Ingreso,Completado,MEDIA
+28/10/2025,Pago Cliente,Cuentas por Cobrar,Promerica USD,ORTODONCIA DE LA CRUZ,Pago parcial deuda cliente,8241251,356.50,USD,Ingreso,Completado,MEDIA
+28/10/2025,Pago Cliente,Cuentas por Cobrar,Promerica USD,SMART WEB SERVICES,Pago Factura 2548,8241539,1237.35,USD,Ingreso,Completado,ALTA
+29/10/2025,Gasto,Comisiones Bancarias,Promerica USD,Banco Promerica,Comisión transferencia SINPE,611261,3.00,USD,Egreso,Completado,BAJA
+29/10/2025,Pago Tarjeta,Tarjetas de Crédito,Promerica USD,Tarjeta BNCR,Pago tarjeta crédito,611261,305.50,USD,Egreso,Completado,ALTA
+29/10/2025,Gasto,Comisiones Bancarias,Promerica USD,Banco Promerica,Comisión transferencia SINPE,611329,3.00,USD,Egreso,Completado,BAJA
+29/10/2025,Pago Tarjeta,Tarjetas de Crédito,Promerica USD,Tarjeta BNCR,Pago tarjeta crédito,611329,101.83,USD,Egreso,Completado,ALTA
+29/10/2025,Gasto,Comisiones Bancarias,Promerica USD,Banco Promerica,Comisión transferencia SINPE,611345,3.00,USD,Egreso,Completado,BAJA
+29/10/2025,Gasto,Capacitación,Promerica USD,Proveedor Curso,Curso Pricing,611345,101.83,USD,Egreso,Completado,MEDIA
+29/10/2025,Gasto,Comisiones Bancarias,Promerica USD,Banco Promerica,Comisión transferencia SINPE,2788366,0.75,USD,Egreso,Completado,BAJA
+29/10/2025,Pago Préstamo,Financiamiento Vehículo,Promerica USD,CARROFACIL DE COSTA RICA,Pago cuota Nissan,31889087,800.00,USD,Egreso,Completado,CRÍTICA
+30/10/2025,Pago Cliente,Cuentas por Cobrar,Promerica USD,GRUPO PORCINAS DE LA COSTA,Pago Facturas 2495 + 2487,93194651,1171.18,USD,Ingreso,Completado,ALTA
+30/10/2025,Pago Cliente,Cuentas por Cobrar,Promerica USD,RODRIGUEZ ROJAS CARLOS HUMBERTO,Transferencia pago deuda,251030212028809,282.50,USD,Ingreso,Completado,MEDIA
+30/10/2025,Pago Cliente,Cuentas por Cobrar,Promerica USD,VOLIO PARTNERS,Pago Factura 2502,66679628,284.76,USD,Ingreso,Completado,MEDIA
+30/10/2025,Pago Cliente,Cuentas por Cobrar,Promerica USD,SMART WEB SERVICES,Pago Factura 2547,8254868,149.16,USD,Ingreso,Completado,ALTA
+30/10/2025,Pago Cliente,Cuentas por Cobrar,Promerica USD,GENTRA DE COSTA RICA,Pago parcial deuda,8254872,226.00,USD,Ingreso,Completado,MEDIA
+30/10/2025,Gasto,Combustible,Promerica USD,Don Fernando,Gasolina vehículo empresa,730298,226.83,USD,Egreso,Completado,MEDIA
+30/10/2025,Gasto,Otros Gastos,Promerica USD,Farmavalue,Compra farmacia,737072,40.46,USD,Egreso,Completado,BAJA
+30/10/2025,Gasto,Combustible,Promerica USD,Unopetrol Barreal,Gasolina vehículo empresa,754410,63.03,USD,Egreso,Completado,MEDIA
+03/11/2025,Gasto,CCSS,Promerica USD,Caja Costarricense Seguro Social,Pago CCSS empleados,67169898,733.20,USD,Egreso,Completado,CRÍTICA
+04/11/2025,Pago Cliente,Cuentas por Cobrar,Promerica USD,ALMACEN FISCAL DEL PACIFICO,Pago Facturas 2530 + 2535,5490555,761.06,USD,Ingreso,Completado,ALTA
