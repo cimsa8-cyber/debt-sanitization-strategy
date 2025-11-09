@@ -11,6 +11,8 @@ from openpyxl.styles import Font, PatternFill, Alignment, Border, Side
 from openpyxl.utils import get_column_letter
 from openpyxl.worksheet.datavalidation import DataValidation
 from openpyxl.formatting.rule import CellIsRule
+from openpyxl.chart import PieChart, BarChart, LineChart, Reference
+from openpyxl.chart.series import DataPoint
 import json
 from datetime import datetime, timedelta
 import os
@@ -69,22 +71,27 @@ class InstaladorSistemaFinanciero:
             print("✅ Fórmulas aplicadas")
 
             # Paso 7: Crear hojas derivadas
-            print("⏳ Paso 7/10: Creando hojas derivadas...")
+            print("⏳ Paso 7/11: Creando hojas derivadas...")
             self.crear_hojas_derivadas()
             print("✅ 8 hojas derivadas creadas")
 
-            # Paso 8: Aplicar formato condicional
-            print("⏳ Paso 8/10: Aplicando formato condicional...")
+            # Paso 8: Crear gráficas visuales
+            print("⏳ Paso 8/11: Creando gráficas visuales...")
+            self.crear_graficas()
+            print("✅ 4 gráficas visuales creadas")
+
+            # Paso 9: Aplicar formato condicional
+            print("⏳ Paso 9/11: Aplicando formato condicional...")
             self.aplicar_formato_condicional()
             print("✅ Formato condicional aplicado")
 
-            # Paso 9: Proteger hojas
-            print("⏳ Paso 9/10: Aplicando protecciones...")
+            # Paso 10: Proteger hojas
+            print("⏳ Paso 10/11: Aplicando protecciones...")
             self.proteger_hojas()
             print("✅ Protecciones aplicadas")
 
-            # Paso 10: Guardar archivo
-            print("⏳ Paso 10/10: Guardando archivo...")
+            # Paso 11: Guardar archivo
+            print("⏳ Paso 11/11: Guardando archivo...")
             output_file = "AlvaroVelasco_Finanzas_v1.0.xlsx"
             self.wb.save(output_file)
             print(f"✅ Archivo guardado: {output_file}")
@@ -541,6 +548,111 @@ class InstaladorSistemaFinanciero:
             ws_health[f"B{row}"] = formula
             ws_health[f"C{row}"] = detalle
             row += 1
+
+    def crear_graficas(self):
+        """Crea gráficas visuales en hoja Dashboard"""
+        ws_dash = self.wb["Dashboard"]
+
+        # GRÁFICA 1: Composición de Deudas (Pie Chart)
+        pie = PieChart()
+        pie.title = "Composición de Deudas"
+        pie.style = 10
+        pie.height = 10
+        pie.width = 15
+
+        # Datos para pie chart (manualmente desde JSON)
+        ws_dash["F4"] = "Tarjetas Crédito"
+        ws_dash["F5"] = "Cuentas por Pagar"
+        ws_dash["F6"] = "IVA Pendiente"
+        ws_dash["F7"] = "Deuda Hacienda"
+
+        ws_dash["G4"] = self.datos_json["tarjetas_credito"]["total_usd"]
+        ws_dash["G5"] = self.datos_json["cuentas_por_pagar"]["total_usd"]
+        ws_dash["G6"] = self.datos_json["iva"]["vencido_hacienda"]["total_usd"]
+        ws_dash["G7"] = self.datos_json["deuda_hacienda"]["total_estimado_usd"]
+
+        labels = Reference(ws_dash, min_col=6, min_row=4, max_row=7)
+        data = Reference(ws_dash, min_col=7, min_row=4, max_row=7)
+        pie.add_data(data)
+        pie.set_categories(labels)
+
+        ws_dash.add_chart(pie, "F9")
+
+        # GRÁFICA 2: Top 10 Clientes A/R (Bar Chart Horizontal)
+        bar1 = BarChart()
+        bar1.type = "bar"
+        bar1.title = "Top 10 Clientes por Cobrar"
+        bar1.style = 11
+        bar1.height = 12
+        bar1.width = 18
+
+        # Datos de clientes (top 10)
+        clientes_top = sorted(
+            [c for c in self.datos_json["cuentas_por_cobrar"]["todos_los_clientes"] if c["monto_usd"] > 0],
+            key=lambda x: x["monto_usd"],
+            reverse=True
+        )[:10]
+
+        row_start = 11
+        ws_dash["I10"] = "Cliente"
+        ws_dash["J10"] = "Saldo USD"
+
+        for i, cliente in enumerate(clientes_top, row_start):
+            nombre = cliente["nombre"]
+            # Acortar nombres largos
+            if len(nombre) > 30:
+                nombre = nombre[:27] + "..."
+            ws_dash[f"I{i}"] = nombre
+            ws_dash[f"J{i}"] = cliente["monto_usd"]
+
+        labels1 = Reference(ws_dash, min_col=9, min_row=row_start, max_row=row_start+9)
+        data1 = Reference(ws_dash, min_col=10, min_row=row_start, max_row=row_start+9)
+        bar1.add_data(data1)
+        bar1.set_categories(labels1)
+
+        ws_dash.add_chart(bar1, "I22")
+
+        # GRÁFICA 3: Estado de Tarjetas (Bar Chart Vertical)
+        bar2 = BarChart()
+        bar2.type = "col"
+        bar2.title = "Estado de Tarjetas de Crédito"
+        bar2.style = 12
+        bar2.height = 10
+        bar2.width = 15
+        bar2.y_axis.title = "Saldo USD"
+
+        # Datos de tarjetas
+        row_start_tc = 36
+        ws_dash["L35"] = "Tarjeta"
+        ws_dash["M35"] = "Saldo"
+
+        for i, tarjeta in enumerate(self.datos_json["tarjetas_credito"]["tarjetas"], row_start_tc):
+            ws_dash[f"L{i}"] = f"{tarjeta['banco']} {tarjeta.get('numero', 'XXXX')[-4:]}"
+            ws_dash[f"M{i}"] = tarjeta["saldo_usd"]
+
+        labels2 = Reference(ws_dash, min_col=12, min_row=row_start_tc, max_row=row_start_tc+4)
+        data2 = Reference(ws_dash, min_col=13, min_row=row_start_tc, max_row=row_start_tc+4)
+        bar2.add_data(data2)
+        bar2.set_categories(labels2)
+
+        ws_dash.add_chart(bar2, "L42")
+
+        # GRÁFICA 4: Resumen Dashboard (Bar Chart comparativo)
+        bar3 = BarChart()
+        bar3.type = "col"
+        bar3.title = "Resumen Financiero"
+        bar3.style = 13
+        bar3.height = 10
+        bar3.width = 15
+        bar3.y_axis.title = "USD"
+
+        # Usar datos del dashboard existente
+        labels3 = Reference(ws_dash, min_col=1, min_row=4, max_row=7)
+        data3 = Reference(ws_dash, min_col=2, min_row=4, max_row=7)
+        bar3.add_data(data3)
+        bar3.set_categories(labels3)
+
+        ws_dash.add_chart(bar3, "F42")
 
     def aplicar_formato_condicional(self):
         """Aplica formato condicional para alertas visuales"""
