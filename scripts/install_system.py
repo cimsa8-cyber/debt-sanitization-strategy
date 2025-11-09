@@ -286,12 +286,16 @@ class InstaladorSistemaFinanciero:
             row += 1
 
         # APERTURA INICIAL - CUENTAS POR COBRAR
-        # Solo los primeros 10 clientes más grandes
+        # Cargar TODOS los clientes con saldo pendiente (no solo 10)
+        clientes_con_saldo = [
+            c for c in self.datos_json["cuentas_por_cobrar"]["todos_los_clientes"]
+            if c.get("monto_usd", 0) > 0
+        ]
         clientes_top = sorted(
-            self.datos_json["cuentas_por_cobrar"]["todos_los_clientes"],
+            clientes_con_saldo,
             key=lambda x: x["monto_usd"],
             reverse=True
-        )[:10]
+        )
 
         for cliente in clientes_top:
             ws[f"A{row}"] = fecha_apertura
