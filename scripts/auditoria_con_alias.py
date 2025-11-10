@@ -115,46 +115,65 @@ if transacciones_no_reconocidas:
     for t in transacciones_no_reconocidas[:10]:
         print(f"   Fila {t['fila']}: '{t['cuenta_original']}'")
 
-# Leer hoja Efectivo
-print("\nLeyendo hoja Efectivo...")
+# Leer balances iniciales desde TRANSACCIONES
+# (La hoja Efectivo tiene fórmulas que apuntan a TRANSACCIONES)
+print("\nLeyendo balances iniciales desde TRANSACCIONES...")
 
 balances_efectivo = {}
 
 try:
-    ws_efectivo = wb['Efectivo']
+    # Buscar en TRANSACCIONES los movimientos tipo "Apertura Inicial" o "Balance inicial"
+    for row in range(2, ws_trans.max_row + 1):
+        tipo = ws_trans[f'B{row}'].value
+        cuenta = ws_trans[f'E{row}'].value
+        monto_usd = ws_trans[f'I{row}'].value
+        fecha = ws_trans[f'A{row}'].value
 
-    for row in range(1, 30):
-        concepto = ws_efectivo[f'B{row}'].value
-        cuenta_ef = ws_efectivo[f'C{row}'].value
-        balance = ws_efectivo[f'F{row}'].value
-        fecha = ws_efectivo[f'A{row}'].value
-
-        # Verificar si es un balance inicial usando sistema de alias
-        if not concepto or not cuenta_ef or not balance:
+        # Verificar si es un balance/apertura inicial
+        if not tipo or not cuenta:
             continue
 
         # Usar función del sistema de alias para reconocer todos los formatos
-        if not es_balance_inicial(concepto):
+        if not es_balance_inicial(tipo):
             continue
 
-        # Convertir nombre de Efectivo a canónico
-        cuenta_ef_str = str(cuenta_ef).strip()
-        cuenta_canonica = obtener_nombre_canonico(cuenta_ef_str)
+        # Convertir nombre de cuenta a canónico
+        cuenta_str = str(cuenta).strip()
+        cuenta_canonica = obtener_nombre_canonico(cuenta_str)
 
-        if cuenta_canonica:
+        if cuenta_canonica and monto_usd:
             try:
-                balances_efectivo[cuenta_canonica] = {
-                    'balance': float(balance),
-                    'fecha': fecha,
-                    'nombre_en_efectivo': cuenta_ef_str
-                }
+                # Si ya existe una apertura para esta cuenta, usar el más reciente
+                if cuenta_canonica in balances_efectivo:
+                    # Comparar fechas y usar el más reciente
+                    if fecha and balances_efectivo[cuenta_canonica]['fecha']:
+                        if fecha > balances_efectivo[cuenta_canonica]['fecha']:
+                            balances_efectivo[cuenta_canonica] = {
+                                'balance': float(monto_usd),
+                                'fecha': fecha,
+                                'nombre_original': cuenta_str,
+                                'fila': row
+                            }
+                else:
+                    balances_efectivo[cuenta_canonica] = {
+                        'balance': float(monto_usd),
+                        'fecha': fecha,
+                        'nombre_original': cuenta_str,
+                        'fila': row
+                    }
             except:
                 pass
 
-    print(f"✓ Balances en Efectivo: {len(balances_efectivo)}")
+    print(f"✓ Balances iniciales encontrados: {len(balances_efectivo)}")
+    if len(balances_efectivo) > 0:
+        print(f"   Cuentas con balance inicial:")
+        for cuenta_can in sorted(balances_efectivo.keys()):
+            bal = balances_efectivo[cuenta_can]['balance']
+            fila = balances_efectivo[cuenta_can]['fila']
+            print(f"      - {cuenta_can}: ${bal:,.2f} (TRANSACCIONES fila {fila})")
 
 except Exception as e:
-    print(f"⚠️ Error al leer hoja Efectivo: {e}")
+    print(f"⚠️ Error al leer balances: {e}")
 
 # Calcular saldos consolidados
 print("\n" + "="*80)
@@ -208,51 +227,44 @@ for cuenta_canonica in sorted(movimientos_por_cuenta.keys()):
     simbolo_moneda = '$' if moneda == 'USD' else '₡'
     print(f"   Saldo calculado: {simbolo_moneda}{saldo_total:,.2f}")
 
-    # Comparar con Efectivo
+    # Comparar con balance inicial (Apertura Inicial)
     if cuenta_canonica in balances_efectivo:
-        balance_ef = balances_efectivo[cuenta_canonica]['balance']
-        nombre_ef = balances_efectivo[cuenta_canonica]['nombre_en_efectivo']
+        balance_inicial = balances_efectivo[cuenta_canonica]['balance']
+        nombre_inicial = balances_efectivo[cuenta_canonica]['nombre_original']
+        fila_inicial = balances_efectivo[cuenta_canonica]['fila']
 
-        diferencia = saldo_total - balance_ef
+        diferencia = saldo_total - balance_inicial
 
-        print(f"   Balance Efectivo: ${balance_ef:,.2f}")
-        if nombres_originales_por_cuenta[cuenta_canonica] != {nombre_ef}:
-            print(f"      (bajo nombre: '{nombre_ef}')")
+        print(f"   Balance Inicial: ${balance_inicial:,.2f} (TRANSACCIONES:{fila_inicial})")
+        if nombres_originales_por_cuenta[cuenta_canonica] != {nombre_inicial}:
+            print(f"      (registrado como: '{nombre_inicial}')")
 
         if abs(diferencia) > 0.01:
             print(f"   ⚠️ DIFERENCIA: ${diferencia:,.2f}")
 
             # Diagnóstico
-            if saldo_total < 0 and balance_ef > 0:
-                saldo_inicial_necesario = balance_ef - saldo_total
-                print(f"      💡 Falta saldo inicial de ~${saldo_inicial_necesario:,.2f}")
+            if abs(diferencia) < abs(balance_inicial) * 0.1:
+                porcentaje = abs(diferencia / balance_inicial) * 100
+                print(f"      💡 Diferencia pequeña (~{porcentaje:.1f}%) - movimientos faltantes o duplicados")
                 problemas_detectados.append({
                     'cuenta': cuenta_canonica,
-                    'tipo': 'FALTA_SALDO_INICIAL',
-                    'saldo_necesario': saldo_inicial_necesario
-                })
-            elif abs(diferencia) < abs(balance_ef) * 0.1:
-                porcentaje = abs(diferencia / balance_ef) * 100
-                print(f"      💡 Movimientos faltantes (~{porcentaje:.1f}%)")
-                problemas_detectados.append({
-                    'cuenta': cuenta_canonica,
-                    'tipo': 'MOVIMIENTOS_FALTANTES',
+                    'tipo': 'DIFERENCIA_MENOR',
                     'diferencia': diferencia
                 })
             else:
-                print(f"      💡 Discrepancia significativa - revisar extractos")
+                print(f"      💡 Discrepancia significativa - revisar extractos y categorización")
                 problemas_detectados.append({
                     'cuenta': cuenta_canonica,
                     'tipo': 'DISCREPANCIA_GRANDE',
                     'diferencia': diferencia
                 })
         else:
-            print(f"   ✅ COINCIDE con Efectivo")
+            print(f"   ✅ COINCIDE con Balance Inicial")
     else:
-        print(f"   ⚠️ NO está en hoja Efectivo")
+        print(f"   ⚠️ NO tiene Balance Inicial (Apertura Inicial)")
         problemas_detectados.append({
             'cuenta': cuenta_canonica,
-            'tipo': 'NO_EN_EFECTIVO'
+            'tipo': 'SIN_BALANCE_INICIAL'
         })
 
 # Resumen
@@ -271,16 +283,12 @@ print(f"Cuentas con problemas: {cuentas_con_problemas}")
 if cuentas_con_problemas > 0:
     print(f"\n⚠️ PROBLEMAS DETECTADOS:")
 
-    for tipo_problema in ['FALTA_SALDO_INICIAL', 'MOVIMIENTOS_FALTANTES', 'DISCREPANCIA_GRANDE', 'NO_EN_EFECTIVO']:
+    for tipo_problema in ['DIFERENCIA_MENOR', 'DISCREPANCIA_GRANDE', 'SIN_BALANCE_INICIAL']:
         problemas_tipo = [p for p in problemas_detectados if p['tipo'] == tipo_problema]
         if problemas_tipo:
             print(f"\n{tipo_problema} ({len(problemas_tipo)} cuentas):")
             for prob in problemas_tipo:
-                if tipo_problema == 'FALTA_SALDO_INICIAL':
-                    print(f"   - {prob['cuenta']}: Necesita saldo inicial ~${prob['saldo_necesario']:,.2f}")
-                elif tipo_problema == 'MOVIMIENTOS_FALTANTES':
-                    print(f"   - {prob['cuenta']}: Diferencia ${prob['diferencia']:,.2f}")
-                elif tipo_problema == 'DISCREPANCIA_GRANDE':
+                if tipo_problema in ['DIFERENCIA_MENOR', 'DISCREPANCIA_GRANDE']:
                     print(f"   - {prob['cuenta']}: Diferencia ${prob['diferencia']:,.2f}")
                 else:
                     print(f"   - {prob['cuenta']}")
