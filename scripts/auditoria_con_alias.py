@@ -13,7 +13,12 @@ import os
 
 # Importar sistema de alias
 try:
-    from alias_cuentas import obtener_nombre_canonico, listar_cuentas, es_misma_cuenta
+    from alias_cuentas import (
+        obtener_nombre_canonico,
+        listar_cuentas,
+        es_misma_cuenta,
+        es_balance_inicial
+    )
 except ImportError:
     print("ERROR: No se pudo importar alias_cuentas.py")
     print("Asegúrese de que alias_cuentas.py esté en el mismo directorio")
@@ -124,12 +129,12 @@ try:
         balance = ws_efectivo[f'F{row}'].value
         fecha = ws_efectivo[f'A{row}'].value
 
-        # Reconocer tanto "Balance inicial" como "Apertura Inicial"
+        # Verificar si es un balance inicial usando sistema de alias
         if not concepto or not cuenta_ef or not balance:
             continue
 
-        concepto_str = str(concepto)
-        if not ('Balance inicial' in concepto_str or 'Apertura Inicial' in concepto_str or 'balance' in concepto_str.lower()):
+        # Usar función del sistema de alias para reconocer todos los formatos
+        if not es_balance_inicial(concepto):
             continue
 
         # Convertir nombre de Efectivo a canónico

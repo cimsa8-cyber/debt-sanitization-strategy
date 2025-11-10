@@ -1,13 +1,33 @@
 #!/usr/bin/env python3
 # -*- coding: utf-8 -*-
 """
-SISTEMA DE ALIAS - CUENTAS BANCARIAS
-Define todas las variaciones posibles de nombres de cuenta
+SISTEMA DE ALIAS - CUENTAS BANCARIAS Y CONCEPTOS
+Define todas las variaciones posibles de nombres de cuenta y conceptos
 y mapea automáticamente al nombre canónico
 """
 
 # ============================================================================
-# DEFINICIÓN DE ALIAS
+# DEFINICIÓN DE ALIAS - CONCEPTOS/TIPOS DE MOVIMIENTO
+# ============================================================================
+
+ALIAS_CONCEPTOS = {
+    # Balance inicial / Apertura inicial
+    "Balance inicial": [
+        "Balance inicial",
+        "Apertura Inicial",
+        "Apertura inicial",
+        "BALANCE INICIAL",
+        "APERTURA INICIAL",
+        "balance inicial",
+        "apertura inicial",
+        "Saldo inicial",
+        "saldo inicial",
+        "SALDO INICIAL",
+    ],
+}
+
+# ============================================================================
+# DEFINICIÓN DE ALIAS - CUENTAS BANCARIAS
 # ============================================================================
 
 ALIAS_CUENTAS = {
@@ -171,7 +191,7 @@ ALIAS_CUENTAS = {
 # ÍNDICE INVERTIDO (para búsqueda rápida)
 # ============================================================================
 
-# Crear índice: alias -> nombre_canonico
+# Crear índice: alias -> nombre_canonico (CUENTAS)
 INDICE_ALIAS = {}
 
 for nombre_canonico, aliases in ALIAS_CUENTAS.items():
@@ -179,6 +199,15 @@ for nombre_canonico, aliases in ALIAS_CUENTAS.items():
         # Normalizar: mayúsculas, sin espacios extras
         alias_norm = alias.strip().upper()
         INDICE_ALIAS[alias_norm] = nombre_canonico
+
+# Crear índice: alias -> nombre_canonico (CONCEPTOS)
+INDICE_ALIAS_CONCEPTOS = {}
+
+for nombre_canonico, aliases in ALIAS_CONCEPTOS.items():
+    for alias in aliases:
+        # Normalizar: mayúsculas, sin espacios extras
+        alias_norm = alias.strip().upper()
+        INDICE_ALIAS_CONCEPTOS[alias_norm] = nombre_canonico
 
 # ============================================================================
 # FUNCIONES PÚBLICAS
@@ -289,6 +318,72 @@ def agregar_alias(nombre_canonico, nuevo_alias):
             return True
 
     return False
+
+
+# ============================================================================
+# FUNCIONES PÚBLICAS - CONCEPTOS
+# ============================================================================
+
+def obtener_concepto_canonico(concepto):
+    """
+    Recibe cualquier variación de concepto/tipo de movimiento
+    y devuelve el nombre canónico oficial.
+
+    Args:
+        concepto (str): Cualquier variación del concepto
+
+    Returns:
+        str: Nombre canónico, o None si no se encuentra
+
+    Ejemplo:
+        >>> obtener_concepto_canonico("Apertura Inicial")
+        "Balance inicial"
+        >>> obtener_concepto_canonico("SALDO INICIAL")
+        "Balance inicial"
+    """
+    if not concepto:
+        return None
+
+    # Normalizar
+    concepto_norm = str(concepto).strip().upper()
+
+    # Buscar en índice
+    return INDICE_ALIAS_CONCEPTOS.get(concepto_norm, None)
+
+
+def es_balance_inicial(concepto):
+    """
+    Verifica si un concepto se refiere a "Balance inicial" o cualquier alias.
+
+    Args:
+        concepto (str): Concepto a verificar
+
+    Returns:
+        bool: True si es un balance inicial, False en caso contrario
+
+    Ejemplo:
+        >>> es_balance_inicial("Apertura Inicial")
+        True
+        >>> es_balance_inicial("Balance inicial")
+        True
+        >>> es_balance_inicial("Compra")
+        False
+    """
+    if not concepto:
+        return False
+
+    concepto_canonico = obtener_concepto_canonico(concepto)
+    return concepto_canonico == "Balance inicial"
+
+
+def listar_conceptos():
+    """
+    Lista todos los conceptos canónicos disponibles.
+
+    Returns:
+        list: Lista de nombres canónicos de conceptos
+    """
+    return list(ALIAS_CONCEPTOS.keys())
 
 
 # ============================================================================
