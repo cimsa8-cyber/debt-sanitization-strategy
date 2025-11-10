@@ -124,7 +124,12 @@ try:
         balance = ws_efectivo[f'F{row}'].value
         fecha = ws_efectivo[f'A{row}'].value
 
-        if not (concepto and 'Balance inicial' in str(concepto) and cuenta_ef and balance):
+        # Reconocer tanto "Balance inicial" como "Apertura Inicial"
+        if not concepto or not cuenta_ef or not balance:
+            continue
+
+        concepto_str = str(concepto)
+        if not ('Balance inicial' in concepto_str or 'Apertura Inicial' in concepto_str or 'balance' in concepto_str.lower()):
             continue
 
         # Convertir nombre de Efectivo a canónico
