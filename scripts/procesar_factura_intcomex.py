@@ -145,8 +145,9 @@ def registrar_en_excel(datos_factura):
     # Buscar próxima fila vacía
     next_row = ws.max_row + 1
 
-    # Formato de fecha compacto (d/m/yy)
-    fecha_formato = datos_factura['fecha'].strftime('%-d/%-m/%y')
+    # Formato de fecha compacto (d/m/yy) - Compatible Windows/Linux
+    fecha = datos_factura['fecha']
+    fecha_formato = f"{fecha.day}/{fecha.month}/{fecha.year % 100}"
 
     # Preparar concepto detallado
     concepto_items = [p['detalle'][:40] for p in datos_factura['productos'][:2]]
