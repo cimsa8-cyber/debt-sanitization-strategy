@@ -31,7 +31,7 @@ TRANSACCIONES = [
     },
     {
         'num': 2,
-        'fecha': datetime(2025, 11, 10, 11, 63, 10),  # Aproximado del número de referencia
+        'fecha': datetime(2025, 11, 10, 11, 31, 0),  # Aproximado basado en referencia
         'tipo': 'COMPRAS PARA REVENTA',
         'categoria': 'Productos Tecnológicos',
         'entidad': 'Cuentas por Pagar',
