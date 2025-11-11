@@ -94,18 +94,29 @@ def corregir_balance_inicial():
 
     problema_detectado = False
 
-    if ing_egr and ing_egr == "Egreso":
+    # Verificar si Ingreso/Egreso es una fórmula
+    if isinstance(ing_egr, str) and ing_egr.startswith('='):
+        print("📋 Columna Ingreso/Egreso contiene una FÓRMULA:")
+        print(f"   {ing_egr[:80]}...")
+        print()
+
+        # Verificar si el Tipo actual está en la lista de la fórmula
+        if tipo_actual == "TRANSFERENCIAS":
+            if "TRANSFERENCIAS" not in ing_egr and "Apertura Inicial" in ing_egr:
+                print("⚠️  PROBLEMA DETECTADO:")
+                print(f"   Tipo actual: '{tipo_actual}'")
+                print("   La fórmula NO incluye 'TRANSFERENCIAS' como Ingreso")
+                print("   Por lo tanto evalúa a 'Egreso'")
+                print("   Esto hace que aparezca como egreso en hoja Efectivo")
+                print()
+                problema_detectado = True
+
+    elif ing_egr and ing_egr == "Egreso":
         print("⚠️  PROBLEMA DETECTADO:")
         print("   Balance Inicial está marcado como 'Egreso'")
         print("   Esto hace que aparezca en columna Egresos de hoja Efectivo")
         print()
         problema_detectado = True
-
-    if tipo_actual and tipo_actual != "TRANSFERENCIAS":
-        print("⚠️  SUGERENCIA:")
-        print(f"   Tipo actual: '{tipo_actual}'")
-        print("   Recomendado: 'TRANSFERENCIAS' para balances iniciales")
-        print()
 
     # =========================================================================
     # PASO 3: CORREGIR
@@ -115,19 +126,19 @@ def corregir_balance_inicial():
         print("📋 PASO 3: Aplicando corrección...")
         print()
 
-        # Cambiar Ingreso/Egreso a vacío o "Balance"
-        ws_trans.cell(balance_inicial_fila, col_map['Ingreso/Egreso']).value = None
-
-        # Asegurar que Tipo sea TRANSFERENCIAS
-        ws_trans.cell(balance_inicial_fila, col_map['Tipo Transacción']).value = 'TRANSFERENCIAS'
+        # Cambiar Tipo a "Apertura Inicial" para que la fórmula evalúe a "Ingreso"
+        ws_trans.cell(balance_inicial_fila, col_map['Tipo Transacción']).value = 'Apertura Inicial'
 
         # Categoría
         ws_trans.cell(balance_inicial_fila, col_map['Categoría']).value = 'Saldos Iniciales'
 
         print("✅ Correcciones aplicadas:")
-        print(f"   Ingreso/Egreso: 'Egreso' → (vacío)")
-        print(f"   Tipo: '{tipo_actual}' → 'TRANSFERENCIAS'")
+        print(f"   Tipo: '{tipo_actual}' → 'Apertura Inicial'")
         print(f"   Categoría: '{categoria}' → 'Saldos Iniciales'")
+        print()
+        print("📋 Efecto de la corrección:")
+        print("   La fórmula en Ingreso/Egreso ahora evaluará a 'Ingreso'")
+        print("   El balance inicial NO aparecerá como egreso en Efectivo")
         print()
 
         # Guardar
