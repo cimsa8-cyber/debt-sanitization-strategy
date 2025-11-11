@@ -155,25 +155,25 @@ def registrar_en_excel(datos_factura):
         concepto_items.append(f"+ {len(datos_factura['productos']) - 2} items más")
     concepto = " | ".join(concepto_items)
 
-    # Registrar movimiento
+    # Registrar movimiento según estructura real del Excel
     # A: Fecha
     ws[f'A{next_row}'] = datos_factura['fecha']
     ws[f'A{next_row}'].number_format = 'd/m/yy'
 
-    # B: Tipo
-    ws[f'B{next_row}'] = 'Egreso'
+    # B: Tipo Transacción
+    ws[f'B{next_row}'] = 'COMPRAS PARA REVENTA'
 
     # C: Categoría
-    ws[f'C{next_row}'] = 'Gastos Operativos'
+    ws[f'C{next_row}'] = 'Productos Tecnológicos'
 
-    # D: Subcategoría
+    # D: Entidad (subcategoría)
     ws[f'D{next_row}'] = 'Suministros de Oficina'
 
-    # E: Cuenta
+    # E: Cuenta Bancaria
     ws[f'E{next_row}'] = 'Por Pagar'
 
-    # F: Moneda
-    ws[f'F{next_row}'] = 'USD'
+    # F: Cliente/Proveedor
+    ws[f'F{next_row}'] = 'Intcomex Costa Rica'
 
     # G: Concepto
     ws[f'G{next_row}'] = f"Factura Intcomex #{datos_factura['numero'][-6:]} - {concepto}"
@@ -190,17 +190,17 @@ def registrar_en_excel(datos_factura):
     # K: Ingreso/Egreso
     ws[f'K{next_row}'] = 'Egreso'
 
-    # L: Método de pago
-    ws[f'L{next_row}'] = f'Crédito {datos_factura["plazo_credito"]} días'
+    # L: Estado
+    ws[f'L{next_row}'] = 'Pendiente'
 
-    # M: Estado
-    ws[f'M{next_row}'] = 'Pendiente'
+    # M: Prioridad
+    ws[f'M{next_row}'] = 'Normal'
 
-    # N: Proveedor
-    ws[f'N{next_row}'] = 'Intcomex Costa Rica'
+    # N: Vencimiento
+    ws[f'N{next_row}'] = datos_factura['fecha_vencimiento']
 
     # O: Notas
-    ws[f'O{next_row}'] = f"Vence: {datos_factura['fecha_vencimiento'].strftime('%d/%m/%Y')}"
+    ws[f'O{next_row}'] = f"Crédito {datos_factura['plazo_credito']} días - Vence: {datos_factura['fecha_vencimiento'].strftime('%d/%m/%Y')}"
 
     # Guardar
     wb.save(EXCEL_FILE)
