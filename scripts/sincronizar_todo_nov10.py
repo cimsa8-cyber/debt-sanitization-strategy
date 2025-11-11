@@ -68,7 +68,38 @@ def sincronizar():
     print()
 
     print("=" * 80)
-    print("PASO 2: REGISTRANDO TRANSACCIONES DEL 10/11/2025")
+    print("PASO 2: BUSCANDO Y ACTUALIZANDO FACTURA #821720")
+    print("=" * 80)
+    print()
+
+    # Buscar factura #821720 (debería estar como Por Pagar)
+    factura_821720_fila = None
+    for row in range(2, ws.max_row + 1):
+        referencia = ws.cell(row, col_map['Referencia']).value
+        concepto = ws.cell(row, col_map['Concepto']).value
+
+        if referencia and '821720' in str(referencia):
+            factura_821720_fila = row
+            break
+        elif concepto and '821720' in str(concepto):
+            factura_821720_fila = row
+            break
+
+    if factura_821720_fila:
+        estado_antes = ws.cell(factura_821720_fila, col_map['Estado']).value
+        ws.cell(factura_821720_fila, col_map['Estado']).value = 'Pagado'
+
+        print(f"✅ Factura #821720 encontrada y actualizada:")
+        print(f"   Fila: {factura_821720_fila}")
+        print(f"   Estado: {estado_antes} → Pagado")
+        print()
+    else:
+        print("⚠️  Factura #821720 no encontrada en Excel")
+        print("   Se registrará el pago de todas formas")
+        print()
+
+    print("=" * 80)
+    print("PASO 3: REGISTRANDO TRANSACCIONES DEL 10/11/2025")
     print("=" * 80)
     print()
 
@@ -95,22 +126,22 @@ def sincronizar():
         },
         {
             'num': 2,
-            'descripcion': 'Pago Intcomex factura anterior #821720',
+            'descripcion': 'Pago factura Intcomex #821720 (sept-25)',
             'fecha': datetime(2025, 11, 10, 11, 31, 0),
-            'tipo': 'COMPRAS PARA REVENTA',
-            'categoria': 'Productos Tecnológicos',
-            'entidad': 'Productos',
+            'tipo': 'TRANSFERENCIAS',
+            'categoria': 'Transferencias',
+            'entidad': 'Pago a Proveedor',
             'cuenta': 'Promerica USD (40000003881774)',
             'cliente_proveedor': 'Intcomex Costa Rica',
-            'concepto': 'Pago Factura Intcomex #821720 - AlvaroVelascoNet',
-            'referencia': '2025111011631000083186200',
+            'concepto': 'Pago Factura #821720 (sept-25) - AlvaroVelascoNet',
+            'referencia': '821720',
             'monto_usd': -3137.26,
             'monto_crc': None,
             'ingreso_egreso': 'Egreso',
             'estado': 'Pagado',
             'prioridad': 'Normal',
             'vencimiento': None,
-            'notas': 'SINPE Programado - Doc: 2797944',
+            'notas': 'SINPE Programado 2025111011631000083186200 - Doc: 2797944',
         },
         {
             'num': 3,
@@ -194,8 +225,10 @@ def sincronizar():
     print("=" * 80)
     print()
 
-    print("✅ CORRECCIONES:")
-    print(f"   • Fila 206: Cliente/Proveedor corregido")
+    print("✅ CORRECCIONES Y ACTUALIZACIONES:")
+    print(f"   • Fila 206: Cliente/Proveedor corregido (USD → Intcomex Costa Rica)")
+    if factura_821720_fila:
+        print(f"   • Fila {factura_821720_fila}: Estado actualizado a Pagado (Factura #821720)")
     print()
 
     print("✅ TRANSACCIONES AGREGADAS:")
