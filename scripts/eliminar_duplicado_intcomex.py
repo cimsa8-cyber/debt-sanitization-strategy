@@ -93,11 +93,11 @@ def buscar_y_eliminar_duplicado():
     print("=" * 80)
     print()
 
-    # Buscar registros del 10/11 con egreso de Promerica
+    # Buscar registros del 10/11 desde Promerica (cualquier signo)
     pagos_promerica_10_11 = [r for r in registros_encontrados
                               if r['fecha'].day == 10 and r['fecha'].month == 11
-                              and r['monto'] < 0  # Egresos
-                              and r['cuenta'] and 'Promerica' in str(r['cuenta'])]
+                              and r['cuenta'] and 'Promerica' in str(r['cuenta'])
+                              and 'Pago' in str(r['concepto'])]  # Debe ser un pago
 
     if len(pagos_promerica_10_11) > 1:
         print(f"⚠️  DUPLICADO DETECTADO: {len(pagos_promerica_10_11)} pagos desde Promerica el 10/11")
