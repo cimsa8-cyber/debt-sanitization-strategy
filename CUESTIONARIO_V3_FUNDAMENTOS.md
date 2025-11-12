@@ -16,8 +16,9 @@ Establecer bases sólidas para el diseño del Excel v3.0 mediante cuestionario e
 - ✅ **Bloque #1 (C1-C5):** COMPLETADO - Tarjetas, Gastos Noviembre, Márgenes, Contratos, Categorizaciones
 - ✅ **Bloque #2 (T1-T5):** COMPLETADO - Pagos tarjetas, uso empresa/personal, 22 clientes facturados, alias, canjes
 - ✅ **Bloque #3 (B1-B5):** COMPLETADO - 9 cuentas bancarias, $3.4k efectivo (12.9 días cobertura), CIMSA=cliente
-- ⏳ **Bloque #4 (H1-H5):** PRÓXIMO - Deuda Hacienda detallada
-- 📋 **Bloques #5-8:** PLANIFICADOS - Estructura, migración, categorización, dashboards
+- ✅ **Bloque #4 (H1-H5):** COMPLETADO - $10k deuda Hacienda, 2% mensual, $45k deuda total, sin arreglo de pago
+- ⏳ **Bloque #5 (E1-E5):** PRÓXIMO - Estructura Excel v3.0, automatización, frecuencia
+- 📋 **Bloques #6-8:** PLANIFICADOS - Migración, categorización, dashboards
 
 ---
 
@@ -592,12 +593,198 @@ RATIO COBRO/EFECTIVO:          2.7x - 3.2x
 
 ## 📋 BLOQUES PLANIFICADOS
 
-### Bloque #4 - Deuda Hacienda
-- H1: Monto total adeudado a Hacienda
-- H2: Desglose por tipo (Renta, IVA)
-- H3: Cuotas pendientes de cada tipo
-- H4: Pago mensual acordado
-- H5: ¿Hay recargos/intereses?
+## ✅ BLOQUE #4 - DEUDA HACIENDA (BOMBA FISCAL)
+**Estado:** COMPLETADO
+**Fecha:** 12 Nov 2025
+
+### H1. Monto Total Adeudado a Hacienda
+
+**Respuesta:** ✅ **₡5,286,694 (~$10,215.83 USD)**
+
+---
+
+### H2. Desglose por Tipo de Impuesto
+
+**Respuesta:** ✅ **4 años de Renta + 3 meses de IVA**
+
+**IMPUESTO DE RENTA (4 años sin pagar):**
+- 2020: ₡947,987 (~$1,831.86)
+- 2021: ₡1,389,119 (~$2,684.29)
+- 2022: ₡1,391,192 (~$2,688.29) 👈 Año más alto
+- 2023: ₡789,497 (~$1,525.60)
+- **SUBTOTAL RENTA:** ₡4,517,795 (~$8,730.04)
+
+**IVA (3 meses sin pagar):**
+- Septiembre 2025: ₡478,806 (~$925.23)
+- Octubre 2025: ₡244,129 (~$471.75)
+- Noviembre 2025: ₡45,964 (~$88.82)
+- **SUBTOTAL IVA:** ₡768,899 (~$1,485.80)
+
+**TOTAL DEUDA HACIENDA:** ₡5,286,694 ($10,215.83)
+
+**Análisis Crítico:**
+- IVA bajó 90% de Sep a Nov (₡478k → ₡45k)
+- Posible: Facturación de Nov menor, o facturas exentas de IVA
+- IVA Nov esperado (13% de $9,466): ~$1,231 vs real $89 → DISCREPANCIA $1,142
+- Probable: Muchas facturas exentas (licencias Microsoft, servicios) o régimen de caja
+
+---
+
+### H3. Cuotas Pendientes de Cada Tipo
+
+**Respuesta:** ✅ **Documentado en H2**
+
+- **Renta:** 4 períodos anuales completos (2020, 2021, 2022, 2023)
+- **IVA:** 3 períodos mensuales (Sep, Oct, Nov 2025)
+
+**Análisis Crítico:**
+- Renta 2021 y 2022 son casi idénticas (~₡1.39M cada una)
+- Renta 2023 es 43% menor que 2021/2022
+- Sugiere: Negocio tuvo mejores años 2021-2022, bajó en 2023
+
+---
+
+### H4. Pago Mensual Acordado
+
+**Pregunta:** ¿Tienes arreglo de pago con Hacienda?
+
+**Respuesta:** ✅ **NO - Sin arreglo formal**
+
+**Proceso Actual:**
+- **IVA:** Contador prepara fórmula mensual (13% de facturas) → Envía al banco → **NO SE ESTÁ PAGANDO**
+- **Renta:** Contador analiza ventas/gastos anuales → Crea fórmula → **NO SE ESTÁ PAGANDO**
+
+**Análisis Crítico:**
+- 🚨 **CRÍTICO:** NO hay plan de pago activo
+- El "$544/mes" mencionado antes NO se está pagando realmente
+- La deuda está **ACUMULÁNDOSE sin control**
+- Contador prepara fórmulas pero **NO se ejecutan los pagos**
+- **RIESGO:** Hacienda puede embargar cuentas, cerrar negocio, inhabilitar para licitaciones
+
+---
+
+### H5. Recargos e Intereses
+
+**Pregunta:** ¿Hacienda cobra recargos/intereses?
+
+**Respuesta:** ✅ **SÍ - 2% mensual (26.8% anual efectivo)**
+
+**Detalle:**
+- **A. SÍ:** 2% mensual de recargo
+- **B. SÍ:** Se agregan automáticamente al saldo
+- **C. NO:** Aún sin resolver por parte de Hacienda (interpretación: NO hay acuerdo formal)
+
+**Cálculo de Intereses:**
+```
+Capital actual: ₡5,286,694 ($10,215.83)
+Interés mensual (2%): ₡105,734 (~$204.32/mes)
+Interés anual (26.8%): ₡1,268,807 (~$2,451.80/año)
+```
+
+**Proyección sin pagos:**
+```
+Hoy (12 Nov 2025):      $10,215.83
+6 meses (May 2026):     $11,479.77 (+$1,264)
+12 meses (Nov 2026):    $12,951.85 (+$2,736)
+24 meses (Nov 2027):    $16,380.67 (+$6,165)
+```
+
+**Análisis Crítico:**
+- 🔥 **INTERÉS USURARIO:** 26.8% anual efectivo
+- En 1 año la deuda crece $2,736 SOLO en intereses
+- Si no pagas, en 24 meses deberás $16,380 (60% más)
+- **URGENCIA MÁXIMA:** Necesitas arreglo de pago YA
+
+---
+
+## 🚨 ANÁLISIS CRÍTICO DEVASTADOR - BLOQUE #4
+
+### 💣 BOMBA DE TIEMPO FISCAL:
+
+**DEUDA TOTAL CONSOLIDADA:**
+```
+Tarjetas Crédito:    $16,536.00
+Nissan Frontier:     $18,680.75
+Hacienda:            $10,215.83 👈 NUEVA BOMBA
+────────────────────────────────
+TOTAL DEUDA:         $45,432.58
+```
+
+**Contexto Brutal:**
+- Efectivo disponible: $3,444.54
+- Deuda total: $45,432.58
+- **RATIO: 13.2x** (debes 13 veces lo que tienes en banco)
+
+### 💰 PAGOS MENSUALES OBLIGATORIOS MÍNIMOS:
+
+```
+TC (1.5x mínimo):              $556.00
+Nissan Frontier:               $800.00
+Hacienda (solo intereses):     $204.32 👈 NUEVO
+────────────────────────────────────────
+TOTAL MÍNIMO MENSUAL:          $1,560.32
+```
+
+**Análisis:**
+- Break-even: $8,000/mes
+- Pagos deuda: $1,560/mes (19.5% del break-even)
+- **MARGEN OPERATIVO DISPONIBLE:** $6,440/mes
+- Facturación Nov: $9,466 → Margen real: ~$7,906/mes
+- **CONCLUSIÓN:** Técnicamente manejable SI cobras y mantienes facturación
+
+### ⚠️ ALERTA ROJA MÁXIMA - IVA NO PAGADO:
+
+**IVA es dinero que YA COBRASTE a clientes:**
+```
+Sep: ₡478,806 (~$925) 👈 Cobraste en facturas
+Oct: ₡244,129 (~$472) 👈 Cobraste en facturas
+Nov: ₡45,964  (~$89)  👈 Cobraste en facturas
+TOTAL: ₡768,899 (~$1,486) NO pagado a Hacienda
+```
+
+**Esto es GRAVÍSIMO porque:**
+1. No es "tu" dinero, es del gobierno temporal en tu poder
+2. Hacienda puede EMBARGAR cuentas bancarias sin aviso
+3. Puede INHABILITAR para participar en licitaciones/contratos
+4. Puede CERRAR el negocio administrativamente
+5. Delito fiscal si se prueba intencionalidad
+
+### 🔍 DISCREPANCIA IVA NOVIEMBRE:
+
+```
+Facturación Nov 2025:    $9,466.42
+IVA 13% esperado:        $1,230.63
+IVA reportado Nov:       $88.82
+DIFERENCIA:              -$1,141.81 (93% faltante!)
+```
+
+**Posibles explicaciones:**
+1. Muchas facturas exentas de IVA (Microsoft 365, servicios)
+2. Régimen de caja: Solo se declara IVA de facturas COBRADAS
+3. Facturas de Nov aún pendientes de cobro
+4. Error en cálculo del contador
+
+**Acción requerida:** Verificar con contador qué % de facturación está exenta de IVA
+
+### 🎯 PRIORIDAD ABSOLUTA PARA V3.0:
+
+**1. Dashboard IVA:**
+- IVA Cobrado este mes
+- IVA Pagado a Hacienda
+- IVA Pendiente de pago (acumulado)
+- Alerta roja: "IVA vencido: $X"
+
+**2. Proyección Deuda Hacienda:**
+- Gráfico crecimiento exponencial (2% mensual)
+- Simulador de pagos: "¿Cuánto debo pagar mensualmente?"
+- Escenarios: Pagar solo intereses vs amortizar capital
+
+**3. Tracking de Impuestos:**
+- Renta: Provisión mensual (1/12 de estimado anual)
+- IVA: Separación automática del 13% en cada factura
+- Alerta: "Provisión insuficiente para pagar Renta 2025"
+
+---
 
 ### Bloque #5 - Estructura Excel v3.0
 - E1: ¿Prefieres 1 archivo o múltiples workbooks?
@@ -647,7 +834,7 @@ RATIO COBRO/EFECTIVO:          2.7x - 3.2x
 
 ### Datos Financieros Confirmados:
 
-**Deuda Total:**
+**Deuda Total:** $45,432.58
 - Tarjetas Crédito: $16,536 USD equivalente
   - VISA 3519 (Personal): $3,864.90 → Pago TOTAL mensual
   - VISA 9837 (Empresa): $3,299.01 → Pago 1.5x mínimo (~$123/mes)
@@ -655,9 +842,13 @@ RATIO COBRO/EFECTIVO:          2.7x - 3.2x
   - MC 8759 (Empresa): ₡863,830 → Pago 1.5x mínimo (~₡32k/mes)
   - BAC 9550 (Empresa): $2,508.75 → Pago 1.5x mínimo (~$94/mes)
   - Tarjeta Simán: EXTINGUIDA (nov 2025)
-- 🚨 **ALERTA DEUDA:** Pagos 1.5x mínimo (~$556/mes) < Intereses generados (~$625/mes) = DEUDA CRECIENTE
+- 🚨 **ALERTA TC:** Pagos 1.5x mínimo (~$556/mes) < Intereses (~$625/mes) = DEUDA CRECIENTE
 - Nissan Frontier: $18,680.75 saldo, $800/mes
-- Hacienda: $544/mes (Renta + IVA atrasados)
+- Hacienda: $10,215.83 (₡5,286,694)
+  - Renta 2020-2023: $8,730.04 (4 años sin pagar)
+  - IVA Sep-Nov 2025: $1,485.80 (3 meses sin pagar)
+  - Intereses: 2% mensual (26.8% anual) = $204.32/mes
+  - 🔥 **SIN ARREGLO DE PAGO:** Deuda creciendo sin control
 
 **Facturación Real - Noviembre 2025:**
 - **22 clientes activos** facturaron $9,466.42
@@ -720,12 +911,15 @@ RATIO COBRO/EFECTIVO:          2.7x - 3.2x
 
 ### Riesgos Identificados:
 
-1. **🔴 CRÍTICO - Crisis de Liquidez:** Solo 12.9 días de efectivo (meta: 30+ días)
-2. **🔴 CRÍTICO - Deuda TC Creciente:** Pagos ($556/mes) < Intereses ($625/mes)
-3. **🟠 ALTO - Dependencia CxC:** $9k+ por cobrar vs $3.4k efectivo (ratio 2.7x-3.2x)
-4. **🟡 MEDIO - Concentración Cliente:** TOP 2 = 32.6% (mejorado vs 51%)
-5. **🟡 MEDIO - Volatilidad Ingresos:** Verificar con más meses limpios
-6. **🟢 BAJO - Fondo Emergencia:** Meta $10k (actual: $3.4k = 34%)
+1. **🔴 CRÍTICO - Bomba Fiscal Hacienda:** $10k deuda, 2% mensual, sin arreglo de pago, riesgo de embargo
+2. **🔴 CRÍTICO - Crisis de Liquidez:** Solo 12.9 días de efectivo (meta: 30+ días)
+3. **🔴 CRÍTICO - Deuda TC Creciente:** Pagos ($556/mes) < Intereses ($625/mes)
+4. **🔴 CRÍTICO - IVA No Pagado:** $1,486 cobrado a clientes pero no pagado a Hacienda (delito fiscal)
+5. **🟠 ALTO - Dependencia CxC:** $9k+ por cobrar vs $3.4k efectivo (ratio 2.7x-3.2x)
+6. **🟠 ALTO - Ratio Deuda/Efectivo:** 13.2x (debes 13 veces lo que tienes)
+7. **🟡 MEDIO - Concentración Cliente:** TOP 2 = 32.6% (mejorado vs 51%)
+8. **🟡 MEDIO - Volatilidad Ingresos:** Verificar con más meses limpios
+9. **🟢 BAJO - Fondo Emergencia:** Meta $10k (actual: $3.4k = 34%)
 
 ---
 
