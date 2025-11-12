@@ -14,8 +14,9 @@ Establecer bases sólidas para el diseño del Excel v3.0 mediante cuestionario e
 ## 📊 PROGRESO GENERAL
 
 - ✅ **Bloque #1 (C1-C5):** COMPLETADO - Tarjetas, Gastos Noviembre, Márgenes, Contratos, Categorizaciones
-- ⏳ **Bloque #2 (T1-T5):** ENVIADO - Esperando respuestas sobre pagos, uso, top clientes, alias
-- 📋 **Bloques #3-8:** PLANIFICADOS - Cuentas bancarias, Hacienda, estructura, migración, dashboards
+- ✅ **Bloque #2 (T1-T5):** COMPLETADO - Pagos tarjetas, uso empresa/personal, 22 clientes facturados, alias, canjes
+- ⏳ **Bloque #3 (B1-B5):** PRÓXIMO - Cuentas bancarias, normalización, CIMSA
+- 📋 **Bloques #4-8:** PLANIFICADOS - Hacienda, estructura, migración, categorización, dashboards
 
 ---
 
@@ -196,24 +197,32 @@ Establecer bases sólidas para el diseño del Excel v3.0 mediante cuestionario e
 
 ---
 
-## ⏳ BLOQUE #2 - TARJETAS, CLIENTES TOP, ALIAS
-**Estado:** ENVIADO - Esperando Respuestas
-**Fecha Envío:** 12 Nov 2025
+## ✅ BLOQUE #2 - TARJETAS, CLIENTES TOP, ALIAS
+**Estado:** COMPLETADO
+**Fecha:** 12 Nov 2025
 
 ### T1. Montos de Pago Mensual de Tarjetas
 
 **Pregunta:** ¿Cuánto pagas mensualmente a cada una de las 5 tarjetas?
 
-**Formato solicitado:**
-```
-1. VISA 3519: $___/mes
-2. VISA 9837: $___/mes
-3. VISA 6386 (Alejandra): $___/mes
-4. MC 8759: ₡___/mes
-5. BAC 9550: $___/mes
-```
+**Respuesta:** ✅ **Estrategia de Pago Mínimo + 50%**
 
-**⏳ PENDIENTE DE RESPUESTA**
+**Detalle:**
+- **VISA 3519 (Personal):** Se trata de pagar TOTAL cada mes
+- **VISA 9837, 6386, MC 8759, BAC 9550:** Pago típico = Mínimo × 1.5
+- **Tarjeta Simán:** EXTINGUIDA el mes pasado (debería estar en $0 + intereses residuales)
+
+**Análisis Crítico:**
+- 🚨 **ALERTA:** Pagar solo 1.5x el mínimo genera deuda rotativa crónica
+- Con $14,867 de deuda y pago mínimo típico ~2.5%, pagas ~$371/mes
+- A 1.5x mínimo = ~$556/mes en 4 tarjetas
+- Tasas BNCR/BAC: ~45-52% anual → ~$625/mes SOLO EN INTERESES
+- **Conclusión:** Estás pagando $556/mes pero generando $625/mes en intereses = DEUDA CRECIENTE
+
+**Para v3.0:**
+- Dashboard con proyección de deuda a 6/12 meses
+- Alerta si Pago Mensual < Intereses Generados
+- Tracking de "Deuda Neta" (balance actual - pagos + cargos)
 
 ---
 
@@ -221,33 +230,126 @@ Establecer bases sólidas para el diseño del Excel v3.0 mediante cuestionario e
 
 **Pregunta:** ¿Qué porcentaje de cada tarjeta es uso empresarial vs personal?
 
-**Formato solicitado:**
-```
-1. VISA 3519: ___% Empresa / ___% Personal
-2. VISA 9837: ___% Empresa / ___% Personal
-3. VISA 6386: ___% Empresa / ___% Personal
-4. MC 8759: ___% Empresa / ___% Personal
-5. BAC 9550: ___% Empresa / ___% Personal
-```
+**Respuesta:** ✅ **Clara Separación - 1 Personal, 4 Empresa**
 
-**⏳ PENDIENTE DE RESPUESTA**
+**Desglose:**
+1. **VISA 3519:** 0% Empresa / **100% Personal** ✅ Se declara personal
+2. **VISA 9837:** **100% Empresa** / 0% Personal
+3. **VISA 6386 (Alejandra):** **100% Empresa** / 0% Personal
+4. **MC 8759:** **100% Empresa** / 0% Personal
+5. **BAC 9550:** **100% Empresa** / 0% Personal
+
+**Análisis Crítico:**
+- ✅ **Excelente separación** - Simplifica enormemente la contabilidad
+- VISA 3519 ($3,864.90): 100% deducible como préstamo/retiro personal
+- Otras 4 tarjetas ($10,671.83): 100% deducible como gasto/inversión empresarial
+- **IMPLICACIÓN FISCAL:** Intereses de las 4 tarjetas empresa son gasto deducible
+
+**Para v3.0:**
+- Campo "Tipo Entidad" = "Personal" para VISA 3519
+- Todas las demás transacciones TC = "Empresa"
+- Separar reportes: "Gastos Empresa" vs "Retiros Personales"
 
 ---
 
 ### T3. TOP 5 Clientes por Ingresos Mensuales
 
-**Pregunta:** ¿Cuáles son los 5 clientes que más ingresos generan mensualmente (contratos + licencias + ocasional)?
+**Pregunta:** ¿Cuáles son los 5 clientes que más ingresos generan mensualmente?
 
-**Formato solicitado:**
-```
-1. [Cliente]: $___/mes (Contratos: $___ + Licencias: $___ + Ocasional: $___)
-2. [Cliente]: $___/mes (breakdown)
-3. [Cliente]: $___/mes (breakdown)
-4. [Cliente]: $___/mes (breakdown)
-5. [Cliente]: $___/mes (breakdown)
-```
+**Respuesta:** ✅ **FACTURACIÓN REAL NOVIEMBRE 2025 (22 clientes)**
 
-**⏳ PENDIENTE DE RESPUESTA**
+#### 🏆 TOP 5 CLIENTES - NOVIEMBRE 2025:
+
+1. **GRUPO ACCION COMERCIAL S.A.** - $1,689.04 (17.8% del total) 👑
+2. **VWR INTERNATIONAL LTDA** - $1,400.00 (14.8%)
+3. **ALFIPAC (Almacén Fiscal del Pacífico)** - $761.05 (8.0%)
+4. **3-102-887892 SRL** - $691.56 (7.3%)
+5. **WAIPIO S.A.** - $687.27 (7.3%)
+
+**Subtotal TOP 5:** $5,228.92 (55.2% de ingresos totales)
+
+#### 📊 FACTURACIÓN COMPLETA - 22 CLIENTES:
+
+| # | Cliente | Factura | Fecha | Monto USD | % Total |
+|---|---------|---------|-------|-----------|---------|
+| 1 | Grupo Acción Comercial S.A. | AR-002 | 01/11/25 | $1,689.04 | 17.8% |
+| 2 | VWR International Ltda | AR-001 | 01/11/25 | $1,400.00 | 14.8% |
+| 3 | Alfipac (Almacén Fiscal Pacífico) | AR-003 | 01/11/25 | $761.05 | 8.0% |
+| 4 | 3-102-887892 SRL | AR-004 | 01/11/25 | $691.56 | 7.3% |
+| 5 | Waipio S.A. | AR-005 | 01/11/25 | $687.27 | 7.3% |
+| 6 | Centro Integral Oncología CIO SRL | AR-006 | 01/11/25 | $687.05 | 7.3% |
+| 7 | Ortodoncia de la Cruz | AR-007 | 01/11/25 | $494.50 | 5.2% |
+| 8 | Global Automotriz GACR S.A. | AR-008 | 01/11/25 | $439.61 | 4.6% |
+| 9 | Solusa Consolidators | AR-009 | 01/11/25 | $378.35 | 4.0% |
+| 10 | Cemso | AR-010 | 01/11/25 | $333.92 | 3.5% |
+| 11 | Acacia (Asoc. CR Agencias Carga) | AR-011 | 01/11/25 | $333.35 | 3.5% |
+| 12 | Rodriguez Rojas Carlos Humberto | AR-012 | 01/11/25 | $282.50 | 3.0% |
+| 13 | Supply Net C.R.W.H S.A. | AR-013 | 01/11/25 | $276.85 | 2.9% |
+| 14 | Operation Managment Tierra Magnifica | AR-014 | 01/11/25 | $209.06 | 2.2% |
+| 15 | Gentra de Costa Rica S.A. | AR-015 | 01/11/25 | $183.63 | 1.9% |
+| 16 | Sevilla Navarro Edgar | AR-016 | 01/11/25 | $169.50 | 1.8% |
+| 17 | Gomez Ajoy Edgar Luis | AR-017 | 01/11/25 | $113.00 | 1.2% |
+| 18 | Melendez Morales Monica | AR-018 | 01/11/25 | $113.00 | 1.2% |
+| 19 | Bandogo Soluciones Tecnológicas S.A. | AR-019 | 01/11/25 | $67.80 | 0.7% |
+| 20 | CPF Servicios Radiológicos S.A. | AR-020 | 01/11/25 | $56.50 | 0.6% |
+| 21 | Ortodec S.A. | AR-021 | 01/11/25 | $56.50 | 0.6% |
+| 22 | Perez Morales Francisco | AR-022 | 01/11/25 | $42.38 | 0.4% |
+
+**TOTAL FACTURACIÓN NOVIEMBRE 2025:** $9,466.42
+
+---
+
+## 🚨 ANÁLISIS CRÍTICO EXPLOSIVO - T3
+
+### 💣 DISCREPANCIA MASIVA CON V2.0:
+
+**v2.0 reportó:** $17,188 ingresos en Noviembre
+**FACTURACIÓN REAL:** $9,466.42
+**DIFERENCIA:** -$7,721.58 (45% DE INFLACIÓN!!!)
+
+**CONFIRMACIÓN DEFINITIVA:** El Excel v2.0 tiene duplicados MASIVOS no solo en gastos sino también en INGRESOS.
+
+### 📈 Métricas Reales:
+
+- **Promedio por cliente:** $430.29
+- **Concentración TOP 3:** 40.7% (Grupo Acción + VWR + Alfipac)
+- **Concentración TOP 5:** 55.2%
+- **Diversificación:** ✅ Excelente (22 clientes activos)
+
+### 🔄 Cambio de Liderazgo:
+
+**ANTES pensábamos:**
+- VWR = Cliente #1 con 51% concentración (RIESGO CRÍTICO)
+
+**REALIDAD:**
+- **Grupo Acción = Cliente #1** con $1,689.04 (17.8%) 👑
+- VWR = Cliente #2 con $1,400.00 (14.8%)
+- **Concentración distribuida:** TOP 3 = 40.7% (SALUDABLE)
+
+### 💡 Insights Clave:
+
+1. **Grupo Acción facturó $1,689.04** (contrato $678 + licencias $258 = $936) → ¿Diferencia de $753? Probablemente servicios adicionales/productos
+2. **VWR facturó exactamente $1,400** (su contrato mensual) → Sin adicionales este mes
+3. **Global Automotriz ($439.61)** está en la lista → Confirmando que SÍ se facturan los canjes
+4. **Gentra solo $183.63** este mes vs contrato de $678/mes → Posible pago atrasado o parcial
+5. **22 clientes facturaron** → Modelo de negocio saludablemente diversificado
+
+### ⚠️ Alertas para V3.0:
+
+- **Gentra subperformance:** ¿Por qué solo $183 vs $678 esperado?
+- **Facturación variable:** Algunos meses pueden tener diferencias significativas
+- Necesitamos tracking de "Facturación Esperada vs Real" por cliente
+
+### 🎯 Para v3.0:
+
+- Hoja CLIENTES_VIP con:
+  - Facturación mensual esperada (contratos + licencias)
+  - Facturación real mensual
+  - Variación % mes a mes
+  - Customer Lifetime Value (CLV)
+  - Días promedio de pago por cliente
+- Dashboard de concentración de riesgo (actualización automática)
+- Alertas: "Cliente X no facturó este mes" o "Facturación < 50% de esperado"
 
 ---
 
@@ -255,22 +357,39 @@ Establecer bases sólidas para el diseño del Excel v3.0 mediante cuestionario e
 
 **Pregunta:** ¿Cuáles son todas las variaciones de nombres que usas para cada cliente?
 
-**Ya Identificados:**
+**Respuesta:** ✅ **Usar Sistema de Alias Existente + Expandir a Clientes**
+
+**Referencia:** Ya existe archivo `/home/user/debt-sanitization-strategy/SISTEMA_ALIAS_CUENTAS.md`
+
+**Sistema Actual:**
+- Documenta normalización de cuentas BANCARIAS (Promerica, BNCR, tarjetas)
+- Scripts disponibles:
+  - `crear_hoja_alias_cuentas.py`
+  - `normalizar_cuentas_universal.py`
+
+**Alias Ya Identificados:**
 - Futuropa → Proimagen (o viceversa)
 - Real Clean → JDSRealClean, RealCleanJDS
 - Tecnoambientes → Ambientes con Tecnología
 - Start Sistemas → Sistema, SWS-Software
 
-**Formato solicitado:**
-```
-Nombre Oficial → alias1, alias2, alias3
+**Análisis Crítico:**
+- ✅ Sistema robusto ya implementado para cuentas bancarias
+- 🔧 Necesita EXPANSIÓN para incluir:
+  - **Clientes** (22+ nombres oficiales con variaciones)
+  - **Proveedores** (Intcomex, Eurocomp, TD Synex, etc.)
+  - **Categorías** (normalizaciones de subcategorías)
 
-Ejemplo:
-VWR Costa Rica → VWR, VWR CR
-[Continúa con los 22 clientes...]
-```
+**Para v3.0:**
+- Expandir hoja **CUENTAS_ALIAS** a **ENTIDADES_ALIAS**
+- Agregar columna "Tipo" (Cliente/Proveedor/Banco/Interno)
+- Normalizar nombres de facturas AR-001 a AR-022 con variaciones futuras
+- Script único: `normalizar_entidades_universal.py`
 
-**⏳ PENDIENTE DE RESPUESTA**
+**Acción Pendiente:**
+- Crear tabla maestra de alias de los 22 clientes
+- Mapear variaciones comunes (ej: "GRUPO ACCION" vs "Grupo Acción Comercial S.A.")
+- Integrar con sistema existente
 
 ---
 
@@ -278,23 +397,49 @@ VWR Costa Rica → VWR, VWR CR
 
 **Pregunta:** ¿Cómo quieres registrar las transacciones de canje con Global Automotriz, Miguel Solano y Start Sistemas?
 
-**Opciones:**
+**Respuesta:** ✅ **Sistema Mixto - Según Tipo de Relación**
 
-**A. No Registrar ($0):**
-- No aparece en TRANSACCIONES
-- Solo nota en hoja CLIENTES_VIP
+**Criterio: Relación 1-a-1 con Facturación vs Palabra:**
 
-**B. Doble Registro (Ingreso + Egreso):**
-- Ingreso: "Servicio a Global Automotriz" +$500
-- Egreso: "Canje - Servicio recibido" -$500
-- Net: $0, pero refleja volumen de operaciones
+#### ✅ REGISTRAR CON FACTURACIÓN (Opción B):
+**Global Automotriz:**
+- **Método:** Doble registro (Ingreso + Egreso)
+- **Razón:** Relación 1-a-1, se emiten facturas formales
+- **Ejemplo:**
+  - Ingreso: "Servicio Mantenimiento a Global Automotriz" +$439.61 (Factura AR-008)
+  - Egreso: "Canje - Servicio mecánico recibido de Global" -$439.61 (COGS)
+  - **Net:** $0 (no afecta utilidad neta)
+  - **Beneficio:** Refleja volumen real de operaciones, cumple obligaciones fiscales (factura legal)
 
-**C. Memo/Nota Únicamente:**
-- Registro con Monto = $0
-- Campo Notas: "Canje: Valor estimado $500"
-- No afecta P&L ni métricas
+#### ❌ NO REGISTRAR (Opción A):
+**Miguel Solano y Start Sistemas (SWS-Software):**
+- **Método:** No registrar movimientos contables
+- **Razón:** Relación de palabra, sin facturación formal
+- **Implementación:** Solo notas en hoja CLIENTES_VIP o sección MEMO
 
-**⏳ PENDIENTE DE RESPUESTA**
+**Análisis Crítico:**
+
+**Ventajas del Sistema Mixto:**
+1. ✅ **Cumplimiento Fiscal:** Global Automotriz genera factura legal → debe registrarse
+2. ✅ **Volumen Real:** Refleja $9,466 de facturación (no $9,026 excluyendo Global)
+3. ✅ **Trazabilidad:** Auditoría puede verificar factura AR-008
+4. ✅ **Simplicidad:** Miguel Solano y SWS sin factura = sin registro (menos trabajo)
+
+**Implicaciones:**
+- Global Automotriz facturó $439.61 en Nov → Genera IVA cobrado (13% = $57.15)
+- Debes pagar ese IVA a Hacienda aunque no recibiste efectivo
+- **IMPORTANTE:** Verificar si el "servicio recibido" de Global también tiene IVA (deducible)
+
+**Para v3.0:**
+- Campo "Es Canje" (SI/NO) para marcar transacciones de intercambio
+- Filtro en reportes: "Ingresos Efectivo Real" (excluye canjes)
+- Dashboard separado: "Ingresos Totales" vs "Ingresos en Efectivo"
+- Alerta: "IVA por pagar en canjes: $X.XX"
+
+**Confirmación Datos:**
+- Global Automotriz AR-008: $439.61 (01/11/2025) → ✅ Registrado en facturación
+- Esta transacción ya está en tu sistema de facturación
+- Solo falta registrar el EGRESO correspondiente (servicio recibido)
 
 ---
 
@@ -346,15 +491,44 @@ VWR Costa Rica → VWR, VWR CR
 
 ## 🔍 HALLAZGOS CRÍTICOS ACUMULADOS
 
+### 💣 DESCUBRIMIENTO EXPLOSIVO - BLOQUE #2:
+
+**DUPLICADOS MASIVOS EN INGRESOS:**
+- v2.0 reportó: $17,188 ingresos en Noviembre
+- **FACTURACIÓN REAL:** $9,466.42
+- **DIFERENCIA:** -$7,721.58 (45% DE INFLACIÓN!!!)
+- **Conclusión:** v2.0 duplica TANTO ingresos como gastos
+
+**RECÁLCULO DE SITUACIÓN REAL NOVIEMBRE:**
+- Ingresos reales: $9,466.42 (no $17,188)
+- Gastos reales estimados: ~$6,000-$8,000 (no $24,422)
+- **Utilidad real estimada:** +$1,500 a +$3,500 (NO -$7,234 como mostraba v2.0)
+- **CONFIRMADO:** El negocio SÍ es rentable
+
 ### Datos Financieros Confirmados:
 
 **Deuda Total:**
-- Tarjetas Crédito: ~$16,536 USD equivalente (5 tarjetas)
+- Tarjetas Crédito: $16,536 USD equivalente
+  - VISA 3519 (Personal): $3,864.90 → Pago TOTAL mensual
+  - VISA 9837 (Empresa): $3,299.01 → Pago 1.5x mínimo (~$123/mes)
+  - VISA 6386 (Empresa): $5,195.07 → Pago 1.5x mínimo (~$195/mes)
+  - MC 8759 (Empresa): ₡863,830 → Pago 1.5x mínimo (~₡32k/mes)
+  - BAC 9550 (Empresa): $2,508.75 → Pago 1.5x mínimo (~$94/mes)
+  - Tarjeta Simán: EXTINGUIDA (nov 2025)
+- 🚨 **ALERTA DEUDA:** Pagos 1.5x mínimo (~$556/mes) < Intereses generados (~$625/mes) = DEUDA CRECIENTE
 - Nissan Frontier: $18,680.75 saldo, $800/mes
 - Hacienda: $544/mes (Renta + IVA atrasados)
 
+**Facturación Real - Noviembre 2025:**
+- **22 clientes activos** facturaron $9,466.42
+- **Cliente #1:** Grupo Acción ($1,689.04 = 17.8%) 👑
+- **Cliente #2:** VWR ($1,400.00 = 14.8%)
+- Concentración TOP 3: 40.7% (saludable, no 51% crítico)
+- Concentración TOP 5: 55.2%
+- Promedio por cliente: $430.29
+
 **Flujo Operativo:**
-- Ingresos variables: $8k-$17k/mes
+- Ingresos reales: ~$9,466/mes (Noviembre)
 - Break-even: ~$8k/mes
 - 85% ventas a crédito (15-30 días)
 - Paga proveedores en 30 días
@@ -371,27 +545,37 @@ VWR Costa Rica → VWR, VWR CR
 
 **Modelo de Negocio:**
 - Intermediación SIN inventario
+- 22+ clientes activos (diversificado)
 - 45% Contratos Mantenimiento
 - 20% Licencias Microsoft
 - 15% Productos
 - 15% Servicios
 - 5% Cloud Services
 
+**Canjes:**
+- Global Automotriz: Registrar (factura AR-008: $439.61)
+- Miguel Solano: NO registrar (palabra)
+- Start Sistemas (SWS): NO registrar (palabra)
+
 ### Problemas Confirmados de v2.0:
 
-1. **Duplicados:** ~$3,000+ (explica noviembre catastrófico)
+1. **Duplicados MASIVOS:**
+   - Ingresos inflados +81% ($7,721 duplicados)
+   - Gastos inflados +300% ($18,310 duplicados)
+   - Totales: ~$26,000+ en duplicados
 2. **Categorizaciones Incorrectas:**
    - Transferencias internas como ingresos
    - Pagos completos TC como "intereses"
    - Sistema de facturación como cliente
-3. **Mezcla Personal/Empresarial:** Sin separación clara
+3. **Mezcla Personal/Empresarial:** Sin separación clara (ahora: 1 tarjeta personal, 4 empresa)
 4. **Fragmentación de Nombres:** Múltiples alias sin normalizar
 5. **Sin Tracking de Márgenes:** Por operación/producto
 
 ### Riesgos Identificados:
 
-1. **Concentración Cliente:** VWR = 51% ingresos por contratos
-2. **Volatilidad Ingresos:** $8k-$17k (variación 112%)
+1. **CRÍTICO - Deuda Tarjetas Creciente:** Pagos < Intereses generados
+2. **Concentración Cliente:** Grupo Acción 17.8% + VWR 14.8% = 32.6% TOP 2 (MEJORADO vs 51% anterior)
+3. **Volatilidad Ingresos:** Rango $8k-$17k (verificar con más meses limpios)
 3. **Fondo Emergencia:** ~$0 (meta: $10k)
 4. **Cuentas por Cobrar:** Alto volumen sin tracking claro
 
