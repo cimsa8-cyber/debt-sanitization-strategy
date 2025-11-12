@@ -1121,12 +1121,208 @@ Ejemplo de nota en celda B2 (TRANSACCIONES - Tipo):
 
 ---
 
-### Bloque #6 - Plan de Migración
-- M1: ¿Partir de cero o migrar transacciones v2.0?
-- M2: Si migrar, ¿desde qué fecha?
-- M3: ¿Mantener v2.0 como referencia histórica?
-- M4: ¿Quién alimentará v3.0 (solo tú, equipo)?
-- M5: ¿Deadline para tener v3.0 operativo?
+## ✅ BLOQUE #6 - PLAN DE MIGRACIÓN
+**Estado:** COMPLETADO
+**Fecha:** 12 Nov 2025
+
+### M1. ¿Partir de Cero o Migrar Datos?
+
+**Respuesta:** ✅ **OPCIÓN C - HÍBRIDO**
+
+**Especificaciones:**
+- Empezar v3.0 desde **1 Noviembre 2025**
+- Migrar solo datos de **Noviembre** (más recientes)
+- Histórico antiguo queda en v2.0 como archivo
+- Mejor de ambos mundos
+
+**Análisis Crítico:**
+- ✅ **Decisión inteligente:** Balance perfecto entre datos limpios y contexto histórico
+- Noviembre tiene facturación completa (22 facturas AR-001 a AR-022)
+- Evita lidiar con duplicados masivos de Oct ($24k gastos inflados)
+- v2.0 disponible para análisis de tendencias históricas
+- **1 mes** suficiente para validar el sistema antes de expandir
+
+**Para v3.0:**
+- Fecha inicio: 01/11/2025
+- Importar facturas AR-001 a AR-022 ($9,466.42 total)
+- Saldos iniciales de cuentas al 01/11/2025
+- Transacciones Nov limpias (sin duplicados)
+
+---
+
+### M2. Fecha de Migración
+
+**Respuesta:** ✅ **Desde 1 NOVIEMBRE 2025 (1 mes de data)**
+
+**Análisis Crítico:**
+- Alineado con M1 (opción híbrido)
+- Nov 2025 completo disponible
+- Para proyecciones: Tendrás 3-6 meses a futuro (Dic-May 2026)
+- **Ventaja:** Empiezas con mes completo cerrado = fácil de validar
+
+**Para v3.0:**
+- Crear transacciones de apertura (01/11/2025) con saldos iniciales:
+  - 9 cuentas bancarias
+  - 5 tarjetas de crédito
+  - Nissan Frontier
+  - Hacienda
+  - Cuentas por Cobrar inicial
+  - Cuentas por Pagar inicial
+
+---
+
+### M3. ¿Qué Hacer con v2.0?
+
+**Respuesta:** ✅ **OPCIÓN A - ARCHIVAR (Solo lectura)**
+
+**Especificaciones:**
+- Renombrar: `AlvaroVelasco_Finanzas_v2.0_ARCHIVO_2025.xlsx`
+- NO editar nunca más
+- Usar solo para consultar histórico
+
+**Análisis Crítico:**
+- ✅ Protege datos históricos
+- ✅ Evita confusión (un solo archivo activo)
+- ✅ Disponible para auditorías
+- Sugerencia: Mover a carpeta `/Historico/` en OneDrive
+
+**Para implementación:**
+```powershell
+# Renombrar v2.0
+Rename-Item "AlvaroVelasco_Finanzas_v2.0.xlsx" `
+            "AlvaroVelasco_Finanzas_v2.0_ARCHIVO_2025.xlsx"
+
+# Mover a carpeta Historico
+Move-Item "AlvaroVelasco_Finanzas_v2.0_ARCHIVO_2025.xlsx" `
+          "./Historico/"
+```
+
+---
+
+### M4. ¿Quién Alimentará v3.0?
+
+**Respuesta:** ✅ **División de Trabajo Clara**
+
+**ÁLVARO (Propietario):**
+- ✅ Conciliación de bancos (semanal)
+- ✅ Ingreso de facturas de compras
+- ✅ Compras a proveedores
+- ✅ Servicios y gastos operativos
+- ✅ Decisiones estratégicas (inversiones, préstamos)
+- ✅ Transacciones personales (pestaña PERSONAL)
+- ✅ Revisión y aprobación final
+
+**ASISTENTE:**
+- ✅ Facturas y pagos de clientes (PRIMORDIALMENTE)
+- ✅ Registrar facturas de clientes (ingresos)
+- ✅ Actualizar CxC cuando cliente paga
+- ✅ Actualizar CxP cuando se paga proveedor
+- ✅ Pagos de servicios recurrentes
+
+**Inicio:** INMEDIATAMENTE
+
+**Análisis Crítico:**
+- ✅ **División lógica:** Álvaro maneja lado de costos/gastos, Asistente lado de ingresos/cobros
+- ✅ Asistente enfocado en flujo de caja (crítico para liquidez)
+- ✅ Álvaro mantiene control estratégico
+- Conciliación semanal por Álvaro = punto de control de calidad
+
+**Para v3.0:**
+- Pestaña AYUDA con roles claramente definidos
+- Protección de hojas según responsabilidades
+- Log de cambios: Identificar quién hizo qué
+- Validaciones específicas por usuario
+
+---
+
+### M5. Deadline para V3.0 Operativo
+
+**Respuesta:** ✅ **FIN DE MES (30 Nov 2025) - FASE 1 en 1 semana**
+
+**Presión:** ALTA - Necesitas datos YA
+
+**Timeline Definido:**
+```
+FASE 1 (MVP) - 1 SEMANA (19 Nov 2025):
+- TRANSACCIONES + formulario entrada
+- EFECTIVO (9 cuentas)
+- DASHBOARD básico
+- Manual inline celdas
+
+FASE 2 (Operación) - 2 SEMANAS (26 Nov 2025):
+- CUENTAS_POR_COBRAR
+- CUENTAS_POR_PAGAR
+- IVA_CONTROL
+- Macro conciliación
+
+FASE 3 (Completo) - FIN DE MES (30 Nov 2025):
+- PASIVOS
+- UTILIDADES_MENSUALES
+- CLIENTES_VIP
+- Migración datos Nov
+- Testing final
+```
+
+**Análisis Crítico:**
+- 🚨 **URGENTE por crisis de liquidez:** 12.9 días efectivo
+- 🚨 **URGENTE por Hacienda:** IVA debe pagarse 15 de cada mes
+- Timeline agresivo pero alcanzable
+- **Prioridad #1:** TRANSACCIONES + EFECTIVO + DASHBOARD (semana 1)
+
+**Para v3.0:**
+- Desarrollo incremental con entregas semanales
+- Testing con datos reales de Noviembre
+- Capacitación a asistente en paralelo
+- Backup continuo en OneDrive
+
+---
+
+## 🚨 ANÁLISIS CRÍTICO - BLOQUE #6
+
+### 📋 PLAN DE MIGRACIÓN DEFINIDO:
+
+**ESTRATEGIA:**
+- ✅ Híbrido: Partir desde 1 Nov 2025
+- ✅ Solo 1 mes de data (Nov completo)
+- ✅ v2.0 archivado (solo lectura)
+- ✅ Histórico disponible para consulta
+
+**DIVISIÓN DE TRABAJO:**
+```
+ÁLVARO (50%):              ASISTENTE (50%):
+├─ Compras/Proveedores     ├─ Facturas Clientes ⭐
+├─ Servicios/Gastos        ├─ Pagos Clientes ⭐
+├─ Conciliación Bancos ⭐  ├─ Actualizar CxC
+├─ Decisiones Estratégicas ├─ Actualizar CxP
+├─ Transacciones Personal  └─ Servicios Recurrentes
+└─ Revisión Final
+```
+
+**TIMELINE CRÍTICO:**
+```
+Hoy (12 Nov):     Especificaciones completas ✅
++7 días (19 Nov): FASE 1 operativa (MVP)
++14 días (26 Nov): FASE 2 operativa (CxC/CxP/IVA)
++18 días (30 Nov): FASE 3 completa (100% funcional)
+```
+
+**PRESIÓN:**
+- 🔴 Crisis liquidez: 12.9 días efectivo
+- 🔴 IVA vence: 15 de cada mes
+- 🔴 Deuda Hacienda: +$204/mes intereses
+- 🔴 Fin de mes: Cierre Nov necesita v3.0
+
+### 🎯 SIGUIENTE PASO INMEDIATO:
+
+**¡COMENZAR CONSTRUCCIÓN EXCEL V3.0!**
+
+**Prioridad absoluta:**
+1. Crear estructura TRANSACCIONES
+2. Crear estructura EFECTIVO
+3. Crear DASHBOARD básico
+4. Importar datos Noviembre
+
+---
 
 ### Bloque #7 - Categorización y Nomenclatura
 - N1: Aprobación de categorías principales propuestas
