@@ -17,8 +17,9 @@ Establecer bases sólidas para el diseño del Excel v3.0 mediante cuestionario e
 - ✅ **Bloque #2 (T1-T5):** COMPLETADO - Pagos tarjetas, uso empresa/personal, 22 clientes facturados, alias, canjes
 - ✅ **Bloque #3 (B1-B5):** COMPLETADO - 9 cuentas bancarias, $3.4k efectivo (12.9 días cobertura), CIMSA=cliente
 - ✅ **Bloque #4 (H1-H5):** COMPLETADO - $10k deuda Hacienda, 2% mensual, $45k deuda total, sin arreglo de pago
-- ⏳ **Bloque #5 (E1-E5):** PRÓXIMO - Estructura Excel v3.0, automatización, frecuencia
-- 📋 **Bloques #6-8:** PLANIFICADOS - Migración, categorización, dashboards
+- ✅ **Bloque #5 (E1-E5):** COMPLETADO - 1 archivo único, multi-usuario OneDrive, automatización avanzada, actualización diaria
+- ⏳ **Bloque #6 (M1-M5):** PRÓXIMO - Plan de migración desde v2.0
+- 📋 **Bloques #7-8:** PLANIFICADOS - Categorización, dashboards
 
 ---
 
@@ -786,12 +787,339 @@ DIFERENCIA:              -$1,141.81 (93% faltante!)
 
 ---
 
-### Bloque #5 - Estructura Excel v3.0
-- E1: ¿Prefieres 1 archivo o múltiples workbooks?
-- E2: ¿Qué hojas consideras más críticas?
-- E3: ¿Nivel de automatización deseado?
-- E4: ¿Frecuencia de actualización (diaria/semanal)?
-- E5: ¿Necesitas versión móvil/Google Sheets?
+## ✅ BLOQUE #5 - ESTRUCTURA EXCEL V3.0
+**Estado:** COMPLETADO
+**Fecha:** 12 Nov 2025
+
+### E1. Archivo Único o Múltiples Workbooks
+
+**Pregunta:** ¿Prefieres 1 archivo único o múltiples archivos separados?
+
+**Respuesta:** ✅ **OPCIÓN A - 1 ARCHIVO ÚNICO con múltiples pestañas**
+
+**Especificaciones:**
+- Archivo único: `AlvaroVelasco_Finanzas_v3.0.xlsx`
+- Múltiples pestañas de trabajo
+- ✅ Todo en un lugar
+- ✅ Fácil de respaldar
+- **IMPORTANTE:** Incluir 1 o varias pestañas para uso PERSONAL (separación empresa/personal)
+
+**Análisis Crítico:**
+- ✅ Decisión correcta para tu caso: Facilita respaldos y sincronización OneDrive
+- Con 15+ hojas planificadas, el archivo será ~5-10 MB (manejable)
+- Separación personal = clave para contabilidad limpia
+- Sugerencia: Agrupar pestañas por color (Operativas=azul, Pasivos=rojo, Dashboards=verde, Personal=gris)
+
+**Para v3.0:**
+- Estructura de pestañas con índice de navegación
+- Hipervínculos entre hojas relacionadas
+- Pestaña PERSONAL separada con estructura simplificada
+- Protección de hojas: Solo campos editables desbloqueados
+
+---
+
+### E2. Hojas Más Críticas
+
+**Pregunta:** ¿Cuáles son las hojas MÁS CRÍTICAS (TOP 5)?
+
+**Respuesta:** ✅ **Priorización Clara + Inclusión Total**
+
+**TOP 5 por prioridad:**
+1. **TRANSACCIONES** (fuente de verdad)
+2. **EFECTIVO** (saldos bancarios)
+3. **CUENTAS_POR_COBRAR** (antigüedad CxC)
+4. **CUENTAS_POR_PAGAR** (proveedores)
+5. **DASHBOARD** (resumen ejecutivo)
+
+**IMPORTANTE:** Usuario indica "todas las demás también son importantes, no me gustaría que quedaran fuera"
+
+**Análisis Crítico:**
+- Priorización alineada con operación diaria: Transacciones → Efectivo → Cobros → Pagos → Dashboard
+- IVA_CONTROL no está en TOP 5 pero es CRÍTICA por situación fiscal
+- Orden de implementación sugerido:
+  1. **FASE 1 (MVP):** TRANSACCIONES + EFECTIVO + DASHBOARD
+  2. **FASE 2 (Operación):** CUENTAS_POR_COBRAR + CUENTAS_POR_PAGAR + IVA_CONTROL
+  3. **FASE 3 (Gestión):** PASIVOS + UTILIDADES_MENSUALES + CLIENTES_VIP
+  4. **FASE 4 (Estrategia):** OPERACIONES + PROYECCIONES + PRESUPUESTO + PERSONAL
+
+**Para v3.0:**
+- Implementar TODAS las 15+ hojas
+- Priorizar desarrollo según TOP 5
+- IVA_CONTROL como hoja crítica (dado contexto fiscal)
+- PERSONAL como hoja independiente
+
+---
+
+### E3. Nivel de Automatización
+
+**Pregunta:** ¿Cuánta automatización quieres?
+
+**Respuesta:** ✅ **OPCIÓN C - AVANZADO**
+
+**Funcionalidades requeridas:**
+- ✅ Macros/VBA para procesos repetitivos
+- ✅ Scripts Python para análisis profundo
+- ✅ Importación automática de datos
+- ✅ Reportes PDF automatizados
+
+**Análisis Crítico:**
+- 🎯 **Nivel correcto** para frecuencia diaria de actualización
+- VBA necesario para: Botones de conciliación, importación datos, limpieza duplicados
+- Python para: Análisis v2.0, detección duplicados, reportes avanzados, proyecciones
+- Importación automática: Extractos bancarios (CSV), facturas (XML Hacienda)
+- Reportes PDF: Dashboard semanal, P&L mensual, IVA mensual para contador
+
+**Implementaciones específicas:**
+
+**VBA Macros necesarios:**
+1. **BotónConciliarBanco:** Importa CSV de banco → Compara con TRANSACCIONES → Marca conciliadas
+2. **BotónDetectarDuplicados:** Escanea TRANSACCIONES → Resalta duplicados potenciales
+3. **BotónGenerarReportePDF:** Captura DASHBOARD → Exporta PDF con fecha
+4. **BotónActualizarTodo:** Refresca todas las tablas dinámicas y cálculos
+5. **BotónConciliarIVA:** Calcula IVA cobrado vs pagado → Genera reporte mensual
+
+**Python Scripts necesarios:**
+1. **analizar_v2_y_migrar.py:** Limpia duplicados de v2.0 → Importa a v3.0
+2. **importar_xml_hacienda.py:** Lee facturas XML → Extrae datos → Agrega a TRANSACCIONES
+3. **proyectar_flujo_caja.py:** Analiza histórico → Proyecta 6 meses → Grafica
+4. **analizar_margenes.py:** Calcula margen por operación, cliente, producto
+5. **reporte_ejecutivo.py:** Genera PDF con métricas clave
+
+**Formato de reportes PDF:**
+- Dashboard semanal (lunes, resumen última semana)
+- P&L mensual (día 5 de cada mes)
+- IVA mensual (día 10, antes de vencimiento 15)
+- Proyecciones trimestrales
+
+**Para v3.0:**
+- Botones visibles en hoja DASHBOARD
+- Scripts Python en carpeta `/scripts/`
+- Manual de uso de cada macro en pestaña AYUDA
+- Logs de ejecución de macros
+
+---
+
+### E4. Frecuencia de Actualización
+
+**Pregunta:** ¿Con qué frecuencia actualizarás el Excel?
+
+**Respuesta:** ✅ **OPCIÓN A - DIARIA + Conciliación SEMANAL**
+
+**Detalle:**
+- **Registro de transacciones:** DIARIO (cada día)
+- **Conciliación bancaria:** SEMANAL (con extractos)
+
+**Análisis Crítico:**
+- 🚨 **Actualización diaria = Diseño EFICIENTE crítico**
+- Tiempo estimado actualización diaria: 10-15 minutos máximo
+- Conciliación semanal: 30-45 minutos (viernes o lunes)
+- Necesita formularios de entrada rápida
+- Validaciones automáticas para evitar errores
+
+**Flujo de trabajo diario:**
+```
+9:00 AM - Abrir Excel v3.0
+         ↓
+9:02 AM - Ir a hoja TRANSACCIONES
+         ↓
+9:03 AM - Agregar transacciones del día anterior (3-5 transacciones típicas)
+         ↓
+9:05 AM - Verificar alertas en DASHBOARD
+         ↓
+9:08 AM - Revisar CUENTAS_POR_COBRAR (¿qué cobrar hoy?)
+         ↓
+9:10 AM - Revisar CUENTAS_POR_PAGAR (¿qué pagar hoy?)
+         ↓
+9:12 AM - Cerrar y sincronizar OneDrive
+```
+
+**Flujo de conciliación semanal:**
+```
+Viernes 4:00 PM - Descargar extractos bancarios (9 cuentas)
+                 ↓
+4:05 PM - Ejecutar macro "BotónConciliarBanco"
+         ↓
+4:10 PM - Revisar transacciones no conciliadas (investigar)
+         ↓
+4:20 PM - Ajustar/corregir transacciones
+         ↓
+4:30 PM - Verificar saldos EFECTIVO vs extractos
+         ↓
+4:40 PM - Generar reporte semanal PDF
+         ↓
+4:45 PM - Enviar PDF a contador (si es fin de mes)
+```
+
+**Para v3.0:**
+- Formulario de entrada rápida (UserForm VBA)
+- Atajos de teclado para acciones comunes
+- Validación en tiempo real (dropdowns, alertas)
+- Botón "Conciliación Semanal" con wizard paso a paso
+- Timer: "Última actualización hace X días" (alerta si >3 días)
+
+---
+
+### E5. Versión Móvil / Acceso Compartido
+
+**Pregunta:** ¿Necesitas acceso móvil o compartir con otros?
+
+**Respuesta:** ✅ **Excel en PC + Compartir OneDrive (Multi-usuario)**
+
+**Usuarios y permisos:**
+
+**1. ÁLVARO (Propietario):**
+- Acceso: TOTAL (lectura + escritura + configuración)
+- Dispositivo: PC (Excel Desktop)
+- Actualización: Diaria
+- Responsabilidad: Ingresar transacciones, tomar decisiones
+
+**2. CONTADOR (Solo lectura):**
+- Acceso: LECTURA únicamente
+- Compartir: OneDrive
+- Frecuencia: Mensual (al cierre)
+- Responsabilidad: Revisar P&L, IVA, Renta para declaraciones
+
+**3. ASISTENTE (Lectura + Escritura):**
+- Acceso: LECTURA + ESCRITURA (hojas específicas)
+- Compartir: OneDrive
+- Frecuencia: Diaria (apoyo en registro)
+- Responsabilidad: Registrar transacciones, conciliar bancos, actualizar CxC/CxP
+
+**CRÍTICO - MANUAL DE USO:**
+- ✅ Celdas con NOTAS adjuntas
+- ✅ Explicación de qué hace cada celda
+- ✅ Instrucciones de qué debe hacer el usuario
+- ✅ Formato: Comentarios de Excel (botón derecho → Insertar comentario)
+
+**Análisis Crítico:**
+- 🚨 **Multi-usuario = Riesgo de conflictos** (2 personas editando simultáneamente)
+- OneDrive tiene sincronización automática pero puede causar duplicados
+- Necesita PROTECCIÓN DE HOJAS con contraseña
+- Solo celdas de entrada desbloqueadas (coloreadas en amarillo)
+- Fórmulas y tablas dinámicas bloqueadas
+
+**Estrategia de protección:**
+
+**Hojas 100% protegidas (solo lectura para asistente/contador):**
+- DASHBOARD
+- UTILIDADES_MENSUALES
+- PROYECCIONES
+- PRESUPUESTO
+
+**Hojas parcialmente protegidas (campos editables para asistente):**
+- TRANSACCIONES: Campos A-T desbloqueados, columnas de fórmulas bloqueadas
+- EFECTIVO: Solo "Saldo Inicial" editable
+- CUENTAS_POR_COBRAR: Campo "Fecha Cobrado" editable
+- CUENTAS_POR_PAGAR: Campo "Fecha Pagado" editable
+- IVA_CONTROL: Solo "IVA Pagado" editable
+
+**Hojas personales (100% bloqueadas para todos excepto propietario):**
+- PERSONAL
+- PASIVOS (contiene info sensible de deudas)
+
+**Sistema de notas/manual:**
+```
+Ejemplo de nota en celda B2 (TRANSACCIONES - Tipo):
+┌─────────────────────────────────────────┐
+│ TIPO DE TRANSACCIÓN                     │
+│                                         │
+│ Selecciona del dropdown:                │
+│ • Ingreso: Dinero que ENTRA             │
+│ • Egreso: Dinero que SALE               │
+│ • Transferencia: Entre cuentas propias  │
+│ • Apertura: Saldo inicial               │
+│                                         │
+│ ⚠️ Transferencias NO afectan P&L        │
+└─────────────────────────────────────────┘
+```
+
+**Para v3.0:**
+- Pestaña "AYUDA" con manual completo
+- Comentarios en TODAS las celdas editables
+- Color amarillo = editable, blanco = solo lectura
+- Botón "Modo Asistente" que oculta hojas sensibles
+- Registro de cambios: Quién editó qué y cuándo (VBA log)
+- Validación: Si Asistente intenta editar celda bloqueada → Mensaje explicativo
+
+---
+
+## 🚨 ANÁLISIS CRÍTICO - BLOQUE #5
+
+### 📋 ESPECIFICACIONES FINALES V3.0:
+
+**ARQUITECTURA:**
+- ✅ 1 archivo único: `AlvaroVelasco_Finanzas_v3.0.xlsx`
+- ✅ 15+ pestañas (incluye PERSONAL separada)
+- ✅ Tamaño estimado: 5-10 MB
+- ✅ Almacenamiento: OneDrive (sincronización automática)
+
+**USUARIOS:**
+- 👤 Álvaro (Propietario): Control total
+- 👤 Asistente: Lectura + Escritura en hojas operativas
+- 👤 Contador: Solo lectura (mensual)
+
+**AUTOMATIZACIÓN:**
+- 🤖 VBA: 5 macros principales (conciliación, duplicados, reportes, actualización, IVA)
+- 🐍 Python: 5 scripts (migración, XML, proyecciones, márgenes, reportes)
+- 📄 PDF: 4 tipos de reportes automatizados
+
+**FRECUENCIA:**
+- 📅 Actualización: DIARIA (10-15 min)
+- 🏦 Conciliación: SEMANAL (30-45 min)
+- 📊 Reportes: Automáticos según calendario
+
+**USABILIDAD:**
+- 📝 Manual inline con notas en celdas
+- 🎨 Códigos de color (amarillo=editable, blanco=protegido)
+- 🔒 Protección de hojas con permisos granulares
+- 📚 Pestaña AYUDA con documentación completa
+
+### 🎯 PRIORIDADES DE IMPLEMENTACIÓN:
+
+**FASE 1 - MVP (Mínimo Viable):**
+1. TRANSACCIONES (con formulario de entrada)
+2. EFECTIVO (con 9 cuentas bancarias)
+3. DASHBOARD (métricas básicas)
+4. Manual de uso en celdas
+
+**FASE 2 - Operación Crítica:**
+5. CUENTAS_POR_COBRAR (con antigüedad)
+6. CUENTAS_POR_PAGAR (con vencimientos)
+7. IVA_CONTROL (urgente por situación fiscal)
+8. Macro de conciliación bancaria
+
+**FASE 3 - Gestión de Deuda:**
+9. PASIVOS (TC, Nissan, Hacienda con proyecciones)
+10. UTILIDADES_MENSUALES (P&L automático)
+11. CLIENTES_VIP (CLV, contratos)
+12. Script Python migración v2.0
+
+**FASE 4 - Estrategia y Análisis:**
+13. OPERACIONES (margen por venta)
+14. PROYECCIONES (flujo de caja 6 meses)
+15. PRESUPUESTO (vs real)
+16. PERSONAL (gastos personales)
+17. Reportes PDF automatizados
+
+### ⚠️ RIESGOS Y MITIGACIONES:
+
+**RIESGO 1: Conflictos multi-usuario**
+- Mitigación: OneDrive sincroniza cambios, pero entrenar a asistente en "Guardar cada 5 min"
+- Plan B: Si hay conflictos frecuentes, considerar Excel Online en lugar de Desktop
+
+**RIESGO 2: Actualización diaria no sostenible**
+- Mitigación: Formulario de entrada ULTRA rápido (<2 min por transacción)
+- Plan B: Si fallas >3 días, macro detecta y alerta
+
+**RIESGO 3: Complejidad abruma a asistente**
+- Mitigación: Manual detallado + sesión de capacitación 2 horas
+- Plan B: "Modo Simple" con solo hojas esenciales visibles
+
+**RIESGO 4: Archivo corrupto/perdido**
+- Mitigación: OneDrive mantiene versiones (recuperación hasta 30 días)
+- Plan B: Backup semanal manual a carpeta local (macro automático viernes)
+
+---
 
 ### Bloque #6 - Plan de Migración
 - M1: ¿Partir de cero o migrar transacciones v2.0?
