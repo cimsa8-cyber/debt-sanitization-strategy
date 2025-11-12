@@ -15,8 +15,9 @@ Establecer bases sólidas para el diseño del Excel v3.0 mediante cuestionario e
 
 - ✅ **Bloque #1 (C1-C5):** COMPLETADO - Tarjetas, Gastos Noviembre, Márgenes, Contratos, Categorizaciones
 - ✅ **Bloque #2 (T1-T5):** COMPLETADO - Pagos tarjetas, uso empresa/personal, 22 clientes facturados, alias, canjes
-- ⏳ **Bloque #3 (B1-B5):** PRÓXIMO - Cuentas bancarias, normalización, CIMSA
-- 📋 **Bloques #4-8:** PLANIFICADOS - Hacienda, estructura, migración, categorización, dashboards
+- ✅ **Bloque #3 (B1-B5):** COMPLETADO - 9 cuentas bancarias, $3.4k efectivo (12.9 días cobertura), CIMSA=cliente
+- ⏳ **Bloque #4 (H1-H5):** PRÓXIMO - Deuda Hacienda detallada
+- 📋 **Bloques #5-8:** PLANIFICADOS - Estructura, migración, categorización, dashboards
 
 ---
 
@@ -443,14 +444,153 @@ Establecer bases sólidas para el diseño del Excel v3.0 mediante cuestionario e
 
 ---
 
-## 📋 BLOQUES PLANIFICADOS
+## ✅ BLOQUE #3 - CUENTAS BANCARIAS Y NORMALIZACIÓN
+**Estado:** COMPLETADO
+**Fecha:** 12 Nov 2025
 
-### Bloque #3 - Cuentas Bancarias
-- B1: Lista completa de cuentas (normalización de nombres)
-- B2: Saldos actuales de cada cuenta
-- B3: Uso principal de cada cuenta (operativa, nómina, ahorro)
-- B4: ¿CIMSA es tu empresa o intermediario separado?
-- B5: Preferencia de nombres normalizados
+### B1. Lista Completa de Cuentas Bancarias
+
+**Respuesta:** ✅ **9 CUENTAS BANCARIAS (5 BNCR + 4 Promerica)**
+
+#### BNCR (5 cuentas):
+1. **100-01-000-188618-3** (Colones) - ₡211.24 - NEGOCIO
+2. **100-02-087-601066-4** (Dólares) - $1,087.37 - NEGOCIO
+3. **200-01-087-042186-9** (Colones) - ₡28,950.50 - NEGOCIO/RESERVAS
+4. **200-02-087-009589-4** (Dólares) - $0.43 - PERSONAL
+5. **200-02-087-011112-1** (Dólares) - $21.84 - PERSONAL
+
+#### PROMERICA (4 cuentas - A nombre de "ALVARO VELASCONET SOCIEDAD DE RESPONSABILIDAD LIMITADA"):
+6. **10000003881708** (SINPE Colones) - ₡1,090.00 - NEGOCIO
+7. **20000003881691** (Ahorros Dólares) - $0.00 - NEGOCIO
+8. **30000003904229** (CC Corporativa Colones) - ₡0.00 - NEGOCIO
+9. **40000003881774** (CC Corporativa Dólares) - $2,276.44 - NEGOCIO 👑
+
+---
+
+### B2 & B3. Saldos y Uso (12 Nov 2025 16:04)
+
+**Respuesta:** ✅ **Incluidos en B1**
+
+**RESUMEN:**
+- **7 cuentas NEGOCIO** (77.8%)
+- **2 cuentas PERSONAL** (22.2%)
+- **1 cuenta RESERVAS** (cuenta compartida negocio/reservas)
+- **3 cuentas en $0:** Promerica Ahorros USD, Promerica CC CRC, BNCR Personal USD 9589
+
+---
+
+### B4. ¿Qué es CIMSA?
+
+**Pregunta:** ¿CIMSA es tu empresa o un intermediario separado?
+
+**Respuesta:** ✅ **OPCIÓN B - CIMSA es un distribuidor/cliente (intermediario separado)**
+
+"CIMSA es un distribuidor nuestro, se le factura como a cualquier otro cliente."
+
+**Análisis Crítico:**
+- Tu razón social real: **"ALVARO VELASCONET SOCIEDAD DE RESPONSABILIDAD LIMITADA"** (revelado en cuentas Promerica)
+- CIMSA = Cliente externo, no tu empresa
+- Se factura como cliente normal (posiblemente mayorista/distribuidor)
+
+**Para v3.0:**
+- Agregar CIMSA a la lista de clientes
+- Categorizar como "Distribuidor" o "Cliente Mayorista" si hay precios especiales
+
+---
+
+### B5. Variaciones de Nombres en v2.0
+
+**Pregunta:** ¿Cuáles son las variaciones con las que aparecen tus cuentas en v2.0?
+
+**Respuesta:** ✅ **Confirmado para Promerica USD (40000003881774)**
+
+**Variaciones Identificadas:**
+- Promerica USD
+- Promerica USD (40000003881774)
+- Promerica USD 1774
+- Promerica USD (*1774)
+- Promerica 1774
+
+**Análisis Crítico:**
+- ✅ Sistema de alias existente puede manejar estas variaciones
+- Necesita expansión para las 9 cuentas (especialmente las 5 de BNCR)
+- Patrón común: Banco + Moneda + últimos 4 dígitos con diferentes formatos
+
+**Para v3.0:**
+- Nombre estándar BNCR: "BNCR [Moneda] (***[últimos4])" (ej: "BNCR CRC (***8618)")
+- Nombre estándar Promerica: "Promerica [Moneda] (***[últimos4])" (ej: "Promerica USD (***1774)")
+- Script de normalización: Expandir para cubrir las 9 cuentas
+
+---
+
+## 🚨 ANÁLISIS CRÍTICO EXPLOSIVO - BLOQUE #3
+
+### 💣 CRISIS DE LIQUIDEZ DETECTADA:
+
+**EFECTIVO TOTAL DISPONIBLE:** $3,444.54
+```
+BNCR:
+  Colones: ₡29,161.74 (~$56.35)
+  Dólares: $1,109.64
+  Subtotal: $1,165.99
+
+PROMERICA:
+  Colones: ₡1,090.00 (~$2.11)
+  Dólares: $2,276.44
+  Subtotal: $2,278.55
+
+TOTAL: $3,444.54
+```
+
+### 🚨 ALERTA CRÍTICA DE SUPERVIVENCIA:
+
+```
+Break-even mensual:     $8,000
+Efectivo disponible:    $3,444
+COBERTURA:              12.9 DÍAS (1.8 semanas)
+DÉFICIT:                -$4,556
+```
+
+**¡SITUACIÓN CRÍTICA!** Tienes efectivo para menos de 2 semanas de operación.
+
+### 📊 Concentración de Efectivo:
+
+- **Cuenta principal:** Promerica USD 1774 = $2,276.44 (66% del total)
+- **Cuenta reservas:** BNCR CRC 2186 = ₡28,950 (~$56) - NO es reserva real
+- **Cuentas personales:** $22.27 (0.6%)
+- **3 cuentas en $0:** Promerica Ahorros, Promerica CC CRC, BNCR 9589
+
+### 💡 Contexto vs Cuentas por Cobrar:
+
+```
+Cuentas por Cobrar estimadas:  $9,200 - $10,866
+Efectivo en banco:             $3,444
+RATIO COBRO/EFECTIVO:          2.7x - 3.2x
+```
+
+**BUENA NOTICIA:** Si cobras solo 32-38% de CxC pendientes, duplicas tu efectivo disponible.
+
+**MALA NOTICIA:** Dependes críticamente de cobros para operar día a día.
+
+### ⚠️ Riesgos Identificados:
+
+1. **CRÍTICO - Liquidez Ultra Baja:** 12.9 días de cobertura
+2. **Alta Dependencia de CxC:** $9k+ por cobrar vs $3.4k en banco
+3. **Cuenta "Reservas" Inútil:** Solo ₡28,950 (~$56) en colones
+4. **Fragmentación Excesiva:** 9 cuentas para operar (complejidad innecesaria)
+5. **3 Cuentas Inactivas:** $0 saldo (mantenerlas cuesta)
+
+### 🎯 Para v3.0:
+
+- **URGENTE:** Dashboard de liquidez con alerta si efectivo < 20 días de operación
+- Proyección de flujo de caja semanal (no mensual)
+- Tracking de antigüedad de CxC (0-15, 16-30, 31-60, 60+ días)
+- Alertas: "Efectivo crítico: < 15 días de cobertura"
+- Consolidación de cuentas: ¿Realmente necesitas 9 cuentas?
+
+---
+
+## 📋 BLOQUES PLANIFICADOS
 
 ### Bloque #4 - Deuda Hacienda
 - H1: Monto total adeudado a Hacienda
@@ -534,8 +674,15 @@ Establecer bases sólidas para el diseño del Excel v3.0 mediante cuestionario e
 - Paga proveedores en 30 días
 - Ciclo de conversión: -15 días (favorable)
 
+**Efectivo en Bancos (12 Nov 2025):**
+- 9 cuentas totales (5 BNCR + 4 Promerica)
+- Total efectivo: $3,444.54 USD equivalente
+- Razón social: "Alvaro Velasconet SRL"
+- 🚨 CRÍTICO: Solo 12.9 días de cobertura operativa
+
 **Cuentas por Cobrar:**
 - Estimado: $9,200-$10,866
+- Ratio CxC/Efectivo: 2.7x - 3.2x (alta dependencia de cobros)
 
 **Proveedores Principales:**
 - Intcomex: $5k crédito
@@ -573,11 +720,12 @@ Establecer bases sólidas para el diseño del Excel v3.0 mediante cuestionario e
 
 ### Riesgos Identificados:
 
-1. **CRÍTICO - Deuda Tarjetas Creciente:** Pagos < Intereses generados
-2. **Concentración Cliente:** Grupo Acción 17.8% + VWR 14.8% = 32.6% TOP 2 (MEJORADO vs 51% anterior)
-3. **Volatilidad Ingresos:** Rango $8k-$17k (verificar con más meses limpios)
-3. **Fondo Emergencia:** ~$0 (meta: $10k)
-4. **Cuentas por Cobrar:** Alto volumen sin tracking claro
+1. **🔴 CRÍTICO - Crisis de Liquidez:** Solo 12.9 días de efectivo (meta: 30+ días)
+2. **🔴 CRÍTICO - Deuda TC Creciente:** Pagos ($556/mes) < Intereses ($625/mes)
+3. **🟠 ALTO - Dependencia CxC:** $9k+ por cobrar vs $3.4k efectivo (ratio 2.7x-3.2x)
+4. **🟡 MEDIO - Concentración Cliente:** TOP 2 = 32.6% (mejorado vs 51%)
+5. **🟡 MEDIO - Volatilidad Ingresos:** Verificar con más meses limpios
+6. **🟢 BAJO - Fondo Emergencia:** Meta $10k (actual: $3.4k = 34%)
 
 ---
 
