@@ -8,8 +8,31 @@ import openpyxl
 from datetime import datetime
 from collections import defaultdict
 import statistics
+import os
 
-EXCEL_FILE = "AlvaroVelasco_Finanzas_v2.0.xlsx"
+# Buscar el archivo Excel en múltiples ubicaciones
+EXCEL_NAMES = [
+    "AlvaroVelasco_Finanzas_v2.0.xlsx",
+    "AlvaroVelasco_Finanzas_v2.0.xls",
+    "../AlvaroVelasco_Finanzas_v2.0.xlsx",
+    "../AlvaroVelasco_Finanzas_v2.0.xls"
+]
+
+EXCEL_FILE = None
+for name in EXCEL_NAMES:
+    if os.path.exists(name):
+        EXCEL_FILE = name
+        break
+
+if not EXCEL_FILE:
+    print("❌ ERROR: No se encontró el archivo Excel")
+    print("Buscando:")
+    for name in EXCEL_NAMES:
+        print(f"  - {name}")
+    print()
+    print("Coloca el archivo Excel en la misma carpeta que este script")
+    print("o en la carpeta padre")
+    exit(1)
 
 def analizar_metricas():
     print("=" * 80)
