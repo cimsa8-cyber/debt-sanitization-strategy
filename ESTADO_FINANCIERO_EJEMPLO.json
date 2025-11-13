@@ -1,0 +1,93 @@
+{
+  "efectivo": {
+    "total_usd": 4302.10,
+    "cuentas": {
+      "bncr": {
+        "cuenta_usd": {"saldo_real": 1240.87, "moneda": "USD"},
+        "cuenta_crc": {"saldo_real_usd": 59.84, "saldo_real_crc": 30337.24}
+      },
+      "promerica": {
+        "cuenta_usd": {"saldo_real": 2999.24, "moneda": "USD"},
+        "cuenta_crc": {"saldo_real_usd": 2.15, "saldo_real_crc": 1090}
+      }
+    },
+    "cuentas_personal_alvaro": {
+      "total_usd": 156.28,
+      "cuenta_1": 0.43,
+      "cuenta_2": 21.84,
+      "cuenta_3": 134.01
+    }
+  },
+  "cuentas_por_cobrar": {
+    "total_usd": 10866.42,
+    "cantidad_clientes": 26,
+    "todos_los_clientes": [
+      {"nombre": "CLIENTE 1", "monto_usd": 2800.00, "prioridad": "CRÍTICA"},
+      {"nombre": "CLIENTE 2", "monto_usd": 1689.04, "prioridad": "CRÍTICA"},
+      {"nombre": "CLIENTE 3", "monto_usd": 950.00, "prioridad": "ALTA"},
+      {"nombre": "CLIENTE 4", "monto_usd": 870.50, "prioridad": "ALTA"},
+      {"nombre": "CLIENTE 5", "monto_usd": 750.00, "prioridad": "ALTA"},
+      {"nombre": "CLIENTE 6", "monto_usd": 650.88, "prioridad": "MEDIA"},
+      {"nombre": "CLIENTE 7", "monto_usd": 580.00, "prioridad": "MEDIA"},
+      {"nombre": "CLIENTE 8", "monto_usd": 500.00, "prioridad": "MEDIA"},
+      {"nombre": "CLIENTE 9", "monto_usd": 450.00, "prioridad": "MEDIA"},
+      {"nombre": "CLIENTE 10", "monto_usd": 400.00, "prioridad": "BAJA"}
+    ]
+  },
+  "cuentas_por_pagar": {
+    "total_usd": 6103.66,
+    "vencido_urgente": {
+      "total_usd": 454.16,
+      "facturas": [
+        {"proveedor": "PROVEEDOR 1", "factura": "FAC-001", "monto_usd": 410.09, "dias_mora": 33},
+        {"proveedor": "PROVEEDOR 2", "monto_usd": 44.07, "dias_mora": 27}
+      ]
+    }
+  },
+  "tarjetas_credito": {
+    "total_usd": 16382.69,
+    "tarjetas": [
+      {"banco": "BANCO A", "numero": "****3519", "saldo_usd": 1192.44, "estado": "VENCIDA"},
+      {"banco": "BANCO A", "numero": "****9837", "saldo_usd": 5779.40, "estado": "VENCIDA"},
+      {"banco": "BANCO A", "numero": "****6386", "saldo_usd": 591.70, "estado": "VENCIDA"},
+      {"banco": "BANCO A", "numero": "****8759", "saldo_usd": 5731.48, "estado": "VENCIDA"},
+      {"banco": "BANCO B", "saldo_usd": 3087.67, "estado": "Activa"}
+    ],
+    "total_vencido": 13295.02
+  },
+  "gastos_operativos_mensuales": {
+    "total_mensual_usd": 2809.38,
+    "gastos_mensuales": [
+      {"concepto": "Salario", "monto_usd": 1000.00},
+      {"concepto": "CCSS", "monto_usd": 353.26, "monto_crc": 179000},
+      {"concepto": "ICE", "monto_usd": 380.24, "monto_crc": 192804.15},
+      {"concepto": "Software", "monto_usd": 200.00},
+      {"concepto": "Servicios", "monto_usd": 16.85},
+      {"concepto": "Vehículo", "monto_usd": 800.00},
+      {"concepto": "Parqueos", "monto_usd": 59.17, "monto_crc": 30000}
+    ]
+  },
+  "ahorros": {
+    "total_usd": 8053.97,
+    "cuentas": [
+      {"codigo": "AHORRO-1", "descripcion": "Ahorro 1", "saldo_usd": 1006.06},
+      {"codigo": "AHORRO-2", "descripcion": "Ahorro 2", "saldo_usd": 2263.15},
+      {"codigo": "AHORRO-3", "descripcion": "Ahorro 3", "saldo_usd": 225.43},
+      {"codigo": "AHORRO-4", "descripcion": "Ahorro 4", "saldo_usd": 4559.33}
+    ]
+  },
+  "iva": {
+    "vencido_hacienda": {
+      "total_usd": 533.92,
+      "periodos": [
+        {"periodo": "202508", "monto_usd": 481.44, "dias_mora": 52},
+        {"periodo": "202509", "monto_usd": 52.48, "dias_mora": 14}
+      ]
+    }
+  },
+  "deuda_hacienda": {
+    "total_estimado_usd": 19604,
+    "isr": {"total_usd": 9265.71},
+    "solicitud_arreglo": {"numero": "DGV-XXXXXX", "estado": "En trámite"}
+  }
+}

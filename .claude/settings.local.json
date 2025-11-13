@@ -1,0 +1,19 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(python:*)",
+      "WebFetch(domain:code.claude.com)",
+      "Bash(git add:*)",
+      "Bash(git commit -m \"$(cat <<''EOF''\nFEATURE: Agregar scripts Python para importación automática de transacciones\n\n- Crear script importar_transacciones_promerica.py para importar CSV a Excel\n- Agregar explorar_excel.py para análisis de estructura del Excel\n- Incluir verificar_importacion.py para validar transacciones importadas\n- Actualizar .gitignore para excluir carpeta .claude/\n\nImportadas exitosamente 25 transacciones Promerica (27/10 - 04/11/2025)\nTotal transacciones en Excel: 37 → 62\n\n🤖 Generated with [Claude Code](https://claude.com/claude-code)\n\nCo-Authored-By: Claude <noreply@anthropic.com>\nEOF\n)\")",
+      "Bash(git rm:*)",
+      "Bash(git commit -m \"$(cat <<''EOF''\nSECURITY: Eliminar información sensible del repositorio público\n\nCRÍTICO - Archivos con datos financieros reales removidos del índice git:\n- 43 archivos con información bancaria y financiera sensible\n- Números de cuenta bancarios reales\n- Saldos y transacciones con nombres de clientes\n- Extractos bancarios completos (BNCR, Promerica, BAC)\n\nArchivos protegidos (permanecen en local, no en git):\n✓ Carpeta data/ completa (33 archivos con extractos)\n✓ CSV con transacciones Promerica\n✓ JSON con estados financieros y clientes\n✓ TXT con saldos, conciliaciones y auditorías\n\n.gitignore actualizado con protecciones adicionales:\n- data/ y subcarpetas\n- Todos los CSV de transacciones\n- Todos los JSON de estado financiero\n- Archivos TXT con saldos y conciliaciones\n\nIMPORTANTE: Los archivos NO fueron borrados del disco, solo del índice git.\nTodos los datos permanecen seguros en el directorio local.\n\n🤖 Generated with [Claude Code](https://claude.com/claude-code)\n\nCo-Authored-By: Claude <noreply@anthropic.com>\nEOF\n)\")",
+      "Bash(git commit:*)",
+      "Bash(cat:*)",
+      "Bash(dir:*)",
+      "Bash(nul)",
+      "Bash(findstr:*)"
+    ],
+    "deny": [],
+    "ask": []
+  }
+}
