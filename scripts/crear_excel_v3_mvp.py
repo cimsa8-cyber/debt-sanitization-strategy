@@ -460,12 +460,13 @@ def crear_hoja_efectivo(wb):
     ws.cell(row_total_bancos, 1, "TOTAL BANCOS (USD equivalente)")
     ws.cell(row_total_bancos, 1).font = Font(bold=True)
 
-    # Crear fórmula que sume USD + (CRC/517.5)
+    # Crear fórmula que sume USD + (CRC/TC_COMPRA)
+    # Usamos TC Compra porque es lo que nos DAN por USD (conversión CRC a USD)
     # Necesitamos SUMIF por moneda
-    tipo_cambio = 517.5
+    tipo_cambio_compra = 494.00  # TC Compra 12/Nov/2025
 
     # Saldo inicial total en USD
-    formula_saldo_usd = f'=SUMIF(D5:D{row_total_bancos-1},"USD",E5:E{row_total_bancos-1})+SUMIF(D5:D{row_total_bancos-1},"CRC",E5:E{row_total_bancos-1})/{tipo_cambio}'
+    formula_saldo_usd = f'=SUMIF(D5:D{row_total_bancos-1},"USD",E5:E{row_total_bancos-1})+SUMIF(D5:D{row_total_bancos-1},"CRC",E5:E{row_total_bancos-1})/{tipo_cambio_compra}'
     ws.cell(row_total_bancos, 5, formula_saldo_usd)
     ws.cell(row_total_bancos, 5).font = Font(bold=True)
     ws.cell(row_total_bancos, 5).number_format = '$#,##0.00'
@@ -516,7 +517,8 @@ def crear_hoja_efectivo(wb):
         crear_estilo_editable(ws.cell(row, 4))
 
         # Equivalente USD Total (USD + CRC convertido)
-        formula_equiv = f'=C{row}+(D{row}/517.5)'
+        # Usamos TC Compra para conversión CRC a USD
+        formula_equiv = f'=C{row}+(D{row}/494)'
         ws.cell(row, 5, formula_equiv)
         ws.cell(row, 5).number_format = '$#,##0.00'
         crear_estilo_formula(ws.cell(row, 5))
@@ -593,11 +595,11 @@ def crear_hoja_efectivo(wb):
     ws[f'A{row}'].font = FONT_SMALL
 
     row += 1
-    ws[f'A{row}'] = "• Tipo de cambio usado: ₡517.5 por $1 USD"
+    ws[f'A{row}'] = "• Tipo de cambio usado para conversión: TC Compra ₡494.00 por $1 USD (12/Nov/2025)"
     ws[f'A{row}'].font = FONT_SMALL
 
     row += 1
-    ws[f'A{row}'] = f"• EFECTIVO NETO REAL (12/Nov): $3,444.54 en bancos - $16,536 en tarjetas = -$13,091.46 (CRISIS)"
+    ws[f'A{row}'] = f"• EFECTIVO NETO REAL: Bancos - Tarjetas (ver cálculo arriba)"
     ws[f'A{row}'].font = Font(size=10, bold=True, color='FF0000')
 
     print("   ✅ Hoja EFECTIVO creada")
@@ -913,7 +915,7 @@ def crear_hoja_configuracion(wb):
     # TC COMPRA
     ws.cell(row, 1, "TC Compra")
     ws.cell(row, 1).font = Font(bold=True)
-    ws.cell(row, 2, 517.50)
+    ws.cell(row, 2, 494.00)  # TC Real 12/Nov/2025
     crear_estilo_editable(ws.cell(row, 2))
     ws.cell(row, 2).number_format = '₡#,##0.00'
 
@@ -921,14 +923,14 @@ def crear_hoja_configuracion(wb):
     crear_estilo_editable(ws.cell(row, 3))
 
     ws.cell(row, 4, "Banco compra dólares (tú vendes USD)")
-    agregar_comentario(ws.cell(row, 2), "💡 TIPO DE CAMBIO COMPRA\n\nCuántos colones TE DAN por $1 USD\n\nEjemplo: Si banco te da ₡517.50 por $1\n\n⚠️ Actualizar 1 vez/semana")
+    agregar_comentario(ws.cell(row, 2), "💡 TIPO DE CAMBIO COMPRA\n\nCuántos colones TE DAN por $1 USD\n\nEjemplo: Si banco te da ₡494.00 por $1\n\n⚠️ Actualizar 1 vez/semana")
 
     row += 1
     row_tc_venta = row
     # TC VENTA
     ws.cell(row, 1, "TC Venta")
     ws.cell(row, 1).font = Font(bold=True)
-    ws.cell(row, 2, 525.00)
+    ws.cell(row, 2, 508.00)  # TC Real 12/Nov/2025
     crear_estilo_editable(ws.cell(row, 2))
     ws.cell(row, 2).number_format = '₡#,##0.00'
 
@@ -936,7 +938,7 @@ def crear_hoja_configuracion(wb):
     crear_estilo_editable(ws.cell(row, 3))
 
     ws.cell(row, 4, "Banco vende dólares (tú compras USD)")
-    agregar_comentario(ws.cell(row, 2), "💡 TIPO DE CAMBIO VENTA\n\nCuántos colones PAGAS por $1 USD\n\nEjemplo: Si banco cobra ₡525.00 por $1\n\n⚠️ Actualizar 1 vez/semana")
+    agregar_comentario(ws.cell(row, 2), "💡 TIPO DE CAMBIO VENTA\n\nCuántos colones PAGAS por $1 USD\n\nEjemplo: Si banco cobra ₡508.00 por $1\n\n⚠️ Actualizar 1 vez/semana")
 
     # ========================================================================
     # SECCIÓN 3: HISTORIAL DE TIPOS DE CAMBIO
@@ -955,11 +957,11 @@ def crear_hoja_configuracion(wb):
 
     row += 1
     row_hist_inicio = row
-    # Primera entrada del historial (actual)
+    # Primera entrada del historial (TC Real 12/Nov/2025)
     ws.cell(row, 1, datetime.now().strftime("%d/%m/%Y"))
-    ws.cell(row, 2, 517.50)
+    ws.cell(row, 2, 494.00)
     ws.cell(row, 2).number_format = '₡#,##0.00'
-    ws.cell(row, 3, 525.00)
+    ws.cell(row, 3, 508.00)
     ws.cell(row, 3).number_format = '₡#,##0.00'
 
     # Promedio
@@ -1018,8 +1020,8 @@ def crear_hoja_configuracion(wb):
     ws.column_dimensions['F'].width = 15
 
     print("   ✅ Hoja CONFIG creada")
-    print(f"      - TC Compra: ₡517.50 (editable)")
-    print(f"      - TC Venta: ₡525.00 (editable)")
+    print(f"      - TC Compra: ₡494.00 (editable)")
+    print(f"      - TC Venta: ₡508.00 (editable)")
     print(f"      - Historial de TCs para auditoría")
 
 # ============================================================================
