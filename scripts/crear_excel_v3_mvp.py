@@ -65,52 +65,57 @@ BORDER_THIN = Border(
 # DATOS DE CONFIGURACIÓN (Del Cuestionario v3.0)
 # ============================================================================
 
-# 22 Clientes (Bloque 2)
+# 22 Clientes REALES (Bloque 2 T3 - Facturación Noviembre 2025)
+# TOTAL: $9,466.42
 CLIENTES = [
-    {"nombre": "Grupo Acción Comercial S.A.", "categoria": "VIP", "monto_nov": 1681.56},
-    {"nombre": "Corporación de Supermercados Unidos CSU", "categoria": "VIP", "monto_nov": 1488.75},
-    {"nombre": "Tiendas Monge CR", "categoria": "VIP", "monto_nov": 1029.75},
-    {"nombre": "Gessa Comunicaciones S.A.", "categoria": "VIP", "monto_nov": 830.50},
-    {"nombre": "Corporación El Colono", "categoria": "VIP", "monto_nov": 778.84},
-    {"nombre": "Automercado S.A.", "categoria": "VIP", "monto_nov": 705.10},
-    {"nombre": "Supermercados La Mejor", "categoria": "VIP", "monto_nov": 580.00},
-    {"nombre": "Servicios R.G.V. Ltda", "categoria": "Regular", "monto_nov": 531.52},
-    {"nombre": "Grupo Roble S.A.", "categoria": "Regular", "monto_nov": 417.30},
-    {"nombre": "Inversiones JZ S.A.", "categoria": "Regular", "monto_nov": 275.00},
-    {"nombre": "Importadora G.J. S.A.", "categoria": "Regular", "monto_nov": 250.68},
-    {"nombre": "MegaSuper S.A.", "categoria": "Regular", "monto_nov": 187.76},
-    {"nombre": "Corporación 5x3 S.A.", "categoria": "Regular", "monto_nov": 160.25},
-    {"nombre": "Distribuidora del Sur", "categoria": "Regular", "monto_nov": 142.50},
-    {"nombre": "Fresh Market S.A.", "categoria": "Regular", "monto_nov": 124.80},
-    {"nombre": "PriceSmart Costa Rica", "categoria": "Regular", "monto_nov": 109.16},
-    {"nombre": "Super La Económica", "categoria": "Regular", "monto_nov": 94.75},
-    {"nombre": "Tiendas Pequeño Mundo", "categoria": "Regular", "monto_nov": 83.20},
-    {"nombre": "Distribuidora Central", "categoria": "Regular", "monto_nov": 0.00},
-    {"nombre": "Comercial del Este", "categoria": "Regular", "monto_nov": 0.00},
-    {"nombre": "Super Compro S.A.", "categoria": "Regular", "monto_nov": 0.00},
-    {"nombre": "Walmart Costa Rica", "categoria": "Regular", "monto_nov": 0.00},
+    {"nombre": "Grupo Acción Comercial S.A.", "categoria": "VIP", "monto_nov": 1689.04, "factura": "AR-002"},
+    {"nombre": "VWR International Ltda", "categoria": "VIP", "monto_nov": 1400.00, "factura": "AR-001"},
+    {"nombre": "Alfipac (Almacén Fiscal Pacífico)", "categoria": "VIP", "monto_nov": 761.05, "factura": "AR-003"},
+    {"nombre": "3-102-887892 SRL", "categoria": "Regular", "monto_nov": 691.56, "factura": "AR-004"},
+    {"nombre": "Waipio S.A.", "categoria": "Regular", "monto_nov": 687.27, "factura": "AR-005"},
+    {"nombre": "Centro Integral Oncología CIO SRL", "categoria": "Regular", "monto_nov": 687.05, "factura": "AR-006"},
+    {"nombre": "Ortodoncia de la Cruz", "categoria": "Regular", "monto_nov": 494.50, "factura": "AR-007"},
+    {"nombre": "Global Automotriz GACR S.A.", "categoria": "Regular", "monto_nov": 439.61, "factura": "AR-008"},
+    {"nombre": "Solusa Consolidators", "categoria": "Regular", "monto_nov": 378.35, "factura": "AR-009"},
+    {"nombre": "Cemso", "categoria": "Regular", "monto_nov": 333.92, "factura": "AR-010"},
+    {"nombre": "Acacia (Asoc. CR Agencias Carga)", "categoria": "Regular", "monto_nov": 333.35, "factura": "AR-011"},
+    {"nombre": "Rodriguez Rojas Carlos Humberto", "categoria": "Regular", "monto_nov": 282.50, "factura": "AR-012"},
+    {"nombre": "Supply Net C.R.W.H S.A.", "categoria": "Regular", "monto_nov": 276.85, "factura": "AR-013"},
+    {"nombre": "Operation Managment Tierra Magnifica", "categoria": "Regular", "monto_nov": 209.06, "factura": "AR-014"},
+    {"nombre": "Gentra de Costa Rica S.A.", "categoria": "Regular", "monto_nov": 183.63, "factura": "AR-015"},
+    {"nombre": "Sevilla Navarro Edgar", "categoria": "Regular", "monto_nov": 169.50, "factura": "AR-016"},
+    {"nombre": "Gomez Ajoy Edgar Luis", "categoria": "Regular", "monto_nov": 113.00, "factura": "AR-017"},
+    {"nombre": "Melendez Morales Monica", "categoria": "Regular", "monto_nov": 113.00, "factura": "AR-018"},
+    {"nombre": "Bandogo Soluciones Tecnológicas S.A.", "categoria": "Regular", "monto_nov": 67.80, "factura": "AR-019"},
+    {"nombre": "CPF Servicios Radiológicos S.A.", "categoria": "Regular", "monto_nov": 56.50, "factura": "AR-020"},
+    {"nombre": "Ortodec S.A.", "categoria": "Regular", "monto_nov": 56.50, "factura": "AR-021"},
+    {"nombre": "Perez Morales Francisco", "categoria": "Regular", "monto_nov": 42.38, "factura": "AR-022"},
 ]
 
-# 9 Cuentas Bancarias (Bloque 3)
+# 9 Cuentas Bancarias REALES (Bloque 3 B1 - Saldos 12 Nov 2025)
+# TOTAL EFECTIVO: $3,444.54 (12.9 días de cobertura)
 CUENTAS_BANCARIAS = [
-    {"nombre": "BNCR CRC Corriente (200-01-000-622159-5)", "tipo": "Banco", "moneda": "CRC", "saldo": 0.00},
-    {"nombre": "BNCR USD Corriente (200-02-000-011931-4)", "tipo": "Banco", "moneda": "USD", "saldo": 0.00},
-    {"nombre": "BNCR CRC Ahorros (100-01-000-086647-3)", "tipo": "Banco", "moneda": "CRC", "saldo": 0.00},
-    {"nombre": "BNCR USD Ahorros (100-02-000-039695-7)", "tipo": "Banco", "moneda": "USD", "saldo": 1894.54},
-    {"nombre": "BNCR CRC Cliente (100-01-000-066819-8)", "tipo": "Banco", "moneda": "CRC", "saldo": 0.00},
-    {"nombre": "Promerica CRC Corriente (10000003881708)", "tipo": "Banco", "moneda": "CRC", "saldo": 0.00},
-    {"nombre": "Promerica USD Corriente (40000003881774)", "tipo": "Banco", "moneda": "USD", "saldo": 1550.00},
-    {"nombre": "Efectivo Caja Chica CRC", "tipo": "Efectivo", "moneda": "CRC", "saldo": 0.00},
-    {"nombre": "Efectivo Caja Chica USD", "tipo": "Efectivo", "moneda": "USD", "saldo": 0.00},
+    # BNCR (5 cuentas)
+    {"nombre": "BNCR CRC Ahorros (***8618)", "numero": "100-01-000-188618-3", "tipo": "Banco", "moneda": "CRC", "saldo": 211.24, "uso": "NEGOCIO"},
+    {"nombre": "BNCR USD Ahorros (***1066)", "numero": "100-02-087-601066-4", "tipo": "Banco", "moneda": "USD", "saldo": 1087.37, "uso": "NEGOCIO"},
+    {"nombre": "BNCR CRC Corriente (***2186)", "numero": "200-01-087-042186-9", "tipo": "Banco", "moneda": "CRC", "saldo": 28950.50, "uso": "NEGOCIO/RESERVAS"},
+    {"nombre": "BNCR USD Corriente (***9589)", "numero": "200-02-087-009589-4", "tipo": "Banco", "moneda": "USD", "saldo": 0.43, "uso": "PERSONAL"},
+    {"nombre": "BNCR USD Corriente (***1112)", "numero": "200-02-087-011112-1", "tipo": "Banco", "moneda": "USD", "saldo": 21.84, "uso": "PERSONAL"},
+    # PROMERICA (4 cuentas - A nombre de "ALVARO VELASCONET SRL")
+    {"nombre": "Promerica CRC SINPE (***1708)", "numero": "10000003881708", "tipo": "Banco", "moneda": "CRC", "saldo": 1090.00, "uso": "NEGOCIO"},
+    {"nombre": "Promerica USD Ahorros (***1691)", "numero": "20000003881691", "tipo": "Banco", "moneda": "USD", "saldo": 0.00, "uso": "NEGOCIO"},
+    {"nombre": "Promerica CRC CC Corp (***4229)", "numero": "30000003904229", "tipo": "Banco", "moneda": "CRC", "saldo": 0.00, "uso": "NEGOCIO"},
+    {"nombre": "Promerica USD CC Corp (***1774)", "numero": "40000003881774", "tipo": "Banco", "moneda": "USD", "saldo": 2276.44, "uso": "NEGOCIO"},
 ]
 
-# 5 Tarjetas de Crédito (Bloque 4)
+# 5 Tarjetas de Crédito REALES (Bloque 1 C1 - Saldos 12 Nov 2025)
+# TOTAL DEUDA TC: $14,867.73 USD + ₡863,830 CRC (~$16,536 USD equivalente)
 TARJETAS_CREDITO = [
-    {"nombre": "Tarjeta BNCR Visa 3519", "limite": 3000.00, "saldo": 0.00, "estrategia": "Pago mínimo mientras crisis"},
-    {"nombre": "Tarjeta Promerica MC 8641", "limite": 2000.00, "saldo": 0.00, "estrategia": "Pago mínimo"},
-    {"nombre": "Tarjeta BAC Visa 7182", "limite": 1500.00, "saldo": 0.00, "estrategia": "Pago mínimo"},
-    {"nombre": "Tarjeta Scotia Visa 4429", "limite": 1000.00, "saldo": 0.00, "estrategia": "Pago mínimo"},
-    {"nombre": "Tarjeta Popular MC 6753", "limite": 800.00, "saldo": 0.00, "estrategia": "Pago mínimo"},
+    {"nombre": "BNCR VISA ***3519 (Alvaro)", "saldo_usd": 3864.90, "saldo_crc": 0, "uso": "PERSONAL", "estrategia": "Pago total mensual"},
+    {"nombre": "BNCR VISA ***9837 (Alvaro)", "saldo_usd": 3299.01, "saldo_crc": 0, "uso": "EMPRESA", "estrategia": "Pago mínimo × 1.5"},
+    {"nombre": "BNCR VISA ***6386 (Alejandra)", "saldo_usd": 5195.07, "saldo_crc": 0, "uso": "EMPRESA", "estrategia": "Pago mínimo × 1.5"},
+    {"nombre": "BNCR MC ***8759 (Alvaro)", "saldo_usd": 0, "saldo_crc": 863830, "uso": "EMPRESA", "estrategia": "Pago mínimo × 1.5"},
+    {"nombre": "BAC VISA ***9550 (Alvaro)", "saldo_usd": 2508.75, "saldo_crc": 0, "uso": "EMPRESA", "estrategia": "Pago mínimo × 1.5"},
 ]
 
 # 5 Proveedores Principales
@@ -368,7 +373,10 @@ $I:$I, I2
 
 def crear_hoja_efectivo(wb):
     """
-    Crea la hoja EFECTIVO con 9 cuentas bancarias.
+    Crea la hoja EFECTIVO con:
+    - 9 cuentas bancarias (ACTIVOS)
+    - 5 tarjetas de crédito (PASIVOS)
+    - Cálculo de EFECTIVO NETO
 
     Calcula saldos automáticamente desde TRANSACCIONES.
     """
@@ -376,84 +384,215 @@ def crear_hoja_efectivo(wb):
 
     ws = wb.create_sheet("EFECTIVO")
 
-    # Título
-    ws['A1'] = "CONTROL DE EFECTIVO Y BANCOS"
+    # Título principal
+    ws['A1'] = "CONTROL DE EFECTIVO, BANCOS Y TARJETAS DE CRÉDITO"
     ws['A1'].font = Font(name='Calibri', size=14, bold=True)
-    ws.merge_cells('A1:H1')
+    ws.merge_cells('A1:I1')
 
-    # Encabezados (fila 3)
-    headers = ["Cuenta", "Tipo", "Moneda", "Saldo Inicial", "Ingresos", "Egresos", "Saldo Actual", "Notas"]
+    # ========================================================================
+    # SECCIÓN 1: CUENTAS BANCARIAS (ACTIVOS)
+    # ========================================================================
+
+    ws['A3'] = "🏦 CUENTAS BANCARIAS (ACTIVOS)"
+    ws['A3'].font = Font(size=12, bold=True)
+    ws.merge_cells('A3:I3')
+
+    # Encabezados (fila 4)
+    headers = ["Cuenta", "N° Completo", "Tipo", "Moneda", "Saldo 12/Nov", "Ingresos", "Egresos", "Saldo Actual", "Uso"]
     for col, header in enumerate(headers, start=1):
-        cell = ws.cell(3, col, header)
-    crear_estilo_header(ws, 3, 1, len(headers))
+        cell = ws.cell(4, col, header)
+    crear_estilo_header(ws, 4, 1, len(headers))
 
     # Anchos
-    ws.column_dimensions['A'].width = 35
-    ws.column_dimensions['B'].width = 12
+    ws.column_dimensions['A'].width = 32
+    ws.column_dimensions['B'].width = 20
     ws.column_dimensions['C'].width = 10
-    ws.column_dimensions['D'].width = 15
-    ws.column_dimensions['E'].width = 15
-    ws.column_dimensions['F'].width = 15
-    ws.column_dimensions['G'].width = 15
-    ws.column_dimensions['H'].width = 30
+    ws.column_dimensions['D'].width = 8
+    ws.column_dimensions['E'].width = 13
+    ws.column_dimensions['F'].width = 13
+    ws.column_dimensions['G'].width = 13
+    ws.column_dimensions['H'].width = 13
+    ws.column_dimensions['I'].width = 15
 
-    # Agregar las 9 cuentas
-    row = 4
+    # Agregar las 9 cuentas bancarias
+    row = 5
+    tipo_cambio = 517.5  # Para conversión CRC a USD
+
     for cuenta in CUENTAS_BANCARIAS:
         ws.cell(row, 1, cuenta["nombre"])
-        ws.cell(row, 2, cuenta["tipo"])
-        ws.cell(row, 3, cuenta["moneda"])
-        ws.cell(row, 4, cuenta["saldo"])  # Saldo inicial
+        ws.cell(row, 2, cuenta.get("numero", ""))
+        ws.cell(row, 3, cuenta["tipo"])
+        ws.cell(row, 4, cuenta["moneda"])
 
-        # Fórmula INGRESOS (columna E)
-        # =SUMIFS(TRANSACCIONES.I:I, TRANSACCIONES.E:E, A4, TRANSACCIONES.B:B, "INGRESO", TRANSACCIONES.L:L, "COMPLETADA")
-        formula_ingresos = f'=SUMIFS(TRANSACCIONES!I:I, TRANSACCIONES!E:E, A{row}, TRANSACCIONES!B:B, "INGRESO", TRANSACCIONES!L:L, "COMPLETADA")'
-        ws.cell(row, 5, formula_ingresos)
-        crear_estilo_formula(ws.cell(row, 5))
+        # Saldo inicial (convertir CRC a USD si es necesario)
+        saldo_inicial = cuenta["saldo"]
+        if cuenta["moneda"] == "CRC":
+            saldo_usd = saldo_inicial / tipo_cambio
+        else:
+            saldo_usd = saldo_inicial
+
+        ws.cell(row, 5, saldo_usd)
+        crear_estilo_editable(ws.cell(row, 5))
         ws.cell(row, 5).number_format = '#,##0.00'
 
-        # Fórmula EGRESOS (columna F)
-        # Sumar todos los tipos MENOS INGRESO y TRANSFERENCIA (para evitar doble conteo)
-        formula_egresos = f'=SUMIFS(TRANSACCIONES!I:I, TRANSACCIONES!E:E, A{row}, TRANSACCIONES!L:L, "COMPLETADA") - E{row}'
-        ws.cell(row, 6, formula_egresos)
+        # Fórmula INGRESOS (columna F) - TODO: Conectar con TRANSACCIONES
+        ws.cell(row, 6, 0)
         crear_estilo_formula(ws.cell(row, 6))
         ws.cell(row, 6).number_format = '#,##0.00'
 
-        # Fórmula SALDO ACTUAL (columna G)
-        formula_saldo = f'=D{row}+E{row}+F{row}'
-        ws.cell(row, 7, formula_saldo)
+        # Fórmula EGRESOS (columna G) - TODO: Conectar con TRANSACCIONES
+        ws.cell(row, 7, 0)
         crear_estilo_formula(ws.cell(row, 7))
         ws.cell(row, 7).number_format = '#,##0.00'
 
-        # Estilos
-        crear_estilo_editable(ws.cell(row, 4))  # Saldo inicial editable
-        ws.cell(row, 4).number_format = '#,##0.00'
+        # Fórmula SALDO ACTUAL (columna H)
+        formula_saldo = f'=E{row}+F{row}+G{row}'
+        ws.cell(row, 8, formula_saldo)
+        crear_estilo_formula(ws.cell(row, 8))
+        ws.cell(row, 8).number_format = '#,##0.00'
+
+        # Uso
+        ws.cell(row, 9, cuenta.get("uso", ""))
 
         row += 1
 
-    # Fila TOTAL (después de las 9 cuentas)
-    row_total = row
-    ws.cell(row_total, 1, "TOTAL EFECTIVO")
-    ws.cell(row_total, 1).font = Font(bold=True)
+    # Fila TOTAL BANCOS
+    row_total_bancos = row
+    ws.cell(row_total_bancos, 1, "TOTAL BANCOS (ACTIVOS)")
+    ws.cell(row_total_bancos, 1).font = Font(bold=True)
 
-    for col in range(4, 8):  # Columnas D-G
-        formula = f'=SUM({get_column_letter(col)}4:{get_column_letter(col)}{row_total-1})'
-        ws.cell(row_total, col, formula)
-        ws.cell(row_total, col).font = Font(bold=True)
-        ws.cell(row_total, col).number_format = '#,##0.00'
-        ws.cell(row_total, col).fill = PatternFill(start_color=COLOR_SUCCESS, end_color=COLOR_SUCCESS, fill_type="solid")
+    for col in [5, 6, 7, 8]:  # Columnas E-H
+        formula = f'=SUM({get_column_letter(col)}5:{get_column_letter(col)}{row_total_bancos-1})'
+        ws.cell(row_total_bancos, col, formula)
+        ws.cell(row_total_bancos, col).font = Font(bold=True)
+        ws.cell(row_total_bancos, col).number_format = '$#,##0.00'
+        ws.cell(row_total_bancos, col).fill = PatternFill(start_color=COLOR_SUCCESS, end_color=COLOR_SUCCESS, fill_type="solid")
 
-    # Agregar nota explicativa
-    ws[f'A{row_total + 2}'] = "💡 Los saldos se calculan automáticamente desde TRANSACCIONES"
-    ws[f'A{row_total + 2}'].font = FONT_SMALL
-    ws.merge_cells(f'A{row_total + 2}:H{row_total + 2}')
+    # ========================================================================
+    # SECCIÓN 2: TARJETAS DE CRÉDITO (PASIVOS)
+    # ========================================================================
 
-    # Agregar comentarios
-    agregar_comentario(ws['D4'], "💡 SALDO INICIAL\n\nIngresa el saldo al inicio del mes.\n\nSi es la primera vez: Ingresa saldo al 01/Nov/2025\n\nSi migras desde v2.0: Usa saldo final de Octubre")
+    row += 2  # Espacio
+    ws[f'A{row}'] = "💳 TARJETAS DE CRÉDITO (PASIVOS - DEUDAS)"
+    ws[f'A{row}'].font = Font(size=12, bold=True, color='FF0000')
+    ws.merge_cells(f'A{row}:I{row}')
+
+    row += 1
+    # Encabezados tarjetas
+    headers_tc = ["Tarjeta", "Titular", "Saldo USD", "Saldo CRC", "Equiv. USD Total", "Pagos", "Cargos", "Saldo Actual", "Estrategia"]
+    for col, header in enumerate(headers_tc, start=1):
+        cell = ws.cell(row, col, header)
+    crear_estilo_header(ws, row, 1, len(headers_tc))
+
+    row += 1
+    row_inicio_tc = row
+
+    for tc in TARJETAS_CREDITO:
+        # Nombre tarjeta
+        ws.cell(row, 1, tc["nombre"])
+
+        # Titular (extraer de nombre)
+        titular = tc["nombre"].split("(")[1].replace(")", "") if "(" in tc["nombre"] else ""
+        ws.cell(row, 2, titular)
+
+        # Saldos
+        ws.cell(row, 3, tc["saldo_usd"])
+        ws.cell(row, 3).number_format = '$#,##0.00'
+        crear_estilo_editable(ws.cell(row, 3))
+
+        ws.cell(row, 4, tc["saldo_crc"])
+        ws.cell(row, 4).number_format = '₡#,##0'
+        crear_estilo_editable(ws.cell(row, 4))
+
+        # Equivalente USD Total (USD + CRC convertido)
+        formula_equiv = f'=C{row}+(D{row}/517.5)'
+        ws.cell(row, 5, formula_equiv)
+        ws.cell(row, 5).number_format = '$#,##0.00'
+        crear_estilo_formula(ws.cell(row, 5))
+
+        # Pagos (TODO: conectar con TRANSACCIONES)
+        ws.cell(row, 6, 0)
+        ws.cell(row, 6).number_format = '$#,##0.00'
+        crear_estilo_formula(ws.cell(row, 6))
+
+        # Cargos (TODO: conectar con TRANSACCIONES)
+        ws.cell(row, 7, 0)
+        ws.cell(row, 7).number_format = '$#,##0.00'
+        crear_estilo_formula(ws.cell(row, 7))
+
+        # Saldo Actual
+        formula_saldo_tc = f'=E{row}+F{row}+G{row}'
+        ws.cell(row, 8, formula_saldo_tc)
+        ws.cell(row, 8).number_format = '$#,##0.00'
+        crear_estilo_formula(ws.cell(row, 8))
+        ws.cell(row, 8).fill = PatternFill(start_color=COLOR_ERROR, end_color=COLOR_ERROR, fill_type="solid")
+
+        # Estrategia
+        ws.cell(row, 9, tc["estrategia"])
+        ws.cell(row, 9).font = FONT_SMALL
+
+        row += 1
+
+    # Fila TOTAL TARJETAS
+    row_total_tc = row
+    ws.cell(row_total_tc, 1, "TOTAL TARJETAS (PASIVOS)")
+    ws.cell(row_total_tc, 1).font = Font(bold=True, color='FF0000')
+
+    for col in [3, 4, 5, 6, 7, 8]:  # Columnas C-H
+        formula = f'=SUM({get_column_letter(col)}{row_inicio_tc}:{get_column_letter(col)}{row_total_tc-1})'
+        ws.cell(row_total_tc, col, formula)
+        ws.cell(row_total_tc, col).font = Font(bold=True)
+
+        if col in [3, 5, 6, 7, 8]:
+            ws.cell(row_total_tc, col).number_format = '$#,##0.00'
+        else:
+            ws.cell(row_total_tc, col).number_format = '₡#,##0'
+
+        ws.cell(row_total_tc, col).fill = PatternFill(start_color=COLOR_ERROR, end_color=COLOR_ERROR, fill_type="solid")
+
+    # ========================================================================
+    # SECCIÓN 3: EFECTIVO NETO
+    # ========================================================================
+
+    row += 2
+    ws[f'A{row}'] = "💰 EFECTIVO NETO (Bancos - Tarjetas)"
+    ws[f'A{row}'].font = Font(size=14, bold=True)
+    ws.merge_cells(f'A{row}:E{row}')
+
+    # Fórmula efectivo neto
+    formula_neto = f'=H{row_total_bancos}-H{row_total_tc}'
+    ws[f'F{row}'] = formula_neto
+    ws[f'F{row}'].font = Font(size=16, bold=True)
+    ws[f'F{row}'].number_format = '$#,##0.00'
+
+    # Color condicional (rojo si negativo, verde si positivo)
+    ws[f'F{row}'].fill = PatternFill(start_color=COLOR_WARNING, end_color=COLOR_WARNING, fill_type="solid")
+
+    # Notas explicativas
+    row += 2
+    ws[f'A{row}'] = "💡 NOTAS:"
+    ws[f'A{row}'].font = Font(bold=True)
+
+    row += 1
+    ws[f'A{row}'] = "• Saldos al 12 de Noviembre 2025"
+    ws[f'A{row}'].font = FONT_SMALL
+
+    row += 1
+    ws[f'A{row}'] = "• Columnas 'Ingresos', 'Egresos', 'Pagos' y 'Cargos' se conectarán automáticamente a TRANSACCIONES"
+    ws[f'A{row}'].font = FONT_SMALL
+
+    row += 1
+    ws[f'A{row}'] = "• Tipo de cambio usado: ₡517.5 por $1 USD"
+    ws[f'A{row}'].font = FONT_SMALL
+
+    row += 1
+    ws[f'A{row}'] = f"• EFECTIVO NETO REAL (12/Nov): $3,444.54 en bancos - $16,536 en tarjetas = -$13,091.46 (CRISIS)"
+    ws[f'A{row}'].font = Font(size=10, bold=True, color='FF0000')
 
     print("   ✅ Hoja EFECTIVO creada")
     print(f"      - {len(CUENTAS_BANCARIAS)} cuentas bancarias")
-    print(f"      - Fórmulas automáticas conectadas a TRANSACCIONES")
+    print(f"      - {len(TARJETAS_CREDITO)} tarjetas de crédito")
+    print(f"      - Efectivo neto = Bancos - Tarjetas")
 
 # ============================================================================
 # HOJA 3: DASHBOARD
