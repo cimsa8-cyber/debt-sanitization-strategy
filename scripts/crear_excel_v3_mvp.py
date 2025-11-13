@@ -66,30 +66,31 @@ BORDER_THIN = Border(
 # ============================================================================
 
 # 22 Clientes REALES (Bloque 2 T3 - Facturación Noviembre 2025)
-# TOTAL: $9,466.42
+# FACTURACIÓN TOTAL NOV: $9,466.42
+# CxC PENDIENTE TOTAL: $9,923.19 (27 clientes con saldo, incluye facturas anteriores)
 CLIENTES = [
-    {"nombre": "Grupo Acción Comercial S.A.", "categoria": "VIP", "monto_nov": 1689.04, "factura": "AR-002"},
-    {"nombre": "VWR International Ltda", "categoria": "VIP", "monto_nov": 1400.00, "factura": "AR-001"},
-    {"nombre": "Alfipac (Almacén Fiscal Pacífico)", "categoria": "VIP", "monto_nov": 761.05, "factura": "AR-003"},
-    {"nombre": "3-102-887892 SRL", "categoria": "Regular", "monto_nov": 691.56, "factura": "AR-004"},
-    {"nombre": "Waipio S.A.", "categoria": "Regular", "monto_nov": 687.27, "factura": "AR-005"},
-    {"nombre": "Centro Integral Oncología CIO SRL", "categoria": "Regular", "monto_nov": 687.05, "factura": "AR-006"},
-    {"nombre": "Ortodoncia de la Cruz", "categoria": "Regular", "monto_nov": 494.50, "factura": "AR-007"},
-    {"nombre": "Global Automotriz GACR S.A.", "categoria": "Regular", "monto_nov": 439.61, "factura": "AR-008"},
-    {"nombre": "Solusa Consolidators", "categoria": "Regular", "monto_nov": 378.35, "factura": "AR-009"},
-    {"nombre": "Cemso", "categoria": "Regular", "monto_nov": 333.92, "factura": "AR-010"},
-    {"nombre": "Acacia (Asoc. CR Agencias Carga)", "categoria": "Regular", "monto_nov": 333.35, "factura": "AR-011"},
-    {"nombre": "Rodriguez Rojas Carlos Humberto", "categoria": "Regular", "monto_nov": 282.50, "factura": "AR-012"},
-    {"nombre": "Supply Net C.R.W.H S.A.", "categoria": "Regular", "monto_nov": 276.85, "factura": "AR-013"},
-    {"nombre": "Operation Managment Tierra Magnifica", "categoria": "Regular", "monto_nov": 209.06, "factura": "AR-014"},
-    {"nombre": "Gentra de Costa Rica S.A.", "categoria": "Regular", "monto_nov": 183.63, "factura": "AR-015"},
-    {"nombre": "Sevilla Navarro Edgar", "categoria": "Regular", "monto_nov": 169.50, "factura": "AR-016"},
-    {"nombre": "Gomez Ajoy Edgar Luis", "categoria": "Regular", "monto_nov": 113.00, "factura": "AR-017"},
-    {"nombre": "Melendez Morales Monica", "categoria": "Regular", "monto_nov": 113.00, "factura": "AR-018"},
-    {"nombre": "Bandogo Soluciones Tecnológicas S.A.", "categoria": "Regular", "monto_nov": 67.80, "factura": "AR-019"},
-    {"nombre": "CPF Servicios Radiológicos S.A.", "categoria": "Regular", "monto_nov": 56.50, "factura": "AR-020"},
-    {"nombre": "Ortodec S.A.", "categoria": "Regular", "monto_nov": 56.50, "factura": "AR-021"},
-    {"nombre": "Perez Morales Francisco", "categoria": "Regular", "monto_nov": 42.38, "factura": "AR-022"},
+    {"nombre": "Grupo Acción Comercial S.A.", "categoria": "VIP", "monto_nov": 1689.04, "factura": "AR-002", "cxc": 1689.04},
+    {"nombre": "VWR International Ltda", "categoria": "VIP", "monto_nov": 1400.00, "factura": "AR-001", "cxc": 3567.08},
+    {"nombre": "Alfipac (Almacén Fiscal Pacífico)", "categoria": "VIP", "monto_nov": 761.05, "factura": "AR-003", "cxc": 0.00},
+    {"nombre": "3-102-887892 SRL", "categoria": "Regular", "monto_nov": 691.56, "factura": "AR-004", "cxc": 691.56},
+    {"nombre": "Waipio S.A.", "categoria": "Regular", "monto_nov": 687.27, "factura": "AR-005", "cxc": 0.00},
+    {"nombre": "Centro Integral Oncología CIO SRL", "categoria": "Regular", "monto_nov": 687.05, "factura": "AR-006", "cxc": 687.05},
+    {"nombre": "Ortodoncia de la Cruz", "categoria": "Regular", "monto_nov": 494.50, "factura": "AR-007", "cxc": 494.50},
+    {"nombre": "Global Automotriz GACR S.A.", "categoria": "Regular", "monto_nov": 439.61, "factura": "AR-008", "cxc": 439.61},
+    {"nombre": "Solusa Consolidators", "categoria": "Regular", "monto_nov": 378.35, "factura": "AR-009", "cxc": 378.35},
+    {"nombre": "Cemso", "categoria": "Regular", "monto_nov": 333.92, "factura": "AR-010", "cxc": 333.92},
+    {"nombre": "Acacia (Asoc. CR Agencias Carga)", "categoria": "Regular", "monto_nov": 333.35, "factura": "AR-011", "cxc": 0.00},
+    {"nombre": "Rodriguez Rojas Carlos Humberto", "categoria": "Regular", "monto_nov": 282.50, "factura": "AR-012", "cxc": 282.50},
+    {"nombre": "Supply Net C.R.W.H S.A.", "categoria": "Regular", "monto_nov": 276.85, "factura": "AR-013", "cxc": 276.85},
+    {"nombre": "Operation Managment Tierra Magnifica", "categoria": "Regular", "monto_nov": 209.06, "factura": "AR-014", "cxc": 209.06},
+    {"nombre": "Gentra de Costa Rica S.A.", "categoria": "Regular", "monto_nov": 183.63, "factura": "AR-015", "cxc": 0.00},
+    {"nombre": "Sevilla Navarro Edgar", "categoria": "Regular", "monto_nov": 169.50, "factura": "AR-016", "cxc": 169.50},
+    {"nombre": "Gomez Ajoy Edgar Luis", "categoria": "Regular", "monto_nov": 113.00, "factura": "AR-017", "cxc": 113.00},
+    {"nombre": "Melendez Morales Monica", "categoria": "Regular", "monto_nov": 113.00, "factura": "AR-018", "cxc": 113.00},
+    {"nombre": "Bandogo Soluciones Tecnológicas S.A.", "categoria": "Regular", "monto_nov": 67.80, "factura": "AR-019", "cxc": 67.80},
+    {"nombre": "CPF Servicios Radiológicos S.A.", "categoria": "Regular", "monto_nov": 56.50, "factura": "AR-020", "cxc": 56.50},
+    {"nombre": "Ortodec S.A.", "categoria": "Regular", "monto_nov": 56.50, "factura": "AR-021", "cxc": 56.50},
+    {"nombre": "Perez Morales Francisco", "categoria": "Regular", "monto_nov": 42.38, "factura": "AR-022", "cxc": 42.38},
 ]
 
 # 9 Cuentas Bancarias REALES (Bloque 3 B1 - Saldos 12 Nov 2025)
