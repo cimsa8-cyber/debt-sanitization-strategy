@@ -50,6 +50,12 @@ CXP_DATA = [
     {"proveedor": "Intcomex Costa Rica", "factura": "2520652", "monto": 565.34, "vencimiento": "2025-12-10", "prioridad": "ALTA"},
     {"proveedor": "Alquiler Oficina", "factura": "Mensual", "monto": 775.00, "vencimiento": "2025-12-15", "prioridad": "CRÍTICA"},
     {"proveedor": "Hacienda - IVA/Renta", "factura": "Deuda fiscal", "monto": 10000.00, "vencimiento": "2025-12-31", "prioridad": "CRÍTICA"},
+    {"proveedor": "Sea Global Logistics (SGL)", "factura": "Importación 1", "monto": 14.69, "vencimiento": "2025-11-13", "prioridad": "MEDIA"},
+    {"proveedor": "Sea Global Logistics (SGL)", "factura": "Importación 2", "monto": 14.69, "vencimiento": "2025-11-13", "prioridad": "MEDIA"},
+    {"proveedor": "Corporacion Geoalerta TTI, S.A.", "factura": "Seguridad Sept", "monto": 33.90, "vencimiento": "2025-11-13", "prioridad": "MEDIA"},
+    {"proveedor": "Computadores Economicos, S.A.", "factura": "LCD/Bateria/Pantalla", "monto": 284.90, "vencimiento": "2025-11-23", "prioridad": "MEDIA"},
+    {"proveedor": "Eurocomp de Costa Rica, S.A.", "factura": "Teclado/Mouse", "monto": 16.92, "vencimiento": "2025-11-19", "prioridad": "MEDIA"},
+    {"proveedor": "Eurocomp de Costa Rica, S.A.", "factura": "PC/Laptop/UPS/Monitor", "monto": 2007.68, "vencimiento": "2025-11-16", "prioridad": "ALTA"},
 ]
 
 print("\n" + "="*60)
