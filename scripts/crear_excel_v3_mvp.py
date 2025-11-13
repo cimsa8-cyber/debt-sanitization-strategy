@@ -416,7 +416,6 @@ def crear_hoja_efectivo(wb):
 
     # Agregar las 9 cuentas bancarias
     row = 5
-    tipo_cambio = 517.5  # Para conversión CRC a USD
 
     for cuenta in CUENTAS_BANCARIAS:
         ws.cell(row, 1, cuenta["nombre"])
@@ -424,16 +423,16 @@ def crear_hoja_efectivo(wb):
         ws.cell(row, 3, cuenta["tipo"])
         ws.cell(row, 4, cuenta["moneda"])
 
-        # Saldo inicial (convertir CRC a USD si es necesario)
+        # Saldo inicial en su moneda ORIGINAL (no convertir)
         saldo_inicial = cuenta["saldo"]
-        if cuenta["moneda"] == "CRC":
-            saldo_usd = saldo_inicial / tipo_cambio
-        else:
-            saldo_usd = saldo_inicial
-
-        ws.cell(row, 5, saldo_usd)
+        ws.cell(row, 5, saldo_inicial)
         crear_estilo_editable(ws.cell(row, 5))
-        ws.cell(row, 5).number_format = '#,##0.00'
+
+        # Formato según moneda
+        if cuenta["moneda"] == "CRC":
+            ws.cell(row, 5).number_format = '₡#,##0.00'
+        else:
+            ws.cell(row, 5).number_format = '$#,##0.00'
 
         # Fórmula INGRESOS (columna F) - TODO: Conectar con TRANSACCIONES
         ws.cell(row, 6, 0)
@@ -456,12 +455,24 @@ def crear_hoja_efectivo(wb):
 
         row += 1
 
-    # Fila TOTAL BANCOS
+    # Fila TOTAL BANCOS (en USD equivalente)
     row_total_bancos = row
-    ws.cell(row_total_bancos, 1, "TOTAL BANCOS (ACTIVOS)")
+    ws.cell(row_total_bancos, 1, "TOTAL BANCOS (USD equivalente)")
     ws.cell(row_total_bancos, 1).font = Font(bold=True)
 
-    for col in [5, 6, 7, 8]:  # Columnas E-H
+    # Crear fórmula que sume USD + (CRC/517.5)
+    # Necesitamos SUMIF por moneda
+    tipo_cambio = 517.5
+
+    # Saldo inicial total en USD
+    formula_saldo_usd = f'=SUMIF(D5:D{row_total_bancos-1},"USD",E5:E{row_total_bancos-1})+SUMIF(D5:D{row_total_bancos-1},"CRC",E5:E{row_total_bancos-1})/{tipo_cambio}'
+    ws.cell(row_total_bancos, 5, formula_saldo_usd)
+    ws.cell(row_total_bancos, 5).font = Font(bold=True)
+    ws.cell(row_total_bancos, 5).number_format = '$#,##0.00'
+    ws.cell(row_total_bancos, 5).fill = PatternFill(start_color=COLOR_SUCCESS, end_color=COLOR_SUCCESS, fill_type="solid")
+
+    # Ingresos, Egresos, Saldo Actual (simple suma, ya deberían estar en USD)
+    for col in [6, 7, 8]:  # Columnas F-H
         formula = f'=SUM({get_column_letter(col)}5:{get_column_letter(col)}{row_total_bancos-1})'
         ws.cell(row_total_bancos, col, formula)
         ws.cell(row_total_bancos, col).font = Font(bold=True)
@@ -854,8 +865,8 @@ def crear_hoja_configuracion(wb):
     configs = [
         ("Versión", "3.0.0 MVP"),
         ("Fecha Creación", datetime.now().strftime("%d/%m/%Y %H:%M")),
-        ("Propietario", "Alvaro Velasco - CIMSA"),
-        ("Tipo Cambio por Defecto", "540.00"),
+        ("Propietario", "Alvaro Velasco - AVN (AlvaroVelascoNet)"),
+        ("Tipo Cambio por Defecto", "517.50"),
         ("Período Fiscal", "2025"),
         ("Mes Activo", "Noviembre 2025"),
     ]
@@ -883,7 +894,7 @@ def main():
 ╔═══════════════════════════════════════════════════════════════╗
 ║                                                               ║
 ║           CREAR EXCEL V3.0 - FASE 1 MVP                     ║
-║           Sistema de Saneamiento de Deuda - CIMSA           ║
+║           Alvaro Velasco - AVN (AlvaroVelascoNet)           ║
 ║                                                               ║
 ║           Due: Nov 19, 2025 (7 días)                        ║
 ║                                                               ║
