@@ -23,6 +23,7 @@ for row in range(2, ws.max_row + 1):
     ws.cell(row, 8).number_format = '₡#,##0.00'  # CRC
     ws.cell(row, 9).number_format = '$#,##0.00'  # USD
     ws.cell(row, 10).number_format = '₡#,##0.00'  # TC
+    ws.cell(row, 17).number_format = 'DD/MM/YY'  # Fecha Creación (col Q)
 
 # HOJA EFECTIVO
 ws = wb["EFECTIVO"]
