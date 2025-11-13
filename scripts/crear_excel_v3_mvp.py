@@ -132,6 +132,7 @@ PROVEEDORES = [
 TIPOS_TRANSACCION = [
     "INGRESO",
     "GASTO OPERATIVO",
+    "GASTO PERSONAL",
     "GASTO FINANCIERO",
     "COMPRA PARA REVENTA",
     "TRANSFERENCIA",
@@ -308,8 +309,8 @@ def crear_hoja_transacciones(wb):
     # ========================================================================
 
     # Tipo Cambio (J2) - Auto-fetch o manual
-    ws['J2'] = 540  # Valor por defecto
-    agregar_comentario(ws['J2'], "💡 TIPO DE CAMBIO\n\nIngresa el tipo de cambio del día.\n\nSi dejas vacío, se usará 540 por defecto.\n\nFormato: 540 (sin comas)")
+    ws['J2'] = 508  # TC Venta por defecto (12/Nov/2025)
+    agregar_comentario(ws['J2'], "💡 TIPO DE CAMBIO\n\nIngresa el TC del día de la transacción.\n\nPor defecto: ₡508 (TC Venta 12/Nov/2025)\n\nActualiza en CONFIG si cambia.\n\nFormato: 508 (sin comas)")
 
     # Alerta Duplicados (S2)
     formula_duplicados = '''=IF(
@@ -338,7 +339,7 @@ $I:$I, I2
     # ========================================================================
 
     agregar_comentario(ws['A2'], "💡 FECHA DE LA TRANSACCIÓN\n\nFormato: DD/MM/YYYY\nEjemplo: 15/11/2025\n\n⚠️ Usa la fecha real de la transacción, no cuando la registras.")
-    agregar_comentario(ws['B2'], "💡 TIPO DE TRANSACCIÓN\n\nOpciones:\n• INGRESO - Dinero que entra\n• GASTO OPERATIVO - Gastos del negocio\n• GASTO FINANCIERO - Intereses, comisiones\n• COMPRA PARA REVENTA - Inventario\n• TRANSFERENCIA - Movimiento entre cuentas\n• PAGO TARJETA - Abono a tarjetas\n• PAGO PRESTAMO - Abono a préstamos\n• AJUSTE - Correcciones")
+    agregar_comentario(ws['B2'], "💡 TIPO DE TRANSACCIÓN\n\nOpciones:\n• INGRESO - Dinero que entra\n• GASTO OPERATIVO - Gastos del negocio\n• GASTO PERSONAL - Gastos personales/no deducibles\n• GASTO FINANCIERO - Intereses, comisiones\n• COMPRA PARA REVENTA - Inventario\n• TRANSFERENCIA - Movimiento entre cuentas\n• PAGO TARJETA - Abono a tarjetas\n• PAGO PRESTAMO - Abono a préstamos\n• AJUSTE - Correcciones")
     agregar_comentario(ws['C2'], "💡 CATEGORÍA\n\nElige la categoría contable.\n\nSi es venta: Especifica qué vendiste\nSi es gasto: Especifica en qué gastaste\n\n⚠️ Importante para reportes de P&L")
     agregar_comentario(ws['D2'], "💡 DESCRIPCIÓN\n\nDetalla QUÉ fue la transacción.\n\nEjemplo:\n• Pago quincenal empleados\n• Compra inventario laptops HP\n• Servicio técnico en sitio - Cliente XYZ\n\n✅ Sé específico, te ayudará después")
     agregar_comentario(ws['E2'], "💡 CUENTA ORIGEN\n\nElige de dónde salió/entró el dinero:\n\n• Cuenta bancaria específica\n• Tarjeta de crédito\n• Efectivo\n\n⚠️ Debe coincidir exactamente con nombres en hoja EFECTIVO")
