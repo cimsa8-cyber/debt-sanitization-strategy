@@ -853,35 +853,174 @@ def crear_hoja_entidades_alias(wb):
 # ============================================================================
 
 def crear_hoja_configuracion(wb):
-    """Crea hoja de configuración del sistema"""
+    """Crea hoja de configuración del sistema con TC bi-moneda"""
     print("\n⚙️ Creando hoja CONFIGURACIÓN...")
 
     ws = wb.create_sheet("CONFIG")
 
+    # ========================================================================
+    # TÍTULO PRINCIPAL
+    # ========================================================================
     ws['A1'] = "CONFIGURACIÓN DEL SISTEMA"
     ws['A1'].font = Font(size=14, bold=True)
+    ws.merge_cells('A1:D1')
 
-    # Información del sistema
-    configs = [
-        ("Versión", "3.0.0 MVP"),
-        ("Fecha Creación", datetime.now().strftime("%d/%m/%Y %H:%M")),
-        ("Propietario", "Alvaro Velasco - AVN (AlvaroVelascoNet)"),
-        ("Tipo Cambio por Defecto", "517.50"),
-        ("Período Fiscal", "2025"),
-        ("Mes Activo", "Noviembre 2025"),
+    # ========================================================================
+    # SECCIÓN 1: INFORMACIÓN GENERAL
+    # ========================================================================
+    ws['A3'] = "📋 INFORMACIÓN GENERAL"
+    ws['A3'].font = Font(size=12, bold=True)
+    ws.merge_cells('A3:D3')
+
+    configs_generales = [
+        ("Versión", "3.0.0 MVP", False),
+        ("Fecha Creación", datetime.now().strftime("%d/%m/%Y %H:%M"), False),
+        ("Propietario", "Alvaro Velasco - AVN (AlvaroVelascoNet)", False),
+        ("Período Fiscal", "2025", False),
+        ("Mes Activo", "Noviembre 2025", True),  # Editable
     ]
 
-    row = 3
-    for key, value in configs:
+    row = 4
+    for key, value, editable in configs_generales:
         ws.cell(row, 1, key)
-        ws.cell(row, 2, value)
         ws.cell(row, 1).font = Font(bold=True)
+        ws.cell(row, 2, value)
+
+        if editable:
+            crear_estilo_editable(ws.cell(row, 2))
+            agregar_comentario(ws.cell(row, 2), "💡 MES ACTIVO\n\nCambia el mes cuando inicies un nuevo período.\n\nFormato: Enero 2025, Febrero 2025, etc.")
+
         row += 1
 
+    # ========================================================================
+    # SECCIÓN 2: TIPO DE CAMBIO (EDITABLE)
+    # ========================================================================
+    row += 1
+    ws[f'A{row}'] = "💱 TIPO DE CAMBIO BI-MONEDA (CRC ↔ USD)"
+    ws[f'A{row}'].font = Font(size=12, bold=True, color='0000FF')
+    ws.merge_cells(f'A{row}:D{row}')
+
+    row += 1
+    # Encabezados TC
+    ws.cell(row, 1, "Tipo")
+    ws.cell(row, 2, "Valor")
+    ws.cell(row, 3, "Última Actualización")
+    ws.cell(row, 4, "Notas")
+    crear_estilo_header(ws, row, 1, 4)
+
+    row += 1
+    row_tc_compra = row
+    # TC COMPRA
+    ws.cell(row, 1, "TC Compra")
+    ws.cell(row, 1).font = Font(bold=True)
+    ws.cell(row, 2, 517.50)
+    crear_estilo_editable(ws.cell(row, 2))
+    ws.cell(row, 2).number_format = '₡#,##0.00'
+
+    ws.cell(row, 3, datetime.now().strftime("%d/%m/%Y %H:%M"))
+    crear_estilo_editable(ws.cell(row, 3))
+
+    ws.cell(row, 4, "Banco compra dólares (tú vendes USD)")
+    agregar_comentario(ws.cell(row, 2), "💡 TIPO DE CAMBIO COMPRA\n\nCuántos colones TE DAN por $1 USD\n\nEjemplo: Si banco te da ₡517.50 por $1\n\n⚠️ Actualizar 1 vez/semana")
+
+    row += 1
+    row_tc_venta = row
+    # TC VENTA
+    ws.cell(row, 1, "TC Venta")
+    ws.cell(row, 1).font = Font(bold=True)
+    ws.cell(row, 2, 525.00)
+    crear_estilo_editable(ws.cell(row, 2))
+    ws.cell(row, 2).number_format = '₡#,##0.00'
+
+    ws.cell(row, 3, datetime.now().strftime("%d/%m/%Y %H:%M"))
+    crear_estilo_editable(ws.cell(row, 3))
+
+    ws.cell(row, 4, "Banco vende dólares (tú compras USD)")
+    agregar_comentario(ws.cell(row, 2), "💡 TIPO DE CAMBIO VENTA\n\nCuántos colones PAGAS por $1 USD\n\nEjemplo: Si banco cobra ₡525.00 por $1\n\n⚠️ Actualizar 1 vez/semana")
+
+    # ========================================================================
+    # SECCIÓN 3: HISTORIAL DE TIPOS DE CAMBIO
+    # ========================================================================
+    row += 2
+    ws[f'A{row}'] = "📊 HISTORIAL DE TIPOS DE CAMBIO (Auditoría)"
+    ws[f'A{row}'].font = Font(size=11, bold=True)
+    ws.merge_cells(f'A{row}:F{row}')
+
+    row += 1
+    # Encabezados historial
+    headers_hist = ["Fecha", "TC Compra", "TC Venta", "Promedio", "Variación %", "Registrado Por"]
+    for col, header in enumerate(headers_hist, start=1):
+        ws.cell(row, col, header)
+    crear_estilo_header(ws, row, 1, len(headers_hist))
+
+    row += 1
+    row_hist_inicio = row
+    # Primera entrada del historial (actual)
+    ws.cell(row, 1, datetime.now().strftime("%d/%m/%Y"))
+    ws.cell(row, 2, 517.50)
+    ws.cell(row, 2).number_format = '₡#,##0.00'
+    ws.cell(row, 3, 525.00)
+    ws.cell(row, 3).number_format = '₡#,##0.00'
+
+    # Promedio
+    ws.cell(row, 4, f'=(B{row}+C{row})/2')
+    ws.cell(row, 4).number_format = '₡#,##0.00'
+    crear_estilo_formula(ws.cell(row, 4))
+
+    # Variación % (será 0 para la primera)
+    ws.cell(row, 5, "Inicial")
+    ws.cell(row, 6, "Sistema")
+
+    # Dejar filas vacías para futuras actualizaciones (formato editable)
+    for i in range(1, 6):  # 5 filas adicionales
+        row += 1
+        for col in [1, 2, 3, 6]:  # Fecha, TC Compra, TC Venta, Usuario
+            crear_estilo_editable(ws.cell(row, col))
+
+        # Fórmulas para Promedio y Variación
+        ws.cell(row, 4, f'=IF(B{row}<>"", (B{row}+C{row})/2, "")')
+        ws.cell(row, 4).number_format = '₡#,##0.00'
+        crear_estilo_formula(ws.cell(row, 4))
+
+        ws.cell(row, 5, f'=IF(D{row}<>"", IF(D{row-1}<>"", (D{row}-D{row-1})/D{row-1}*100, 0), "")')
+        ws.cell(row, 5).number_format = '0.00"%"'
+        crear_estilo_formula(ws.cell(row, 5))
+
+    # ========================================================================
+    # INSTRUCCIONES
+    # ========================================================================
+    row += 2
+    ws[f'A{row}'] = "📝 INSTRUCCIONES PARA ACTUALIZAR TC:"
+    ws[f'A{row}'].font = Font(bold=True, size=10)
+    ws.merge_cells(f'A{row}:F{row}')
+
+    row += 1
+    instrucciones = [
+        "1. Actualiza TC Compra y TC Venta cada semana (o cuando hagas cambio de moneda)",
+        "2. Actualiza la fecha en 'Última Actualización'",
+        "3. Registra el cambio en el HISTORIAL para auditoría",
+        "4. Usa TC Compra cuando VENDES dólares (USD → CRC)",
+        "5. Usa TC Venta cuando COMPRAS dólares (CRC → USD)",
+    ]
+
+    for instruccion in instrucciones:
+        ws[f'A{row}'] = instruccion
+        ws[f'A{row}'].font = FONT_SMALL
+        ws.merge_cells(f'A{row}:F{row}')
+        row += 1
+
+    # Anchos de columna
     ws.column_dimensions['A'].width = 25
-    ws.column_dimensions['B'].width = 30
+    ws.column_dimensions['B'].width = 15
+    ws.column_dimensions['C'].width = 20
+    ws.column_dimensions['D'].width = 25
+    ws.column_dimensions['E'].width = 12
+    ws.column_dimensions['F'].width = 15
 
     print("   ✅ Hoja CONFIG creada")
+    print(f"      - TC Compra: ₡517.50 (editable)")
+    print(f"      - TC Venta: ₡525.00 (editable)")
+    print(f"      - Historial de TCs para auditoría")
 
 # ============================================================================
 # FUNCIÓN PRINCIPAL
